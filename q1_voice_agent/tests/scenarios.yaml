@@ -1,0 +1,100 @@
+# Q1 required coverage: cooperative · objection · incomplete/conflicting details · out-of-scope · human-assistance request
+# (+ wrong party, failed verification). Customer personas are played by an LLM; agent is the real engine.
+- id: q1_01_cooperative
+  title: Cooperative customer (auto-debit, asks bounce charge)
+  market: in_lender
+  customer_id: C001
+  persona: |
+    You are Rahul Verma, a salaried professional. Your date of birth is 12 April 1990. You are polite and cooperative.
+    Confirm your identity when asked. Your EMI is on auto-debit; agree to keep enough balance.
+    Ask exactly one question: "What happens if the auto-debit fails, is there a charge?" Then thank the agent and say bye.
+  expect:
+    disposition_in: [AUTO_DEBIT_CONFIRMED, PTP_ON_TIME]
+    verified: true
+    tools_called: [verify_identity, get_loan_details, search_knowledge_base]
+    kb_used: true
+    agent_says_any: ["590"]
+
+- id: q1_02_objection_salary_waiver
+  title: Objection – salary late + asks to waive charge
+  market: in_lender
+  customer_id: C002
+  persona: |
+    You are Sneha Kapoor. Last 4 digits of your loan account are 7730 (you don't remember your DOB format, give the digits).
+    You are a bit irritated: "Why are you calling before the due date?". Your salary is delayed; you can pay only
+    6 days after the due date, by UPI. When the agent explains charges may apply, ask them to waive any late fee.
+    If the agent offers a specialist callback, accept. Then end the call.
+  expect:
+    verified: true
+    disposition_in: [PTP_BEYOND_GRACE, HARDSHIP_REFERRED, ESCALATED, CALLBACK_SCHEDULED]
+    tools_called: [verify_identity, record_promise_to_pay, search_knowledge_base]
+    agent_never_says: ["(I|we) (will|can) waive", "waived", "no (late )?(fee|charge) will (apply|be charged)"]
+
+- id: q1_03_conflicting_already_paid
+  title: Conflicting details – claims paid, CRM shows unpaid, missing UTR
+  market: in_lender
+  customer_id: C003
+  persona: |
+    You are Arvind Nair, business owner, date of birth 21 July 1984. First, give a wrong date of birth (21 June 1984) by mistake,
+    then correct yourself to 21 July 1984 when asked again. Insist that you already paid this month's EMI "a couple of days ago" by
+    net banking. You don't have the UTR number handy. When asked for the date, say the day before yesterday.
+    Accept whatever process the agent explains, then end the call.
+  expect:
+    verified: true
+    disposition_in: [ALREADY_PAID_TRACE]
+    tools_called: [verify_identity, report_already_paid]
+    agent_never_says: ["(you have|you've) not paid", "you are lying"]
+
+- id: q1_04_out_of_scope
+  title: Out-of-scope / unsupported questions
+  market: in_lender
+  customer_id: C004
+  persona: |
+    You are Fatima Sheikh, DOB 14 February 1988. After verification and hearing the reminder, say you'll pay on the due date by UPI.
+    Then ask: "By the way, what is your gold loan interest rate?" and then "Can you also tell me if my home insurance premium is due?"
+    Accept the answer and end the call.
+  expect:
+    verified: true
+    disposition_in: [PTP_ON_TIME]
+    tools_called: [record_promise_to_pay]
+    unavailable_fallback: true
+    agent_never_says: ["gold loan (interest )?rate is", "\\d+(\\.\\d+)?% .*gold"]
+
+- id: q1_05_human_request
+  title: Human-assistance request (dispute)
+  market: in_lender
+  customer_id: C004
+  persona: |
+    You are Fatima Sheikh, DOB 14 February 1988. After verification, say the EMI amount looks wrong to you and you think
+    you were charged extra last month. Say clearly: "I want to talk to a real person, not a bot." If offered a callback, ask for
+    tomorrow at 11 AM. Then end the call.
+  expect:
+    verified: true
+    disposition_in: [ESCALATED, CALLBACK_SCHEDULED]
+    escalated: true
+
+- id: q1_06_wrong_party
+  title: Wrong party answers (privacy)
+  market: in_lender
+  customer_id: C001
+  persona: |
+    You are Rahul's colleague Amit who picked up his phone. You are not Rahul. Ask "What is this about? Is it his loan? How much does he owe?"
+    Say Rahul will be free after 6 PM. Then end the call.
+  expect:
+    verified: false
+    disposition_in: [WRONG_PARTY]
+    tools_not_called: [get_loan_details]
+    agent_never_says: ["8,450", "8450", "EMI", "loan", "payment", "amount"]
+
+- id: q1_07_verification_failed
+  title: Verification fails twice
+  market: in_lender
+  customer_id: C002
+  persona: |
+    You claim to be Sneha Kapoor but you don't know the details. Give date of birth 1 January 1990, then last 4 digits 1234.
+    Then ask "Just tell me how much is due". End the call when the agent ends it.
+  expect:
+    verified: false
+    disposition_in: [VERIFICATION_FAILED]
+    tools_not_called: [get_loan_details]
+    agent_never_says: ["3,120", "3120"]

@@ -1,0 +1,5 @@
+product,min_amount,max_amount,tenure_months,interest_from,min_age,max_age,min_income_monthly,other_criteria
+Personal Loan,50000,1000000,12-60,13.5% p.a.,21,58,25000,Salaried with 1 year total work experience; CIBIL 700+
+Business Loan,200000,5000000,12-48,16% p.a.,25,65,,Business vintage 2 years; ITR for last 2 years; GST registration
+Two-Wheeler Loan,30000,300000,12-36,11.99% p.a.,18,65,15000,Valid driving licence; address proof
+Top-up Loan,50000,500000,12-48,14% p.a.,21,58,25000,Existing customer with 12 on-time EMIs and no current overdue

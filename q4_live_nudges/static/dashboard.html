@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Live Call Nudges</title>
+<style>
+:root{--bg:#f5f6f8;--card:#fff;--ink:#14161b;--mute:#667085;--line:#e4e7ec;--acc:#2e5bff;--p1:#b42318;--p2:#b54708;--p3:#12805c;--agent:#eef2ff;--cust:#f2f4f7}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1115;--card:#171a21;--ink:#e6e8ee;--mute:#98a2b3;--line:#2a2f3a;--agent:#1c2340;--cust:#20242d;--p1:#f97066;--p2:#fdb022;--p3:#32d583}}
+*{box-sizing:border-box}body{margin:0;font:14px/1.45 system-ui,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--ink)}
+header{display:flex;gap:10px;align-items:center;flex-wrap:wrap;padding:12px 16px;background:var(--card);border-bottom:1px solid var(--line)}
+header h1{font-size:16px;margin:0 10px 0 0}select,button{font:inherit;padding:7px 10px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--ink)}
+button.primary{background:var(--acc);color:#fff;border-color:var(--acc);cursor:pointer}
+main{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:16px;padding:16px;max-width:1300px;margin:0 auto}
+@media (max-width:900px){main{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}h2{font-size:14px;margin:0 0 8px}
+#tx{height:66vh;overflow:auto;display:flex;flex-direction:column;gap:6px}.u{padding:6px 10px;border-radius:10px;max-width:88%}.agent{background:var(--agent)}.customer{background:var(--cust);align-self:flex-end}
+.m{font-size:11px;color:var(--mute)}#nudges{display:flex;flex-direction:column;gap:8px;min-height:120px}
+.n{border-left:5px solid var(--p3);padding:8px 10px;border-radius:8px;background:var(--bg);animation:pop .25s ease-out}.n.p1{border-color:var(--p1)}.n.p2{border-color:var(--p2)}
+.n.closed{opacity:.45}.n b{display:block}@keyframes pop{from{transform:scale(.96);opacity:0}to{transform:none;opacity:1}}
+.row{display:flex;gap:16px;flex-wrap:wrap}.kpi{font-size:22px;font-weight:600}.topic{display:inline-block;font-size:11px;border:1px solid var(--line);border-radius:10px;padding:1px 7px;margin:2px}
+#log{max-height:22vh;overflow:auto;font-size:12px}
+</style>
+</head>
+<body>
+<header>
+  <h1>Live Call Insights &amp; Nudges</h1>
+  <select id="sc"></select>
+  <select id="asr"><option value="groq">ASR: Groq Whisper (real)</option><option value="mock">ASR: mock (offline)</option></select>
+  <label><input type="checkbox" id="llm" checked> LLM signals</label>
+  <label><input type="checkbox" id="play" checked> play audio</label>
+  <button class="primary" id="go">Start live replay</button>
+  <span id="status" class="m"></span>
+</header>
+<main>
+  <section class="card"><h2>Live transcript (agent ⟷ customer, separated by channel)</h2><div id="tx"></div></section>
+  <section>
+    <div class="card"><h2>Nudges for the agent</h2><div id="nudges"><span class="m">Nudges appear here within seconds of the trigger.</span></div></div>
+    <div class="card" style="margin-top:12px"><h2>Latency</h2>
+      <div class="row"><div><div class="kpi" id="e2e">–</div><div class="m">last nudge e2e (ms)</div></div><div><div class="kpi" id="asrl">–</div><div class="m">last ASR (ms)</div></div><div><div class="kpi" id="cnt">0</div><div class="m">nudges</div></div></div>
+      <div id="topics" style="margin-top:8px"></div>
+    </div>
+    <div class="card" style="margin-top:12px"><h2>Events</h2><div id="log"></div></div>
+  </section>
+</main>
+<script>
+const $=s=>document.querySelector(s);const esc=s=>String(s??'').replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+let ws,player=new Audio(),count=0;
+fetch('/api/scenarios').then(r=>r.json()).then(xs=>$('#sc').innerHTML=xs.map(x=>`<option value="${x.id}" title="${esc(x.description)}">${esc(x.title)}</option>`).join(''));
+function connect(){ws=new WebSocket(`ws://${location.host}/ws`);ws.onmessage=e=>handle(JSON.parse(e.data));ws.onclose=()=>setTimeout(connect,1000)}connect();
+$('#go').onclick=()=>{$('#tx').innerHTML='';$('#nudges').innerHTML='';$('#log').innerHTML='';$('#topics').innerHTML='';count=0;$('#cnt').textContent=0;
+  const id=$('#sc').value;ws.send(JSON.stringify({action:'run',scenario:id,asr:$('#asr').value,llm:$('#llm').checked,speed:1}));
+  if($('#play').checked){player.src=`/audio/${id}.wav`;player.play().catch(()=>{})}};
+function log(t){$('#log').insertAdjacentHTML('afterbegin',`<div>${esc(t)}</div>`)}
+function handle(m){const d=m.data;
+ if(m.type==='start'){$('#status').textContent=`streaming ${d.wav} · ${d.duration}s · ASR ${d.asr} · LLM ${d.llm}`}
+ else if(m.type==='transcript'){$('#tx').insertAdjacentHTML('beforeend',`<div class="u ${d.speaker}">${esc(d.text)}<div class="m">${d.speaker} · ${d.start_t}s · ASR ${d.asr_ms} ms · audio→text ${d.audio_to_text_ms} ms · conf ${d.asr_conf}</div></div>`);$('#tx').scrollTop=1e9;$('#asrl').textContent=d.asr_ms}
+ else if(m.type==='nudge'){if(!count)$('#nudges').innerHTML='';count++;$('#cnt').textContent=count;
+   $('#nudges').insertAdjacentHTML('afterbegin',`<div class="n p${d.priority}" id="${d.id}"><b>P${d.priority} · ${esc(d.label)}</b>${esc(d.text)}<div class="m">${d.id} · ${esc(d.type)} · ${esc(d.source)} conf ${d.confidence} · <span class="lat">…</span></div></div>`)}
+ else if(m.type==='nudge_latency'){const el=document.querySelector(`#${d.id} .lat`);if(el)el.textContent=`e2e ${d.latency_ms.e2e} ms (ASR ${d.latency_ms.asr}, signal ${d.latency_ms.signal})`;$('#e2e').textContent=d.latency_ms.e2e}
+ else if(m.type==='nudge_update'){const el=document.getElementById(d.id);if(el)el.querySelector('.m').insertAdjacentHTML('beforeend',` · merged ×${d.updates}`);log(`${d.id} duplicate merged (${d.type})`)}
+ else if(m.type==='nudge_close'){const el=document.getElementById(d.id);if(el){el.classList.add('closed');el.querySelector('b').insertAdjacentHTML('beforeend',` – ${d.status}`)}log(`${d.id} ${d.status}`)}
+ else if(m.type==='topic_shift'){$('#topics').insertAdjacentHTML('beforeend',`<span class="topic">${esc(d.to)}</span>`)}
+ else if(m.type==='sentiment'){log(`frustration ${d.frustration}`)}
+ else if(m.type==='summary'){const pc=d.post_call;log(`CALL END · nudges ${pc.total_nudges} · acted on ${pc.acted_on} · missed opportunities ${pc.missed_opportunities.length} · unresolved compliance ${pc.unresolved_compliance.length}`);$('#status').textContent+=' · finished'}}
+</script>
+</body>
+</html>

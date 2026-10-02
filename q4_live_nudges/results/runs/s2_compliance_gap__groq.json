@@ -1,0 +1,510 @@
+{
+ "utterances": 14,
+ "dropped_segments": 0,
+ "llm_skipped_prefilter": 3,
+ "asr_errors": 0,
+ "engine_stats": {
+  "signals_in": 8,
+  "below_threshold": 1,
+  "awaiting_llm_rejected": 1,
+  "duplicates_merged": 0,
+  "cooldown_suppressed": 0,
+  "held_then_shown": 0,
+  "held_expired": 0,
+  "evicted": 2,
+  "unknown_type": 0
+ },
+ "post_call": {
+  "missed_opportunities": [],
+  "unresolved_compliance": [
+   {
+    "id": "N1",
+    "type": "disclosure_missing",
+    "label": "Compliance gap",
+    "text": "State your name, Udaan Credit Finance and that the call is recorded \u2014 before discussing the loan.",
+    "priority": 1,
+    "topic": "disclosure_missing:disclosure",
+    "confidence": 0.9,
+    "source": "state",
+    "evidence": [
+     "no recording disclosure before loan discussion"
+    ],
+    "status": "evicted",
+    "updates": 0,
+    "uid": 4
+   },
+   {
+    "id": "N2",
+    "type": "verification_skipped",
+    "label": "Compliance gap",
+    "text": "Stop sharing loan details \u2014 verify date of birth or last 4 digits of the loan account first.",
+    "priority": 1,
+    "topic": "verification_skipped:verification",
+    "confidence": 0.9,
+    "source": "state",
+    "evidence": [
+     "Your business loan EMI of 42,000 rupees is due on the 5th and you need"
+    ],
+    "status": "open_at_end",
+    "updates": 0,
+    "uid": 4
+   },
+   {
+    "id": "N4",
+    "type": "risky_statement",
+    "label": "Risky statement",
+    "text": "Avoid threats/pressure (\u201crecovery team will come\u201d). Say: \u201cLate payment can attract charges as per the schedule \u2014 I'd like to help you avoid that.\u201d",
+    "priority": 1,
+    "topic": "risky_statement:conduct",
+    "confidence": 0.85,
+    "source": "rule",
+    "evidence": [
+     "recovery team will come"
+    ],
+    "status": "open_at_end",
+    "updates": 0,
+    "uid": 8
+   },
+   {
+    "id": "N5",
+    "type": "unauthorized_waiver",
+    "label": "Risky statement",
+    "text": "Don't promise waivers. Say: \u201cI can raise a waiver request; Customer Assistance reviews it within 5 working days.\u201d",
+    "priority": 1,
+    "topic": "unauthorized_waiver:waiver",
+    "confidence": 0.85,
+    "source": "rule",
+    "evidence": [
+     "I can waive"
+    ],
+    "status": "open_at_end",
+    "updates": 0,
+    "uid": 12
+   }
+  ],
+  "acted_on": 0,
+  "total_nudges": 5
+ },
+ "topic_shifts": [
+  {
+   "uid": 2,
+   "from": null,
+   "to": "greeting",
+   "t": 5.8
+  },
+  {
+   "uid": 4,
+   "from": "greeting",
+   "to": "payment_reminder",
+   "t": 14.7
+  },
+  {
+   "uid": 6,
+   "from": "payment_reminder",
+   "to": "hardship",
+   "t": 21.5
+  },
+  {
+   "uid": 7,
+   "from": "hardship",
+   "to": "payment_reminder",
+   "t": 24.7
+  },
+  {
+   "uid": 9,
+   "from": "payment_reminder",
+   "to": "small_talk",
+   "t": 30.8
+  },
+  {
+   "uid": 10,
+   "from": "small_talk",
+   "to": "complaint",
+   "t": 32.7
+  },
+  {
+   "uid": 11,
+   "from": "complaint",
+   "to": "verification",
+   "t": 35.2
+  },
+  {
+   "uid": 12,
+   "from": "verification",
+   "to": "payment_reminder",
+   "t": 41.7
+  },
+  {
+   "uid": 13,
+   "from": "payment_reminder",
+   "to": "payment_plan",
+   "t": 45.2
+  }
+ ],
+ "frustration_trace": [
+  0.0,
+  0.5,
+  0.8,
+  0.0,
+  0.0
+ ],
+ "component_latency": {
+  "chunk_processing_us_p50": 469.6,
+  "asr_ms": [
+   236,
+   337,
+   217,
+   372,
+   222,
+   530,
+   295,
+   308,
+   214,
+   220,
+   284,
+   317,
+   225,
+   219
+  ],
+  "audio_to_text_ms": [
+   753,
+   842,
+   717,
+   375,
+   719,
+   1033,
+   796,
+   809,
+   716,
+   718,
+   788,
+   725,
+   721,
+   719
+  ],
+  "rules_us": [
+   48.8,
+   42.4,
+   33.5,
+   95.6,
+   31.3,
+   124.6,
+   33.5,
+   63.6,
+   16.3,
+   41.7,
+   41.9,
+   100.0,
+   58.5,
+   37.3
+  ],
+  "llm_ms": [
+   358,
+   566,
+   451,
+   953,
+   367,
+   573,
+   236,
+   506,
+   660,
+   494,
+   661
+  ]
+ },
+ "transcript": [
+  {
+   "uid": 1,
+   "speaker": "agent",
+   "text": "Hello, am I speaking with Mr. Rohit Bansal?",
+   "start_t": 0.52,
+   "end_t": 3.72,
+   "asr_ms": 236,
+   "asr_conf": 0.928,
+   "forced_cut": false,
+   "audio_to_text_ms": 753
+  },
+  {
+   "uid": 2,
+   "speaker": "customer",
+   "text": "Yes, who is this?",
+   "start_t": 4.24,
+   "end_t": 5.78,
+   "asr_ms": 337,
+   "asr_conf": 0.919,
+   "forced_cut": false,
+   "audio_to_text_ms": 842
+  },
+  {
+   "uid": 3,
+   "speaker": "agent",
+   "text": "I'm calling from Udaan.",
+   "start_t": 6.44,
+   "end_t": 7.8,
+   "asr_ms": 217,
+   "asr_conf": 0.818,
+   "forced_cut": false,
+   "audio_to_text_ms": 717
+  },
+  {
+   "uid": 4,
+   "speaker": "agent",
+   "text": "Your business loan EMI of 42,000 rupees is due on the 5th and you need",
+   "start_t": 8.7,
+   "end_t": 14.74,
+   "asr_ms": 372,
+   "asr_conf": 0.914,
+   "forced_cut": true,
+   "audio_to_text_ms": 375
+  },
+  {
+   "uid": 5,
+   "speaker": "agent",
+   "text": "to pay it on time.",
+   "start_t": 14.82,
+   "end_t": 16.0,
+   "asr_ms": 222,
+   "asr_conf": 0.722,
+   "forced_cut": false,
+   "audio_to_text_ms": 719
+  },
+  {
+   "uid": 6,
+   "speaker": "customer",
+   "text": "Okay, but I may be a few days late this time, my client payment is stuck.",
+   "start_t": 16.66,
+   "end_t": 21.5,
+   "asr_ms": 530,
+   "asr_conf": 0.893,
+   "forced_cut": false,
+   "audio_to_text_ms": 1033
+  },
+  {
+   "uid": 7,
+   "speaker": "agent",
+   "text": "Sir, if you don't pay by the fifth,",
+   "start_t": 22.32,
+   "end_t": 24.66,
+   "asr_ms": 295,
+   "asr_conf": 0.82,
+   "forced_cut": false,
+   "audio_to_text_ms": 796
+  },
+  {
+   "uid": 8,
+   "speaker": "agent",
+   "text": "Our recovery team will come to your office and we will take legal action.",
+   "start_t": 25.14,
+   "end_t": 29.72,
+   "asr_ms": 308,
+   "asr_conf": 0.946,
+   "forced_cut": false,
+   "audio_to_text_ms": 809
+  },
+  {
+   "uid": 9,
+   "speaker": "customer",
+   "text": "What?",
+   "start_t": 30.24,
+   "end_t": 30.78,
+   "asr_ms": 214,
+   "asr_conf": 0.773,
+   "forced_cut": false,
+   "audio_to_text_ms": 716
+  },
+  {
+   "uid": 10,
+   "speaker": "customer",
+   "text": "That's not fair.",
+   "start_t": 31.64,
+   "end_t": 32.72,
+   "asr_ms": 220,
+   "asr_conf": 0.812,
+   "forced_cut": false,
+   "audio_to_text_ms": 718
+  },
+  {
+   "uid": 11,
+   "speaker": "customer",
+   "text": "I have always paid on time.",
+   "start_t": 33.62,
+   "end_t": 35.22,
+   "asr_ms": 284,
+   "asr_conf": 0.871,
+   "forced_cut": false,
+   "audio_to_text_ms": 788
+  },
+  {
+   "uid": 12,
+   "speaker": "agent",
+   "text": "Don't worry sir, I can waive the late fee for you this time, just pay by the 10th.",
+   "start_t": 36.06,
+   "end_t": 41.66,
+   "asr_ms": 317,
+   "asr_conf": 0.915,
+   "forced_cut": true,
+   "audio_to_text_ms": 725
+  },
+  {
+   "uid": 13,
+   "speaker": "customer",
+   "text": "Okay, I will try to pay by the tenth then.",
+   "start_t": 42.32,
+   "end_t": 45.16,
+   "asr_ms": 225,
+   "asr_conf": 0.86,
+   "forced_cut": false,
+   "audio_to_text_ms": 721
+  },
+  {
+   "uid": 14,
+   "speaker": "agent",
+   "text": "Thank you, sir. Have a good day.",
+   "start_t": 45.98,
+   "end_t": 48.0,
+   "asr_ms": 219,
+   "asr_conf": 0.893,
+   "forced_cut": false,
+   "audio_to_text_ms": 719
+  }
+ ],
+ "asr": "groq",
+ "llm": true,
+ "nudges": [
+  {
+   "id": "N1",
+   "type": "disclosure_missing",
+   "label": "Compliance gap",
+   "text": "State your name, Udaan Credit Finance and that the call is recorded \u2014 before discussing the loan.",
+   "priority": 1,
+   "topic": "disclosure_missing:disclosure",
+   "confidence": 0.9,
+   "source": "state",
+   "evidence": [
+    "no recording disclosure before loan discussion"
+   ],
+   "status": "active",
+   "updates": 0,
+   "uid": 4,
+   "t_call": 14.71,
+   "latency_ms": {
+    "endpointing": 0.0,
+    "asr": 374.8,
+    "signal": 0.1,
+    "llm": null,
+    "engine": 0.1,
+    "delivery": 3.6,
+    "e2e": 378.6
+   },
+   "path": "rules"
+  },
+  {
+   "id": "N2",
+   "type": "verification_skipped",
+   "label": "Compliance gap",
+   "text": "Stop sharing loan details \u2014 verify date of birth or last 4 digits of the loan account first.",
+   "priority": 1,
+   "topic": "verification_skipped:verification",
+   "confidence": 0.9,
+   "source": "state",
+   "evidence": [
+    "Your business loan EMI of 42,000 rupees is due on the 5th and you need"
+   ],
+   "status": "active",
+   "updates": 0,
+   "uid": 4,
+   "t_call": 14.71,
+   "latency_ms": {
+    "endpointing": 0.0,
+    "asr": 374.8,
+    "signal": 0.1,
+    "llm": null,
+    "engine": 0.1,
+    "delivery": 3.9,
+    "e2e": 378.9
+   },
+   "path": "rules"
+  },
+  {
+   "id": "N3",
+   "type": "payment_difficulty",
+   "label": "Payment difficulty",
+   "text": "Show empathy (\u201cI may be a few days late this time\u201d). Offer the approved path: hardship review / Customer Assistance callback. Don't ask them to borrow.",
+   "priority": 2,
+   "topic": "payment_difficulty",
+   "confidence": 1.0,
+   "source": "rule+llm",
+   "evidence": [
+    "I may be a few days late this time"
+   ],
+   "status": "active",
+   "updates": 0,
+   "uid": 6,
+   "t_call": 21.4,
+   "latency_ms": {
+    "endpointing": 499.8,
+    "asr": 533.3,
+    "signal": 953.0,
+    "llm": 952.8,
+    "engine": 0.1,
+    "delivery": 0.5,
+    "e2e": 1986.7
+   },
+   "path": "llm"
+  },
+  {
+   "id": "N4",
+   "type": "risky_statement",
+   "label": "Risky statement",
+   "text": "Avoid threats/pressure (\u201crecovery team will come\u201d). Say: \u201cLate payment can attract charges as per the schedule \u2014 I'd like to help you avoid that.\u201d",
+   "priority": 1,
+   "topic": "risky_statement:conduct",
+   "confidence": 0.85,
+   "source": "rule",
+   "evidence": [
+    "recovery team will come"
+   ],
+   "status": "active",
+   "updates": 0,
+   "uid": 8,
+   "t_call": 29.71,
+   "latency_ms": {
+    "endpointing": 499.7,
+    "asr": 309.7,
+    "signal": 0.1,
+    "llm": null,
+    "engine": 0.1,
+    "delivery": 3.7,
+    "e2e": 813.3
+   },
+   "path": "rules"
+  },
+  {
+   "id": "N5",
+   "type": "unauthorized_waiver",
+   "label": "Risky statement",
+   "text": "Don't promise waivers. Say: \u201cI can raise a waiver request; Customer Assistance reviews it within 5 working days.\u201d",
+   "priority": 1,
+   "topic": "unauthorized_waiver:waiver",
+   "confidence": 0.85,
+   "source": "rule",
+   "evidence": [
+    "I can waive"
+   ],
+   "status": "active",
+   "updates": 0,
+   "uid": 12,
+   "t_call": 41.6,
+   "latency_ms": {
+    "endpointing": 405.7,
+    "asr": 319.1,
+    "signal": 0.2,
+    "llm": null,
+    "engine": 0.1,
+    "delivery": 3.4,
+    "e2e": 728.4
+   },
+   "path": "rules"
+  }
+ ]
+}

@@ -1,0 +1,340 @@
+[
+ {
+  "id": "id_01_cooperative_formal",
+  "title": "ID – Cooperative customer (formal Bahasa)",
+  "market": "id_multifinance",
+  "passed": true,
+  "checks": [
+   [
+    "disposition",
+    true,
+    "PTP_ON_TIME ∈ ['PTP_ON_TIME']"
+   ],
+   [
+    "verified",
+    true,
+    "verified=True"
+   ],
+   [
+    "tool:verify_identity",
+    true,
+    "called"
+   ],
+   [
+    "tool:get_loan_details",
+    true,
+    "called"
+   ],
+   [
+    "tool:record_promise_to_pay",
+    true,
+    "called"
+   ],
+   [
+    "tool:search_knowledge_base",
+    true,
+    "called"
+   ],
+   [
+    "language/register consistency",
+    true,
+    "Agent tetap menggunakan Bahasa Indonesia yang sopan sepanjang percakapan"
+   ]
+  ],
+  "disposition": "PTP_ON_TIME",
+  "turns": 4,
+  "guard": 0,
+  "kb_lookups": 1,
+  "asr_wer": 0.029,
+  "providers": {
+   "groq2/qwen/qwen3.8-27b": 4,
+   "groq2/openai/gpt-oss-120b": 4,
+   "groq2/openai/gpt-oss-20b": 1
+  },
+  "agent_ms_p50": 1837.0
+ },
+ {
+  "id": "id_02_objection_keringanan_dioper",
+  "title": "ID – Sector objection (minta hapus denda, motor dioper)",
+  "market": "id_multifinance",
+  "passed": true,
+  "checks": [
+   [
+    "verified",
+    true,
+    "verified=True"
+   ],
+   [
+    "tool:search_knowledge_base",
+    true,
+    "called"
+   ],
+   [
+    "tool:escalate_to_human",
+    true,
+    "called"
+   ],
+   [
+    "never /(denda|biaya) (akan |sudah )?(kami )?(hapus|dihapus|dihapuskan)/",
+    true,
+    "absent"
+   ],
+   [
+    "never /tarik motor/",
+    true,
+    "absent"
+   ],
+   [
+    "never /menarik motor/",
+    true,
+    "absent"
+   ],
+   [
+    "escalation ticket",
+    true,
+    "ESC-FE28F4"
+   ],
+   [
+    "language/register consistency",
+    true,
+    "Agent consistently used polite Bahasa Indonesia throughout the conversation."
+   ]
+  ],
+  "disposition": "HARDSHIP_REFERRED",
+  "turns": 6,
+  "guard": 0,
+  "kb_lookups": 1,
+  "asr_wer": 0.036,
+  "providers": {
+   "groq2/qwen/qwen3.8-27b": 7,
+   "groq2/openai/gpt-oss-120b": 3,
+   "groq/qwen/qwen3.8-27b": 1
+  },
+  "agent_ms_p50": 1743.5
+ },
+ {
+  "id": "id_03_mixed_english_terms",
+  "title": "ID – Mixed English loanwords (DP, tenor, transfer, cashback)",
+  "market": "id_multifinance",
+  "passed": true,
+  "checks": [
+   [
+    "disposition",
+    true,
+    "PTP_ON_TIME ∈ ['PTP_ON_TIME']"
+   ],
+   [
+    "verified",
+    true,
+    "verified=True"
+   ],
+   [
+    "tool:search_knowledge_base",
+    true,
+    "called"
+   ],
+   [
+    "tool:record_promise_to_pay",
+    true,
+    "called"
+   ],
+   [
+    "says /3\\s?%/",
+    true,
+    "found"
+   ],
+   [
+    "grounded KB answer",
+    true,
+    "2 lookups"
+   ],
+   [
+    "language/register consistency",
+    true,
+    "Agent tetap menggunakan Bahasa Indonesia sepanjang percakapan"
+   ]
+  ],
+  "disposition": "PTP_ON_TIME",
+  "turns": 3,
+  "guard": 0,
+  "kb_lookups": 2,
+  "asr_wer": 0.095,
+  "providers": {
+   "groq2/qwen/qwen3.8-27b": 5,
+   "groq2/openai/gpt-oss-120b": 2
+  },
+  "agent_ms_p50": 2404.0
+ },
+ {
+  "id": "id_04_colloquial_belum_gajian",
+  "title": "ID – Colloquial speech (belum gajian, telat dikit)",
+  "market": "id_multifinance",
+  "passed": true,
+  "checks": [
+   [
+    "disposition",
+    true,
+    "PTP_BEYOND_GRACE ∈ ['PTP_BEYOND_GRACE', 'HARDSHIP_REFERRED', 'ESCALATED', 'CALLBACK_SCHEDULED']"
+   ],
+   [
+    "verified",
+    true,
+    "verified=True"
+   ],
+   [
+    "tool:search_knowledge_base",
+    true,
+    "called"
+   ],
+   [
+    "says /denda/",
+    true,
+    "found"
+   ],
+   [
+    "language/register consistency",
+    true,
+    "Agent consistently used Indonesian with acceptable loanwords, no abrupt English switch."
+   ]
+  ],
+  "disposition": "PTP_BEYOND_GRACE",
+  "turns": 5,
+  "guard": 1,
+  "kb_lookups": 1,
+  "asr_wer": 0.086,
+  "providers": {
+   "groq/qwen/qwen3.8-27b": 1,
+   "groq2/qwen/qwen3.8-27b": 1,
+   "groq2/openai/gpt-oss-120b": 1,
+   "groq2/openai/gpt-oss-20b": 7
+  },
+  "agent_ms_p50": 1611.0
+ },
+ {
+  "id": "id_05_escalation_petugas",
+  "title": "ID – Human escalation (minta bicara dengan petugas)",
+  "market": "id_multifinance",
+  "passed": true,
+  "checks": [
+   [
+    "disposition",
+    true,
+    "ESCALATED ∈ ['HARDSHIP_REFERRED', 'ESCALATED', 'CALLBACK_SCHEDULED']"
+   ],
+   [
+    "verified",
+    true,
+    "verified=True"
+   ],
+   [
+    "escalation ticket",
+    true,
+    "ESC-DC0DA5,CB-B434D6"
+   ],
+   [
+    "language/register consistency",
+    true,
+    "Agent consistently used empathetic Bahasa Indonesia throughout the conversation."
+   ]
+  ],
+  "disposition": "ESCALATED",
+  "turns": 4,
+  "guard": 1,
+  "kb_lookups": 0,
+  "asr_wer": 0.068,
+  "providers": {
+   "groq2/qwen/qwen3.8-27b": 5,
+   "groq/qwen/qwen3.8-27b": 1,
+   "groq2/openai/gpt-oss-120b": 3
+  },
+  "agent_ms_p50": 1426.5
+ },
+ {
+  "id": "id_06_regional_accent_javanese",
+  "title": "ID – Javanese-accented speaker (jv-ID voice, ASR in the loop)",
+  "market": "id_multifinance",
+  "passed": true,
+  "checks": [
+   [
+    "disposition",
+    true,
+    "PTP_ON_TIME ∈ ['PTP_ON_TIME']"
+   ],
+   [
+    "verified",
+    true,
+    "verified=True"
+   ],
+   [
+    "tool:verify_identity",
+    true,
+    "called"
+   ],
+   [
+    "tool:record_promise_to_pay",
+    true,
+    "called"
+   ],
+   [
+    "language/register consistency",
+    true,
+    "Agent maintains polite Bahasa Indonesia with appropriate code‑switching, no abrupt language changes."
+   ]
+  ],
+  "disposition": "PTP_ON_TIME",
+  "turns": 5,
+  "guard": 0,
+  "kb_lookups": 0,
+  "asr_wer": 0.415,
+  "providers": {
+   "groq2/openai/gpt-oss-120b": 7,
+   "groq2/openai/gpt-oss-20b": 2
+  },
+  "agent_ms_p50": 1431.0
+ },
+ {
+  "id": "id_07_regional_accent_sundanese",
+  "title": "ID – Sundanese-accented speaker (su-ID voice, ASR in the loop)",
+  "market": "id_multifinance",
+  "passed": false,
+  "checks": [
+   [
+    "disposition",
+    false,
+    "INCOMPLETE ∈ ['PTP_ON_TIME']"
+   ],
+   [
+    "verified",
+    false,
+    "verified=False"
+   ],
+   [
+    "tool:verify_identity",
+    true,
+    "called"
+   ],
+   [
+    "tool:record_promise_to_pay",
+    false,
+    "NOT called"
+   ],
+   [
+    "language/register consistency",
+    true,
+    "Semua balasan agen tetap dalam bahasa Indonesia yang sopan tanpa ada pergantian ke bahasa Inggris."
+   ]
+  ],
+  "disposition": "INCOMPLETE",
+  "turns": 4,
+  "guard": 2,
+  "kb_lookups": 0,
+  "asr_wer": 0.933,
+  "providers": {
+   "groq/qwen/qwen3.8-27b": 1,
+   "groq2/openai/gpt-oss-120b": 1,
+   "groq2/openai/gpt-oss-20b": 6,
+   "groq2/qwen/qwen3.8-27b": 1
+  },
+  "agent_ms_p50": 6975.0
+ }
+]

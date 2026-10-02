@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Darwix AI Assessment</title>
+<link rel="stylesheet" href="/static/styles.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.1.6/purify.min.js"></script>
+</head>
+<body>
+<div class="app">
+  <aside class="side" id="side">
+    <div class="brand"><div class="brand-mark">D</div><div><b>Darwix AI Assessment</b><span>Voice · KB · Multilingual · Live</span></div></div>
+    <nav class="nav" id="nav">
+      <a href="#/" data-r="">Overview</a>
+      <div class="nav-sep">Questions</div>
+      <a href="#/q1" data-r="q1"><span class="q">Q1</span> Voice agent</a>
+      <a href="#/q2" data-r="q2"><span class="q">Q2</span> Knowledge base</a>
+      <a href="#/q3" data-r="q3"><span class="q">Q3</span> Multilingual bots</a>
+      <a href="#/q4" data-r="q4"><span class="q">Q4</span> Live nudges</a>
+      <div class="nav-sep">Project</div>
+      <a href="#/docs" data-r="docs">Docs &amp; architecture</a>
+    </nav>
+    <div class="side-foot">
+      <div id="sysstatus" class="small">Checking services…</div>
+      <button class="btn small" id="theme">Toggle theme</button>
+    </div>
+  </aside>
+  <div>
+    <div class="topbar"><button class="btn" id="menu" aria-label="Menu">☰</button><b>Darwix AI Assessment</b></div>
+    <main class="main" id="view"><div class="loading">Loading…</div></main>
+  </div>
+</div>
+<aside class="drawer" id="drawer" aria-hidden="true">
+  <header><h3 id="drawer-title">Details</h3><span class="spacer"></span><button class="btn" id="drawer-close">Close</button></header>
+  <div class="body" id="drawer-body"></div>
+</aside>
+<div class="drawer-bg" id="drawer-bg"></div>
+<div class="tip" id="tip"></div>
+<script src="/static/app.js"></script>
+</body>
+</html>

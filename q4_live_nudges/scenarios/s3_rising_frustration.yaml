@@ -1,0 +1,24 @@
+id: s3_rising_frustration
+title: Rising frustration (already paid, repeated calls)
+description: Customer says they paid; agent keeps pushing; frustration escalates. Expect payment-dispute and frustration nudges, no repeats.
+agent_voice: en-IN-NeerjaExpressiveNeural
+customer_voice: en-IN-PrabhatNeural
+customer_rate: "+8%"
+turns:
+  - [agent, "Good afternoon, this is Neha from Udaan Credit Finance, this call is recorded. Am I speaking with Mr. Imran Khan?"]
+  - [customer, "Yes."]
+  - [agent, "Thank you. Could you confirm the last four digits of your loan account for verification?"]
+  - [customer, "Four four two one."]
+  - [agent, "Thank you. Your two-wheeler loan EMI of three thousand one hundred rupees is due on the fifth. How would you like to pay?"]
+  - [customer, "I already paid it two days ago through UPI. Why are you calling me?"]
+  - [agent, "Sir, our system shows it is still pending. Please make the payment today."]
+  - [customer, "This is the third time someone from your company has called me this week. I told you I have already paid!"]
+  - [agent, "Sir, the payment is not reflecting, so you need to pay to avoid charges."]
+  - [customer, "This is ridiculous. I am not paying twice. I am fed up with these calls, stop calling me!"]
+  - [agent, "Sir, please calm down."]
+  - [customer, "Don't tell me to calm down. I want to speak to your manager right now."]
+expected:
+  - {signal: already_paid_dispute, turn: 5}
+  - {signal: frustration_rising, turn: 7}
+  - {signal: frustration_rising, turn: 9, duplicate_of_previous: true}
+  - {signal: escalation_request, turn: 11}

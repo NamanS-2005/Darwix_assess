@@ -1,0 +1,306 @@
+{
+ "call_id": "id-20261001-220442-d4c4",
+ "market": "id_multifinance",
+ "channel": "simulated",
+ "customer_id": "D002",
+ "due_date": "2026-10-03",
+ "outside_calling_hours": true,
+ "state": {
+  "verified": true,
+  "verify_attempts": 1,
+  "disposition": "PTP_ON_TIME",
+  "ptp": {
+   "date": "2026-10-02",
+   "mode": "other",
+   "class": "PTP_ON_TIME"
+  },
+  "tickets": [],
+  "ended": false,
+  "details_shared": true,
+  "offered_anything_else": true
+ },
+ "crm_summary": null,
+ "kb_log": [
+  {
+   "query": "penalti pelunasan dipercepat",
+   "results": [
+    "[kb_id_faq_d11a46 | id_multifinance/faq_angsuran.md §Apakah saya bisa melunasi lebih cepat? | v2026-03-01]",
+    "[kb_id_faq_74136f | id_multifinance/faq_angsuran.md §Berapa denda keterlambatan? | v2026-03-01]",
+    "[kb_id_faq_50ba7e | id_multifinance/faq_angsuran.md §Apakah saya bisa membayar sebagian angsuran? | v2026-03-01]"
+   ],
+   "abstained": false,
+   "mode": "hybrid"
+  },
+  {
+   "query": "transfer mobile banking ke virtual account real-time",
+   "results": [
+    "[kb_id_faq_d11a46 | id_multifinance/faq_angsuran.md §Apakah saya bisa melunasi lebih cepat? | v2026-03-01]",
+    "[kb_id_faq_3f8cee | id_multifinance/faq_angsuran.md §Bagaimana cara membayar angsuran? | v2026-03-01]",
+    "[kb_id_faq_50ba7e | id_multifinance/faq_angsuran.md §Apakah saya bisa membayar sebagian angsuran? | v2026-03-01]"
+   ],
+   "abstained": false,
+   "mode": "hybrid"
+  }
+ ],
+ "guard_log": [],
+ "metrics": {
+  "kb_ms": [
+   926.6,
+   1124.6
+  ],
+  "llm_ms": [
+   560,
+   495,
+   524,
+   1110,
+   638,
+   600,
+   1228
+  ],
+  "turn_ms": [
+   3111,
+   2404,
+   2019
+  ],
+  "providers": {
+   "groq2/qwen/qwen3.8-27b": 5,
+   "groq2/openai/gpt-oss-120b": 2
+  }
+ },
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Selamat malam, saya Dewi, asisten virtual dari Pundi Mitra Finance. Percakapan ini direkam untuk menjaga kualitas layanan. Apakah saya berbicara dengan Bu Siti?",
+   "ts": 1790872482.2254162,
+   "source": "fixed_script"
+  },
+  {
+   "role": "customer",
+   "text": "Iya betul. By the way, kalau saya mau pelunasan dipercepat ada penalti nggak, dan transfer via mobile banking ke VA bisa real-time kan?",
+   "ts": 1790872629.2422664,
+   "asr": {
+    "intended": "Iya betul. Btw, kalau saya mau pelunasan dipercepat ada penalty nggak, dan transfer via mobile banking ke VA bisa real-time kan?",
+    "ms": 357
+   },
+   "intended": "Iya betul. Btw, kalau saya mau pelunasan dipercepat ada penalty nggak, dan transfer via mobile banking ke VA bisa real-time kan?"
+  },
+  {
+   "role": "agent",
+   "text": "Boleh, Bu. Pelunasan dipercepat dikenakan penalti 3% dari sisa pokok pembiayaan, dan untuk nominalnya bisa minta surat simulasi lewat aplikasi atau cabang. Untuk transfer via mobile banking ke virtual account, masuknya real-time, Bu.\n\nSekarang, untuk keamanan data, boleh saya konfirmasi tanggal lahir Ibu atau 4 digit terakhir nomor kontrak?",
+   "ts": 1790872632.3528004,
+   "source": "llm",
+   "tools": [
+    {
+     "tool": "search_knowledge_base",
+     "args": {
+      "query": "penalti pelunasan dipercepat"
+     },
+     "result": {
+      "results": [
+       {
+        "citation": "kb_id_faq_d11a46",
+        "title": "Apakah saya bisa melunasi lebih cepat?",
+        "content": "Bisa. Pelunasan dipercepat dikenakan biaya penalti 3% dari sisa pokok pembiayaan. Minta surat simulasi pelunasan melalui aplikasi atau cabang."
+       },
+       {
+        "citation": "kb_id_faq_74136f",
+        "title": "Berapa denda keterlambatan?",
+        "content": "Jika angsuran belum dibayar setelah tanggal jatuh tempo, dikenakan denda keterlambatan sebesar 0,2% per hari dari angsuran yang tertunggak. Tidak ada masa tenggang untuk denda. Keterlambatan juga dilaporkan ke SLIK OJK dan dapat memengaruhi riwayat kredit."
+       },
+       {
+        "citation": "kb_id_faq_50ba7e",
+        "title": "Apakah saya bisa membayar sebagian angsuran?",
+        "content": "Bisa, tetapi sisa angsuran tetap dianggap tertunggak dan dikenakan denda. Disarankan membayar penuh sebelum jatuh tempo."
+       }
+      ],
+      "instruction": "Answer ONLY from these results, briefly. If they don't answer the question, say you don't have that information."
+     },
+     "ms": 926.7,
+     "model": "groq2/qwen/qwen3.8-27b"
+    },
+    {
+     "tool": "search_knowledge_base",
+     "args": {
+      "query": "transfer mobile banking ke virtual account real-time"
+     },
+     "result": {
+      "results": [
+       {
+        "citation": "kb_id_faq_d11a46",
+        "title": "Apakah saya bisa melunasi lebih cepat?",
+        "content": "Bisa. Pelunasan dipercepat dikenakan biaya penalti 3% dari sisa pokok pembiayaan. Minta surat simulasi pelunasan melalui aplikasi atau cabang."
+       },
+       {
+        "citation": "kb_id_faq_3f8cee",
+        "title": "Bagaimana cara membayar angsuran?",
+        "content": "Virtual account BCA, BRI, Mandiri atau BNI (nomor VA = kode perusahaan + nomor kontrak) Gerai Indomaret dan Alfamart (sebutkan \"bayar angsuran Pundi Mitra\" dan nomor kontrak), biaya admin Rp2.500–Rp5.000 Aplikasi Pundi Mitra, Tokopedia atau DANA Pembayaran melalui virtual account masuk secara real-time. Simpan bukti pembayaran."
+       },
+       {
+        "citation": "kb_id_faq_50ba7e",
+        "title": "Apakah saya bisa membayar sebagian angsuran?",
+        "content": "Bisa, tetapi sisa angsuran tetap dianggap tertunggak dan dikenakan denda. Disarankan membayar penuh sebelum jatuh tempo."
+       }
+      ],
+      "instruction": "Answer ONLY from these results, briefly. If they don't answer the question, say you don't have that information."
+     },
+     "ms": 1124.8,
+     "model": "groq2/qwen/qwen3.8-27b"
+    }
+   ],
+   "agent_ms": 3111,
+   "state": {
+    "verified": false,
+    "disposition": null,
+    "ended": false
+   }
+  },
+  {
+   "role": "customer",
+   "text": "Tanggal lahir saya 25 Agustus 1993.",
+   "ts": 1790872708.1956408,
+   "asr": {
+    "intended": "Tanggal lahir saya 25 Agustus 1993.",
+    "ms": 268
+   },
+   "intended": "Tanggal lahir saya 25 Agustus 1993."
+  },
+  {
+   "role": "agent",
+   "text": "Terima kasih, Bu Siti. Kami ingin mengingatkan bahwa angsuran sebesar Rp685.000 untuk pembiayaan elektronik (kulkas dan mesin cuci) jatuh tempo pada Sabtu, 3 Oktober 2026, angsuran ke‑5 dari 12 bulan. Apakah Ibu berencana membayar pada tanggal tersebut?",
+   "ts": 1790872710.6000035,
+   "source": "llm",
+   "tools": [
+    {
+     "tool": "verify_identity",
+     "args": {
+      "date_of_birth": "1993-08-25"
+     },
+     "result": {
+      "verified": true,
+      "instruction": "Thank the customer, then call get_loan_details and give the reminder."
+     },
+     "ms": 0.2,
+     "model": "groq2/qwen/qwen3.8-27b"
+    },
+    {
+     "tool": "get_loan_details",
+     "args": {},
+     "result": {
+      "product": "Pembiayaan elektronik (kulkas dan mesin cuci)",
+      "amount_due": "Rp685.000",
+      "due_date": "2026-10-03",
+      "due_date_spoken": "Sabtu, 3 Oktober 2026",
+      "days_until_due": 2,
+      "auto_debit_active": false,
+      "auto_debit_bank": null,
+      "grace_period_end": "2026-10-03",
+      "payment_history": "1 kali terlambat 3 hari",
+      "tenor": "12 bulan (angsuran ke-5)"
+     },
+     "ms": 0.1,
+     "model": "groq2/qwen/qwen3.8-27b"
+    }
+   ],
+   "agent_ms": 2404,
+   "state": {
+    "verified": true,
+    "disposition": null,
+    "ended": false
+   }
+  },
+  {
+   "role": "customer",
+   "text": "Saya akan bayar lewat Alfamart satu hari sebelum jatuh tempo, jadi tanggal 2 Oktober.",
+   "ts": 1790873027.2912729,
+   "asr": {
+    "intended": "Saya akan bayar lewat Alfamart satu hari sebelum jatuh tempo, jadi tanggal 2 Oktober.",
+    "ms": 258
+   },
+   "intended": "Saya akan bayar lewat Alfamart satu hari sebelum jatuh tempo, jadi tanggal 2 Oktober."
+  },
+  {
+   "role": "agent",
+   "text": "Baik, Bu Siti, terima kasih. Kami catat Ibu akan membayar Rp685.000 melalui Alfamart pada Jumat, 2 Oktober 2026. Jika ada pertanyaan lain, silakan beri tahu. Selamat malam, terima kasih telah menggunakan layanan Pundi Mitra Finance.",
+   "ts": 1790873029.3103244,
+   "source": "llm",
+   "tools": [
+    {
+     "tool": "record_promise_to_pay",
+     "args": {
+      "date": "2026-10-02",
+      "mode": "other"
+     },
+     "result": {
+      "ok": true,
+      "classification": "PTP_ON_TIME",
+      "date_spoken": "Jumat, 2 Oktober 2026",
+      "mode": "other",
+      "instruction": "Confirm the date and mode back to the customer and thank them."
+     },
+     "ms": 0.3,
+     "model": "groq2/qwen/qwen3.8-27b"
+    }
+   ],
+   "agent_ms": 2019,
+   "state": {
+    "verified": true,
+    "disposition": "PTP_ON_TIME",
+    "ended": false
+   }
+  }
+ ],
+ "scenario": {
+  "id": "id_03_mixed_english_terms",
+  "title": "ID – Mixed English loanwords (DP, tenor, transfer, cashback)",
+  "market": "id_multifinance",
+  "customer_id": "D002",
+  "expect": {
+   "verified": true,
+   "kb_used": true,
+   "tools_called": [
+    "search_knowledge_base",
+    "record_promise_to_pay"
+   ],
+   "disposition_in": [
+    "PTP_ON_TIME"
+   ],
+   "agent_says_any": [
+    "3\\s?%"
+   ],
+   "language_judge": "Bahasa Indonesia; customer's English loanwords tolerated; agent does not reply with English sentences"
+  }
+ },
+ "latency": {
+  "asr_ms": [
+   357,
+   268,
+   258
+  ],
+  "agent_ms": [
+   3111,
+   2404,
+   2019
+  ],
+  "tts_ms": [
+   5619,
+   15868,
+   8073,
+   15051
+  ]
+ },
+ "asr_wer": 0.095,
+ "asr_pairs": [
+  {
+   "intended": "Iya betul. Btw, kalau saya mau pelunasan dipercepat ada penalty nggak, dan transfer via mobile banking ke VA bisa real-time kan?",
+   "asr": "Iya betul. By the way, kalau saya mau pelunasan dipercepat ada penalti nggak, dan transfer via mobile banking ke VA bisa real-time kan?"
+  },
+  {
+   "intended": "Tanggal lahir saya 25 Agustus 1993.",
+   "asr": "Tanggal lahir saya 25 Agustus 1993."
+  },
+  {
+   "intended": "Saya akan bayar lewat Alfamart satu hari sebelum jatuh tempo, jadi tanggal 2 Oktober.",
+   "asr": "Saya akan bayar lewat Alfamart satu hari sebelum jatuh tempo, jadi tanggal 2 Oktober."
+  }
+ ]
+}

@@ -1,0 +1,501 @@
+{
+ "utterances": 22,
+ "dropped_segments": 0,
+ "llm_skipped_prefilter": 10,
+ "asr_errors": 0,
+ "engine_stats": {
+  "signals_in": 6,
+  "below_threshold": 0,
+  "awaiting_llm_rejected": 0,
+  "duplicates_merged": 2,
+  "cooldown_suppressed": 0,
+  "held_then_shown": 0,
+  "held_expired": 0,
+  "evicted": 0,
+  "unknown_type": 0
+ },
+ "post_call": {
+  "missed_opportunities": [
+   {
+    "id": "N2",
+    "type": "cross_sell",
+    "label": "Missed opportunity",
+    "text": "Opportunity: \u201cMy daughter just got admission in an engineering college and I have to\u201d. After closing the EMI topic, mention the pre-approved top-up / two-wheeler loan (subject to eligibility).",
+    "priority": 3,
+    "topic": "cross_sell",
+    "confidence": 1.0,
+    "source": "rule+llm",
+    "evidence": [
+     "My daughter just got admission in an engineering college and I have to arrange her fees next month.",
+     "Also my son wants a scooter for college",
+     "So we are thinking of buying a second two-wheeler soon."
+    ],
+    "status": "open_at_end",
+    "updates": 2,
+    "uid": 13
+   }
+  ],
+  "unresolved_compliance": [],
+  "acted_on": 0,
+  "total_nudges": 2
+ },
+ "topic_shifts": [
+  {
+   "uid": 1,
+   "from": null,
+   "to": "greeting",
+   "t": 4.1
+  },
+  {
+   "uid": 4,
+   "from": "greeting",
+   "to": "verification",
+   "t": 14.0
+  },
+  {
+   "uid": 9,
+   "from": "verification",
+   "to": "payment_reminder",
+   "t": 32.8
+  },
+  {
+   "uid": 11,
+   "from": "payment_reminder",
+   "to": "small_talk",
+   "t": 34.9
+  },
+  {
+   "uid": 12,
+   "from": "small_talk",
+   "to": "payment_difficulty",
+   "t": 38.4
+  },
+  {
+   "uid": 15,
+   "from": "payment_difficulty",
+   "to": "payment_reminder",
+   "t": 50.8
+  },
+  {
+   "uid": 16,
+   "from": "payment_reminder",
+   "to": "verification",
+   "t": 53.5
+  },
+  {
+   "uid": 18,
+   "from": "verification",
+   "to": "offer",
+   "t": 59.9
+  },
+  {
+   "uid": 21,
+   "from": "offer",
+   "to": "small_talk",
+   "t": 69.4
+  }
+ ],
+ "frustration_trace": [
+  0.0,
+  0.0,
+  0.2,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0
+ ],
+ "component_latency": {
+  "chunk_processing_us_p50": 503.5,
+  "asr_ms": [
+   832,
+   232,
+   232,
+   225,
+   227,
+   214,
+   216,
+   219,
+   339,
+   214,
+   215,
+   251,
+   335,
+   238,
+   260,
+   237,
+   241,
+   238,
+   291,
+   327,
+   227,
+   229
+  ],
+  "audio_to_text_ms": [
+   1344,
+   748,
+   744,
+   724,
+   725,
+   718,
+   717,
+   719,
+   342,
+   716,
+   714,
+   752,
+   730,
+   740,
+   764,
+   736,
+   742,
+   738,
+   790,
+   828,
+   728,
+   730
+  ],
+  "rules_us": [
+   72.4,
+   58.5,
+   59.1,
+   68.7,
+   27.1,
+   76.0,
+   55.6,
+   35.4,
+   80.3,
+   28.3,
+   14.0,
+   67.5,
+   122.5,
+   36.9,
+   58.5,
+   57.6,
+   47.1,
+   102.2,
+   20.8,
+   52.3,
+   72.3,
+   44.2
+  ],
+  "llm_ms": [
+   834,
+   750,
+   618,
+   761,
+   587,
+   637,
+   908,
+   203,
+   620,
+   751,
+   498,
+   1322
+  ]
+ },
+ "transcript": [
+  {
+   "uid": 1,
+   "speaker": "agent",
+   "text": "Good morning, this is Karan from Udaan Credit Finance.",
+   "start_t": 0.5,
+   "end_t": 4.12,
+   "asr_ms": 832,
+   "asr_conf": 0.841,
+   "forced_cut": false,
+   "audio_to_text_ms": 1344
+  },
+  {
+   "uid": 2,
+   "speaker": "agent",
+   "text": "This call is recorded for quality and compliance.",
+   "start_t": 4.9,
+   "end_t": 8.14,
+   "asr_ms": 232,
+   "asr_conf": 0.872,
+   "forced_cut": false,
+   "audio_to_text_ms": 748
+  },
+  {
+   "uid": 3,
+   "speaker": "agent",
+   "text": "Am I speaking with Ms. Priya Menon?",
+   "start_t": 9.18,
+   "end_t": 11.46,
+   "asr_ms": 232,
+   "asr_conf": 0.795,
+   "forced_cut": false,
+   "audio_to_text_ms": 744
+  },
+  {
+   "uid": 4,
+   "speaker": "customer",
+   "text": "Yes, this is Priya speaking.",
+   "start_t": 11.94,
+   "end_t": 14.0,
+   "asr_ms": 225,
+   "asr_conf": 0.861,
+   "forced_cut": false,
+   "audio_to_text_ms": 724
+  },
+  {
+   "uid": 5,
+   "speaker": "agent",
+   "text": "Thank you.",
+   "start_t": 14.74,
+   "end_t": 15.3,
+   "asr_ms": 227,
+   "asr_conf": 0.799,
+   "forced_cut": false,
+   "audio_to_text_ms": 725
+  },
+  {
+   "uid": 6,
+   "speaker": "agent",
+   "text": "For verification, could you please tell me your date of birth?",
+   "start_t": 16.22,
+   "end_t": 19.66,
+   "asr_ms": 214,
+   "asr_conf": 0.9,
+   "forced_cut": false,
+   "audio_to_text_ms": 718
+  },
+  {
+   "uid": 7,
+   "speaker": "customer",
+   "text": "Sure, it's the 9th of March, 1989.",
+   "start_t": 20.34,
+   "end_t": 23.86,
+   "asr_ms": 216,
+   "asr_conf": 0.846,
+   "forced_cut": false,
+   "audio_to_text_ms": 717
+  },
+  {
+   "uid": 8,
+   "speaker": "agent",
+   "text": "Thank you for confirming.",
+   "start_t": 24.5,
+   "end_t": 25.88,
+   "asr_ms": 219,
+   "asr_conf": 0.893,
+   "forced_cut": false,
+   "audio_to_text_ms": 719
+  },
+  {
+   "uid": 9,
+   "speaker": "agent",
+   "text": "I'm calling to remind you that your personal loan EMI of 9,200 rupees is",
+   "start_t": 26.8,
+   "end_t": 32.84,
+   "asr_ms": 339,
+   "asr_conf": 0.882,
+   "forced_cut": true,
+   "audio_to_text_ms": 342
+  },
+  {
+   "uid": 10,
+   "speaker": "agent",
+   "text": "It's due on the 5th.",
+   "start_t": 32.88,
+   "end_t": 33.72,
+   "asr_ms": 214,
+   "asr_conf": 0.712,
+   "forced_cut": false,
+   "audio_to_text_ms": 716
+  },
+  {
+   "uid": 11,
+   "speaker": "customer",
+   "text": "Okay.",
+   "start_t": 34.44,
+   "end_t": 34.92,
+   "asr_ms": 215,
+   "asr_conf": 0.626,
+   "forced_cut": false,
+   "audio_to_text_ms": 714
+  },
+  {
+   "uid": 12,
+   "speaker": "customer",
+   "text": "Actually, this month is a bit heavy for me.",
+   "start_t": 35.88,
+   "end_t": 38.36,
+   "asr_ms": 251,
+   "asr_conf": 0.882,
+   "forced_cut": false,
+   "audio_to_text_ms": 752
+  },
+  {
+   "uid": 13,
+   "speaker": "customer",
+   "text": "My daughter just got admission in an engineering college and I have to arrange her fees next month.",
+   "start_t": 39.38,
+   "end_t": 44.98,
+   "asr_ms": 335,
+   "asr_conf": 0.927,
+   "forced_cut": true,
+   "audio_to_text_ms": 730
+  },
+  {
+   "uid": 14,
+   "speaker": "agent",
+   "text": "I understand.",
+   "start_t": 45.78,
+   "end_t": 46.68,
+   "asr_ms": 238,
+   "asr_conf": 0.758,
+   "forced_cut": false,
+   "audio_to_text_ms": 740
+  },
+  {
+   "uid": 15,
+   "speaker": "agent",
+   "text": "Will the EMI be paid through auto-debit as usual?",
+   "start_t": 47.64,
+   "end_t": 50.8,
+   "asr_ms": 260,
+   "asr_conf": 0.87,
+   "forced_cut": false,
+   "audio_to_text_ms": 764
+  },
+  {
+   "uid": 16,
+   "speaker": "customer",
+   "text": "Yes, the auto-debit is fine.",
+   "start_t": 51.34,
+   "end_t": 53.5,
+   "asr_ms": 237,
+   "asr_conf": 0.841,
+   "forced_cut": false,
+   "audio_to_text_ms": 736
+  },
+  {
+   "uid": 17,
+   "speaker": "customer",
+   "text": "Also my son wants a scooter for college,",
+   "start_t": 54.42,
+   "end_t": 56.8,
+   "asr_ms": 241,
+   "asr_conf": 0.965,
+   "forced_cut": false,
+   "audio_to_text_ms": 742
+  },
+  {
+   "uid": 18,
+   "speaker": "customer",
+   "text": "So we are thinking of buying a second two-wheeler soon.",
+   "start_t": 57.28,
+   "end_t": 59.94,
+   "asr_ms": 238,
+   "asr_conf": 0.921,
+   "forced_cut": false,
+   "audio_to_text_ms": 738
+  },
+  {
+   "uid": 19,
+   "speaker": "agent",
+   "text": "Okay, man.",
+   "start_t": 60.74,
+   "end_t": 61.4,
+   "asr_ms": 291,
+   "asr_conf": 0.75,
+   "forced_cut": false,
+   "audio_to_text_ms": 790
+  },
+  {
+   "uid": 20,
+   "speaker": "agent",
+   "text": "Please keep sufficient balance in your account one day before the due date.",
+   "start_t": 62.38,
+   "end_t": 67.04,
+   "asr_ms": 327,
+   "asr_conf": 0.916,
+   "forced_cut": false,
+   "audio_to_text_ms": 828
+  },
+  {
+   "uid": 21,
+   "speaker": "customer",
+   "text": "Sure, I will do that.",
+   "start_t": 67.76,
+   "end_t": 69.4,
+   "asr_ms": 227,
+   "asr_conf": 0.817,
+   "forced_cut": false,
+   "audio_to_text_ms": 728
+  },
+  {
+   "uid": 22,
+   "speaker": "agent",
+   "text": "Thank you for your time. Have a nice day.",
+   "start_t": 70.18,
+   "end_t": 72.9,
+   "asr_ms": 229,
+   "asr_conf": 0.914,
+   "forced_cut": false,
+   "audio_to_text_ms": 730
+  }
+ ],
+ "asr": "groq",
+ "llm": true,
+ "nudges": [
+  {
+   "id": "N1",
+   "type": "payment_difficulty",
+   "label": "Payment difficulty",
+   "text": "Show empathy (\u201cthis month is a bit heavy for me\u201d). Offer the approved path: hardship review / Customer Assistance callback. Don't ask them to borrow.",
+   "priority": 2,
+   "topic": "payment_difficulty",
+   "confidence": 0.9,
+   "source": "llm",
+   "evidence": [
+    "this month is a bit heavy for me"
+   ],
+   "status": "active",
+   "updates": 0,
+   "uid": 12,
+   "t_call": 38.31,
+   "latency_ms": {
+    "endpointing": 497.6,
+    "asr": 254.0,
+    "signal": 636.9,
+    "llm": 636.7,
+    "engine": 0.2,
+    "delivery": 0.4,
+    "e2e": 1389.0
+   },
+   "path": "llm"
+  },
+  {
+   "id": "N2",
+   "type": "cross_sell",
+   "label": "Missed opportunity",
+   "text": "Opportunity: \u201cMy daughter just got admission in an engineering college and I have to\u201d. After closing the EMI topic, mention the pre-approved top-up / two-wheeler loan (subject to eligibility).",
+   "priority": 3,
+   "topic": "cross_sell",
+   "confidence": 1.0,
+   "source": "rule+llm",
+   "evidence": [
+    "My daughter just got admission in an engineering college and I have to arrange her fees next month.",
+    "Also my son wants a scooter for college",
+    "So we are thinking of buying a second two-wheeler soon."
+   ],
+   "status": "active",
+   "updates": 0,
+   "uid": 13,
+   "t_call": 44.92,
+   "latency_ms": {
+    "endpointing": 389.8,
+    "asr": 339.8,
+    "signal": 908.6,
+    "llm": 908.4,
+    "engine": 0.1,
+    "delivery": 0.4,
+    "e2e": 1638.8
+   },
+   "path": "llm"
+  }
+ ]
+}

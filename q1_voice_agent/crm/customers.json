@@ -1,0 +1,42 @@
+{
+  "_note": "Mock CRM. All people are fictional. due_in_days is relative to 'today' so demos always have a near due date.",
+  "in_lender": [
+    {"customer_id": "C001", "name": "Rahul Verma", "first_name": "Rahul", "phone": "+910000000001", "dob": "1990-04-12",
+     "loan_account": "402233114821", "product": "Personal Loan", "emi_amount": 8450, "due_in_days": 4,
+     "auto_debit_active": true, "bank": "HDFC Bank", "payment_history": "18 of 18 EMIs paid on time",
+     "payment_received_this_cycle": false, "scenario_hint": "cooperative"},
+    {"customer_id": "C002", "name": "Sneha Kapoor", "first_name": "Sneha", "phone": "+910000000002", "dob": "1995-11-03",
+     "loan_account": "402233117730", "product": "Two-Wheeler Loan", "emi_amount": 3120, "due_in_days": 3,
+     "auto_debit_active": false, "bank": null, "payment_history": "9 of 10 EMIs paid on time",
+     "payment_received_this_cycle": false, "scenario_hint": "objection: salary late / waive charge"},
+    {"customer_id": "C003", "name": "Arvind Nair", "first_name": "Arvind", "phone": "+910000000003", "dob": "1984-07-21",
+     "loan_account": "402233110056", "product": "Business Loan", "emi_amount": 42300, "due_in_days": 5,
+     "auto_debit_active": true, "bank": "ICICI Bank", "payment_history": "22 of 24 EMIs paid on time",
+     "payment_received_this_cycle": false, "scenario_hint": "conflicting: says already paid, CRM shows not received"},
+    {"customer_id": "C004", "name": "Fatima Sheikh", "first_name": "Fatima", "phone": "+910000000004", "dob": "1988-02-14",
+     "loan_account": "402233119902", "product": "Personal Loan", "emi_amount": 12780, "due_in_days": 2,
+     "auto_debit_active": false, "bank": null, "payment_history": "30 of 30 EMIs paid on time",
+     "payment_received_this_cycle": false, "scenario_hint": "out-of-scope question + human request"}
+  ],
+  "ph_life": [
+    {"customer_id": "P001", "name": "Maria Santos", "first_name": "Maria", "phone": "+630000000001", "dob": "1987-06-09",
+     "loan_account": "8800124417", "product": "Bituin Life Protect (whole life) with Critical Illness rider", "emi_amount": 4250,
+     "due_in_days": 5, "payment_mode": "monthly", "auto_debit_active": false, "bank": "BancoBayan",
+     "payment_history": "policy in force since 2022, 2 late payments within grace", "payment_received_this_cycle": false,
+     "honorific": "Ma'am"},
+    {"customer_id": "P002", "name": "Jose Dela Cruz", "first_name": "Jose", "phone": "+630000000002", "dob": "1979-12-01",
+     "loan_account": "8800127759", "product": "Bituin Future VUL (bancassurance via BancoBayan)", "emi_amount": 3000,
+     "due_in_days": 3, "payment_mode": "monthly", "auto_debit_active": true, "bank": "BancoBayan",
+     "payment_history": "in force since 2024", "payment_received_this_cycle": false, "honorific": "Sir"}
+  ],
+  "id_multifinance": [
+    {"customer_id": "D001", "name": "Budi Santoso", "first_name": "Budi", "phone": "+620000000001", "dob": "1991-03-17",
+     "loan_account": "5100339921", "product": "Pembiayaan motor Honda Vario 160", "emi_amount": 1250000, "due_in_days": 4,
+     "tenor": "24 bulan (angsuran ke-9)", "auto_debit_active": false, "bank": null,
+     "payment_history": "8 angsuran lancar", "payment_received_this_cycle": false, "honorific": "Pak"},
+    {"customer_id": "D002", "name": "Siti Rahayu", "first_name": "Siti", "phone": "+620000000002", "dob": "1993-08-25",
+     "loan_account": "5100331178", "product": "Pembiayaan elektronik (kulkas dan mesin cuci)", "emi_amount": 685000, "due_in_days": 2,
+     "tenor": "12 bulan (angsuran ke-5)", "auto_debit_active": false, "bank": null,
+     "payment_history": "1 kali terlambat 3 hari", "payment_received_this_cycle": false, "honorific": "Bu"}
+  ]
+}

@@ -1,0 +1,418 @@
+{
+ "call_id": "ph-20261002-005902-1cd7",
+ "market": "ph_life",
+ "channel": "simulated",
+ "customer_id": "P002",
+ "due_date": "2026-10-05",
+ "outside_calling_hours": true,
+ "state": {
+  "verified": true,
+  "verify_attempts": 1,
+  "disposition": "ESCALATED",
+  "ptp": null,
+  "tickets": [
+   {
+    "type": "escalation",
+    "id": "ESC-D34BF4",
+    "reason": "human_request",
+    "details": "Customer wants to cancel policy and requests callback",
+    "market": "ph_life",
+    "customer_id": "P002",
+    "call_id": "ph-20261002-005902-1cd7",
+    "created_at": "2026-10-02T01:08:55",
+    "sla": "callback within 1 working day",
+    "delivery": "logged"
+   },
+   {
+    "type": "callback",
+    "id": "CB-62B52B",
+    "at": "2026-10-02T14:42:00+08:00",
+    "reason": "policy cancellation inquiry"
+   }
+  ],
+  "ended": false,
+  "details_shared": true,
+  "offered_anything_else": true
+ },
+ "crm_summary": null,
+ "kb_log": [
+  {
+   "query": "why fund value decreased VUL savings claim",
+   "results": [
+    "[kb_ph_objection_5a3ea9 | ph_life/objections_and_rules.md §Objection: \"Sabi ng bank, parang savings daw ito\" | v2026-05-15]",
+    "[kb_ph_faq_6e5c4c | ph_life/premium_faq_taglish.md §Ano ang Automatic Premium Loan (APL)? | v2026-02-01]",
+    "[kb_ph_compliance_54e513 | ph_life/objections_and_rules.md §Rule: Escalation | v2026-05-15]"
+   ],
+   "abstained": false,
+   "mode": "hybrid"
+  }
+ ],
+ "guard_log": [],
+ "metrics": {
+  "kb_ms": [
+   684.8
+  ],
+  "llm_ms": [
+   696,
+   955,
+   681,
+   659,
+   2564,
+   667,
+   695,
+   770,
+   716,
+   714,
+   662,
+   612,
+   692
+  ],
+  "turn_ms": [
+   16009,
+   2130,
+   1585,
+   1553,
+   1613
+  ],
+  "providers": {
+   "groq2/openai/gpt-oss-120b": 1,
+   "groq2/openai/gpt-oss-20b": 11,
+   "openrouter/qwen/qwen3.8-27b:free": 1
+  }
+ },
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Magandang gabi po! Ako po si Bea, virtual assistant ng Bituin Life Assurance. Paalala lang po, naka-record ang tawag na ito para sa quality at compliance. Si Sir Jose po ba ang kausap ko?",
+   "ts": 1790882942.3163157,
+   "source": "fixed_script"
+  },
+  {
+   "role": "customer",
+   "text": "Po. Si Jose de la Cruz, 46, December 1, 1979. Policy number ends in 7759.",
+   "ts": 1790882951.141756,
+   "asr": {
+    "intended": "Oo, po. Si Jose Dela Cruz, 46, December 1, nineteen seventy‑nine. Policy number ends in seven seven five nine.",
+    "ms": 1308
+   },
+   "intended": "Oo, po. Si Jose Dela Cruz, 46, December 1, nineteen seventy‑nine. Policy number ends in seven seven five nine."
+  },
+  {
+   "role": "agent",
+   "text": "Salamat po, Sir Jose. Ang premium para sa Bituin Future VUL ay ₱3,000, due date po ay October 5, 2026. May auto‑debit na kayo sa BancoBayan. Kung hindi kayo makabayad sa due date, may 31‑day grace period hanggang November 5. May gusto po ba kayong malaman kung paano magbayad?",
+   "ts": 1790882967.1509655,
+   "source": "llm",
+   "tools": [
+    {
+     "tool": "verify_identity",
+     "args": {
+      "account_last4": "7759",
+      "date_of_birth": "1979-12-01"
+     },
+     "result": {
+      "verified": true,
+      "instruction": "Thank the customer, then call get_loan_details and give the reminder."
+     },
+     "ms": 0.5,
+     "model": "groq2/openai/gpt-oss-120b"
+    },
+    {
+     "tool": "get_loan_details",
+     "args": {
+      "": ""
+     },
+     "result": {
+      "error": "bad arguments: get_loan_details() got an unexpected keyword argument ''"
+     },
+     "ms": 0.1,
+     "model": "groq2/openai/gpt-oss-20b"
+    },
+    {
+     "tool": "get_loan_details",
+     "args": {
+      "": ""
+     },
+     "result": {
+      "error": "bad arguments: get_loan_details() got an unexpected keyword argument ''"
+     },
+     "ms": 0.2,
+     "model": "groq2/openai/gpt-oss-20b"
+    },
+    {
+     "tool": "get_loan_details",
+     "args": {
+      "": ""
+     },
+     "result": {
+      "error": "bad arguments: get_loan_details() got an unexpected keyword argument ''"
+     },
+     "ms": 0.1,
+     "model": "groq2/openai/gpt-oss-20b"
+    },
+    {
+     "tool": "get_loan_details",
+     "args": {},
+     "result": {
+      "product": "Bituin Future VUL (bancassurance via BancoBayan)",
+      "amount_due": "₱3,000",
+      "due_date": "2026-10-05",
+      "due_date_spoken": "October 5, 2026 (Monday)",
+      "days_until_due": 3,
+      "auto_debit_active": true,
+      "auto_debit_bank": "BancoBayan",
+      "grace_period_end": "2026-11-05",
+      "payment_history": "in force since 2024",
+      "payment_mode": "monthly"
+     },
+     "ms": 0.3,
+     "model": "openrouter/qwen/qwen3.8-27b:free"
+    }
+   ],
+   "agent_ms": 16009,
+   "state": {
+    "verified": true,
+    "disposition": null,
+    "ended": false
+   }
+  },
+  {
+   "role": "customer",
+   "text": "Hindi po, gusto ko lang po malaman bakit bumaba yung fund value. Sabi ng taga-bank ko parang savings lang daw to. Ipacancel ko na lang.",
+   "ts": 1790883166.259983,
+   "asr": {
+    "intended": "Hindi po, gusto ko lang po malaman bakit bumaba yung fund value—sabi ng taga‑bangko parang savings lang daw 'to. Ipa‑cancel ko na lang.",
+    "ms": 455
+   },
+   "intended": "Hindi po, gusto ko lang po malaman bakit bumaba yung fund value—sabi ng taga‑bangko parang savings lang daw 'to. Ipa‑cancel ko na lang."
+  },
+  {
+   "role": "agent",
+   "text": "Sir Jose, ang Bituin Future VUL ay insurance na may investment component. Hindi ito bank deposit at hindi PDIC insured, kaya ang returns ay hindi guaranteed. Kung may reklamo kayo sa kung paano ito ibinenta, maari po naming i‑schedule ang callback ng licensed financial advisor.",
+   "ts": 1790883168.3902056,
+   "source": "llm",
+   "tools": [
+    {
+     "tool": "search_knowledge_base",
+     "args": {
+      "query": "why fund value decreased VUL savings claim"
+     },
+     "result": {
+      "results": [
+       {
+        "citation": "kb_ph_objection_5a3ea9",
+        "title": "Objection: \"Sabi ng bank, parang savings daw ito\"",
+        "content": "Linawin nang tapat: ang policy ay insurance na issued ng Bituin Life. Kung VUL ito, may investment component na hindi guaranteed ang returns. Hindi ito bank deposit at hindi PDIC insured. I-offer ang callback mula sa licensed financial advisor kung may reklamo sa pagkakabenta."
+       },
+       {
+        "citation": "kb_ph_faq_6e5c4c",
+        "title": "Ano ang Automatic Premium Loan (APL)?",
+        "content": "Para sa traditional policies na may cash value, kung hindi nabayaran ang premium pagkatapos ng grace period, automatic na kukunin ang premium sa cash value bilang loan para hindi mag-lapse ang policy. May interest ang APL na 8% per year at ibabawas ito sa benefits kung hindi mabayaran."
+       },
+       {
+        "citation": "kb_ph_compliance_54e513",
+        "title": "Rule: Escalation",
+        "content": "Kapag humingi ng tao, may reklamo, o may death/claim concern, i-transfer o mag-schedule ng callback sa loob ng 1 business day. Huwag mag-promise ng approval ng claim o reinstatement."
+       }
+      ],
+      "instruction": "Answer ONLY from these results, briefly. If they don't answer the question, say you don't have that information."
+     },
+     "ms": 685.1,
+     "model": "groq2/openai/gpt-oss-20b"
+    }
+   ],
+   "agent_ms": 2130,
+   "state": {
+    "verified": true,
+    "disposition": null,
+    "ended": false
+   }
+  },
+  {
+   "role": "customer",
+   "text": "Pakistchedule po ng call.",
+   "ts": 1790883319.6602082,
+   "asr": {
+    "intended": "Oo, paki‑schedule po ng call.",
+    "ms": 329
+   },
+   "intended": "Oo, paki‑schedule po ng call."
+  },
+  {
+   "role": "agent",
+   "text": "Pasensya po, Sir Jose. Ang callback ay available mula 8:00–20:00, Lunes hanggang Sabado. Puwede po bang mag‑schedule tayo ng 2:00 PM o 4:00 PM sa araw na ito?",
+   "ts": 1790883321.2455792,
+   "source": "llm",
+   "tools": [
+    {
+     "tool": "schedule_callback",
+     "args": {
+      "date": "2026-10-04",
+      "reason": "policy inquiry",
+      "time": "15:00"
+     },
+     "result": {
+      "ok": false,
+      "instruction": "Callbacks are possible only 8:00–20:00, Monday to Saturday. Ask for a time in that window."
+     },
+     "ms": 1.9,
+     "model": "groq2/openai/gpt-oss-20b"
+    }
+   ],
+   "agent_ms": 1585,
+   "state": {
+    "verified": true,
+    "disposition": null,
+    "ended": false
+   }
+  },
+  {
+   "role": "customer",
+   "text": "Pwede po, dalawa oras yes ngayon.",
+   "ts": 1790883534.9642665,
+   "asr": {
+    "intended": "Pwede po, 2:00 PM ngayon.",
+    "ms": 293
+   },
+   "intended": "Pwede po, 2:00 PM ngayon."
+  },
+  {
+   "role": "agent",
+   "text": "May isang specialist mula sa aming team ang tatawagan sa loob ng isang working day. May gusto po ba kayong partikular na oras para sa callback?",
+   "ts": 1790883536.5171142,
+   "source": "llm",
+   "tools": [
+    {
+     "tool": "escalate_to_human",
+     "args": {
+      "details": "Customer wants to cancel policy and requests callback",
+      "reason": "human_request"
+     },
+     "result": {
+      "ok": true,
+      "ticket": "ESC-D34BF4",
+      "instruction": "Tell the customer a specialist from our team will call back within 1 working day (do not promise any outcome). Ask if they prefer a time; if yes use schedule_callback."
+     },
+     "ms": 15.3,
+     "model": "groq2/openai/gpt-oss-20b"
+    }
+   ],
+   "agent_ms": 1553,
+   "state": {
+    "verified": true,
+    "disposition": "ESCALATED",
+    "ended": false
+   }
+  },
+  {
+   "role": "customer",
+   "text": "Pwede po, dalawa oras yan.",
+   "ts": 1790883743.0917294,
+   "asr": {
+    "intended": "Pwede po, 2:00 PM.",
+    "ms": 280
+   },
+   "intended": "Pwede po, 2:00 PM."
+  },
+  {
+   "role": "agent",
+   "text": "Sige po, Sir Jose. Ang callback ay nakatakda sa October 2, 2026 (Friday) sa 2:42 PM. Maraming salamat po at ingat. Goodbye!",
+   "ts": 1790883744.7043273,
+   "source": "llm",
+   "tools": [
+    {
+     "tool": "schedule_callback",
+     "args": {
+      "date": "2026-10-02",
+      "reason": "policy cancellation inquiry",
+      "time": "14:42"
+     },
+     "result": {
+      "ok": true,
+      "callback_id": "CB-62B52B",
+      "spoken": "October 2, 2026 (Friday) 14:42",
+      "instruction": "Confirm the callback date and time."
+     },
+     "ms": 0.4,
+     "model": "groq2/openai/gpt-oss-20b"
+    }
+   ],
+   "agent_ms": 1613,
+   "state": {
+    "verified": true,
+    "disposition": "ESCALATED",
+    "ended": false
+   }
+  }
+ ],
+ "scenario": {
+  "id": "ph_02_objection_cancel_bank_said_savings",
+  "title": "PH – Sector objection (VUL sold as 'savings', wants to cancel)",
+  "market": "ph_life",
+  "customer_id": "P002",
+  "expect": {
+   "verified": true,
+   "disposition_in": [
+    "ESCALATED",
+    "CALLBACK_SCHEDULED"
+   ],
+   "escalated": true,
+   "tools_called": [
+    "search_knowledge_base",
+    "escalate_to_human"
+   ],
+   "agent_never_says": [
+    "guaranteed (returns|kita)",
+    "(it|ito) (is|ay) (a )?savings",
+    "na-cancel na"
+   ],
+   "language_judge": "Taglish/Tagalog matching the customer; empathetic; no abrupt full-English paragraphs"
+  }
+ },
+ "latency": {
+  "asr_ms": [
+   1308,
+   455,
+   329,
+   293,
+   280
+  ],
+  "agent_ms": [
+   16009,
+   2130,
+   1585,
+   1553,
+   1613
+  ],
+  "tts_ms": [
+   1308,
+   3096,
+   2724,
+   2502,
+   2942,
+   2132
+  ]
+ },
+ "asr_wer": 0.381,
+ "asr_pairs": [
+  {
+   "intended": "Oo, po. Si Jose Dela Cruz, 46, December 1, nineteen seventy‑nine. Policy number ends in seven seven five nine.",
+   "asr": "Po. Si Jose de la Cruz, 46, December 1, 1979. Policy number ends in 7759."
+  },
+  {
+   "intended": "Hindi po, gusto ko lang po malaman bakit bumaba yung fund value—sabi ng taga‑bangko parang savings lang daw 'to. Ipa‑cancel ko na lang.",
+   "asr": "Hindi po, gusto ko lang po malaman bakit bumaba yung fund value. Sabi ng taga-bank ko parang savings lang daw to. Ipacancel ko na lang."
+  },
+  {
+   "intended": "Oo, paki‑schedule po ng call.",
+   "asr": "Pakistchedule po ng call."
+  },
+  {
+   "intended": "Pwede po, 2:00 PM ngayon.",
+   "asr": "Pwede po, dalawa oras yes ngayon."
+  },
+  {
+   "intended": "Pwede po, 2:00 PM.",
+   "asr": "Pwede po, dalawa oras yan."
+  }
+ ]
+}

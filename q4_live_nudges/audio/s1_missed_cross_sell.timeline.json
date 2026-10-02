@@ -1,0 +1,83 @@
+{
+ "id": "s1_missed_cross_sell",
+ "duration": 73.57,
+ "turns": [
+  {
+   "turn": 0,
+   "speaker": "agent",
+   "text": "Good morning, this is Karan from Udaan Credit Finance. This call is recorded for quality and compliance. Am I speaking with Ms. Priya Menon?",
+   "start": 0.6,
+   "end": 11.577
+  },
+  {
+   "turn": 1,
+   "speaker": "customer",
+   "text": "Yes, this is Priya speaking.",
+   "start": 12.027,
+   "end": 14.232
+  },
+  {
+   "turn": 2,
+   "speaker": "agent",
+   "text": "Thank you. For verification, could you please tell me your date of birth?",
+   "start": 14.832,
+   "end": 19.965
+  },
+  {
+   "turn": 3,
+   "speaker": "customer",
+   "text": "Sure, it's the ninth of March, nineteen eighty nine.",
+   "start": 20.415,
+   "end": 23.971
+  },
+  {
+   "turn": 4,
+   "speaker": "agent",
+   "text": "Thank you for confirming. I'm calling to remind you that your personal loan EMI of nine thousand two hundred rupees is due on the fifth.",
+   "start": 24.571,
+   "end": 34.079
+  },
+  {
+   "turn": 5,
+   "speaker": "customer",
+   "text": "Okay. Actually this month is a bit heavy for me. My daughter just got admission in an engineering college and I have to arrange her fees next month.",
+   "start": 34.529,
+   "end": 45.282
+  },
+  {
+   "turn": 6,
+   "speaker": "agent",
+   "text": "I understand. Will the EMI be paid through auto-debit as usual?",
+   "start": 45.882,
+   "end": 50.983
+  },
+  {
+   "turn": 7,
+   "speaker": "customer",
+   "text": "Yes, the auto-debit is fine. Also my son wants a scooter for college, so we are thinking of buying a second two-wheeler soon.",
+   "start": 51.433,
+   "end": 60.235
+  },
+  {
+   "turn": 8,
+   "speaker": "agent",
+   "text": "Okay ma'am. Please keep sufficient balance in your account one day before the due date.",
+   "start": 60.835,
+   "end": 67.392
+  },
+  {
+   "turn": 9,
+   "speaker": "customer",
+   "text": "Sure, I will do that.",
+   "start": 67.842,
+   "end": 69.671
+  },
+  {
+   "turn": 10,
+   "speaker": "agent",
+   "text": "Thank you for your time, have a nice day.",
+   "start": 70.271,
+   "end": 73.12
+  }
+ ]
+}

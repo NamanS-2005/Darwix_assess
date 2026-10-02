@@ -1,0 +1,73 @@
+# Q3 Philippines coverage: cooperative · sector objection · mixed English/finance terms · colloquial · human escalation
+- id: ph_01_cooperative_taglish
+  title: PH – Cooperative policyowner (Taglish)
+  market: ph_life
+  customer_id: P001
+  persona: |
+    You are Maria Santos, 39, from Quezon City. Birthday June 9, 1987. Policy number ends in 4417. Say numbers like Filipinos do on the phone: the year in English words ("nineteen eighty-seven") and policy digits one by one in English ("four four one seven"). You speak natural Taglish (Tagalog with English words), polite, using "po".
+    Confirm identity. Say you'll pay the premium via GCash on payday which is before the due date. Ask "Pwede ko bang i-auto-debit na lang yung premium para hindi ko makalimutan?"
+    Then thank the agent and say bye.
+  expect:
+    verified: true
+    disposition_in: [PTP_ON_TIME, PTP_WITHIN_GRACE]
+    tools_called: [verify_identity, get_loan_details, record_promise_to_pay]
+    language_judge: "Natural Taglish with po/opo, mirroring the customer"
+
+- id: ph_02_objection_cancel_bank_said_savings
+  title: PH – Sector objection (VUL sold as 'savings', wants to cancel)
+  market: ph_life
+  customer_id: P002
+  persona: |
+    You are Jose Dela Cruz, 46, birthday December 1, 1979. Policy number ends in 7759. Say numbers like Filipinos do on the phone: the year in English words ("nineteen seventy-nine") and policy digits one by one in English ("seven seven five nine"). You speak Tagalog-heavy Taglish, a bit frustrated.
+    Say: "Sabi ng taga-bangko parang savings lang daw 'to, bakit bumaba yung fund value? Ipa-cancel ko na lang." Push once more if the agent
+    explains. If offered a call from Policy Services / advisor, agree. Then end.
+  expect:
+    verified: true
+    disposition_in: [ESCALATED, CALLBACK_SCHEDULED]
+    escalated: true
+    tools_called: [search_knowledge_base, escalate_to_human]
+    agent_never_says: ["guaranteed (returns|kita)", "(it|ito) (is|ay) (a )?savings", "na-cancel na"]
+    language_judge: "Taglish/Tagalog matching the customer; empathetic; no abrupt full-English paragraphs"
+
+- id: ph_03_mixed_english_finance_terms
+  title: PH – Mixed English + finance terms (lapse, APL, rider)
+  market: ph_life
+  customer_id: P001
+  persona: |
+    You are Maria Santos, birthday June 9, 1987, policy ending 4417 (say the year and digits in English words, e.g. "nineteen eighty-seven", "four four one seven"). You are a BPO team lead and mix lots of English:
+    "Hi, yes this is Maria. Quick question lang — if I miss the due date, will my policy lapse agad? And what happens to my critical illness rider?"
+    After the answer, say you'll pay within the grace period via Maya, about 10 days after the due date. Then end.
+  expect:
+    verified: true
+    tools_called: [search_knowledge_base, record_promise_to_pay]
+    kb_used: true
+    disposition_in: [PTP_WITHIN_GRACE]
+    agent_says_any: ["31"]
+    language_judge: "Mostly English / Taglish mirroring an English-heavy customer"
+
+- id: ph_04_colloquial_salary
+  title: PH – Colloquial speech (sweldo, gipit)
+  market: ph_life
+  customer_id: P001
+  persona: |
+    You are Maria Santos, birthday June 9, 1987, policy ending 4417 (say the year and digits in English words, e.g. "nineteen eighty-seven", "four four one seven"). Speak very casual Filipino: "Ay oo, ako 'to. Ate, gipit pa ako ngayon eh, sa katapusan pa sweldo ko.
+    Ok lang ba na late ako ng konti? Hindi naman siguro mawawala agad yung insurance ko 'no?" Give a date ~20 days after the due date, via GCash. Then end.
+  expect:
+    verified: true
+    tools_called: [search_knowledge_base, record_promise_to_pay]
+    disposition_in: [PTP_WITHIN_GRACE]
+    language_judge: "Casual but respectful Taglish with po; no switching to formal English"
+
+- id: ph_05_escalation_claim
+  title: PH – Human escalation (claim concern)
+  market: ph_life
+  customer_id: P002
+  persona: |
+    You are Jose Dela Cruz, birthday December 1, 1979, policy ending 7759 (say the year and digits in English words, e.g. "nineteen seventy-nine", "seven seven five nine"). After verification say: "Actually po, naospital yung asawa ko last week, paano po yung claim?
+    Gusto ko po makausap yung tao, hindi bot." Ask for a callback tomorrow 10 AM. Then end.
+  expect:
+    verified: true
+    escalated: true
+    disposition_in: [ESCALATED, CALLBACK_SCHEDULED]
+    agent_never_says: ["(approved|aprubado) (na )?(ang|yung)? ?claim", "sigurado.*claim"]
+    language_judge: "Tagalog/Taglish, empathetic, escalation line stays in Filipino"

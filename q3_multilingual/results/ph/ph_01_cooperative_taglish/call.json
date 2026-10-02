@@ -1,0 +1,314 @@
+{
+ "call_id": "ph-20261001-213512-f3e2",
+ "market": "ph_life",
+ "channel": "simulated",
+ "customer_id": "P001",
+ "due_date": "2026-10-07",
+ "outside_calling_hours": true,
+ "state": {
+  "verified": true,
+  "verify_attempts": 1,
+  "disposition": "PTP_ON_TIME",
+  "ptp": {
+   "date": "2026-10-05",
+   "mode": "branch",
+   "class": "PTP_ON_TIME"
+  },
+  "tickets": [],
+  "ended": true,
+  "details_shared": true
+ },
+ "crm_summary": {
+  "call_id": "ph-20261001-213512-f3e2",
+  "market": "ph_life",
+  "customer_id": "P001",
+  "disposition": "PTP_ON_TIME",
+  "llm_disposition": "PTP_ON_TIME",
+  "summary": "Simulation stopped (max turns or customer hung up).",
+  "ptp": {
+   "date": "2026-10-05",
+   "mode": "branch",
+   "class": "PTP_ON_TIME"
+  },
+  "tickets": [],
+  "verified": true,
+  "kb_queries": 0,
+  "ended_at": "2026-10-01T21:36:57"
+ },
+ "kb_log": [],
+ "guard_log": [],
+ "metrics": {
+  "kb_ms": [],
+  "llm_ms": [
+   1560,
+   1602,
+   441,
+   784,
+   1695,
+   924,
+   1957,
+   1539,
+   824
+  ],
+  "turn_ms": [
+   1764,
+   2893,
+   2621,
+   1961,
+   2424
+  ],
+  "providers": {
+   "groq2/qwen/qwen3.8-27b": 4,
+   "groq2/openai/gpt-oss-120b": 5
+  }
+ },
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Magandang gabi po! Ako po si Bea, virtual assistant ng Bituin Life Assurance. Paalala lang po, naka-record ang tawag na ito para sa quality at compliance. Si Ma'am Maria po ba ang kausap ko?",
+   "ts": 1790870712.1246455,
+   "source": "fixed_script"
+  },
+  {
+   "role": "customer",
+   "text": "Opo, aku ngapo si Maria Santos. Hello, B.",
+   "ts": 1790870737.801065,
+   "asr": {
+    "intended": "Opo, ako nga po si Maria Santos. Hello, Bea!",
+    "ms": 1724
+   },
+   "intended": "Opo, ako nga po si Maria Santos. Hello, Bea!"
+  },
+  {
+   "role": "agent",
+   "text": "Opo, Ma'am Maria, salamat po! Para po sa security, puwede ko po bang makuha ang birthday ninyo o ang huling apat na digits ng policy number ninyo?",
+   "ts": 1790870739.5653903,
+   "source": "llm",
+   "tools": [],
+   "agent_ms": 1764,
+   "state": {
+    "verified": false,
+    "disposition": null,
+    "ended": false
+   }
+  },
+  {
+   "role": "customer",
+   "text": "June siyam, isang libo siyam na daan at walumput pito po ang birthday ko, at apat na libo, apat na daan at labimpito naman ang huling apat na digits ng policy number ko.",
+   "ts": 1790870751.4223387,
+   "asr": {
+    "intended": "June 9, 1987 po ang birthday ko at 4417 naman ang huling apat na digits ng policy number ko.",
+    "ms": 1475
+   },
+   "intended": "June 9, 1987 po ang birthday ko at 4417 naman ang huling apat na digits ng policy number ko."
+  },
+  {
+   "role": "agent",
+   "text": "Ma'am Maria, ang premium po ninyo ay ₱4,250 na due na po sa October 7, 2026. Pwede po kayong magbayad via GCash, Maya, auto‑debit, BancoBayan branch, o Bayad Center. May 31‑day grace period po kung hindi pa makabayad sa due date. Kailan po ninyo balak magbayad at anong channel po ang gusto ninyo?",
+   "ts": 1790870754.315608,
+   "source": "llm",
+   "tools": [
+    {
+     "tool": "verify_identity",
+     "args": {
+      "account_last4": "4017",
+      "date_of_birth": "1987-06-09"
+     },
+     "result": {
+      "verified": true,
+      "instruction": "Thank the customer, then call get_loan_details and give the reminder."
+     },
+     "ms": 1.1,
+     "model": "groq2/qwen/qwen3.8-27b"
+    },
+    {
+     "tool": "get_loan_details",
+     "args": {},
+     "result": {
+      "product": "Bituin Life Protect (whole life) with Critical Illness rider",
+      "amount_due": "₱4,250",
+      "due_date": "2026-10-07",
+      "due_date_spoken": "October 7, 2026 (Wednesday)",
+      "days_until_due": 5,
+      "auto_debit_active": false,
+      "auto_debit_bank": "BancoBayan",
+      "grace_period_end": "2026-11-07",
+      "payment_history": "policy in force since 2022, 2 late payments within grace",
+      "payment_mode": "monthly"
+     },
+     "ms": 0.4,
+     "model": "groq2/qwen/qwen3.8-27b"
+    }
+   ],
+   "agent_ms": 2893,
+   "state": {
+    "verified": true,
+    "disposition": null,
+    "ended": false
+   }
+  },
+  {
+   "role": "customer",
+   "text": "Babayaran ko po via cash sa darating na payday, bago naman po yung due date. Pwede ko po bang i-auto-debit na lang yung premium para hindi ko makalimutan?",
+   "ts": 1790870766.412608,
+   "asr": {
+    "intended": "Babayaran ko po via GCash sa darating na payday, bago naman po yung due date. Pwede ko po bang i-auto-debit na lang yung premium para hindi ko makalimutan?",
+    "ms": 1542
+   },
+   "intended": "Babayaran ko po via GCash sa darating na payday, bago naman po yung due date. Pwede ko po bang i-auto-debit na lang yung premium para hindi ko makalimutan?"
+  },
+  {
+   "role": "agent",
+   "text": "Naiintindihan ko po, Ma'am. Sa ngayon po, wala pa po tayong auto‑debit set up. Puwede po ba kayong magbayad ng cash sa BancoBayan branch o Bayad Center bago po ang October 7, o gusto ninyo gumamit ng GCash/Maya para ma‑schedule na?",
+   "ts": 1790870769.0341027,
+   "source": "llm",
+   "tools": [
+    {
+     "tool": "confirm_auto_debit",
+     "args": {},
+     "result": {
+      "ok": false,
+      "instruction": "Auto-debit is NOT active for this account. Ask how they will pay instead."
+     },
+     "ms": 0.1,
+     "model": "groq2/openai/gpt-oss-120b"
+    }
+   ],
+   "agent_ms": 2621,
+   "state": {
+    "verified": true,
+    "disposition": null,
+    "ended": false
+   }
+  },
+  {
+   "role": "customer",
+   "text": "Sige po, sa cash ko na lang po babayaran pagdating ng payday. Maraming salamat po sa tulong nyo, Bea.",
+   "ts": 1790870778.5432656,
+   "asr": {
+    "intended": "Sige po, sa GCash ko na lang po babayaran pagdating ng payday. Maraming salamat po sa tulong niyo, Bea!",
+    "ms": 1439
+   },
+   "intended": "Sige po, sa GCash ko na lang po babayaran pagdating ng payday. Maraming salamat po sa tulong niyo, Bea!"
+  },
+  {
+   "role": "agent",
+   "text": "Ma'am Maria, para po ma‑record natin, anong petsa po ng inyong payday para sa cash payment? (Halimbawa: October 5)",
+   "ts": 1790870780.5043192,
+   "source": "llm",
+   "tools": [],
+   "agent_ms": 1961,
+   "state": {
+    "verified": true,
+    "disposition": null,
+    "ended": false
+   }
+  },
+  {
+   "role": "customer",
+   "text": "October 5 ang payday ko, kaya siguradong makakabayad ako bago ang due date. Salamat po ulit, bye!",
+   "ts": 1790870808.1469066,
+   "asr": {
+    "intended": "October 5 po ang payday ko, kaya siguradong makakabayad ako bago ang due date. Salamat po ulit, bye!",
+    "ms": 1645
+   },
+   "intended": "October 5 po ang payday ko, kaya siguradong makakabayad ako bago ang due date. Salamat po ulit, bye!"
+  },
+  {
+   "role": "agent",
+   "text": "Salamat po, Ma'am Maria. Nakarecord po namin ang cash payment sa BancoBayan branch para sa October 5, 2026. Kung may tanong po kayo, tawagan lang po namin kayo muli. Maraming salamat po at magandang araw!Call Summary: Customer promised to pay cash at BancoBayan branch on October 5, 2026 (on‑time).  \nDisposition: PTP_ON_TIME  \n\nEnd of call.",
+   "ts": 1790870810.5707479,
+   "source": "llm",
+   "tools": [
+    {
+     "tool": "record_promise_to_pay",
+     "args": {
+      "date": "2026-10-05",
+      "mode": "branch"
+     },
+     "result": {
+      "ok": true,
+      "classification": "PTP_ON_TIME",
+      "date_spoken": "October 5, 2026 (Monday)",
+      "mode": "branch",
+      "instruction": "Confirm the date and mode back to the customer and thank them."
+     },
+     "ms": 0.2,
+     "model": "groq2/qwen/qwen3.8-27b"
+    }
+   ],
+   "agent_ms": 2424,
+   "state": {
+    "verified": true,
+    "disposition": "PTP_ON_TIME",
+    "ended": false
+   }
+  }
+ ],
+ "scenario": {
+  "id": "ph_01_cooperative_taglish",
+  "title": "PH – Cooperative policyowner (Taglish)",
+  "market": "ph_life",
+  "customer_id": "P001",
+  "expect": {
+   "verified": true,
+   "disposition_in": [
+    "PTP_ON_TIME",
+    "PTP_WITHIN_GRACE"
+   ],
+   "tools_called": [
+    "verify_identity",
+    "get_loan_details",
+    "record_promise_to_pay"
+   ],
+   "language_judge": "Natural Taglish with po/opo, mirroring the customer"
+  }
+ },
+ "latency": {
+  "asr_ms": [
+   1724,
+   1475,
+   1542,
+   1439,
+   1645
+  ],
+  "agent_ms": [
+   1764,
+   2893,
+   2621,
+   1961,
+   2424
+  ],
+  "tts_ms": [
+   1213,
+   1631,
+   3562,
+   4267,
+   2763,
+   3256
+  ]
+ },
+ "asr_wer": 0.263,
+ "asr_pairs": [
+  {
+   "intended": "Opo, ako nga po si Maria Santos. Hello, Bea!",
+   "asr": "Opo, aku ngapo si Maria Santos. Hello, B."
+  },
+  {
+   "intended": "June 9, 1987 po ang birthday ko at 4417 naman ang huling apat na digits ng policy number ko.",
+   "asr": "June siyam, isang libo siyam na daan at walumput pito po ang birthday ko, at apat na libo, apat na daan at labimpito naman ang huling apat na digits ng policy number ko."
+  },
+  {
+   "intended": "Babayaran ko po via GCash sa darating na payday, bago naman po yung due date. Pwede ko po bang i-auto-debit na lang yung premium para hindi ko makalimutan?",
+   "asr": "Babayaran ko po via cash sa darating na payday, bago naman po yung due date. Pwede ko po bang i-auto-debit na lang yung premium para hindi ko makalimutan?"
+  },
+  {
+   "intended": "Sige po, sa GCash ko na lang po babayaran pagdating ng payday. Maraming salamat po sa tulong niyo, Bea!",
+   "asr": "Sige po, sa cash ko na lang po babayaran pagdating ng payday. Maraming salamat po sa tulong nyo, Bea."
+  },
+  {
+   "intended": "October 5 po ang payday ko, kaya siguradong makakabayad ako bago ang due date. Salamat po ulit, bye!",
+   "asr": "October 5 ang payday ko, kaya siguradong makakabayad ako bago ang due date. Salamat po ulit, bye!"
+  }
+ ]
+}

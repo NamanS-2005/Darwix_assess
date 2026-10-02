@@ -1,0 +1,534 @@
+{
+ "utterances": 22,
+ "dropped_segments": 0,
+ "llm_skipped_prefilter": 5,
+ "engine_stats": {
+  "signals_in": 19,
+  "below_threshold": 0,
+  "awaiting_llm_rejected": 0,
+  "duplicates_merged": 9,
+  "cooldown_suppressed": 0,
+  "held_then_shown": 0,
+  "held_expired": 0,
+  "evicted": 0,
+  "unknown_type": 0
+ },
+ "post_call": {
+  "missed_opportunities": [],
+  "unresolved_compliance": [],
+  "acted_on": 0,
+  "total_nudges": 3
+ },
+ "topic_shifts": [
+  {
+   "uid": 1,
+   "from": null,
+   "to": "greeting",
+   "t": 5.5
+  },
+  {
+   "uid": 3,
+   "from": "greeting",
+   "to": "verification",
+   "t": 9.5
+  },
+  {
+   "uid": 10,
+   "from": "verification",
+   "to": "payment_dispute",
+   "t": 30.1
+  },
+  {
+   "uid": 9,
+   "from": "payment_dispute",
+   "to": "payment_reminder",
+   "t": 26.7
+  },
+  {
+   "uid": 11,
+   "from": "payment_reminder",
+   "to": "payment_dispute",
+   "t": 32.2
+  },
+  {
+   "uid": 14,
+   "from": "payment_dispute",
+   "to": "complaint",
+   "t": 42.8
+  },
+  {
+   "uid": 13,
+   "from": "complaint",
+   "to": "payment_reminder",
+   "t": 38.0
+  },
+  {
+   "uid": 15,
+   "from": "payment_reminder",
+   "to": "payment_dispute",
+   "t": 45.6
+  },
+  {
+   "uid": 19,
+   "from": "payment_dispute",
+   "to": "already_paid_dispute",
+   "t": 59.0
+  },
+  {
+   "uid": 21,
+   "from": "already_paid_dispute",
+   "to": "complaint",
+   "t": 63.5
+  },
+  {
+   "uid": 22,
+   "from": "complaint",
+   "to": "escalation_request",
+   "t": 66.8
+  }
+ ],
+ "frustration_trace": [
+  0.0,
+  0.0,
+  0.6,
+  0.8,
+  0.8,
+  0.9,
+  0.9,
+  0.9,
+  0.8,
+  1.0
+ ],
+ "component_latency": {
+  "chunk_processing_us_p50": 500.0,
+  "asr_ms": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "audio_to_text_ms": [
+   264,
+   250,
+   250,
+   249,
+   250,
+   249,
+   249,
+   250,
+   265,
+   250,
+   250,
+   251,
+   248,
+   250,
+   253,
+   252,
+   249,
+   248,
+   264,
+   253,
+   251,
+   250
+  ],
+  "rules_us": [
+   69.5,
+   46.1,
+   16.0,
+   99.6,
+   61.7,
+   31.3,
+   29.9,
+   74.5,
+   77.1,
+   60.6,
+   50.0,
+   63.4,
+   33.0,
+   121.2,
+   91.9,
+   92.5,
+   56.4,
+   65.6,
+   39.0,
+   38.0,
+   78.8,
+   73.5
+  ],
+  "llm_ms": [
+   912,
+   2631,
+   862,
+   3875,
+   1758,
+   3575,
+   6155,
+   2253,
+   1149,
+   4195,
+   6684,
+   5161,
+   3688,
+   4758,
+   6099,
+   3955,
+   3489
+  ]
+ },
+ "transcript": [
+  {
+   "uid": 1,
+   "speaker": "agent",
+   "text": "Good afternoon, this is Neha from Udaan Credit Finance, this call is recorded.",
+   "start_t": 0.5,
+   "end_t": 5.52,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 264
+  },
+  {
+   "uid": 2,
+   "speaker": "agent",
+   "text": "I speaking with Mr. Imran Khan?",
+   "start_t": 6.42,
+   "end_t": 8.66,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 250
+  },
+  {
+   "uid": 3,
+   "speaker": "customer",
+   "text": "Yes.",
+   "start_t": 9.18,
+   "end_t": 9.48,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 250
+  },
+  {
+   "uid": 4,
+   "speaker": "agent",
+   "text": "Thank you. Could",
+   "start_t": 10.32,
+   "end_t": 10.98,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 249
+  },
+  {
+   "uid": 5,
+   "speaker": "agent",
+   "text": "you confirm the last four digits of your loan account for verification?",
+   "start_t": 11.88,
+   "end_t": 15.9,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 250
+  },
+  {
+   "uid": 6,
+   "speaker": "customer",
+   "text": "Four four two one.",
+   "start_t": 16.48,
+   "end_t": 17.5,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 249
+  },
+  {
+   "uid": 7,
+   "speaker": "agent",
+   "text": "Thank you. Your",
+   "start_t": 18.28,
+   "end_t": 18.94,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 249
+  },
+  {
+   "uid": 8,
+   "speaker": "agent",
+   "text": "loan EMI of three thousand one hundred rupees is due on the fifth. How",
+   "start_t": 19.84,
+   "end_t": 24.38,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 250
+  },
+  {
+   "uid": 9,
+   "speaker": "agent",
+   "text": "you like to pay?",
+   "start_t": 25.44,
+   "end_t": 26.7,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 265
+  },
+  {
+   "uid": 10,
+   "speaker": "customer",
+   "text": "I already paid it two days ago through UPI.",
+   "start_t": 27.18,
+   "end_t": 30.06,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 250
+  },
+  {
+   "uid": 11,
+   "speaker": "customer",
+   "text": "Why are you calling me?",
+   "start_t": 30.88,
+   "end_t": 32.16,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 250
+  },
+  {
+   "uid": 12,
+   "speaker": "agent",
+   "text": "Sir, our system shows it is still pending.",
+   "start_t": 32.86,
+   "end_t": 35.68,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 251
+  },
+  {
+   "uid": 13,
+   "speaker": "agent",
+   "text": "Please make the payment today.",
+   "start_t": 36.52,
+   "end_t": 38.02,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 248
+  },
+  {
+   "uid": 14,
+   "speaker": "customer",
+   "text": "This is the third time someone from your company has called me this week.",
+   "start_t": 38.54,
+   "end_t": 42.82,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 250
+  },
+  {
+   "uid": 15,
+   "speaker": "customer",
+   "text": "I told you I have already paid!",
+   "start_t": 43.66,
+   "end_t": 45.64,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 253
+  },
+  {
+   "uid": 16,
+   "speaker": "agent",
+   "text": "Sir, the payment is not reflecting, so you need to pay to avoid charges.",
+   "start_t": 46.44,
+   "end_t": 51.46,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 252
+  },
+  {
+   "uid": 17,
+   "speaker": "customer",
+   "text": "This is ridiculous. I",
+   "start_t": 51.92,
+   "end_t": 53.14,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 249
+  },
+  {
+   "uid": 18,
+   "speaker": "customer",
+   "text": "am not paying twice. I",
+   "start_t": 53.88,
+   "end_t": 55.16,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 248
+  },
+  {
+   "uid": 19,
+   "speaker": "customer",
+   "text": "fed up with these calls, stop calling me!",
+   "start_t": 56.1,
+   "end_t": 59.02,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 264
+  },
+  {
+   "uid": 20,
+   "speaker": "agent",
+   "text": "Sir, please calm down.",
+   "start_t": 59.74,
+   "end_t": 61.44,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 253
+  },
+  {
+   "uid": 21,
+   "speaker": "customer",
+   "text": "Don't tell me to calm down.",
+   "start_t": 61.9,
+   "end_t": 63.48,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 251
+  },
+  {
+   "uid": 22,
+   "speaker": "customer",
+   "text": "I want to speak to your manager right now.",
+   "start_t": 64.3,
+   "end_t": 66.84,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 250
+  }
+ ],
+ "asr": "mock",
+ "llm": true,
+ "nudges": [
+  {
+   "id": "N1",
+   "type": "already_paid_dispute",
+   "label": "Payment dispute",
+   "text": "Customer says it's paid \u2014 don't insist. Ask payment date, mode and UTR; raise a payment trace (can take 2 working days to reflect).",
+   "priority": 2,
+   "topic": "already_paid_dispute",
+   "confidence": 1.0,
+   "source": "rule+llm",
+   "evidence": [
+    "I already paid it two days ago through UPI.",
+    "Why are you calling me?",
+    "I told you I have already paid!",
+    "am not paying twice.",
+    "This is ridiculous. I"
+   ],
+   "status": "active",
+   "updates": 0,
+   "uid": 10,
+   "t_call": 15.01,
+   "latency_ms": {
+    "endpointing": 248.9,
+    "asr": 0.8,
+    "signal": 1758.0,
+    "llm": 1757.9,
+    "engine": 0.1,
+    "delivery": 0.2,
+    "e2e": 2008.0
+   },
+   "path": "llm"
+  },
+  {
+   "id": "N2",
+   "type": "frustration_rising",
+   "label": "Rising frustration",
+   "text": "Pause the push. Acknowledge first: \u201cI understand this is frustrating, and I'm sorry for the repeated calls.\u201d Then give one clear next step.",
+   "priority": 2,
+   "topic": "frustration_rising",
+   "confidence": 1.0,
+   "source": "rule+llm",
+   "evidence": [
+    "This is the third time someone from your company has called me this week.",
+    "I told you I have already paid!",
+    "am not paying twice.",
+    "This is ridiculous. I",
+    "fed up with these calls, stop calling me!",
+    "Don't tell me to calm down."
+   ],
+   "status": "active",
+   "updates": 0,
+   "uid": 14,
+   "t_call": 21.41,
+   "latency_ms": {
+    "endpointing": 248.1,
+    "asr": 1.8,
+    "signal": 1148.8,
+    "llm": 1148.6,
+    "engine": 0.1,
+    "delivery": 0.6,
+    "e2e": 1399.3
+   },
+   "path": "llm"
+  },
+  {
+   "id": "N3",
+   "type": "escalation_request",
+   "label": "Escalation",
+   "text": "Customer asked for a manager \u2014 acknowledge, then offer a transfer or a supervisor callback within 1 working day.",
+   "priority": 2,
+   "topic": "escalation_request:speak_to_manager",
+   "confidence": 1.0,
+   "source": "rule+llm",
+   "evidence": [
+    "I want to speak to your manager right now."
+   ],
+   "status": "active",
+   "updates": 0,
+   "uid": 22,
+   "t_call": 33.41,
+   "latency_ms": {
+    "endpointing": 249.3,
+    "asr": 0.8,
+    "signal": 3489.1,
+    "llm": 3489.0,
+    "engine": 0.1,
+    "delivery": 0.1,
+    "e2e": 3739.4
+   },
+   "path": "llm"
+  }
+ ]
+}

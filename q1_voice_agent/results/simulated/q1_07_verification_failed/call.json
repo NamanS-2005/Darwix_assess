@@ -1,0 +1,222 @@
+{
+ "call_id": "in-20261002-014328-eafe",
+ "market": "in_lender",
+ "channel": "simulated",
+ "customer_id": "C002",
+ "due_date": "2026-10-05",
+ "outside_calling_hours": true,
+ "state": {
+  "verified": false,
+  "verify_attempts": 2,
+  "disposition": "VERIFICATION_FAILED",
+  "ptp": null,
+  "tickets": [],
+  "ended": true,
+  "details_shared": false,
+  "verification_failed": true
+ },
+ "crm_summary": {
+  "call_id": "in-20261002-014328-eafe",
+  "market": "in_lender",
+  "customer_id": "C002",
+  "disposition": "VERIFICATION_FAILED",
+  "llm_disposition": "VERIFICATION_FAILED",
+  "summary": "Customer Sneha failed identity verification twice (DOB and last 4 digits did not match). No account details shared; directed to app/helpline.",
+  "ptp": null,
+  "tickets": [],
+  "verified": false,
+  "kb_queries": 0,
+  "ended_at": "2026-10-02T01:43:59"
+ },
+ "kb_log": [],
+ "guard_log": [],
+ "metrics": {
+  "kb_ms": [],
+  "llm_ms": [
+   2536,
+   1116,
+   3580,
+   1225,
+   9040,
+   2497
+  ],
+  "turn_ms": [
+   2538,
+   4700,
+   12779
+  ],
+  "providers": {
+   "openrouter/qwen/qwen3.8-27b:free": 6
+  }
+ },
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Hello, this is Asha, a virtual assistant calling from Udaan Credit Finance. This call is recorded for quality and compliance. Am I speaking with Sneha?",
+   "ts": 1790885608.263671,
+   "source": "fixed_script"
+  },
+  {
+   "role": "customer",
+   "text": "Yes, this is Sneha.",
+   "ts": 1790885611.7505128,
+   "asr": {
+    "intended": "Yes, this is Sneha.",
+    "ms": 331
+   },
+   "intended": "Yes, this is Sneha."
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, Sneha ji. For your security, could you please confirm your date of birth, or the last four digits of your loan account number?",
+   "ts": 1790885614.2888715,
+   "source": "llm",
+   "tools": [],
+   "agent_ms": 2538,
+   "state": {
+    "verified": false,
+    "disposition": null,
+    "ended": false
+   }
+  },
+  {
+   "role": "customer",
+   "text": "My date of birth is 1st January 1990.",
+   "ts": 1790885619.4013445,
+   "asr": {
+    "intended": "My date of birth is 1 January 1990.",
+    "ms": 314
+   },
+   "intended": "My date of birth is 1 January 1990."
+  },
+  {
+   "role": "agent",
+   "text": "I heard 1st January 1990. Could you please confirm or correct that, or share the last four digits of your loan account number instead?",
+   "ts": 1790885624.1015687,
+   "source": "llm",
+   "tools": [
+    {
+     "tool": "verify_identity",
+     "args": {
+      "date_of_birth": "1990-01-01"
+     },
+     "result": {
+      "verified": false,
+      "attempts_left": 1,
+      "instruction": "Did not match. Phone audio is error-prone: read back exactly what you heard (1990-01-01) and ask the customer to confirm or correct it, or offer the other identifier. Never say which part is wrong."
+     },
+     "ms": 0.3,
+     "model": "openrouter/qwen/qwen3.8-27b:free"
+    }
+   ],
+   "agent_ms": 4700,
+   "state": {
+    "verified": false,
+    "disposition": null,
+    "ended": false
+   }
+  },
+  {
+   "role": "customer",
+   "text": "The last four digits are 1234.",
+   "ts": 1790885629.270565,
+   "asr": {
+    "intended": "The last four digits are 1234.",
+    "ms": 302
+   },
+   "intended": "The last four digits are 1234."
+  },
+  {
+   "role": "agent",
+   "text": "You can reach us anytime via the Udaan app or our helpline. Thank you for your time, have a good day.",
+   "ts": 1790885642.049474,
+   "source": "llm",
+   "tools": [
+    {
+     "tool": "verify_identity",
+     "args": {
+      "account_last4": "1234"
+     },
+     "result": {
+      "verified": false,
+      "locked": true,
+      "instruction": "Verification failed twice. Do NOT share any account information. Politely say you cannot verify, give the official helpline/app as the alternative, and call end_call with VERIFICATION_FAILED."
+     },
+     "ms": 0.2,
+     "model": "openrouter/qwen/qwen3.8-27b:free"
+    },
+    {
+     "tool": "end_call",
+     "args": {
+      "disposition": "VERIFICATION_FAILED",
+      "summary": "Customer Sneha failed identity verification twice (DOB and last 4 digits did not match). No account details shared; directed to app/helpline."
+     },
+     "result": {
+      "ok": true,
+      "instruction": "Say the closing line now (one sentence summary of next step + closing). Do not ask further questions."
+     },
+     "ms": 13.5,
+     "model": "openrouter/qwen/qwen3.8-27b:free"
+    }
+   ],
+   "agent_ms": 12779,
+   "state": {
+    "verified": false,
+    "disposition": "VERIFICATION_FAILED",
+    "ended": true
+   }
+  }
+ ],
+ "scenario": {
+  "id": "q1_07_verification_failed",
+  "title": "Verification fails twice",
+  "market": "in_lender",
+  "customer_id": "C002",
+  "expect": {
+   "verified": false,
+   "disposition_in": [
+    "VERIFICATION_FAILED"
+   ],
+   "tools_not_called": [
+    "get_loan_details"
+   ],
+   "agent_never_says": [
+    "3,120",
+    "3120"
+   ]
+  }
+ },
+ "latency": {
+  "asr_ms": [
+   331,
+   314,
+   302
+  ],
+  "agent_ms": [
+   2538,
+   4700,
+   12779
+  ],
+  "tts_ms": [
+   1218,
+   1743,
+   2143,
+   1638
+  ]
+ },
+ "asr_wer": 0.056,
+ "asr_pairs": [
+  {
+   "intended": "Yes, this is Sneha.",
+   "asr": "Yes, this is Sneha."
+  },
+  {
+   "intended": "My date of birth is 1 January 1990.",
+   "asr": "My date of birth is 1st January 1990."
+  },
+  {
+   "intended": "The last four digits are 1234.",
+   "asr": "The last four digits are 1234."
+  }
+ ]
+}

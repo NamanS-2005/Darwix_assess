@@ -1,0 +1,43 @@
+# Q1 – Loan pre-due reminder (India, English). Fictional lender.
+id: in_lender
+kb_market: in_lender
+company: Udaan Credit Finance
+agent_name: Asha
+locale: en-IN
+timezone: Asia/Kolkata
+currency: "₹"
+asr:
+  model: whisper-large-v3-turbo
+  language: en
+  # Whisper prompt biases decoding toward domain vocabulary (cheap "custom vocabulary")
+  prompt: "Udaan Credit Finance, EMI, NACH, auto-debit, UPI, UTR, CIBIL, foreclosure, bounce charge, grace period, rupees, lakh."
+tts:
+  voice: en-IN-NeerjaNeural
+  customer_voice: en-IN-PrabhatNeural   # used only for simulated customers
+  rate: "+0%"
+vapi:
+  transcriber: {provider: deepgram, model: nova-3, language: en-IN}
+  voice: {provider: azure, voiceId: en-IN-NeerjaNeural}
+prompt_file: system_prompt.md
+script_file: call_script.md
+rules_file: business_rules.yaml
+crm_file: ../crm/customers.json
+closing_phrases: ["Thank you for your time. Have a good day.", "Have a good day."]
+# Fixed, pre-approved lines (never LLM-generated): disclosure, fallbacks, closings
+phrases:
+  opening: "Hello, this is {agent_name}, a virtual assistant calling from {company}. This call is recorded for quality and compliance. Am I speaking with {first_name}?"
+  not_heard: "Sorry, I didn't catch that. Could you please repeat?"
+  unavailable: "I'm sorry, I don't have that information right now. I can arrange a callback from our team if you like."
+  technical: "Sorry, I'm having a technical issue. I'll arrange for our team to call you back. Thank you for your patience."
+  verification_failed: "I'm sorry, I'm unable to verify the details, so I can't discuss the account. Please call our toll-free number or use the Udaan app. Thank you, have a good day."
+  closing: "Thank you for your time. Have a good day."
+  beyond_grace_notice: "Please note, paying after the grace period may attract late payment charges and can be reported to credit bureaus. I have noted this for our Customer Assistance team."
+  repeat_breaker: "Sorry, I want to be sure I note this correctly. Could you tell me the exact date you plan to pay? If it is easier, I can have a colleague call you back."
+  third_party: "I'm calling for {first_name} on a personal matter. Could you let me know a good time to reach them? Thank you."
+third_party_regex: '\b(this is (his|her)|(his|her) (colleague|wife|husband|brother|sister|father|mother|son|daughter|friend)|colleague|wrong number|(he|she)(''s| is) not (here|available)|not (him|her))\b'
+account_terms_regex: '\b(loan|emi|instal?ment|payment|pay|due|amount|owe|outstanding|account|overdue|credit|repay\w*)\b'
+closing_regex: 'good day|goodbye|\bbye\b'
+anything_else_regex: 'anything else|any other question'
+customer_bye_regex: 'bye|that''?s all|nothing else|no,? thanks|thank you|thanks'
+beyond_grace_regex: "late (payment )?charge|late fee|credit bureau|cibil"
+callback_days: [0, 1, 2, 3, 4, 5]   # Mon–Sat (Python weekday numbers)

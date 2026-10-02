@@ -1,0 +1,21 @@
+UDAAN CREDIT FINANCE LTD.
+NACH / E-MANDATE REGISTRATION FORM                                   Form No. UCF-NACH-02 (Rev. Jan-2026)
+
+Instructions: Fill in BLOCK LETTERS. The mandate authorises Udaan to debit your EMI on the due date.
+Registration takes 7-10 working days; pay the first EMI manually if the mandate is not active by then.
+
+Name of Account Holder : ______________________________
+Bank Name              : ______________________________
+Account No.            : ______________________________
+IFSC                   : ______________________________
+Account Type           : [ ] Savings  [ ] Current
+Max Debit Amount (Rs.) : ______________________________   (must be at least the EMI amount)
+Frequency              : [x] Monthly
+Start Date (DD/MM/YYYY): ____/____/________
+End Date               : [ ] Until cancelled  [ ] Date ____/____/________
+Loan Account No.       : ______________________________
+Mobile No.             : ______________________________
+Signature of Account Holder(s): ____________________     Date: __________
+
+To cancel or change the bank account for auto-debit, submit a new mandate at least 15 days before the next due date.
+Page 1 of 1                                                    Udaan Credit Finance Ltd. - Confidential

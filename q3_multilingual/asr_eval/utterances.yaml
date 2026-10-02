@@ -1,0 +1,32 @@
+# ASR test set. `terms` = finance/local terms that must survive transcription (term recall metric).
+# Audio is synthesised with several neural voices per market (incl. regional-accent voices for Indonesia).
+# Real recordings can be added under audio/real/<market>/<name>.wav with a matching <name>.txt reference.
+ph_life:
+  voices: [fil-PH-BlessicaNeural, fil-PH-AngeloNeural, en-PH-RosaNeural]
+  items:
+    - {id: ph01, cat: formal_tagalog, text: "Magandang umaga po. Gusto ko pong malaman kung kailan ang due date ng premium ko.", terms: [premium, due date]}
+    - {id: ph02, cat: taglish, text: "Hi po, nag-check ako sa app pero hindi pa nag-reflect yung bayad ko sa GCash kahapon.", terms: [app, GCash, nag-reflect]}
+    - {id: ph03, cat: taglish, text: "Kapag na-lapse po ba yung policy, mawawala na rin yung coverage ng rider ko?", terms: [lapse, policy, coverage, rider]}
+    - {id: ph04, cat: finance_terms, text: "Gusto ko pong palitan yung beneficiary ko, yung asawa ko na lang po ang ilagay.", terms: [beneficiary]}
+    - {id: ph05, cat: colloquial, text: "Ay naku, gipit pa ako ngayon, sa katapusan pa yung sweldo ko eh.", terms: [gipit, sweldo, katapusan]}
+    - {id: ph06, cat: english_heavy, text: "Quick question lang, if I miss the due date will my policy lapse agad or may grace period?", terms: [due date, lapse, grace period]}
+    - {id: ph07, cat: numbers_dates, text: "Babayaran ko po yung four thousand two hundred fifty sa October fifteen, sa BancoBayan branch.", terms: [four thousand two hundred fifty, October, BancoBayan]}
+    - {id: ph08, cat: bancassurance, text: "Sabi kasi ng taga-bangko parang savings lang daw ito, bank referral lang daw.", terms: [savings, bank referral]}
+    - {id: ph09, cat: escalation, text: "Gusto ko pong makausap yung tao, hindi po bot. Pakitawagan na lang po ako bukas ng umaga.", terms: [tao, bot, bukas]}
+    - {id: ph10, cat: objection, text: "Scam ba 'to? Paano ko malalaman na taga-Bituin Life talaga kayo?", terms: [scam, Bituin Life]}
+id_multifinance:
+  voices: [id-ID-GadisNeural, id-ID-ArdiNeural]
+  regional_voices: [jv-ID-DimasNeural, jv-ID-SitiNeural, su-ID-JajangNeural, su-ID-TutiNeural]
+  items:
+    - {id: id01, cat: formal, text: "Selamat siang, saya ingin menanyakan tanggal jatuh tempo angsuran saya bulan ini.", terms: [jatuh tempo, angsuran]}
+    - {id: id02, cat: formal, text: "Berapa denda keterlambatan kalau saya membayar dua hari setelah jatuh tempo?", terms: [denda, keterlambatan, jatuh tempo]}
+    - {id: id03, cat: colloquial, text: "Aduh Mbak, saya belum gajian nih, telat dikit nggak apa-apa kan?", terms: [gajian, telat]}
+    - {id: id04, cat: colloquial, text: "Udah saya transfer kemarin sore lewat m-banking, kok belum masuk ya?", terms: [transfer, m-banking]}
+    - {id: id05, cat: finance_terms, text: "Tenor saya dua puluh empat bulan, DP-nya dulu sepuluh persen, cicilannya satu koma dua lima juta.", terms: [tenor, DP, cicilan]}
+    - {id: id06, cat: finance_terms, text: "Kalau pelunasan dipercepat ada penalti berapa persen dari sisa pokok pembiayaan?", terms: [pelunasan, penalti, pembiayaan]}
+    - {id: id07, cat: mixed_english, text: "Btw kalau saya bayar via virtual account BCA itu real-time kan, nggak pakai admin fee?", terms: [virtual account, real-time, admin fee]}
+    - {id: id08, cat: numbers_dates, text: "Saya bayar tanggal lima Oktober lewat Indomaret, jumlahnya satu juta dua ratus lima puluh ribu rupiah.", terms: [Oktober, Indomaret, satu juta dua ratus lima puluh ribu]}
+    - {id: id09, cat: objection, text: "Motornya sudah saya oper ke adik saya, jadi BPKB-nya gimana?", terms: [oper, BPKB]}
+    - {id: id10, cat: escalation, text: "Saya mau bicara langsung sama petugas aja, Mbak, tolong telepon balik besok.", terms: [petugas, telepon balik]}
+    - {id: id11, cat: javanese_insertions, text: "Nggih leres, angsuranipun sampun kulo siapke, mangke tak bayar lewat Alfamart.", terms: [angsuran, Alfamart, nggih]}
+    - {id: id12, cat: sundanese_insertions, text: "Muhun Teh, teu acan gajian atuh, tapi pas jatuh tempo abdi bayar.", terms: [gajian, jatuh tempo, muhun]}

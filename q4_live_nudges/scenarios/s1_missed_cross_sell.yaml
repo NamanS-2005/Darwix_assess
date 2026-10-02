@@ -1,0 +1,20 @@
+id: s1_missed_cross_sell
+title: Missed cross-sell (education fees + second two-wheeler)
+description: Compliant pre-due call. Customer mentions two buying needs; agent ignores them. Expect cross-sell nudges.
+agent_voice: en-IN-PrabhatNeural
+customer_voice: en-IN-NeerjaNeural
+turns:
+  - [agent, "Good morning, this is Karan from Udaan Credit Finance. This call is recorded for quality and compliance. Am I speaking with Ms. Priya Menon?"]
+  - [customer, "Yes, this is Priya speaking."]
+  - [agent, "Thank you. For verification, could you please tell me your date of birth?"]
+  - [customer, "Sure, it's the ninth of March, nineteen eighty nine."]
+  - [agent, "Thank you for confirming. I'm calling to remind you that your personal loan EMI of nine thousand two hundred rupees is due on the fifth."]
+  - [customer, "Okay. Actually this month is a bit heavy for me. My daughter just got admission in an engineering college and I have to arrange her fees next month."]
+  - [agent, "I understand. Will the EMI be paid through auto-debit as usual?"]
+  - [customer, "Yes, the auto-debit is fine. Also my son wants a scooter for college, so we are thinking of buying a second two-wheeler soon."]
+  - [agent, "Okay ma'am. Please keep sufficient balance in your account one day before the due date."]
+  - [customer, "Sure, I will do that."]
+  - [agent, "Thank you for your time, have a nice day."]
+expected:
+  - {signal: cross_sell, turn: 5, note: education fees -> top-up loan}
+  - {signal: cross_sell, turn: 7, duplicate_of_previous: true, note: second need should MERGE into the open opportunity card (evidence appended), not a new nudge}

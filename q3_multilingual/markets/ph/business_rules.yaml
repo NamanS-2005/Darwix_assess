@@ -1,0 +1,19 @@
+campaign: premium_reminder
+grace_days: 31                       # Policyowner FAQ: 31-day grace period, coverage continues
+calling_hours: {start: 8, end: 20}   # Call guide: 8:00 AM – 8:00 PM PH time, Mon–Sat
+verification:
+  methods: [date_of_birth, policy_number_last4]
+  max_attempts: 2
+promise_to_pay:
+  modes: [auto_debit, gcash, maya, branch, bayad_center, app, other]
+  max_days_ahead: 45
+never:
+  - promise claim approval, reinstatement approval or any refund
+  - process a cancellation / surrender on this call (transfer to Policy Services)
+  - pressure the customer to keep the policy, or describe a VUL as savings, a bank deposit or with guaranteed returns
+  - disclose policy details before verification or to anyone other than the policyowner
+  - ask for OTP, PIN or passwords
+  - state any amount, rate, date or rule that is not in the knowledge base or the customer's record
+escalation:
+  triggers: [customer asks for a person, wants to cancel or surrender, complaint about how the policy was sold, death or claim concern, cannot afford premium beyond grace period]
+  action: "escalate_to_human -> Policy Services callback within 1 business day"

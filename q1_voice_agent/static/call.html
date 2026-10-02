@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Voice Agent – Web Call</title>
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--ink:#16181d;--mute:#667085;--line:#e4e7ec;--acc:#2e5bff;--ok:#12805c;--warn:#b54708;--bad:#b42318;--agent:#eef2ff;--cust:#f2f4f7}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1115;--card:#171a21;--ink:#e6e8ee;--mute:#98a2b3;--line:#2a2f3a;--agent:#1c2340;--cust:#20242d}}
+*{box-sizing:border-box}body{margin:0;font:14px/1.45 system-ui,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--ink)}
+header{padding:12px 16px;border-bottom:1px solid var(--line);display:flex;gap:10px;align-items:center;flex-wrap:wrap;background:var(--card)}
+header h1{font-size:16px;margin:0 12px 0 0}select,button,input{font:inherit;padding:7px 10px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--ink)}
+button{cursor:pointer}button.primary{background:var(--acc);color:#fff;border-color:var(--acc)}button:disabled{opacity:.5;cursor:default}
+main{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:16px;padding:16px;max-width:1200px;margin:0 auto}
+@media (max-width:860px){main{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px}
+#log{height:62vh;overflow:auto;display:flex;flex-direction:column;gap:8px}
+.msg{max-width:85%;padding:8px 11px;border-radius:12px;white-space:pre-wrap}.agent{background:var(--agent);align-self:flex-start}.customer{background:var(--cust);align-self:flex-end}
+.meta{font-size:11px;color:var(--mute);margin-top:4px}.chip{display:inline-block;font-size:11px;border:1px solid var(--line);border-radius:10px;padding:1px 7px;margin:2px 3px 0 0}
+.guard{color:var(--warn)}#status{font-weight:600}.dot{display:inline-block;width:10px;height:10px;border-radius:50%;background:var(--mute);margin-right:6px;vertical-align:middle}
+.rec .dot{background:var(--bad)}.think .dot{background:var(--warn)}.speak .dot{background:var(--ok)}
+#bar{display:flex;gap:8px;margin-top:10px}#bar input{flex:1}dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:4px 10px}dt{color:var(--mute)}
+table{width:100%;border-collapse:collapse;font-size:12px}td,th{border-bottom:1px solid var(--line);padding:3px 4px;text-align:left}
+#meter{height:6px;background:var(--line);border-radius:3px;overflow:hidden;margin-top:6px}#meter div{height:100%;width:0;background:var(--ok)}
+a{color:var(--acc)}
+</style>
+</head>
+<body>
+<header>
+  <h1>Voice Agent · Web Call</h1>
+  <select id="market"></select><select id="customer"></select>
+  <button id="start" class="primary">Start call</button><button id="end" disabled>End call</button>
+  <label><input type="checkbox" id="mic" checked> microphone</label>
+  <span id="status"><span class="dot"></span>idle</span>
+  <a href="/kb" target="_blank" style="margin-left:auto">KB search ↗</a>
+</header>
+<main>
+  <section class="card">
+    <div id="log"></div>
+    <div id="meter"><div></div></div>
+    <div id="bar"><input id="text" placeholder="…or type what the customer says and press Enter" disabled><button id="send" disabled>Send</button></div>
+  </section>
+  <aside class="card">
+    <h3 style="margin-top:0">Call state</h3>
+    <dl id="state"><dt>call</dt><dd>–</dd></dl>
+    <h3>Latency (ms)</h3>
+    <table><thead><tr><th>turn</th><th>ASR</th><th>agent</th><th>TTS</th></tr></thead><tbody id="lat"></tbody></table>
+    <h3>Result</h3><div id="result" class="meta">The CRM summary and recording links appear here when the call ends.</div>
+  </aside>
+</main>
+<script>
+const $=s=>document.querySelector(s);let callId=null,markets=[],turnNo=0,ended=false;
+let stream,ctx,analyser,rec,chunks=[],mode='idle',speechMs=0,silenceMs=0,recStart=0,player=new Audio();
+const VAD={thr:0.018,minSpeech:250,endSilence:900,maxUtt:20000};
+function setMode(m,label){mode=m;$('#status').className={listening:'',recording:'rec',thinking:'think',speaking:'speak'}[m]||'';$('#status').innerHTML='<span class="dot"></span>'+(label||m)}
+async function init(){const r=await (await fetch('/api/markets')).json();markets=r.markets;
+  $('#market').innerHTML=markets.map(m=>`<option value="${m.id}">${m.company} (${m.locale})</option>`).join('');fillCustomers();
+  $('#result').textContent=`LLM: ${r.llm.join(' → ')||'NOT CONFIGURED'} · KB ${r.kb_version} · retrieval ${r.dense?'hybrid':'lexical'}`}
+function fillCustomers(){const m=markets.find(x=>x.id==$('#market').value);$('#customer').innerHTML=m.customers.map(c=>`<option value="${c.id}">${c.id} · ${c.name} · ${c.product}${c.hint?' — '+c.hint:''}</option>`).join('')}
+$('#market').onchange=fillCustomers;
+function add(role,text,meta){const d=document.createElement('div');d.className='msg '+role;d.textContent=text;if(meta){const m=document.createElement('div');m.className='meta';m.innerHTML=meta;d.appendChild(m)}$('#log').appendChild(d);$('#log').scrollTop=1e9}
+function esc(s){return String(s).replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]))}
+function render(p){
+  if(p.user_text!==undefined&&p.user_text!==''&&p._voice)add('customer',p.user_text,p.latency_ms.asr!=null?`ASR ${p.latency_ms.asr} ms`:'');
+  let meta='';(p.tools||[]).forEach(t=>meta+=`<span class="chip">${esc(t.tool)}</span>`);
+  (p.citations||[]).forEach(c=>meta+=`<div>📎 ${esc(c)}</div>`);if(p.guard)meta+=`<div class="guard">⚠ guard: ${esc(p.guard.reason)} → ${esc(p.guard.action)}</div>`;
+  add('agent',p.reply,meta);const s=p.state;
+  $('#state').innerHTML=`<dt>call</dt><dd>${p.call_id}</dd><dt>verified</dt><dd>${s.verified}</dd><dt>disposition</dt><dd>${s.disposition||'–'}</dd><dt>promise</dt><dd>${s.ptp?s.ptp.date+' / '+s.ptp.mode+' ('+s.ptp.class+')':'–'}</dd><dt>tickets</dt><dd>${(s.tickets||[]).join(', ')||'–'}</dd>`;
+  const l=p.latency_ms;$('#lat').insertAdjacentHTML('beforeend',`<tr><td>${turnNo++}</td><td>${l.asr??'–'}</td><td>${l.agent??'–'}</td><td>${l.tts??'–'}</td></tr>`);
+  ended=p.ended;play(p.audio_b64);if(ended){$('#text').disabled=true;}}
+function play(b64){if(!b64){afterSpeak();return}setMode('speaking','agent speaking');player.src='data:audio/mpeg;base64,'+b64;player.onended=afterSpeak;player.play().catch(afterSpeak)}
+function afterSpeak(){if(ended){endCall();return}if($('#mic').checked&&stream)listen();else setMode('idle','your turn (type)')}
+$('#start').onclick=async()=>{$('#log').innerHTML='';$('#lat').innerHTML='';turnNo=0;ended=false;
+  if($('#mic').checked&&!stream){try{await setupMic()}catch(e){alert('Microphone unavailable – use the text box');$('#mic').checked=false}}
+  setMode('thinking','dialling…');const p=await (await fetch('/api/calls',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({market:$('#market').value,customer_id:$('#customer').value})})).json();
+  callId=p.call_id;if(p.outside_calling_hours)add('agent','(note: outside permitted calling hours – allowed here only because this is a test call)');
+  $('#end').disabled=false;$('#text').disabled=false;$('#send').disabled=false;$('#start').disabled=true;render(p)};
+$('#end').onclick=()=>endCall();
+async function endCall(){if(!callId)return;stopRec(true);const id=callId;callId=null;setMode('idle','call ended');$('#start').disabled=false;$('#end').disabled=true;$('#send').disabled=true;
+  const r=await (await fetch(`/api/calls/${id}/end`,{method:'POST'})).json();const f=r.files||{};
+  $('#result').innerHTML=`<b>${esc(r.crm_summary.disposition)}</b><br>${esc(r.crm_summary.summary||'')}<br>`+(f.recording?`<a href="/recordings/${id}/recording.mp3" target="_blank">recording.mp3</a> · `:'')+`<a href="/recordings/${id}/transcript.md" target="_blank">transcript.md</a> · <a href="/recordings/${id}/call.json" target="_blank">call.json</a>`}
+async function sendText(){const t=$('#text').value.trim();if(!t||!callId)return;$('#text').value='';add('customer',t);stopRec(true);setMode('thinking','agent thinking');
+  const p=await (await fetch(`/api/calls/${callId}/text`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({text:t})})).json();render(p)}
+$('#send').onclick=sendText;$('#text').onkeydown=e=>{if(e.key==='Enter')sendText()};
+async function setupMic(){stream=await navigator.mediaDevices.getUserMedia({audio:{echoCancellation:true,noiseSuppression:true}});ctx=new AudioContext();
+  const src=ctx.createMediaStreamSource(stream);analyser=ctx.createAnalyser();analyser.fftSize=1024;src.connect(analyser);setInterval(vadTick,50)}
+function listen(){if(!callId)return;chunks=[];speechMs=0;silenceMs=0;recStart=performance.now();rec=new MediaRecorder(stream,{mimeType:'audio/webm'});
+  rec.ondataavailable=e=>chunks.push(e.data);rec.onstop=onStop;rec.start();setMode('listening','listening… speak now')}
+function stopRec(discard){if(rec&&rec.state!=='inactive'){rec._discard=discard;rec.stop()}}
+function vadTick(){if(!analyser)return;const b=new Float32Array(analyser.fftSize);analyser.getFloatTimeDomainData(b);let s=0;for(const x of b)s+=x*x;const rms=Math.sqrt(s/b.length);
+  $('#meter div').style.width=Math.min(100,rms*800)+'%';if(!(mode==='listening'||mode==='recording'))return;
+  if(rms>VAD.thr){speechMs+=50;silenceMs=0;if(speechMs>=VAD.minSpeech&&mode==='listening')setMode('recording','hearing you…')}else if(mode==='recording'){silenceMs+=50}
+  const dur=performance.now()-recStart;if(mode==='recording'&&(silenceMs>=VAD.endSilence||dur>VAD.maxUtt))stopRec(false);
+  else if(mode==='listening'&&dur>25000){stopRec(true);setTimeout(listen,50)}}
+async function onStop(){const discard=this._discard;if(discard||!callId)return;setMode('thinking','transcribing + thinking');const blob=new Blob(chunks,{type:'audio/webm'});
+  const fd=new FormData();fd.append('file',blob,'speech.webm');const p=await (await fetch(`/api/calls/${callId}/turn`,{method:'POST',body:fd})).json();p._voice=true;render(p)}
+init();
+</script>
+</body>
+</html>

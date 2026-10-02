@@ -1,0 +1,30 @@
+# Business rules for the pre-due reminder campaign. Enforced in code (tools.py), summarised to the LLM in the prompt.
+# Source of truth for policy values is the KB (Schedule of Charges v3.0, Fair Practices Code); values here are
+# the operational subset the call flow needs and are cross-checked against the KB at startup.
+campaign: pre_due_reminder
+call_window_days_before_due: [1, 7]
+grace_days: 3
+calling_hours: {start: 8, end: 19}          # 08:00–19:00 local (Fair Practices Code §1)
+verification:
+  methods: [date_of_birth, loan_account_last4]
+  max_attempts: 2                           # then end politely, disclose nothing (FPC §3)
+promise_to_pay:
+  modes: [upi, auto_debit, net_banking, branch, app]
+  on_time: "date <= due date"
+  within_grace: "due date < date <= due date + grace_days -> allowed, no approval"
+  beyond_grace: "date > due date + grace_days -> allowed but MUST inform: late payment charge + bureau reporting may apply; flag Customer Assistance"
+  max_days_ahead: 30
+already_paid:
+  require: [payment_date, mode]
+  ask_for: utr_or_receipt
+  action: "create payment-trace ticket; never argue"
+never:
+  - waive, reduce or promise reversal of any charge
+  - disclose loan details before verification or to a third party
+  - ask for OTP, PIN, CVV, passwords or card numbers
+  - threaten legal action or contact references/employer
+  - state any fee, rate, date or policy that is not in the knowledge base or the customer's record
+escalation:
+  triggers: [customer asks for a human, dispute about the loan, complaint, hardship / cannot pay, abusive or very distressed customer, repeated misunderstanding]
+  action: "escalate_to_human -> callback by specialist within 1 working day"
+dispositions: [PTP_ON_TIME, PTP_WITHIN_GRACE, PTP_BEYOND_GRACE, ALREADY_PAID_TRACE, AUTO_DEBIT_CONFIRMED, CALLBACK_SCHEDULED, ESCALATED, HARDSHIP_REFERRED, REFUSED, WRONG_PARTY, VERIFICATION_FAILED, INCOMPLETE]

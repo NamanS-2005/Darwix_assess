@@ -1,0 +1,417 @@
+{
+ "utterances": 16,
+ "dropped_segments": 0,
+ "llm_skipped_prefilter": 6,
+ "asr_errors": 0,
+ "engine_stats": {
+  "signals_in": 7,
+  "below_threshold": 1,
+  "awaiting_llm_rejected": 1,
+  "duplicates_merged": 0,
+  "cooldown_suppressed": 0,
+  "held_then_shown": 1,
+  "held_expired": 0,
+  "evicted": 0,
+  "unknown_type": 0
+ },
+ "post_call": {
+  "missed_opportunities": [],
+  "unresolved_compliance": [
+   {
+    "id": "N2",
+    "type": "risky_statement",
+    "label": "Risky statement",
+    "text": "Avoid threats/pressure (\u201cCan you borrow\u201d). Say: \u201cLate payment can attract charges as per the schedule \u2014 I'd like to help you avoid that.\u201d",
+    "priority": 1,
+    "topic": "risky_statement:conduct",
+    "confidence": 0.85,
+    "source": "rule",
+    "evidence": [
+     "Can you borrow"
+    ],
+    "status": "open_at_end",
+    "updates": 0,
+    "uid": 13
+   }
+  ],
+  "acted_on": 0,
+  "total_nudges": 3
+ },
+ "topic_shifts": [
+  {
+   "uid": 1,
+   "from": null,
+   "to": "greeting",
+   "t": 3.6
+  },
+  {
+   "uid": 7,
+   "from": "greeting",
+   "to": "verification",
+   "t": 21.4
+  },
+  {
+   "uid": 9,
+   "from": "verification",
+   "to": "payment_reminder",
+   "t": 29.0
+  },
+  {
+   "uid": 10,
+   "from": "payment_reminder",
+   "to": "payment_difficulty",
+   "t": 35.6
+  },
+  {
+   "uid": 12,
+   "from": "payment_difficulty",
+   "to": "payment_reminder",
+   "t": 39.8
+  },
+  {
+   "uid": 14,
+   "from": "payment_reminder",
+   "to": "callback_needed",
+   "t": 46.2
+  }
+ ],
+ "frustration_trace": [
+  0.0,
+  0.0,
+  0.7,
+  0.0,
+  0.0
+ ],
+ "component_latency": {
+  "chunk_processing_us_p50": 521.8,
+  "asr_ms": [
+   238,
+   218,
+   261,
+   338,
+   212,
+   286,
+   219,
+   226,
+   385,
+   341,
+   208,
+   228,
+   222,
+   257,
+   273,
+   247
+  ],
+  "audio_to_text_ms": [
+   736,
+   720,
+   763,
+   839,
+   711,
+   803,
+   719,
+   729,
+   887,
+   344,
+   709,
+   731,
+   721,
+   761,
+   771,
+   747
+  ],
+  "rules_us": [
+   50.5,
+   48.5,
+   50.8,
+   29.4,
+   32.9,
+   53.4,
+   36.9,
+   21.3,
+   57.5,
+   112.2,
+   12.5,
+   48.8,
+   33.8,
+   90.5,
+   40.1,
+   52.1
+  ],
+  "llm_ms": [
+   338,
+   569,
+   363,
+   398,
+   385,
+   586,
+   585,
+   397,
+   417,
+   726
+  ]
+ },
+ "transcript": [
+  {
+   "uid": 1,
+   "speaker": "agent",
+   "text": "Hello, this is Vikram from Udaan Credit Finance.",
+   "start_t": 0.52,
+   "end_t": 3.58,
+   "asr_ms": 238,
+   "asr_conf": 0.86,
+   "forced_cut": false,
+   "audio_to_text_ms": 736
+  },
+  {
+   "uid": 2,
+   "speaker": "agent",
+   "text": "This call is recorded for quality purposes.",
+   "start_t": 4.58,
+   "end_t": 7.38,
+   "asr_ms": 218,
+   "asr_conf": 0.886,
+   "forced_cut": false,
+   "audio_to_text_ms": 720
+  },
+  {
+   "uid": 3,
+   "speaker": "agent",
+   "text": "Am I speaking with Ms. Anjali Raab?",
+   "start_t": 8.32,
+   "end_t": 10.58,
+   "asr_ms": 261,
+   "asr_conf": 0.899,
+   "forced_cut": false,
+   "audio_to_text_ms": 763
+  },
+  {
+   "uid": 4,
+   "speaker": "customer",
+   "text": "Yes, speaking.",
+   "start_t": 11.18,
+   "end_t": 12.46,
+   "asr_ms": 338,
+   "asr_conf": 0.755,
+   "forced_cut": false,
+   "audio_to_text_ms": 839
+  },
+  {
+   "uid": 5,
+   "speaker": "agent",
+   "text": "Thank you.",
+   "start_t": 13.2,
+   "end_t": 13.76,
+   "asr_ms": 212,
+   "asr_conf": 0.809,
+   "forced_cut": false,
+   "audio_to_text_ms": 711
+  },
+  {
+   "uid": 6,
+   "speaker": "agent",
+   "text": "For verification, may I have your date of birth please?",
+   "start_t": 14.68,
+   "end_t": 18.12,
+   "asr_ms": 286,
+   "asr_conf": 0.878,
+   "forced_cut": false,
+   "audio_to_text_ms": 803
+  },
+  {
+   "uid": 7,
+   "speaker": "customer",
+   "text": "12th of December, 1992",
+   "start_t": 18.8,
+   "end_t": 21.42,
+   "asr_ms": 219,
+   "asr_conf": 0.714,
+   "forced_cut": false,
+   "audio_to_text_ms": 719
+  },
+  {
+   "uid": 8,
+   "speaker": "agent",
+   "text": "Thank you.",
+   "start_t": 22.1,
+   "end_t": 22.66,
+   "asr_ms": 226,
+   "asr_conf": 0.816,
+   "forced_cut": false,
+   "audio_to_text_ms": 729
+  },
+  {
+   "uid": 9,
+   "speaker": "agent",
+   "text": "Your personal loan EMI of 11,500 rupees is due on the 5th.",
+   "start_t": 23.5,
+   "end_t": 29.0,
+   "asr_ms": 385,
+   "asr_conf": 0.896,
+   "forced_cut": false,
+   "audio_to_text_ms": 887
+  },
+  {
+   "uid": 10,
+   "speaker": "customer",
+   "text": "Actually, I lost my job last month and I really don't know how I will pay this EMI right",
+   "start_t": 29.68,
+   "end_t": 35.62,
+   "asr_ms": 341,
+   "asr_conf": 0.988,
+   "forced_cut": true,
+   "audio_to_text_ms": 344
+  },
+  {
+   "uid": 11,
+   "speaker": "customer",
+   "text": "Now.",
+   "start_t": 35.68,
+   "end_t": 35.84,
+   "asr_ms": 208,
+   "asr_conf": 0.589,
+   "forced_cut": false,
+   "audio_to_text_ms": 709
+  },
+  {
+   "uid": 12,
+   "speaker": "agent",
+   "text": "Ma'am, the EMI has to be paid by the due date.",
+   "start_t": 36.62,
+   "end_t": 39.76,
+   "asr_ms": 228,
+   "asr_conf": 0.906,
+   "forced_cut": false,
+   "audio_to_text_ms": 731
+  },
+  {
+   "uid": 13,
+   "speaker": "agent",
+   "text": "Can you borrow from someone?",
+   "start_t": 40.76,
+   "end_t": 42.36,
+   "asr_ms": 222,
+   "asr_conf": 0.823,
+   "forced_cut": false,
+   "audio_to_text_ms": 721
+  },
+  {
+   "uid": 14,
+   "speaker": "customer",
+   "text": "I'm driving right now. Can you call me back in the evening?",
+   "start_t": 42.82,
+   "end_t": 46.24,
+   "asr_ms": 257,
+   "asr_conf": 0.897,
+   "forced_cut": false,
+   "audio_to_text_ms": 761
+  },
+  {
+   "uid": 15,
+   "speaker": "customer",
+   "text": "I can't talk properly.",
+   "start_t": 47.2,
+   "end_t": 48.64,
+   "asr_ms": 273,
+   "asr_conf": 0.861,
+   "forced_cut": false,
+   "audio_to_text_ms": 771
+  },
+  {
+   "uid": 16,
+   "speaker": "agent",
+   "text": "Okay ma'am, but please arrange the money.",
+   "start_t": 49.36,
+   "end_t": 51.94,
+   "asr_ms": 247,
+   "asr_conf": 0.834,
+   "forced_cut": false,
+   "audio_to_text_ms": 747
+  }
+ ],
+ "asr": "groq",
+ "llm": true,
+ "nudges": [
+  {
+   "id": "N1",
+   "type": "payment_difficulty",
+   "label": "Payment difficulty",
+   "text": "Show empathy (\u201cI lost my job last month and I really don't know how I will pay this E\u201d). Offer the approved path: hardship review / Customer Assistance callback. Don't ask them to borrow.",
+   "priority": 2,
+   "topic": "payment_difficulty",
+   "confidence": 1.0,
+   "source": "rule+llm",
+   "evidence": [
+    "I lost my job last month and I really don't know how I will pay this EMI"
+   ],
+   "status": "active",
+   "updates": 0,
+   "uid": 10,
+   "t_call": 35.61,
+   "latency_ms": {
+    "endpointing": 0.0,
+    "asr": 343.6,
+    "signal": 385.3,
+    "llm": 385.1,
+    "engine": 0.1,
+    "delivery": 0.4,
+    "e2e": 729.4
+   },
+   "path": "llm"
+  },
+  {
+   "id": "N2",
+   "type": "risky_statement",
+   "label": "Risky statement",
+   "text": "Avoid threats/pressure (\u201cCan you borrow\u201d). Say: \u201cLate payment can attract charges as per the schedule \u2014 I'd like to help you avoid that.\u201d",
+   "priority": 1,
+   "topic": "risky_statement:conduct",
+   "confidence": 0.85,
+   "source": "rule",
+   "evidence": [
+    "Can you borrow"
+   ],
+   "status": "active",
+   "updates": 0,
+   "uid": 13,
+   "t_call": 42.31,
+   "latency_ms": {
+    "endpointing": 497.9,
+    "asr": 223.2,
+    "signal": 0.1,
+    "llm": null,
+    "engine": 0.1,
+    "delivery": 3.2,
+    "e2e": 724.4
+   },
+   "path": "rules"
+  },
+  {
+   "id": "N3",
+   "type": "callback_needed",
+   "label": "Callback",
+   "text": "Customer can't talk now \u2014 offer a callback slot (8 AM\u20137 PM) and confirm the exact time.",
+   "priority": 3,
+   "topic": "callback_needed:callback_needed",
+   "confidence": 1.0,
+   "source": "rule+llm",
+   "evidence": [
+    "I'm driving right now. Can you call me back in the evening?"
+   ],
+   "status": "active",
+   "updates": 0,
+   "uid": 14,
+   "t_call": 46.2,
+   "latency_ms": {
+    "endpointing": 500.5,
+    "asr": 260.3,
+    "signal": 417.5,
+    "llm": 417.3,
+    "engine": 722.4,
+    "delivery": 0.7,
+    "e2e": 1901.3
+   },
+   "path": "llm"
+  }
+ ]
+}

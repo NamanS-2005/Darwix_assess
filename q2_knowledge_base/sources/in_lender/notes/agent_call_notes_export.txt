@@ -1,0 +1,19 @@
+CALL NOTES EXPORT - Pre-due reminder campaign - Week 36 (internal, contains customer data)
+-----------------------------------------------------------------------------------------
+[2026-09-02 10:14] Agent: Priya K | Customer: Mr. Rakesh Sharma | Mob: +91 98765 43210 | LAN: 402233118812
+Customer said salary gets credited on 7th so EMI on 5th always bounces. Asked to change EMI date. Explained EMI date change form (10 days before due date). Customer happy. PAN on file ABCPS1234K.
+
+[2026-09-02 11:40] Agent: Imran S | Customer: Ms. Neha Verma | Mob: 9123456780 | email neha.verma82@gmail.com
+Objection: "Why are you calling me before the due date, I have never missed an EMI." Response used: thank her, explain it is a courtesy reminder because NACH bounce charge is Rs 590 and bank charges also apply. Customer calmed down.
+
+[2026-09-03 09:05] Agent: Priya K | Customer: Mr. Joseph D'Souza | Aadhaar 4567 8912 3456 | Mob 9988776655
+Customer said he already paid by UPI yesterday. Collected UTR 4271 9988 1123. Raised payment trace ticket. Note: tell customers it can take up to 2 working days to reflect.
+
+[2026-09-03 15:22] Agent: Imran S | Customer: Mrs. Lakshmi Iyer | Mob: +91-90000-11122
+Customer lost job last month, asked if EMI can be skipped. Told her we cannot skip EMIs on this call but Customer Assistance team can review options like EMI date shift or payment plan. Created callback. Objection pattern: hardship.
+
+[2026-09-04 12:30] Agent: Priya K | Customer: Mr. Arjun Mehta | Mob 9811122233 | card 4111 1111 1111 1111
+Customer asked us to waive the bounce charge from last month. Told him reminder team cannot waive charges, waiver requests are reviewed by Customer Assistance within 5 working days.
+
+[2026-09-04 17:55] Agent: Imran S | Customer: Mr. Vikram Rao | Mob 9000012345
+Customer said "Stop calling me, I will pay when I want." Objection: annoyed by calls. Response: apologise, explain this is the only reminder before the due date, offer to set up auto-debit so reminders are not needed.

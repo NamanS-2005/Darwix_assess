@@ -1,0 +1,17 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+# runtime artefacts (recordings are re-generated; commit the curated ones under results/ only)
+q1_voice_agent/recordings/*
+!q1_voice_agent/recordings/.gitkeep
+q1_voice_agent/crm/outcomes.jsonl
+q1_voice_agent/crm/escalations.jsonl
+q2_knowledge_base/output/embeddings*.npy
+# large, regenerable audio (ASR benchmark audio: run_asr_eval regenerates; stereo copies: simulate_calls regenerates)
+q3_multilingual/asr_eval/audio/*.wav
+**/recording_stereo.wav
+# local logs
+*.log
+.claude/

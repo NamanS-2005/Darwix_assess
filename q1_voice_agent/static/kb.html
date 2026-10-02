@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Knowledge Base Search</title>
+<style>
+:root{--bg:#f6f7f9;--card:#fff;--ink:#16181d;--mute:#667085;--line:#e4e7ec;--acc:#2e5bff}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1115;--card:#171a21;--ink:#e6e8ee;--mute:#98a2b3;--line:#2a2f3a}}
+*{box-sizing:border-box}body{margin:0;font:14px/1.5 system-ui,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--ink)}
+.wrap{max-width:900px;margin:0 auto;padding:16px}form{display:flex;gap:8px;flex-wrap:wrap}input,select,button{font:inherit;padding:8px 10px;border-radius:8px;border:1px solid var(--line);background:var(--card);color:var(--ink)}
+input{flex:1;min-width:220px}button{background:var(--acc);color:#fff;border-color:var(--acc);cursor:pointer}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px;margin-top:12px}.mute{color:var(--mute);font-size:12px}code{font-size:12px}
+</style>
+</head>
+<body><div class="wrap">
+<h2>Knowledge Base · grounded answers with citations</h2>
+<form id="f"><input id="q" placeholder="e.g. Will a late payment affect my CIBIL score?" required>
+<select id="m"><option value="in_lender">in_lender (Q1)</option><option value="ph_life">ph_life</option><option value="id_multifinance">id_multifinance</option></select>
+<button>Ask</button></form>
+<div id="ans"></div><div id="hits"></div>
+</div>
+<script>
+const esc=s=>String(s??'').replace(/[&<>]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+document.getElementById('f').onsubmit=async e=>{e.preventDefault();const q=encodeURIComponent(document.getElementById('q').value),m=document.getElementById('m').value;
+ document.getElementById('ans').innerHTML='<div class="card mute">searching…</div>';
+ const [s,a]=await Promise.all([fetch(`/api/kb/search?q=${q}&market=${m}`).then(r=>r.json()),fetch(`/api/kb/answer?q=${q}&market=${m}`).then(r=>r.json()).catch(()=>null)]);
+ document.getElementById('ans').innerHTML=`<div class="card"><b>Answer:</b> ${a?(a.status==='answered'?esc(a.answer):'<i>Not in knowledge base → safe fallback</i> ('+esc(a.reason)+')'):'(LLM unavailable)'}<div class="mute">${a?esc((a.citations||[]).join(' ')):''}</div></div>`;
+ document.getElementById('hits').innerHTML=`<p class="mute">retrieval: ${esc(s.meta.mode)} · ${s.meta.latency_ms} ms · abstained=${s.meta.abstained}</p>`+s.hits.map(h=>`<div class="card"><b>${esc(h.title)}</b> <span class="mute">${esc(h.category)} · score ${h.score} · bm25 ${h.bm25} · dense ${h.dense} · coverage ${h.coverage}</span><p>${esc(h.content)}</p><code>${esc(h.citation)}</code></div>`).join('')};
+</script>
+</body></html>

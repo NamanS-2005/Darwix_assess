@@ -1,0 +1,270 @@
+{
+ "call_id": "id-20261002-013157-56fe",
+ "market": "id_multifinance",
+ "channel": "simulated",
+ "customer_id": "D002",
+ "due_date": "2026-10-04",
+ "outside_calling_hours": true,
+ "state": {
+  "verified": false,
+  "verify_attempts": 0,
+  "disposition": "INCOMPLETE",
+  "ptp": null,
+  "tickets": [],
+  "ended": false,
+  "details_shared": false,
+  "offered_anything_else": true
+ },
+ "crm_summary": null,
+ "kb_log": [],
+ "guard_log": [
+  {
+   "action": "regenerate",
+   "reason": "ungrounded numbers",
+   "numbers": [
+    "1983"
+   ],
+   "draft": "Maaf, Bu Siti. Saya tidak yakin mendengar tahun lahir Ibu. Bisa ulangi tahun lahir Ibu, misalnya 1983?",
+   "note": "SYSTEM CHECK: your draft contains figures not supported by tool results or the customer's words: ['1983']. Rewrite using only facts from tool results this call (call search_knowledge_base if needed). If unknown, say you don't have that information."
+  },
+  {
+   "action": "regenerate",
+   "reason": "ungrounded numbers",
+   "numbers": [
+    "1975",
+    "1983"
+   ],
+   "draft": "Maaf, Bu Siti, saya masih tidak dapat mengonfirmasi tanggal lahir. Mohon ulangi tahun lahir Ibu dengan jelas, misalnya “1983” atau “1975”.",
+   "note": "SYSTEM CHECK: your draft contains figures not supported by tool results or the customer's words: ['1975', '1983']. Rewrite using only facts from tool results this call (call search_knowledge_base if needed). If unknown, say you don't have that information."
+  }
+ ],
+ "metrics": {
+  "kb_ms": [],
+  "llm_ms": [
+   363,
+   674,
+   666,
+   655,
+   765,
+   624,
+   611,
+   400,
+   653
+  ],
+  "turn_ms": [
+   366,
+   2115,
+   11835,
+   12961
+  ],
+  "providers": {
+   "groq/qwen/qwen3.8-27b": 1,
+   "groq2/openai/gpt-oss-120b": 1,
+   "groq2/openai/gpt-oss-20b": 6,
+   "groq2/qwen/qwen3.8-27b": 1
+  }
+ },
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Selamat malam, saya Dewi, asisten virtual dari Pundi Mitra Finance. Percakapan ini direkam untuk menjaga kualitas layanan. Apakah saya berbicara dengan Bu Siti?",
+   "ts": 1790884917.4108756,
+   "source": "fixed_script"
+  },
+  {
+   "role": "customer",
+   "text": "Muhun, leres abdisiti.",
+   "ts": 1790884920.835736,
+   "asr": {
+    "intended": "Muhun, leres abdi Siti.",
+    "ms": 359
+   },
+   "intended": "Muhun, leres abdi Siti."
+  },
+  {
+   "role": "agent",
+   "text": "Baik Bu Siti, terima kasih. Untuk keamanan data, boleh saya konfirmasi tanggal lahir Ibu, atau 4 digit terakhir nomor kontrak?",
+   "ts": 1790884921.201686,
+   "source": "llm",
+   "tools": [],
+   "agent_ms": 366,
+   "state": {
+    "verified": false,
+    "disposition": null,
+    "ended": false
+   }
+  },
+  {
+   "role": "customer",
+   "text": "Saya lahir tanggal 25 Agustus Sarbu 880 Tilu.",
+   "ts": 1790884992.3252501,
+   "asr": {
+    "intended": "Saya lahir tanggal 25 Agustus 1993.",
+    "ms": 571
+   },
+   "intended": "Saya lahir tanggal 25 Agustus 1993."
+  },
+  {
+   "role": "agent",
+   "text": "Maaf, Bu Siti, sepertinya saya tidak dapat mengonfirmasi tanggal lahir yang Anda berikan. Bisakah Ibu ulangi tahun lahir Ibu?",
+   "ts": 1790884994.4406388,
+   "source": "llm",
+   "tools": [
+    {
+     "tool": "verify_identity",
+     "args": {
+      "date_of_birth": "1883-08-25"
+     },
+     "result": {
+      "verified": false,
+      "implausible": true,
+      "instruction": "The date heard (1883-08-25) is implausible – probably mis-heard. Read it back and ask the customer to repeat their birth year."
+     },
+     "ms": 0.3,
+     "model": "groq2/openai/gpt-oss-120b"
+    }
+   ],
+   "agent_ms": 2115,
+   "state": {
+    "verified": false,
+    "disposition": null,
+    "ended": false
+   }
+  },
+  {
+   "role": "customer",
+   "text": "Tahun lahir Abdi Sarbu 880 Tilu.",
+   "ts": 1790885066.8794892,
+   "asr": {
+    "intended": "Tahun lahir abdi 1993.",
+    "ms": 294
+   },
+   "intended": "Tahun lahir abdi 1993."
+  },
+  {
+   "role": "agent",
+   "text": "Maaf, Bu Siti, saya masih belum dapat mengonfirmasi tanggal lahir. Bisakah Ibu ulangi tahun lahir Ibu?",
+   "ts": 1790885078.7147274,
+   "source": "llm",
+   "tools": [
+    {
+     "tool": "verify_identity",
+     "args": {
+      "date_of_birth": "1883-08-25"
+     },
+     "result": {
+      "verified": false,
+      "implausible": true,
+      "instruction": "The date heard (1883-08-25) is implausible – probably mis-heard. Read it back and ask the customer to repeat their birth year."
+     },
+     "ms": 0.3,
+     "model": "groq2/qwen/qwen3.8-27b"
+    },
+    {
+     "tool": "verify_identity",
+     "args": {
+      "date_of_birth": "1883-08-25"
+     },
+     "result": {
+      "verified": false,
+      "implausible": true,
+      "instruction": "The date heard (1883-08-25) is implausible – probably mis-heard. Read it back and ask the customer to repeat their birth year."
+     },
+     "ms": 0.3,
+     "model": "groq2/openai/gpt-oss-20b"
+    }
+   ],
+   "agent_ms": 11835,
+   "state": {
+    "verified": false,
+    "disposition": null,
+    "ended": false
+   }
+  },
+  {
+   "role": "customer",
+   "text": "Sarbu Salapan Ratus Salapan Puluh Tilu",
+   "ts": 1790885276.6971807,
+   "asr": {
+    "intended": "1993.",
+    "ms": 252
+   },
+   "intended": "1993."
+  },
+  {
+   "role": "agent",
+   "text": "Mohon maaf Bu, sedang ada kendala teknis. Tim kami akan menghubungi kembali. Terima kasih atas pengertiannya.",
+   "ts": 1790885289.6585774,
+   "source": "fixed_fallback",
+   "tools": [
+    {
+     "error": "All LLM providers failed or none configured: gemini2/gemini-3.5-flash:BadRequestError:Error code: 400 - [{'error': {'code': 400, 'message': 'Function call is missing a thought_signature in functionCall parts. This is required for tools to work correctly, and missing thought_signature m | gemini2/gem"
+    }
+   ],
+   "agent_ms": 12961,
+   "state": {
+    "verified": false,
+    "disposition": "INCOMPLETE",
+    "ended": false
+   }
+  }
+ ],
+ "scenario": {
+  "id": "id_07_regional_accent_sundanese",
+  "title": "ID – Sundanese-accented speaker (su-ID voice, ASR in the loop)",
+  "market": "id_multifinance",
+  "customer_id": "D002",
+  "customer_voice": "su-ID-TutiNeural",
+  "expect": {
+   "verified": true,
+   "disposition_in": [
+    "PTP_ON_TIME"
+   ],
+   "tools_called": [
+    "verify_identity",
+    "record_promise_to_pay"
+   ],
+   "language_judge": "Polite Bahasa Indonesia; understands Sundanese insertions; does not reply in English"
+  }
+ },
+ "latency": {
+  "asr_ms": [
+   359,
+   571,
+   294,
+   252
+  ],
+  "agent_ms": [
+   366,
+   2115,
+   11835,
+   12961
+  ],
+  "tts_ms": [
+   1238,
+   1325,
+   4177,
+   2869,
+   1170
+  ]
+ },
+ "asr_wer": 0.933,
+ "asr_pairs": [
+  {
+   "intended": "Muhun, leres abdi Siti.",
+   "asr": "Muhun, leres abdisiti."
+  },
+  {
+   "intended": "Saya lahir tanggal 25 Agustus 1993.",
+   "asr": "Saya lahir tanggal 25 Agustus Sarbu 880 Tilu."
+  },
+  {
+   "intended": "Tahun lahir abdi 1993.",
+   "asr": "Tahun lahir Abdi Sarbu 880 Tilu."
+  },
+  {
+   "intended": "1993.",
+   "asr": "Sarbu Salapan Ratus Salapan Puluh Tilu"
+  }
+ ]
+}

@@ -1,0 +1,320 @@
+{
+ "call_id": "id-20261001-223325-a703",
+ "market": "id_multifinance",
+ "channel": "simulated",
+ "customer_id": "D002",
+ "due_date": "2026-10-04",
+ "outside_calling_hours": true,
+ "state": {
+  "verified": true,
+  "verify_attempts": 1,
+  "disposition": "ESCALATED",
+  "ptp": null,
+  "tickets": [
+   {
+    "type": "escalation",
+    "id": "ESC-DC0DA5",
+    "reason": "human_request",
+    "details": "Bu Siti meminta berbicara dengan petugas pada besok jam 10 pagi",
+    "market": "id_multifinance",
+    "customer_id": "D002",
+    "call_id": "id-20261001-223325-a703",
+    "created_at": "2026-10-01T22:38:25",
+    "sla": "callback within 1 working day",
+    "delivery": "logged"
+   },
+   {
+    "type": "callback",
+    "id": "CB-B434D6",
+    "at": "2026-10-03T10:00:00+07:00",
+    "reason": "Minta bicara dengan petugas"
+   }
+  ],
+  "ended": true,
+  "details_shared": false
+ },
+ "crm_summary": {
+  "call_id": "id-20261001-223325-a703",
+  "market": "id_multifinance",
+  "customer_id": "D002",
+  "disposition": "ESCALATED",
+  "llm_disposition": "CALLBACK_SCHEDULED",
+  "summary": "Bu Siti meminta bicara dengan petugas; callback dijadwalkan Sabtu, 3 Oktober 2026 jam 10:00 (tiket ESC-DC0DA5, CB-B434D6).",
+  "ptp": null,
+  "tickets": [
+   {
+    "type": "escalation",
+    "id": "ESC-DC0DA5",
+    "reason": "human_request",
+    "details": "Bu Siti meminta berbicara dengan petugas pada besok jam 10 pagi",
+    "market": "id_multifinance",
+    "customer_id": "D002",
+    "call_id": "id-20261001-223325-a703",
+    "created_at": "2026-10-01T22:38:25",
+    "sla": "callback within 1 working day",
+    "delivery": "logged"
+   },
+   {
+    "type": "callback",
+    "id": "CB-B434D6",
+    "at": "2026-10-03T10:00:00+07:00",
+    "reason": "Minta bicara dengan petugas"
+   }
+  ],
+  "verified": true,
+  "kb_queries": 0,
+  "ended_at": "2026-10-01T22:43:23"
+ },
+ "kb_log": [],
+ "guard_log": [
+  {
+   "action": "regenerate",
+   "reason": "ungrounded numbers",
+   "numbers": [
+    "10.00",
+    "1000"
+   ],
+   "draft": "Terima kasih, Bu Siti, data Ibu sudah terverifikasi. Saya catat permintaan Ibu untuk dihubungi petugas besok, Sabtu, 3 Oktober pukul 10.00 pagi ya.",
+   "note": "SYSTEM CHECK: your draft contains figures not supported by tool results or the customer's words: ['10.00', '1000']. Rewrite using only facts from tool results this call (call search_knowledge_base if needed). If unknown, say you don't have that information."
+  }
+ ],
+ "metrics": {
+  "kb_ms": [],
+  "llm_ms": [
+   433,
+   333,
+   579,
+   426,
+   885,
+   641,
+   772,
+   816,
+   633
+  ],
+  "turn_ms": [
+   435,
+   335,
+   2742,
+   2418
+  ],
+  "providers": {
+   "groq2/qwen/qwen3.8-27b": 5,
+   "groq/qwen/qwen3.8-27b": 1,
+   "groq2/openai/gpt-oss-120b": 3
+  }
+ },
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Selamat malam, saya Dewi, asisten virtual dari Pundi Mitra Finance. Percakapan ini direkam untuk menjaga kualitas layanan. Apakah saya berbicara dengan Bu Siti?",
+   "ts": 1790874205.5161438,
+   "source": "fixed_script"
+  },
+  {
+   "role": "customer",
+   "text": "Ya, ini Bu Siti Rahayu.",
+   "ts": 1790874211.4538257,
+   "asr": {
+    "intended": "Ya, ini Bu Siti Rahayu.",
+    "ms": 246
+   },
+   "intended": "Ya, ini Bu Siti Rahayu."
+  },
+  {
+   "role": "agent",
+   "text": "Baik, Bu Siti. Untuk keamanan data, boleh saya konfirmasi tanggal lahir Ibu, atau 4 digit terakhir nomor kontrak?",
+   "ts": 1790874211.8888643,
+   "source": "llm",
+   "tools": [],
+   "agent_ms": 435,
+   "state": {
+    "verified": false,
+    "disposition": null,
+    "ended": false
+   }
+  },
+  {
+   "role": "customer",
+   "text": "Tanggal lahir saya 25 Agustus 1993, dan 4 digi terakhir nomor kontrak 1178.",
+   "ts": 1790874456.1780355,
+   "asr": {
+    "intended": "Tanggal lahir saya 25 Agustus 1993, dan 4 digit terakhir nomor kontrak 1178.",
+    "ms": 405
+   },
+   "intended": "Tanggal lahir saya 25 Agustus 1993, dan 4 digit terakhir nomor kontrak 1178."
+  },
+  {
+   "role": "agent",
+   "text": "Baik, Bu. Saya verifikasi dulu ya.",
+   "ts": 1790874456.513515,
+   "source": "llm",
+   "tools": [],
+   "agent_ms": 335,
+   "state": {
+    "verified": false,
+    "disposition": null,
+    "ended": false
+   }
+  },
+  {
+   "role": "customer",
+   "text": "Baik, terima kasih. Saya mau bicara langsung sama petugas, Mbak. Minta di telepon besok jam 10 pagi.",
+   "ts": 1790874503.4278193,
+   "asr": {
+    "intended": "Baik, terima kasih. Saya mau bicara langsung sama petugas, Mbak. Minta ditelepon besok jam 10 pagi.",
+    "ms": 336
+   },
+   "intended": "Baik, terima kasih. Saya mau bicara langsung sama petugas, Mbak. Minta ditelepon besok jam 10 pagi."
+  },
+  {
+   "role": "agent",
+   "text": "Baik, Bu Siti, kami akan menghubungi kembali Ibu pada hari kerja berikutnya. Apakah Ibu ingin menentukan jam spesifik untuk panggilan kembali?",
+   "ts": 1790874506.169766,
+   "source": "llm",
+   "tools": [
+    {
+     "tool": "verify_identity",
+     "args": {
+      "account_last4": "1178",
+      "date_of_birth": "1993-08-25"
+     },
+     "result": {
+      "verified": true,
+      "instruction": "Thank the customer, then call get_loan_details and give the reminder."
+     },
+     "ms": 0.4,
+     "model": "groq2/qwen/qwen3.8-27b"
+    },
+    {
+     "tool": "escalate_to_human",
+     "args": {
+      "details": "Bu Siti meminta berbicara dengan petugas pada besok jam 10 pagi",
+      "reason": "human_request"
+     },
+     "result": {
+      "ok": true,
+      "ticket": "ESC-DC0DA5",
+      "instruction": "Tell the customer a specialist from our team will call back within 1 working day (do not promise any outcome). Ask if they prefer a time; if yes use schedule_callback."
+     },
+     "ms": 11.1,
+     "model": "groq2/openai/gpt-oss-120b"
+    }
+   ],
+   "agent_ms": 2742,
+   "state": {
+    "verified": true,
+    "disposition": "ESCALATED",
+    "ended": false
+   }
+  },
+  {
+   "role": "customer",
+   "text": "Ya, tolong hubungi saya besok jam 10 pagi. Terima kasih.",
+   "ts": 1790874801.3017075,
+   "asr": {
+    "intended": "Ya, tolong hubungi saya besok jam 10 pagi. Terima kasih.",
+    "ms": 267
+   },
+   "intended": "Ya, tolong hubungi saya besok jam 10 pagi. Terima kasih."
+  },
+  {
+   "role": "agent",
+   "text": "Kami sudah jadwalkan panggilan kembali pada Sabtu, 3 Oktober 2026 pukul 10 pagi; terima kasih atas waktunya, selamat malam.",
+   "ts": 1790874803.7196987,
+   "source": "llm",
+   "tools": [
+    {
+     "tool": "schedule_callback",
+     "args": {
+      "date": "2026-10-03",
+      "reason": "Minta bicara dengan petugas",
+      "time": "10:00"
+     },
+     "result": {
+      "ok": true,
+      "callback_id": "CB-B434D6",
+      "spoken": "Sabtu, 3 Oktober 2026 10:00",
+      "instruction": "Confirm the callback date and time."
+     },
+     "ms": 0.4,
+     "model": "groq2/qwen/qwen3.8-27b"
+    },
+    {
+     "tool": "end_call",
+     "args": {
+      "disposition": "CALLBACK_SCHEDULED",
+      "summary": "Bu Siti meminta bicara dengan petugas; callback dijadwalkan Sabtu, 3 Oktober 2026 jam 10:00 (tiket ESC-DC0DA5, CB-B434D6)."
+     },
+     "result": {
+      "ok": true,
+      "instruction": "Say the closing line now (one sentence summary of next step + closing). Do not ask further questions."
+     },
+     "ms": 15.3,
+     "model": "groq2/qwen/qwen3.8-27b"
+    }
+   ],
+   "agent_ms": 2418,
+   "state": {
+    "verified": true,
+    "disposition": "ESCALATED",
+    "ended": true
+   }
+  }
+ ],
+ "scenario": {
+  "id": "id_05_escalation_petugas",
+  "title": "ID – Human escalation (minta bicara dengan petugas)",
+  "market": "id_multifinance",
+  "customer_id": "D002",
+  "expect": {
+   "verified": true,
+   "escalated": true,
+   "disposition_in": [
+    "HARDSHIP_REFERRED",
+    "ESCALATED",
+    "CALLBACK_SCHEDULED"
+   ],
+   "language_judge": "Empathetic Bahasa Indonesia, escalation stays in Indonesian"
+  }
+ },
+ "latency": {
+  "asr_ms": [
+   246,
+   405,
+   336,
+   267
+  ],
+  "agent_ms": [
+   435,
+   335,
+   2742,
+   2418
+  ],
+  "tts_ms": [
+   1424,
+   7781,
+   2226,
+   6187,
+   4293
+  ]
+ },
+ "asr_wer": 0.068,
+ "asr_pairs": [
+  {
+   "intended": "Ya, ini Bu Siti Rahayu.",
+   "asr": "Ya, ini Bu Siti Rahayu."
+  },
+  {
+   "intended": "Tanggal lahir saya 25 Agustus 1993, dan 4 digit terakhir nomor kontrak 1178.",
+   "asr": "Tanggal lahir saya 25 Agustus 1993, dan 4 digi terakhir nomor kontrak 1178."
+  },
+  {
+   "intended": "Baik, terima kasih. Saya mau bicara langsung sama petugas, Mbak. Minta ditelepon besok jam 10 pagi.",
+   "asr": "Baik, terima kasih. Saya mau bicara langsung sama petugas, Mbak. Minta di telepon besok jam 10 pagi."
+  },
+  {
+   "intended": "Ya, tolong hubungi saya besok jam 10 pagi. Terima kasih.",
+   "asr": "Ya, tolong hubungi saya besok jam 10 pagi. Terima kasih."
+  }
+ ]
+}

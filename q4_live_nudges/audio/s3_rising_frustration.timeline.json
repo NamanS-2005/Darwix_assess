@@ -1,0 +1,90 @@
+{
+ "id": "s3_rising_frustration",
+ "duration": 67.65,
+ "turns": [
+  {
+   "turn": 0,
+   "speaker": "agent",
+   "text": "Good afternoon, this is Neha from Udaan Credit Finance, this call is recorded. Am I speaking with Mr. Imran Khan?",
+   "start": 0.6,
+   "end": 8.818
+  },
+  {
+   "turn": 1,
+   "speaker": "customer",
+   "text": "Yes.",
+   "start": 9.268,
+   "end": 9.77
+  },
+  {
+   "turn": 2,
+   "speaker": "agent",
+   "text": "Thank you. Could you confirm the last four digits of your loan account for verification?",
+   "start": 10.37,
+   "end": 16.085
+  },
+  {
+   "turn": 3,
+   "speaker": "customer",
+   "text": "Four four two one.",
+   "start": 16.535,
+   "end": 17.743
+  },
+  {
+   "turn": 4,
+   "speaker": "agent",
+   "text": "Thank you. Your two-wheeler loan EMI of three thousand one hundred rupees is due on the fifth. How would you like to pay?",
+   "start": 18.343,
+   "end": 26.816
+  },
+  {
+   "turn": 5,
+   "speaker": "customer",
+   "text": "I already paid it two days ago through UPI. Why are you calling me?",
+   "start": 27.266,
+   "end": 32.351
+  },
+  {
+   "turn": 6,
+   "speaker": "agent",
+   "text": "Sir, our system shows it is still pending. Please make the payment today.",
+   "start": 32.951,
+   "end": 38.184
+  },
+  {
+   "turn": 7,
+   "speaker": "customer",
+   "text": "This is the third time someone from your company has called me this week. I told you I have already paid!",
+   "start": 38.634,
+   "end": 45.922
+  },
+  {
+   "turn": 8,
+   "speaker": "agent",
+   "text": "Sir, the payment is not reflecting, so you need to pay to avoid charges.",
+   "start": 46.522,
+   "end": 51.573
+  },
+  {
+   "turn": 9,
+   "speaker": "customer",
+   "text": "This is ridiculous. I am not paying twice. I am fed up with these calls, stop calling me!",
+   "start": 52.023,
+   "end": 59.219
+  },
+  {
+   "turn": 10,
+   "speaker": "agent",
+   "text": "Sir, please calm down.",
+   "start": 59.819,
+   "end": 61.553
+  },
+  {
+   "turn": 11,
+   "speaker": "customer",
+   "text": "Don't tell me to calm down. I want to speak to your manager right now.",
+   "start": 62.003,
+   "end": 67.049
+  }
+ ]
+}

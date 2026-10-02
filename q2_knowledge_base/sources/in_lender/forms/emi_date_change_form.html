@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><title>EMI Date Change Request Form</title></head>
+<body>
+<header><nav class="nav"><a href="/">Home</a> | <a href="/pay-emi">Pay EMI</a> | <a href="/faq">FAQs</a></nav></header>
+<main>
+<h1>EMI Date Change Request Form</h1>
+<p>Use this form to request a change of your monthly EMI due date. Requests must reach us at least 10 days before the next due date. Only one change is allowed during the loan tenure.</p>
+<form action="/api/forms/emi-date-change" method="post">
+  <label for="lan">Loan Account No.</label><input id="lan" name="loan_acct_no" required>
+  <label for="nm">Name of Borrower (as per records)</label><input id="nm" name="borrower_name" required>
+  <label for="mob">Registered Mobile No.</label><input id="mob" name="mobile" required>
+  <label for="cur">Current EMI Date</label><select id="cur" name="current_emi_dt"><option>2nd</option><option>5th</option><option>10th</option><option>15th</option></select>
+  <label for="new">Requested EMI Date</label><select id="new" name="requested_emi_dt"><option>2nd</option><option>5th</option><option>10th</option><option>15th</option></select>
+  <label for="rsn">Reason for change</label><textarea id="rsn" name="reason"></textarea>
+  <label><input type="checkbox" name="consent_bpi" required> I agree that broken-period interest will be added to my next EMI.</label>
+  <button type="submit">Submit request</button>
+</form>
+</main>
+<footer><p>© 2026 Udaan Credit Finance Ltd. All rights reserved. | Privacy Policy | Terms of Use | Sitemap</p></footer>
+</body>
+</html>

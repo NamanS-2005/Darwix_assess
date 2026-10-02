@@ -1,0 +1,253 @@
+{
+ "call_id": "ph-20261001-235819-7df3",
+ "market": "ph_life",
+ "channel": "simulated",
+ "customer_id": "P001",
+ "due_date": "2026-10-07",
+ "outside_calling_hours": true,
+ "state": {
+  "verified": true,
+  "verify_attempts": 1,
+  "disposition": "PTP_WITHIN_GRACE",
+  "ptp": {
+   "date": "2026-10-27",
+   "mode": "branch",
+   "class": "PTP_WITHIN_GRACE"
+  },
+  "tickets": [],
+  "ended": false,
+  "details_shared": true,
+  "offered_anything_else": true
+ },
+ "crm_summary": null,
+ "kb_log": [],
+ "guard_log": [],
+ "metrics": {
+  "kb_ms": [],
+  "llm_ms": [
+   576,
+   749,
+   565,
+   660,
+   366,
+   1120,
+   796
+  ],
+  "turn_ms": [
+   584,
+   2035,
+   369,
+   1919
+  ],
+  "providers": {
+   "groq2/openai/gpt-oss-120b": 5,
+   "groq2/openai/gpt-oss-20b": 2
+  }
+ },
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Magandang gabi po! Ako po si Bea, virtual assistant ng Bituin Life Assurance. Paalala lang po, naka-record ang tawag na ito para sa quality at compliance. Si Ma'am Maria po ba ang kausap ko?",
+   "ts": 1790879299.060619,
+   "source": "fixed_script"
+  },
+  {
+   "role": "customer",
+   "text": "Ay, ako to, ate, gipit pa ako ngayon eh, sa katapusan pa sweldo ko.",
+   "ts": 1790879302.7241602,
+   "asr": {
+    "intended": "Ay oo, ako 'to. Ate, gipit pa ako ngayon eh, sa katapusan pa sweldo ko.",
+    "ms": 325
+   },
+   "intended": "Ay oo, ako 'to. Ate, gipit pa ako ngayon eh, sa katapusan pa sweldo ko."
+  },
+  {
+   "role": "agent",
+   "text": "Naiintindihan ko po, Ma'am. Para po sa security, puwede ko po bang makuha ang birthday ninyo o ang huling apat na digits ng policy number?",
+   "ts": 1790879303.3077574,
+   "source": "llm",
+   "tools": [],
+   "agent_ms": 584,
+   "state": {
+    "verified": false,
+    "disposition": null,
+    "ended": false
+   }
+  },
+  {
+   "role": "customer",
+   "text": "June 9, 1987, at ang huling apat na digits ng policy ko ay 4417.",
+   "ts": 1790879308.1716125,
+   "asr": {
+    "intended": "June nine, nineteen eighty-seven, at ang huling apat na digits ng policy ko ay four four one seven.",
+    "ms": 418
+   },
+   "intended": "June nine, nineteen eighty-seven, at ang huling apat na digits ng policy ko ay four four one seven."
+  },
+  {
+   "role": "agent",
+   "text": "Salamat po, Ma'am Maria. Ang premium para sa Bituin Life Protect ay ₱4,250, due date po ay October 7, 2026. Maaari po ninyong bayaran sa GCash, Maya, auto‑debit, o sa mga Bayad Center at BancoBayan branch. Kung hindi po makabayad sa due date, may 31‑day grace period hanggang November 7. May plano na ba kayo kung kailan at paano magbabayad?",
+   "ts": 1790879310.2069087,
+   "source": "llm",
+   "tools": [
+    {
+     "tool": "verify_identity",
+     "args": {
+      "account_last4": "4417",
+      "date_of_birth": "1987-06-09"
+     },
+     "result": {
+      "verified": true,
+      "instruction": "Thank the customer, then call get_loan_details and give the reminder."
+     },
+     "ms": 0.2,
+     "model": "groq2/openai/gpt-oss-120b"
+    },
+    {
+     "tool": "get_loan_details",
+     "args": {},
+     "result": {
+      "product": "Bituin Life Protect (whole life) with Critical Illness rider",
+      "amount_due": "₱4,250",
+      "due_date": "2026-10-07",
+      "due_date_spoken": "October 7, 2026 (Wednesday)",
+      "days_until_due": 5,
+      "auto_debit_active": false,
+      "auto_debit_bank": "BancoBayan",
+      "grace_period_end": "2026-11-07",
+      "payment_history": "policy in force since 2022, 2 late payments within grace",
+      "payment_mode": "monthly"
+     },
+     "ms": 0.2,
+     "model": "groq2/openai/gpt-oss-120b"
+    }
+   ],
+   "agent_ms": 2035,
+   "state": {
+    "verified": true,
+    "disposition": null,
+    "ended": false
+   }
+  },
+  {
+   "role": "customer",
+   "text": "Pwede po ako magbayad via cash sa Oktubre 27, 2000 at 26.",
+   "ts": 1790879316.7181478,
+   "asr": {
+    "intended": "Pwede po ako magbayad via GCash sa Oktubre 27, 2026.",
+    "ms": 380
+   },
+   "intended": "Pwede po ako magbayad via GCash sa Oktubre 27, 2026."
+  },
+  {
+   "role": "agent",
+   "text": "Ma'am, kung cash po kayo, pwede po ninyong dalhin sa pinakamalapit na Bayad Center o BancoBayan branch. Ano po ang eksaktong petsa kung kailan ninyo balak magbayad?",
+   "ts": 1790879317.0867145,
+   "source": "llm",
+   "tools": [],
+   "agent_ms": 369,
+   "state": {
+    "verified": true,
+    "disposition": null,
+    "ended": false
+   }
+  },
+  {
+   "role": "customer",
+   "text": "Pwede po ako magbayad via cash sa Oktubre 27, 2000 at 26.",
+   "ts": 1790879522.9063346,
+   "asr": {
+    "intended": "Pwede po ako magbayad via GCash sa Oktubre 27, 2026.",
+    "ms": 1070
+   },
+   "intended": "Pwede po ako magbayad via GCash sa Oktubre 27, 2026."
+  },
+  {
+   "role": "agent",
+   "text": "Nai-record ko po ang payment sa cash sa branch para sa October 27, 2026. Salamat po, Ma'am Maria. Kung may tanong pa po kayo, sabihin niyo lang. Otherwise, magandang araw po!",
+   "ts": 1790879524.825706,
+   "source": "llm",
+   "tools": [
+    {
+     "tool": "record_promise_to_pay",
+     "args": {
+      "date": "2026-10-27",
+      "mode": "branch"
+     },
+     "result": {
+      "ok": true,
+      "classification": "PTP_WITHIN_GRACE",
+      "date_spoken": "October 27, 2026 (Tuesday)",
+      "mode": "branch",
+      "instruction": "Allowed (within grace period). Confirm date and mode. You may say paying by the due date is best; do not invent charges."
+     },
+     "ms": 0.2,
+     "model": "groq2/openai/gpt-oss-120b"
+    }
+   ],
+   "agent_ms": 1919,
+   "state": {
+    "verified": true,
+    "disposition": "PTP_WITHIN_GRACE",
+    "ended": false
+   }
+  }
+ ],
+ "scenario": {
+  "id": "ph_04_colloquial_salary",
+  "title": "PH – Colloquial speech (sweldo, gipit)",
+  "market": "ph_life",
+  "customer_id": "P001",
+  "expect": {
+   "verified": true,
+   "tools_called": [
+    "search_knowledge_base",
+    "record_promise_to_pay"
+   ],
+   "disposition_in": [
+    "PTP_WITHIN_GRACE"
+   ],
+   "language_judge": "Casual but respectful Taglish with po; no switching to formal English"
+  }
+ },
+ "latency": {
+  "asr_ms": [
+   325,
+   418,
+   380,
+   1070
+  ],
+  "agent_ms": [
+   584,
+   2035,
+   369,
+   1919
+  ],
+  "tts_ms": [
+   1167,
+   2035,
+   3312,
+   1602,
+   5218
+  ]
+ },
+ "asr_wer": 0.333,
+ "asr_pairs": [
+  {
+   "intended": "Ay oo, ako 'to. Ate, gipit pa ako ngayon eh, sa katapusan pa sweldo ko.",
+   "asr": "Ay, ako to, ate, gipit pa ako ngayon eh, sa katapusan pa sweldo ko."
+  },
+  {
+   "intended": "June nine, nineteen eighty-seven, at ang huling apat na digits ng policy ko ay four four one seven.",
+   "asr": "June 9, 1987, at ang huling apat na digits ng policy ko ay 4417."
+  },
+  {
+   "intended": "Pwede po ako magbayad via GCash sa Oktubre 27, 2026.",
+   "asr": "Pwede po ako magbayad via cash sa Oktubre 27, 2000 at 26."
+  },
+  {
+   "intended": "Pwede po ako magbayad via GCash sa Oktubre 27, 2026.",
+   "asr": "Pwede po ako magbayad via cash sa Oktubre 27, 2000 at 26."
+  }
+ ]
+}

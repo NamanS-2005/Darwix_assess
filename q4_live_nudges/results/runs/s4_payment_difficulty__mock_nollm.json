@@ -1,0 +1,307 @@
+{
+ "utterances": 16,
+ "dropped_segments": 0,
+ "engine_stats": {
+  "signals_in": 4,
+  "below_threshold": 3,
+  "awaiting_llm_rejected": 0,
+  "duplicates_merged": 0,
+  "cooldown_suppressed": 0,
+  "held_then_shown": 0,
+  "held_expired": 0,
+  "evicted": 0,
+  "unknown_type": 0
+ },
+ "post_call": {
+  "missed_opportunities": [],
+  "unresolved_compliance": [
+   {
+    "id": "N1",
+    "type": "risky_statement",
+    "label": "Risky statement",
+    "text": "Avoid threats/pressure (\u201cCan you borrow\u201d). Say: \u201cLate payment can attract charges as per the schedule \u2014 I'd like to help you avoid that.\u201d",
+    "priority": 1,
+    "topic": "risky_statement:conduct",
+    "confidence": 0.85,
+    "source": "rule",
+    "evidence": [
+     "Can you borrow"
+    ],
+    "status": "open_at_end",
+    "updates": 0,
+    "uid": 13
+   }
+  ],
+  "acted_on": 0,
+  "total_nudges": 1
+ },
+ "topic_shifts": [],
+ "frustration_trace": [],
+ "component_latency": {
+  "chunk_processing_us_p50": 635.3,
+  "asr_ms": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "audio_to_text_ms": [
+   65,
+   64,
+   63,
+   63,
+   64,
+   64,
+   63,
+   63,
+   64,
+   2,
+   64,
+   65,
+   64,
+   63,
+   78,
+   65
+  ],
+  "rules_us": [
+   72.3,
+   53.1,
+   50.6,
+   45.0,
+   47.8,
+   106.8,
+   70.1,
+   45.1,
+   101.7,
+   154.0,
+   54.3,
+   99.2,
+   66.1,
+   83.0,
+   89.8,
+   76.5
+  ],
+  "llm_ms": []
+ },
+ "transcript": [
+  {
+   "uid": 1,
+   "speaker": "agent",
+   "text": "Hello, this is Vikram from Udaan Credit Finance.",
+   "start_t": 0.52,
+   "end_t": 3.58,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 65
+  },
+  {
+   "uid": 2,
+   "speaker": "agent",
+   "text": "This call is recorded for quality purposes. Am",
+   "start_t": 4.58,
+   "end_t": 7.38,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 64
+  },
+  {
+   "uid": 3,
+   "speaker": "agent",
+   "text": "I speaking with Ms. Anjali Rao?",
+   "start_t": 8.32,
+   "end_t": 10.58,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 63
+  },
+  {
+   "uid": 4,
+   "speaker": "customer",
+   "text": "Yes, speaking.",
+   "start_t": 11.18,
+   "end_t": 12.46,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 63
+  },
+  {
+   "uid": 5,
+   "speaker": "agent",
+   "text": "Thank you. For",
+   "start_t": 13.2,
+   "end_t": 13.76,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 64
+  },
+  {
+   "uid": 6,
+   "speaker": "agent",
+   "text": "verification, may I have your date of birth please?",
+   "start_t": 14.68,
+   "end_t": 18.12,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 64
+  },
+  {
+   "uid": 7,
+   "speaker": "customer",
+   "text": "Twelfth of December, nineteen ninety two.",
+   "start_t": 18.8,
+   "end_t": 21.42,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 63
+  },
+  {
+   "uid": 8,
+   "speaker": "agent",
+   "text": "Thank you. Your",
+   "start_t": 22.1,
+   "end_t": 22.66,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 63
+  },
+  {
+   "uid": 9,
+   "speaker": "agent",
+   "text": "personal loan EMI of eleven thousand five hundred rupees is due on the fifth.",
+   "start_t": 23.5,
+   "end_t": 29.0,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 64
+  },
+  {
+   "uid": 10,
+   "speaker": "customer",
+   "text": "Actually I lost my job last month and I really don't know how I will pay this EMI right now.",
+   "start_t": 29.68,
+   "end_t": 35.62,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": true,
+   "audio_to_text_ms": 2
+  },
+  {
+   "uid": 11,
+   "speaker": "customer",
+   "text": "right now.",
+   "start_t": 35.68,
+   "end_t": 35.84,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 64
+  },
+  {
+   "uid": 12,
+   "speaker": "agent",
+   "text": "Ma'am, the EMI has to be paid by the due",
+   "start_t": 36.62,
+   "end_t": 39.76,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 65
+  },
+  {
+   "uid": 13,
+   "speaker": "agent",
+   "text": "Can you borrow from someone?",
+   "start_t": 40.76,
+   "end_t": 42.36,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 64
+  },
+  {
+   "uid": 14,
+   "speaker": "customer",
+   "text": "I'm driving right now, can you call me back in",
+   "start_t": 42.82,
+   "end_t": 46.24,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 63
+  },
+  {
+   "uid": 15,
+   "speaker": "customer",
+   "text": "evening? I can't talk properly.",
+   "start_t": 47.2,
+   "end_t": 48.64,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 78
+  },
+  {
+   "uid": 16,
+   "speaker": "agent",
+   "text": "Okay ma'am, but please arrange the money.",
+   "start_t": 49.36,
+   "end_t": 51.94,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 65
+  }
+ ],
+ "asr": "mock",
+ "llm": false,
+ "nudges": [
+  {
+   "id": "N1",
+   "type": "risky_statement",
+   "label": "Risky statement",
+   "text": "Avoid threats/pressure (\u201cCan you borrow\u201d). Say: \u201cLate payment can attract charges as per the schedule \u2014 I'd like to help you avoid that.\u201d",
+   "priority": 1,
+   "topic": "risky_statement:conduct",
+   "confidence": 0.85,
+   "source": "rule",
+   "evidence": [
+    "Can you borrow"
+   ],
+   "status": "active",
+   "updates": 0,
+   "uid": 13,
+   "t_call": 5.3,
+   "latency_ms": {
+    "endpointing": 63.5,
+    "asr": 0.8,
+    "signal": 0.1,
+    "llm": null,
+    "engine": 0.1,
+    "delivery": 0.2,
+    "e2e": 64.8
+   },
+   "path": "rules"
+  }
+ ]
+}

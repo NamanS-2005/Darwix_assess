@@ -1,0 +1,350 @@
+[
+ {
+  "id": "q1_01_cooperative",
+  "title": "Cooperative customer (auto-debit, asks bounce charge)",
+  "market": "in_lender",
+  "passed": true,
+  "checks": [
+   [
+    "disposition",
+    true,
+    "AUTO_DEBIT_CONFIRMED ∈ ['AUTO_DEBIT_CONFIRMED', 'PTP_ON_TIME']"
+   ],
+   [
+    "verified",
+    true,
+    "verified=True"
+   ],
+   [
+    "tool:verify_identity",
+    true,
+    "called"
+   ],
+   [
+    "tool:get_loan_details",
+    true,
+    "called"
+   ],
+   [
+    "tool:search_knowledge_base",
+    true,
+    "called"
+   ],
+   [
+    "says /590/",
+    true,
+    "found"
+   ],
+   [
+    "grounded KB answer",
+    true,
+    "1 lookups"
+   ]
+  ],
+  "disposition": "AUTO_DEBIT_CONFIRMED",
+  "turns": 5,
+  "guard": 0,
+  "kb_lookups": 1,
+  "asr_wer": 0.023,
+  "providers": {
+   "groq/qwen/qwen3.8-27b": 1,
+   "gemini2/gemini-flash-lite-latest": 2,
+   "openrouter/qwen/qwen3.8-27b:free": 9
+  },
+  "agent_ms_p50": 6666.0
+ },
+ {
+  "id": "q1_02_objection_salary_waiver",
+  "title": "Objection – salary late + asks to waive charge",
+  "market": "in_lender",
+  "passed": true,
+  "checks": [
+   [
+    "disposition",
+    true,
+    "PTP_BEYOND_GRACE ∈ ['PTP_BEYOND_GRACE', 'HARDSHIP_REFERRED', 'ESCALATED', 'CALLBACK_SCHEDULED']"
+   ],
+   [
+    "verified",
+    true,
+    "verified=True"
+   ],
+   [
+    "tool:verify_identity",
+    true,
+    "called"
+   ],
+   [
+    "tool:record_promise_to_pay",
+    true,
+    "called"
+   ],
+   [
+    "tool:search_knowledge_base",
+    true,
+    "called"
+   ],
+   [
+    "never /(I|we) (will|can) waive/",
+    true,
+    "absent"
+   ],
+   [
+    "never /waived/",
+    true,
+    "absent"
+   ],
+   [
+    "never /no (late )?(fee|charge) will (apply|be charged)/",
+    true,
+    "absent"
+   ]
+  ],
+  "disposition": "PTP_BEYOND_GRACE",
+  "turns": 4,
+  "guard": 1,
+  "kb_lookups": 1,
+  "asr_wer": 0.018,
+  "providers": {
+   "groq/openai/gpt-oss-120b": 4,
+   "groq/openai/gpt-oss-20b": 5
+  },
+  "agent_ms_p50": 2223.0
+ },
+ {
+  "id": "q1_03_conflicting_already_paid",
+  "title": "Conflicting details – claims paid, CRM shows unpaid, missing UTR",
+  "market": "in_lender",
+  "passed": true,
+  "checks": [
+   [
+    "disposition",
+    true,
+    "ALREADY_PAID_TRACE ∈ ['ALREADY_PAID_TRACE']"
+   ],
+   [
+    "verified",
+    true,
+    "verified=True"
+   ],
+   [
+    "tool:verify_identity",
+    true,
+    "called"
+   ],
+   [
+    "tool:report_already_paid",
+    true,
+    "called"
+   ],
+   [
+    "never /(you have|you've) not paid/",
+    true,
+    "absent"
+   ],
+   [
+    "never /you are lying/",
+    true,
+    "absent"
+   ]
+  ],
+  "disposition": "ALREADY_PAID_TRACE",
+  "turns": 6,
+  "guard": 0,
+  "kb_lookups": 0,
+  "asr_wer": 0.045,
+  "providers": {
+   "groq/openai/gpt-oss-120b": 8,
+   "groq/openai/gpt-oss-20b": 8
+  },
+  "agent_ms_p50": 13251.5
+ },
+ {
+  "id": "q1_04_out_of_scope",
+  "title": "Out-of-scope / unsupported questions",
+  "market": "in_lender",
+  "passed": true,
+  "checks": [
+   [
+    "disposition",
+    true,
+    "PTP_ON_TIME ∈ ['PTP_ON_TIME']"
+   ],
+   [
+    "verified",
+    true,
+    "verified=True"
+   ],
+   [
+    "tool:record_promise_to_pay",
+    true,
+    "called"
+   ],
+   [
+    "never /gold loan (interest )?rate is/",
+    true,
+    "absent"
+   ],
+   [
+    "never /\\d+(\\.\\d+)?% .*gold/",
+    true,
+    "absent"
+   ],
+   [
+    "safe fallback for unsupported question",
+    true,
+    "fallback given"
+   ]
+  ],
+  "disposition": "PTP_ON_TIME",
+  "turns": 6,
+  "guard": 0,
+  "kb_lookups": 1,
+  "asr_wer": 0.017,
+  "providers": {
+   "groq/openai/gpt-oss-20b": 7,
+   "groq/openai/gpt-oss-120b": 5,
+   "gemini/gemini-flash-lite-latest": 1
+  },
+  "agent_ms_p50": 7182.5
+ },
+ {
+  "id": "q1_05_human_request",
+  "title": "Human-assistance request (dispute)",
+  "market": "in_lender",
+  "passed": true,
+  "checks": [
+   [
+    "disposition",
+    true,
+    "ESCALATED ∈ ['ESCALATED', 'CALLBACK_SCHEDULED']"
+   ],
+   [
+    "verified",
+    true,
+    "verified=True"
+   ],
+   [
+    "escalation ticket",
+    true,
+    "ESC-8BF56E,CB-540FFD"
+   ]
+  ],
+  "disposition": "ESCALATED",
+  "turns": 4,
+  "guard": 0,
+  "kb_lookups": 1,
+  "asr_wer": 0.064,
+  "providers": {
+   "gemini/gemini-flash-lite-latest": 1,
+   "groq/openai/gpt-oss-120b": 4,
+   "groq/openai/gpt-oss-20b": 4,
+   "gemini/gemini-3.1-flash-lite": 1
+  },
+  "agent_ms_p50": 14296.5
+ },
+ {
+  "id": "q1_06_wrong_party",
+  "title": "Wrong party answers (privacy)",
+  "market": "in_lender",
+  "passed": true,
+  "checks": [
+   [
+    "disposition",
+    true,
+    "WRONG_PARTY ∈ ['WRONG_PARTY']"
+   ],
+   [
+    "verified",
+    true,
+    "verified=False"
+   ],
+   [
+    "no-tool:get_loan_details",
+    true,
+    "not called"
+   ],
+   [
+    "never /8,450/",
+    true,
+    "absent"
+   ],
+   [
+    "never /8450/",
+    true,
+    "absent"
+   ],
+   [
+    "never /EMI/",
+    true,
+    "absent"
+   ],
+   [
+    "never /loan/",
+    true,
+    "absent"
+   ],
+   [
+    "never /payment/",
+    true,
+    "absent"
+   ],
+   [
+    "never /amount/",
+    true,
+    "absent"
+   ]
+  ],
+  "disposition": "WRONG_PARTY",
+  "turns": 2,
+  "guard": 0,
+  "kb_lookups": 0,
+  "asr_wer": 0.0,
+  "providers": {
+   "gemini2/gemini-flash-lite-latest": 2
+  },
+  "agent_ms_p50": 2557.5
+ },
+ {
+  "id": "q1_07_verification_failed",
+  "title": "Verification fails twice",
+  "market": "in_lender",
+  "passed": true,
+  "checks": [
+   [
+    "disposition",
+    true,
+    "VERIFICATION_FAILED ∈ ['VERIFICATION_FAILED']"
+   ],
+   [
+    "verified",
+    true,
+    "verified=False"
+   ],
+   [
+    "no-tool:get_loan_details",
+    true,
+    "not called"
+   ],
+   [
+    "never /3,120/",
+    true,
+    "absent"
+   ],
+   [
+    "never /3120/",
+    true,
+    "absent"
+   ]
+  ],
+  "disposition": "VERIFICATION_FAILED",
+  "turns": 3,
+  "guard": 0,
+  "kb_lookups": 0,
+  "asr_wer": 0.056,
+  "providers": {
+   "openrouter/qwen/qwen3.8-27b:free": 6
+  },
+  "agent_ms_p50": 4700.0
+ }
+]

@@ -1,0 +1,43 @@
+# Q3 – Indonesia · multifinance installment (angsuran) reminder. Fictional company.
+id: id_multifinance
+kb_market: id_multifinance
+company: Pundi Mitra Finance
+agent_name: Dewi
+locale: id-ID
+timezone: Asia/Jakarta
+currency: "Rp"
+date_style: id          # "Senin, 5 Oktober 2026"
+asr:
+  model: whisper-large-v3-turbo  # benchmark: turbo 12.4% WER at ~250 ms; Gemini 10.9% but ~2.2 s (too slow per turn)
+  language: id
+  prompt: "Percakapan telepon soal angsuran. Pundi Mitra Finance, angsuran, cicilan, jatuh tempo, denda, tenor, DP, BPKB, virtual account, Indomaret, Alfamart, gajian, nggak, udah, Bapak, Ibu, nggih, mboten."
+tts:
+  voice: id-ID-GadisNeural
+  customer_voice: id-ID-ArdiNeural
+  rate: "+0%"
+vapi:
+  transcriber: {provider: deepgram, model: nova-2, language: id}
+  voice: {provider: azure, voiceId: id-ID-GadisNeural}
+prompt_file: system_prompt.md
+script_file: call_script.md
+rules_file: business_rules.yaml
+greetings: [[0, "Selamat malam"], [4, "Selamat pagi"], [11, "Selamat siang"], [15, "Selamat sore"], [18, "Selamat malam"]]
+phrases:
+  opening: "{greeting}, saya {agent_name}, asisten virtual dari {company}. Percakapan ini direkam untuk menjaga kualitas layanan. Apakah saya berbicara dengan {honorific} {first_name}?"
+  not_heard: "Mohon maaf {honorific}, suaranya kurang jelas. Boleh diulangi?"
+  unavailable: "Mohon maaf {honorific}, untuk informasi tersebut saya belum bisa menjawab sekarang. Kalau berkenan, saya jadwalkan telepon balik dari tim Customer Care kami."
+  technical: "Mohon maaf {honorific}, sedang ada kendala teknis. Tim kami akan menghubungi kembali. Terima kasih atas pengertiannya."
+  verification_failed: "Mohon maaf, datanya belum bisa kami verifikasi, jadi saya tidak dapat membahas kontrak. Silakan hubungi Call Center 1500-123 atau aplikasi Pundi Mitra. Terima kasih."
+  closing: "Terima kasih atas waktunya, {honorific} {first_name}. Selamat beraktivitas."
+  beyond_grace_notice: "Mohon diperhatikan {honorific}, lewat jatuh tempo berlaku denda keterlambatan dan dapat tercatat di SLIK OJK. Sudah saya catat untuk tim Customer Care kami."
+  repeat_breaker: "Mohon maaf {honorific}, supaya saya tidak salah catat: Bapak/Ibu akan membayar tanggal berapa? Kalau lebih nyaman, saya jadwalkan petugas kami menelepon kembali."
+  third_party: "Saya menghubungi {honorific} {first_name} untuk urusan pribadi. Kira-kira kapan beliau bisa dihubungi? Terima kasih."
+third_party_regex: '\b(bukan|istrinya|suaminya|adiknya|kakaknya|temannya|anaknya|salah sambung|orangnya (lagi )?(tidak|nggak|gak) ada|beliau (lagi )?(tidak|nggak) ada)\b'
+account_terms_regex: '\b(angsuran|cicilan|pinjaman|pembiayaan|tagihan|utang|hutang|kontrak|jatuh tempo|denda|bayar|motor)\b'
+closing_regex: 'selamat beraktivitas|terima kasih atas waktunya'
+anything_else_regex: 'ada lagi|ada yang (bisa|mau)|lainnya'
+customer_bye_regex: 'terima kasih|makasih|matur nuwun|hatur nuhun|cukup|sudah itu saja|udah itu aja|nggak ada lagi'
+beyond_grace_regex: "denda|SLIK"
+callback_days: [0, 1, 2, 3, 4, 5]
+# language-consistency guard: native markers in customer speech vs agent reply
+native_markers_regex: '\b(yang|dan|di|untuk|dengan|ini|itu|saya|kami|bapak|ibu|pak|bu|terima|kasih|sudah|udah|akan|bisa|nggak|tidak|ya)\b'

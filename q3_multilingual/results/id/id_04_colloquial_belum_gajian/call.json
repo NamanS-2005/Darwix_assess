@@ -1,0 +1,360 @@
+{
+ "call_id": "id-20261002-011612-db7c",
+ "market": "id_multifinance",
+ "channel": "simulated",
+ "customer_id": "D002",
+ "due_date": "2026-10-04",
+ "outside_calling_hours": true,
+ "state": {
+  "verified": true,
+  "verify_attempts": 1,
+  "disposition": "PTP_BEYOND_GRACE",
+  "ptp": {
+   "date": "2026-10-13",
+   "mode": "branch",
+   "class": "PTP_BEYOND_GRACE"
+  },
+  "tickets": [],
+  "ended": true,
+  "details_shared": true,
+  "offered_anything_else": true,
+  "beyond_grace_notice_given": true
+ },
+ "crm_summary": {
+  "call_id": "id-20261002-011612-db7c",
+  "market": "id_multifinance",
+  "customer_id": "D002",
+  "disposition": "PTP_BEYOND_GRACE",
+  "llm_disposition": "PTP_BEYOND_GRACE",
+  "summary": "Customer Bu Siti agreed to pay Rp685.000 on 13 Oct 2026 via Indomaret. Late fee will apply from 5 Oct. Case noted for Customer Assistance. No further action requested.",
+  "ptp": {
+   "date": "2026-10-13",
+   "mode": "branch",
+   "class": "PTP_BEYOND_GRACE"
+  },
+  "tickets": [],
+  "verified": true,
+  "kb_queries": 1,
+  "ended_at": "2026-10-02T01:27:14"
+ },
+ "kb_log": [
+  {
+   "query": "denda mulai lewat jatuh tempo",
+   "results": [
+    "[kb_id_faq_74136f | id_multifinance/faq_angsuran.md §Berapa denda keterlambatan? | v2026-03-01]",
+    "[kb_id_objection_2af971 | id_multifinance/panduan_keberatan.md §Keberatan: \"Belum gajian, Pak/Bu\" | v2026-06-01]",
+    "[kb_id_faq_50ba7e | id_multifinance/faq_angsuran.md §Apakah saya bisa membayar sebagian angsuran? | v2026-03-01]"
+   ],
+   "abstained": false,
+   "mode": "hybrid"
+  }
+ ],
+ "guard_log": [
+  {
+   "action": "inserted_fixed_line",
+   "reason": "beyond-grace disclosure missing",
+   "draft": "Mohon diperhatikan Bu, lewat jatuh tempo berlaku denda keterlambatan dan dapat tercatat di SLIK OJK. Sudah saya catat untuk tim Customer Care kami. Kami akan me"
+  }
+ ],
+ "metrics": {
+  "kb_ms": [
+   617.7
+  ],
+  "llm_ms": [
+   370,
+   874,
+   695,
+   808,
+   520,
+   405,
+   632,
+   975,
+   720,
+   750
+  ],
+  "turn_ms": [
+   376,
+   2617,
+   1611,
+   13314,
+   1551
+  ],
+  "providers": {
+   "groq/qwen/qwen3.8-27b": 1,
+   "groq2/qwen/qwen3.8-27b": 1,
+   "groq2/openai/gpt-oss-120b": 1,
+   "groq2/openai/gpt-oss-20b": 7
+  }
+ },
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Selamat malam, saya Dewi, asisten virtual dari Pundi Mitra Finance. Percakapan ini direkam untuk menjaga kualitas layanan. Apakah saya berbicara dengan Bu Siti?",
+   "ts": 1790883972.6624267,
+   "source": "fixed_script"
+  },
+  {
+   "role": "customer",
+   "text": "Iya, Mbak, saya Siti Rahayu.",
+   "ts": 1790883980.6698294,
+   "asr": {
+    "intended": "Iya, Mbak, saya Siti Rahayu.",
+    "ms": 853
+   },
+   "intended": "Iya, Mbak, saya Siti Rahayu."
+  },
+  {
+   "role": "agent",
+   "text": "Baik, Bu Siti. Untuk keamanan data, boleh saya konfirmasi tanggal lahir Ibu, atau 4 digit terakhir nomor kontrak?",
+   "ts": 1790883981.0453916,
+   "source": "llm",
+   "tools": [],
+   "agent_ms": 376,
+   "state": {
+    "verified": false,
+    "disposition": null,
+    "ended": false
+   }
+  },
+  {
+   "role": "customer",
+   "text": "Tanggal lahir saya 25 Agustus 1993 atau nomor kontrak 1178.",
+   "ts": 1790884156.3133192,
+   "asr": {
+    "intended": "Tanggal lahir saya 25 Agustus 1993, atau nomor kontrak 1178.",
+    "ms": 296
+   },
+   "intended": "Tanggal lahir saya 25 Agustus 1993, atau nomor kontrak 1178."
+  },
+  {
+   "role": "agent",
+   "text": "Terima kasih, Bu Siti. Saya mengingatkan bahwa angsuran pembiayaan elektronik (kulkas dan mesin cuci) Ibu sebesar Rp685.000 jatuh tempo pada Minggu, 4 Oktober 2026. Ini angsuran ke-5 dari 12 bulan. Apakah Ibu sudah mempersiapkan pembayaran?",
+   "ts": 1790884158.9298873,
+   "source": "llm",
+   "tools": [
+    {
+     "tool": "verify_identity",
+     "args": {
+      "account_last4": "1178",
+      "date_of_birth": "1993-08-25"
+     },
+     "result": {
+      "verified": true,
+      "instruction": "Thank the customer, then call get_loan_details and give the reminder."
+     },
+     "ms": 0.3,
+     "model": "groq2/qwen/qwen3.8-27b"
+    },
+    {
+     "tool": "get_loan_details",
+     "args": {},
+     "result": {
+      "product": "Pembiayaan elektronik (kulkas dan mesin cuci)",
+      "amount_due": "Rp685.000",
+      "due_date": "2026-10-04",
+      "due_date_spoken": "Minggu, 4 Oktober 2026",
+      "days_until_due": 2,
+      "auto_debit_active": false,
+      "auto_debit_bank": null,
+      "grace_period_end": "2026-10-04",
+      "payment_history": "1 kali terlambat 3 hari",
+      "tenor": "12 bulan (angsuran ke-5)"
+     },
+     "ms": 0.1,
+     "model": "groq2/openai/gpt-oss-120b"
+    }
+   ],
+   "agent_ms": 2617,
+   "state": {
+    "verified": true,
+    "disposition": null,
+    "ended": false
+   }
+  },
+  {
+   "role": "customer",
+   "text": "Aduh, belum gajian nih, telat dikit nggak, Bapak, kan? Saya bisa bayar sekitar tanggal 1314 Oktober lewat Indomaret. Jika perlu, bisa dihubungi lagi nanti.",
+   "ts": 1790884303.8139648,
+   "asr": {
+    "intended": "Aduh, belum gajian nih, telat dikit gapapa kan? Saya bisa bayar sekitar tanggal 13‑14 Oktober lewat Indomaret. Jika perlu, bisa dihubungi lagi nanti.",
+    "ms": 386
+   },
+   "intended": "Aduh, belum gajian nih, telat dikit gapapa kan? Saya bisa bayar sekitar tanggal 13‑14 Oktober lewat Indomaret. Jika perlu, bisa dihubungi lagi nanti."
+  },
+  {
+   "role": "agent",
+   "text": "Tidak apa-apa, Bu Siti. Namun, denda keterlambatan 0,2% per hari akan mulai dikenakan sejak lewat tanggal jatuh tempo. Jika Ibu bisa membayar pada 13 Oktober lewat Indomaret, kami akan mencatat janji bayar. Apakah Ibu setuju?",
+   "ts": 1790884305.425201,
+   "source": "llm",
+   "tools": [
+    {
+     "tool": "search_knowledge_base",
+     "args": {
+      "query": "denda mulai lewat jatuh tempo"
+     },
+     "result": {
+      "results": [
+       {
+        "citation": "kb_id_faq_74136f",
+        "title": "Berapa denda keterlambatan?",
+        "content": "Jika angsuran belum dibayar setelah tanggal jatuh tempo, dikenakan denda keterlambatan sebesar 0,2% per hari dari angsuran yang tertunggak. Tidak ada masa tenggang untuk denda. Keterlambatan juga dilaporkan ke SLIK OJK dan dapat memengaruhi riwayat kredit."
+       },
+       {
+        "citation": "kb_id_objection_2af971",
+        "title": "Keberatan: \"Belum gajian, Pak/Bu\"",
+        "content": "Tunjukkan empati. Tanyakan kapan konsumen bisa membayar. Ingatkan bahwa denda 0,2% per hari berlaku sejak lewat jatuh tempo. Jika konsumen menyanggupi tanggal tertentu, catat janji bayar. Jika lebih dari 7 hari setelah jatuh tempo, tawarkan telepon balik dari tim Customer Care untuk membahas opsi."
+       },
+       {
+        "citation": "kb_id_faq_50ba7e",
+        "title": "Apakah saya bisa membayar sebagian angsuran?",
+        "content": "Bisa, tetapi sisa angsuran tetap dianggap tertunggak dan dikenakan denda. Disarankan membayar penuh sebelum jatuh tempo."
+       }
+      ],
+      "instruction": "Answer ONLY from these results, briefly. If they don't answer the question, say you don't have that information."
+     },
+     "ms": 617.9,
+     "model": "groq2/openai/gpt-oss-20b"
+    }
+   ],
+   "agent_ms": 1611,
+   "state": {
+    "verified": true,
+    "disposition": null,
+    "ended": false
+   }
+  },
+  {
+   "role": "customer",
+   "text": "Iya, setuju, saya akan bayar 13 Oktober lewat Indomaret.",
+   "ts": 1790884553.5887086,
+   "asr": {
+    "intended": "Iya, setuju, saya akan bayar 13 Oktober lewat Indomaret.",
+    "ms": 269
+   },
+   "intended": "Iya, setuju, saya akan bayar 13 Oktober lewat Indomaret."
+  },
+  {
+   "role": "agent",
+   "text": "Mohon maaf Bu, sedang ada kendala teknis. Tim kami akan menghubungi kembali. Terima kasih atas pengertiannya.",
+   "ts": 1790884566.9028502,
+   "source": "fixed_fallback",
+   "tools": [
+    {
+     "error": "All LLM providers failed or none configured: gemini2/gemini-3.5-flash:BadRequestError:Error code: 400 - [{'error': {'code': 400, 'message': 'Function call is missing a thought_signature in functionCall parts. This is required for tools to work correctly, and missing thought_signature m | gemini2/gem"
+    }
+   ],
+   "agent_ms": 13314,
+   "state": {
+    "verified": true,
+    "disposition": "PTP_BEYOND_GRACE",
+    "ended": false
+   }
+  },
+  {
+   "role": "customer",
+   "text": "Tidak apa-apa, mbot. Silakan hubungi lagi kalau sudah selesai.",
+   "ts": 1790884633.5817466,
+   "asr": {
+    "intended": "Tidak apa-apa, Mbak. Silakan hubungi lagi kalau sudah selesai.",
+    "ms": 281
+   },
+   "intended": "Tidak apa-apa, Mbak. Silakan hubungi lagi kalau sudah selesai."
+  },
+  {
+   "role": "agent",
+   "text": "Mohon diperhatikan Bu, lewat jatuh tempo berlaku denda keterlambatan dan dapat tercatat di SLIK OJK. Sudah saya catat untuk tim Customer Care kami. Kami akan menghubungi Ibu kembali jika ada perkembangan. Terima kasih, Bu Siti. Terima kasih atas waktunya, Bu Siti. Selamat beraktivitas.",
+   "ts": 1790884635.1331706,
+   "source": "llm",
+   "tools": [
+    {
+     "tool": "end_call",
+     "args": {
+      "disposition": "PTP_BEYOND_GRACE",
+      "summary": "Customer Bu Siti agreed to pay Rp685.000 on 13 Oct 2026 via Indomaret. Late fee will apply from 5 Oct. Case noted for Customer Assistance. No further action requested."
+     },
+     "result": {
+      "ok": true,
+      "instruction": "Say the closing line now (one sentence summary of next step + closing). Do not ask further questions."
+     },
+     "ms": 17.1,
+     "model": "groq2/openai/gpt-oss-20b"
+    }
+   ],
+   "agent_ms": 1551,
+   "state": {
+    "verified": true,
+    "disposition": "PTP_BEYOND_GRACE",
+    "ended": true
+   }
+  }
+ ],
+ "scenario": {
+  "id": "id_04_colloquial_belum_gajian",
+  "title": "ID – Colloquial speech (belum gajian, telat dikit)",
+  "market": "id_multifinance",
+  "customer_id": "D002",
+  "expect": {
+   "verified": true,
+   "tools_called": [
+    "search_knowledge_base"
+   ],
+   "disposition_in": [
+    "PTP_BEYOND_GRACE",
+    "HARDSHIP_REFERRED",
+    "ESCALATED",
+    "CALLBACK_SCHEDULED"
+   ],
+   "agent_says_any": [
+    "denda"
+   ],
+   "language_judge": "Friendly, slightly casual but polite Bahasa Indonesia matching the customer"
+  }
+ },
+ "latency": {
+  "asr_ms": [
+   853,
+   296,
+   386,
+   269,
+   281
+  ],
+  "agent_ms": [
+   376,
+   2617,
+   1611,
+   13314,
+   1551
+  ],
+  "tts_ms": [
+   1204,
+   1174,
+   5996,
+   4693,
+   3018,
+   12260
+  ]
+ },
+ "asr_wer": 0.086,
+ "asr_pairs": [
+  {
+   "intended": "Iya, Mbak, saya Siti Rahayu.",
+   "asr": "Iya, Mbak, saya Siti Rahayu."
+  },
+  {
+   "intended": "Tanggal lahir saya 25 Agustus 1993, atau nomor kontrak 1178.",
+   "asr": "Tanggal lahir saya 25 Agustus 1993 atau nomor kontrak 1178."
+  },
+  {
+   "intended": "Aduh, belum gajian nih, telat dikit gapapa kan? Saya bisa bayar sekitar tanggal 13‑14 Oktober lewat Indomaret. Jika perlu, bisa dihubungi lagi nanti.",
+   "asr": "Aduh, belum gajian nih, telat dikit nggak, Bapak, kan? Saya bisa bayar sekitar tanggal 1314 Oktober lewat Indomaret. Jika perlu, bisa dihubungi lagi nanti."
+  },
+  {
+   "intended": "Iya, setuju, saya akan bayar 13 Oktober lewat Indomaret.",
+   "asr": "Iya, setuju, saya akan bayar 13 Oktober lewat Indomaret."
+  },
+  {
+   "intended": "Tidak apa-apa, Mbak. Silakan hubungi lagi kalau sudah selesai.",
+   "asr": "Tidak apa-apa, mbot. Silakan hubungi lagi kalau sudah selesai."
+  }
+ ]
+}

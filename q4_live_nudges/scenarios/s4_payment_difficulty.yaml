@@ -1,0 +1,19 @@
+id: s4_payment_difficulty
+title: Payment difficulty + callback need
+description: Customer lost job; agent pressures instead of offering the approved hardship path. Customer is driving and wants a callback.
+agent_voice: en-IN-PrabhatNeural
+customer_voice: en-IN-NeerjaNeural
+turns:
+  - [agent, "Hello, this is Vikram from Udaan Credit Finance. This call is recorded for quality purposes. Am I speaking with Ms. Anjali Rao?"]
+  - [customer, "Yes, speaking."]
+  - [agent, "Thank you. For verification, may I have your date of birth please?"]
+  - [customer, "Twelfth of December, nineteen ninety two."]
+  - [agent, "Thank you. Your personal loan EMI of eleven thousand five hundred rupees is due on the fifth."]
+  - [customer, "Actually I lost my job last month and I really don't know how I will pay this EMI right now."]
+  - [agent, "Ma'am, the EMI has to be paid by the due date. Can you borrow from someone?"]
+  - [customer, "I'm driving right now, can you call me back in the evening? I can't talk properly."]
+  - [agent, "Okay ma'am, but please arrange the money."]
+expected:
+  - {signal: payment_difficulty, turn: 5}
+  - {signal: callback_needed, turn: 7}
+  - {signal: risky_statement, turn: 6, optional: true, note: pressure to borrow is poor practice}

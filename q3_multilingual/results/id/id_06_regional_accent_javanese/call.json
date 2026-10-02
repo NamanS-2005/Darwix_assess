@@ -1,0 +1,317 @@
+{
+ "call_id": "id-20261002-002142-5a06",
+ "market": "id_multifinance",
+ "channel": "simulated",
+ "customer_id": "D001",
+ "due_date": "2026-10-06",
+ "outside_calling_hours": true,
+ "state": {
+  "verified": true,
+  "verify_attempts": 1,
+  "disposition": "PTP_ON_TIME",
+  "ptp": {
+   "date": "2026-10-05",
+   "mode": "other",
+   "class": "PTP_ON_TIME"
+  },
+  "tickets": [],
+  "ended": true,
+  "details_shared": true,
+  "offered_anything_else": true
+ },
+ "crm_summary": {
+  "call_id": "id-20261002-002142-5a06",
+  "market": "id_multifinance",
+  "customer_id": "D001",
+  "disposition": "PTP_ON_TIME",
+  "llm_disposition": "PTP_ON_TIME",
+  "summary": "Simulation stopped (max turns or customer hung up).",
+  "ptp": {
+   "date": "2026-10-05",
+   "mode": "other",
+   "class": "PTP_ON_TIME"
+  },
+  "tickets": [],
+  "verified": true,
+  "kb_queries": 0,
+  "ended_at": "2026-10-02T00:26:01"
+ },
+ "kb_log": [],
+ "guard_log": [],
+ "metrics": {
+  "kb_ms": [],
+  "llm_ms": [
+   668,
+   698,
+   737,
+   673,
+   1332,
+   708,
+   714,
+   713,
+   747
+  ],
+  "turn_ms": [
+   670,
+   2178,
+   2097,
+   1431,
+   750
+  ],
+  "providers": {
+   "groq2/openai/gpt-oss-120b": 7,
+   "groq2/openai/gpt-oss-20b": 2
+  }
+ },
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Selamat malam, saya Dewi, asisten virtual dari Pundi Mitra Finance. Percakapan ini direkam untuk menjaga kualitas layanan. Apakah saya berbicara dengan Pak Budi?",
+   "ts": 1790880702.021563,
+   "source": "fixed_script"
+  },
+  {
+   "role": "customer",
+   "text": "Gih, Leres, Kulobudi.",
+   "ts": 1790880770.674581,
+   "asr": {
+    "intended": "Nggih, leres, kulo Budi.",
+    "ms": 267
+   },
+   "intended": "Nggih, leres, kulo Budi."
+  },
+  {
+   "role": "agent",
+   "text": "Untuk keamanan data, boleh saya konfirmasi tanggal lahir Bapak atau 4 digit terakhir nomor kontrak Bapak?",
+   "ts": 1790880771.34452,
+   "source": "llm",
+   "tools": [],
+   "agent_ms": 670,
+   "state": {
+    "verified": false,
+    "disposition": null,
+    "ended": false
+   }
+  },
+  {
+   "role": "customer",
+   "text": "Lahir Kulo 17 Maret 1991, Mbak, nomor kontrak Kulo Sing Wing King 9.921.",
+   "ts": 1790880783.3453436,
+   "asr": {
+    "intended": "Lahir kulo 17 Maret 1991, mbak, nomer kontrak kulo sing wingking 9921.",
+    "ms": 335
+   },
+   "intended": "Lahir kulo 17 Maret 1991, mbak, nomer kontrak kulo sing wingking 9921."
+  },
+  {
+   "role": "agent",
+   "text": "Pak Budi, terima kasih sudah mengonfirmasi. Ini pengingat angsuran pembiayaan motor Honda Vario 160. Angsuran ke-9 sebesar Rp1.250.000 jatuh tempo pada Selasa, 6 Oktober 2026. Apakah Bapak berencana membayar hari ini atau akan menggunakan metode pembayaran lain?",
+   "ts": 1790880785.522889,
+   "source": "llm",
+   "tools": [
+    {
+     "tool": "verify_identity",
+     "args": {
+      "account_last4": "9921",
+      "date_of_birth": "1991-03-17"
+     },
+     "result": {
+      "verified": true,
+      "instruction": "Thank the customer, then call get_loan_details and give the reminder."
+     },
+     "ms": 0.2,
+     "model": "groq2/openai/gpt-oss-120b"
+    },
+    {
+     "tool": "get_loan_details",
+     "args": {},
+     "result": {
+      "product": "Pembiayaan motor Honda Vario 160",
+      "amount_due": "Rp1.250.000",
+      "due_date": "2026-10-06",
+      "due_date_spoken": "Selasa, 6 Oktober 2026",
+      "days_until_due": 4,
+      "auto_debit_active": false,
+      "auto_debit_bank": null,
+      "grace_period_end": "2026-10-06",
+      "payment_history": "8 angsuran lancar",
+      "tenor": "24 bulan (angsuran ke-9)"
+     },
+     "ms": 0.2,
+     "model": "groq2/openai/gpt-oss-120b"
+    }
+   ],
+   "agent_ms": 2178,
+   "state": {
+    "verified": true,
+    "disposition": null,
+    "ended": false
+   }
+  },
+  {
+   "role": "customer",
+   "text": "Angsuranipun sampun kulo siap ke, mangke tak bayar lewat Indomaret, sedinten sakderengipun jatuh tempongkih.",
+   "ts": 1790880798.0268464,
+   "asr": {
+    "intended": "Angsuranipun sampun kulo siapke, mangke tak bayar lewat Indomaret, sedinten sakderengipun jatuh tempo nggih.",
+    "ms": 437
+   },
+   "intended": "Angsuranipun sampun kulo siapke, mangke tak bayar lewat Indomaret, sedinten sakderengipun jatuh tempo nggih."
+  },
+  {
+   "role": "agent",
+   "text": "Baik Pak Budi, kami catat bahwa Bapak akan membayar angsuran Rp1.250.000 pada Senin, 5 Oktober 2026 lewat Indomaret. Terima kasih atas kesepakatan ini. Apakah ada hal lain yang bisa kami bantu?",
+   "ts": 1790880800.1241045,
+   "source": "llm",
+   "tools": [
+    {
+     "tool": "record_promise_to_pay",
+     "args": {
+      "date": "2026-10-05",
+      "mode": "other"
+     },
+     "result": {
+      "ok": true,
+      "classification": "PTP_ON_TIME",
+      "date_spoken": "Senin, 5 Oktober 2026",
+      "mode": "other",
+      "instruction": "Confirm the date and mode back to the customer and thank them."
+     },
+     "ms": 0.2,
+     "model": "groq2/openai/gpt-oss-120b"
+    }
+   ],
+   "agent_ms": 2097,
+   "state": {
+    "verified": true,
+    "disposition": "PTP_ON_TIME",
+    "ended": false
+   }
+  },
+  {
+   "role": "customer",
+   "text": "Maturnuun, Mbak.",
+   "ts": 1790880944.7199395,
+   "asr": {
+    "intended": "Matur nuwun, Mbak.",
+    "ms": 244
+   },
+   "intended": "Matur nuwun, Mbak."
+  },
+  {
+   "role": "agent",
+   "text": "Pak Budi, kami akan menunggu pembayaran pada Senin, 5 Oktober 2026 lewat Indomaret. Apakah ada pertanyaan lain atau hal yang ingin Bapak sampaikan?",
+   "ts": 1790880946.151111,
+   "source": "llm",
+   "tools": [
+    {
+     "tool": "end_call",
+     "args": {
+      "disposition": "PTP_ON_TIME",
+      "summary": "Pak Budi mengonfirmasi pembayaran angsuran Rp1.250.000 pada Senin, 5 Oktober 2026 lewat Indomaret."
+     },
+     "result": {
+      "ok": false,
+      "instruction": "Before ending, briefly confirm the next step and ask if there is anything else you can help with. Do not say goodbye yet."
+     },
+     "ms": 0.1,
+     "model": "groq2/openai/gpt-oss-120b"
+    }
+   ],
+   "agent_ms": 1431,
+   "state": {
+    "verified": true,
+    "disposition": "PTP_ON_TIME",
+    "ended": false
+   }
+  },
+  {
+   "role": "customer",
+   "text": "Boten-wonten malih, sampun cekap. Maturnuun, Mbak.",
+   "ts": 1790880954.6873796,
+   "asr": {
+    "intended": "Mboten wonten malih, sampun cekap. Matur nuwun, Mbak.",
+    "ms": 253
+   },
+   "intended": "Mboten wonten malih, sampun cekap. Matur nuwun, Mbak."
+  },
+  {
+   "role": "agent",
+   "text": "Terima kasih, Pak Budi. Kami tutup percakapan ini. Selamat malam.",
+   "ts": 1790880955.4368892,
+   "source": "llm",
+   "tools": [],
+   "agent_ms": 750,
+   "state": {
+    "verified": true,
+    "disposition": "PTP_ON_TIME",
+    "ended": false
+   }
+  }
+ ],
+ "scenario": {
+  "id": "id_06_regional_accent_javanese",
+  "title": "ID – Javanese-accented speaker (jv-ID voice, ASR in the loop)",
+  "market": "id_multifinance",
+  "customer_id": "D001",
+  "customer_voice": "jv-ID-DimasNeural",
+  "expect": {
+   "verified": true,
+   "disposition_in": [
+    "PTP_ON_TIME"
+   ],
+   "tools_called": [
+    "verify_identity",
+    "record_promise_to_pay"
+   ],
+   "language_judge": "Polite Bahasa Indonesia; understands Javanese insertions; does not reply in English"
+  }
+ },
+ "latency": {
+  "asr_ms": [
+   267,
+   335,
+   437,
+   244,
+   253
+  ],
+  "agent_ms": [
+   670,
+   2178,
+   2097,
+   1431,
+   750
+  ],
+  "tts_ms": [
+   1221,
+   3036,
+   5850,
+   5183,
+   4016,
+   2592
+  ]
+ },
+ "asr_wer": 0.415,
+ "asr_pairs": [
+  {
+   "intended": "Nggih, leres, kulo Budi.",
+   "asr": "Gih, Leres, Kulobudi."
+  },
+  {
+   "intended": "Lahir kulo 17 Maret 1991, mbak, nomer kontrak kulo sing wingking 9921.",
+   "asr": "Lahir Kulo 17 Maret 1991, Mbak, nomor kontrak Kulo Sing Wing King 9.921."
+  },
+  {
+   "intended": "Angsuranipun sampun kulo siapke, mangke tak bayar lewat Indomaret, sedinten sakderengipun jatuh tempo nggih.",
+   "asr": "Angsuranipun sampun kulo siap ke, mangke tak bayar lewat Indomaret, sedinten sakderengipun jatuh tempongkih."
+  },
+  {
+   "intended": "Matur nuwun, Mbak.",
+   "asr": "Maturnuun, Mbak."
+  },
+  {
+   "intended": "Mboten wonten malih, sampun cekap. Matur nuwun, Mbak.",
+   "asr": "Boten-wonten malih, sampun cekap. Maturnuun, Mbak."
+  }
+ ]
+}

@@ -1,0 +1,78 @@
+# Retrieval test set. Gold = (source uri, section substring). Any gold in top-1 -> correct, in top-3 -> partially correct.
+# expect_abstain: the KB has no answer; correct behaviour is to return nothing (or NOT_IN_KB at generation).
+- id: Q01
+  type: product
+  question: What is the interest rate on a two-wheeler loan?
+  gold: [[in_lender/web/home.html, Two-Wheeler Loan], [in_lender/tables/product_eligibility.csv, ""]]
+- id: Q02
+  type: policy
+  question: How much is the bounce charge if my auto-debit fails?
+  gold: [[in_lender/pdf/Schedule_of_Charges_and_Policies_2026.pdf, Charges], [in_lender/web/faq.html, miss my EMI], [in_lender/tables/charges_matrix.csv, ""]]
+- id: Q03
+  type: policy
+  question: How many days of grace period do I get after the due date?
+  gold: [[in_lender/pdf/Schedule_of_Charges_and_Policies_2026.pdf, Repayment and due date], [in_lender/web/pay-emi.html, Grace period]]
+- id: Q04
+  type: qualification
+  question: What is the minimum monthly income to qualify for a personal loan?
+  gold: [[in_lender/tables/product_eligibility.csv, ""]]
+- id: Q05
+  type: qualification
+  question: Who is eligible for a top-up loan?
+  gold: [[in_lender/tables/product_eligibility.csv, ""]]
+- id: Q06
+  type: faq
+  question: Will paying late affect my CIBIL score?
+  gold: [[in_lender/web/faq.html, CIBIL]]
+- id: Q07
+  type: faq
+  question: How can I change my EMI date?
+  gold: [[in_lender/web/faq.html, change my EMI due date], [in_lender/forms/emi_date_change_form.html, ""]]
+- id: Q08
+  type: objection
+  question: I already paid yesterday through UPI, why are you still calling me?
+  gold: [[in_lender/web/faq.html, already paid], [in_lender/docs/objection_playbook.md, already paid]]
+- id: Q09
+  type: objection
+  question: My salary is late this month and I don't have money right now
+  gold: [[in_lender/docs/objection_playbook.md, don't have money], [in_lender/web/faq.html, financial difficulty], [in_lender/pdf/Schedule_of_Charges_and_Policies_2026.pdf, Hardship]]
+- id: Q10
+  type: objection
+  question: Can you waive the bounce charge from last month?
+  gold: [[in_lender/docs/objection_playbook.md, Waive], [in_lender/pdf/Schedule_of_Charges_and_Policies_2026.pdf, Promise to pay]]
+- id: Q11
+  type: objection
+  question: How do I know this call is not a fraud?
+  gold: [[in_lender/docs/objection_playbook.md, fraud], [in_lender/web/contact.html, Report fraud]]
+- id: Q12
+  type: product
+  question: What support do branch partners get?
+  gold: [[in_lender/web/partners.html, Branch Partnership Benefits]]
+- id: Q13
+  type: out_of_scope
+  question: What is your gold loan interest rate?
+  expect_abstain: true
+- id: Q14
+  type: out_of_scope
+  question: Can you book a train ticket to Delhi for me?
+  expect_abstain: true
+- id: Q15
+  type: faq
+  market: ph_life
+  question: Ano po mangyayari kapag na-lapse yung policy ko?
+  gold: [[ph_life/premium_faq_taglish.md, lapse]]
+- id: Q16
+  type: objection
+  market: ph_life
+  question: Wala pa po akong pambayad, sa sweldo pa po sa 30
+  gold: [[ph_life/objections_and_rules.md, pambayad]]
+- id: Q17
+  type: faq
+  market: id_multifinance
+  question: Berapa dendanya kalau saya telat bayar cicilan?
+  gold: [[id_multifinance/faq_angsuran.md, denda]]
+- id: Q18
+  type: faq
+  market: id_multifinance
+  question: Bayar angsuran bisa lewat Indomaret nggak?
+  gold: [[id_multifinance/faq_angsuran.md, cara membayar]]

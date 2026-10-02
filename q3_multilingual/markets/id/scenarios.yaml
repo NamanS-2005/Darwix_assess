@@ -1,0 +1,99 @@
+# Q3 Indonesia coverage: cooperative · sector objection · mixed English/finance terms · colloquial · human escalation · regional accent
+- id: id_01_cooperative_formal
+  title: ID – Cooperative customer (formal Bahasa)
+  market: id_multifinance
+  customer_id: D001
+  persona: |
+    Anda Budi Santoso, karyawan swasta di Jakarta, lahir 17 Maret 1991, nomor kontrak berakhiran 9921. Bicara Bahasa Indonesia sopan dan cukup formal.
+    Konfirmasi identitas. Katakan akan membayar angsuran lewat virtual account BCA sehari sebelum jatuh tempo. Tanyakan "Kalau bayar lewat VA, langsung masuk atau tidak?"
+    Lalu ucapkan terima kasih dan tutup.
+  expect:
+    verified: true
+    disposition_in: [PTP_ON_TIME]
+    tools_called: [verify_identity, get_loan_details, record_promise_to_pay, search_knowledge_base]
+    language_judge: "Polite spoken Bahasa Indonesia, Bapak/Ibu address, no English sentences"
+
+- id: id_02_objection_keringanan_dioper
+  title: ID – Sector objection (minta hapus denda, motor dioper)
+  market: id_multifinance
+  customer_id: D001
+  persona: |
+    Anda Budi Santoso, lahir 17 Maret 1991, nomor kontrak berakhiran 9921. Agak kesal. Setelah verifikasi, bilang: "Bulan lalu saya kena denda, tolong dihapus dong."
+    Setelah dijelaskan, bilang: "Sebenarnya motornya udah saya oper ke adik saya, jadi dia yang bayar." Terima jika ditawari dihubungi petugas. Lalu tutup.
+  expect:
+    verified: true
+    escalated: true
+    tools_called: [search_knowledge_base, escalate_to_human]
+    agent_never_says: ["(denda|biaya) (akan |sudah )?(kami )?(hapus|dihapus|dihapuskan)", "tarik motor", "menarik motor"]
+    language_judge: "Polite Bahasa Indonesia, calm, no threats, no English"
+
+- id: id_03_mixed_english_terms
+  title: ID – Mixed English loanwords (DP, tenor, transfer, cashback)
+  market: id_multifinance
+  customer_id: D002
+  persona: |
+    Anda Siti Rahayu, lahir 25 Agustus 1993 (nomor kontrak berakhiran 1178), staf marketing di Surabaya yang sering mencampur bahasa Inggris:
+    "Iya betul. Btw, kalau saya mau pelunasan dipercepat, ada penalty-nya nggak? Terus kalau saya transfer via mobile banking ke VA bisa real-time kan?"
+    Setelah dijawab, janji bayar lewat Alfamart 1 hari sebelum jatuh tempo. Lalu tutup.
+  expect:
+    verified: true
+    kb_used: true
+    tools_called: [search_knowledge_base, record_promise_to_pay]
+    disposition_in: [PTP_ON_TIME]
+    agent_says_any: ["3\\s?%"]
+    language_judge: "Bahasa Indonesia; customer's English loanwords tolerated; agent does not reply with English sentences"
+
+- id: id_04_colloquial_belum_gajian
+  title: ID – Colloquial speech (belum gajian, telat dikit)
+  market: id_multifinance
+  customer_id: D002
+  persona: |
+    Anda Siti Rahayu, lahir 25 Agustus 1993 (nomor kontrak berakhiran 1178). Bicara sangat santai Jakarta: "Iya Mbak, saya sendiri. Aduh, belum gajian nih, telat dikit gapapa kan?
+    Paling tanggal segini plus seminggu deh." Beri tanggal 9-10 hari setelah jatuh tempo lewat Indomaret. Kalau ditawari telepon balik, terima. Lalu tutup.
+  expect:
+    verified: true
+    tools_called: [search_knowledge_base]   # >7 days late per panduan -> callback is correct; PTP only if a specific date is given
+    disposition_in: [PTP_BEYOND_GRACE, HARDSHIP_REFERRED, ESCALATED, CALLBACK_SCHEDULED]
+    agent_says_any: ["denda"]
+    language_judge: "Friendly, slightly casual but polite Bahasa Indonesia matching the customer"
+
+- id: id_05_escalation_petugas
+  title: ID – Human escalation (minta bicara dengan petugas)
+  market: id_multifinance
+  customer_id: D002
+  persona: |
+    Anda Siti Rahayu, lahir 25 Agustus 1993 (nomor kontrak berakhiran 1178). Setelah verifikasi, bilang suami Anda baru kena PHK dan Anda tidak sanggup bayar bulan ini.
+    "Saya mau bicara langsung sama petugas aja, Mbak." Minta ditelepon besok jam 10 pagi. Lalu tutup.
+  expect:
+    verified: true
+    escalated: true
+    disposition_in: [HARDSHIP_REFERRED, ESCALATED, CALLBACK_SCHEDULED]
+    language_judge: "Empathetic Bahasa Indonesia, escalation stays in Indonesian"
+
+- id: id_06_regional_accent_javanese
+  title: ID – Javanese-accented speaker (jv-ID voice, ASR in the loop)
+  market: id_multifinance
+  customer_id: D001
+  customer_voice: jv-ID-DimasNeural
+  persona: |
+    Anda Budi Santoso dari Solo, lahir 17 Maret 1991, nomor kontrak berakhiran 9921. Bicara Bahasa Indonesia dengan sisipan Jawa halus: "Nggih, leres, kulo Budi."
+    "Angsuranipun sampun kulo siapke, mangke tak bayar lewat Indomaret, sedinten sakderengipun jatuh tempo nggih." Lalu "Matur nuwun, Mbak." dan tutup.
+  expect:
+    verified: true
+    disposition_in: [PTP_ON_TIME]
+    tools_called: [verify_identity, record_promise_to_pay]
+    language_judge: "Polite Bahasa Indonesia; understands Javanese insertions; does not reply in English"
+
+- id: id_07_regional_accent_sundanese
+  title: ID – Sundanese-accented speaker (su-ID voice, ASR in the loop)
+  market: id_multifinance
+  customer_id: D002
+  customer_voice: su-ID-TutiNeural
+  persona: |
+    Anda Siti Rahayu dari Bandung, lahir 25 Agustus 1993 (nomor kontrak berakhiran 1178). Bahasa Indonesia logat Sunda dengan sisipan: "Muhun, leres abdi Siti."
+    "Teu acan gajian atuh Teh, tapi insya Allah pas tanggal jatuh tempo abdi bayar lewat Alfamart." Lalu "Hatur nuhun nya" dan tutup.
+  expect:
+    verified: true
+    disposition_in: [PTP_ON_TIME]
+    tools_called: [verify_identity, record_promise_to_pay]
+    language_judge: "Polite Bahasa Indonesia; understands Sundanese insertions; does not reply in English"

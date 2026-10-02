@@ -1,0 +1,44 @@
+# Q3 – Philippines · life insurance premium reminder (bancassurance book). Fictional insurer.
+id: ph_life
+kb_market: ph_life
+company: Bituin Life Assurance
+agent_name: Bea
+locale: fil-PH
+timezone: Asia/Manila
+currency: "₱"
+date_style: ph          # "October 6, 2026" – Filipinos read dates/amounts in English even mid-Tagalog sentence
+asr:
+  # Whisper: language left to auto-detect – forcing "tl" degrades English-heavy Taglish turns (see asr_eval results).
+  model: whisper-large-v3        # benchmark: v3 + prompt 13.4% vs turbo 18.2% WER on Taglish
+  language: null
+  prompt: "Taglish na usapan tungkol sa insurance. Mga petsa at numero bilang digits, hal. March 3, 1985 at policy ending 2468. Bituin Life, premium, policy, beneficiary, rider, lapse, coverage, grace period, GCash, Maya, BancoBayan, po, opo, sige po, sweldo, bayad, hulog."
+tts:
+  voice: fil-PH-BlessicaNeural
+  customer_voice: fil-PH-AngeloNeural
+  rate: "+0%"
+vapi:
+  transcriber: {provider: azure, language: fil-PH}      # Deepgram has no Filipino model; Azure / Google do
+  voice: {provider: azure, voiceId: fil-PH-BlessicaNeural}
+prompt_file: system_prompt.md
+script_file: call_script.md
+rules_file: business_rules.yaml
+greetings: [[0, "Magandang gabi"], [5, "Magandang umaga"], [12, "Magandang hapon"], [18, "Magandang gabi"]]
+phrases:
+  opening: "{greeting} po! Ako po si {agent_name}, virtual assistant ng {company}. Paalala lang po, naka-record ang tawag na ito para sa quality at compliance. Si {honorific} {first_name} po ba ang kausap ko?"
+  not_heard: "Pasensya na po, hindi ko po masyadong narinig. Pakiulit lang po?"
+  unavailable: "Pasensya na po, wala po akong impormasyon tungkol diyan ngayon. Kung gusto n'yo po, ipapa-schedule ko po kayo ng callback mula sa aming Policy Services team."
+  technical: "Pasensya na po, may technical issue po sa linya. Tatawagan na lang po kayo ulit ng aming team. Salamat po sa pasensya."
+  verification_failed: "Pasensya na po, hindi ko po ma-verify ang details kaya hindi ko po ma-discuss ang policy. Puwede po kayong tumawag sa hotline namin o gamitin ang Bituin Life app. Salamat po, ingat po kayo."
+  closing: "Maraming salamat po sa oras ninyo, {honorific} {first_name}. Ingat po kayo!"
+  beyond_grace_notice: "Paalala lang po, kapag lumampas sa 31-day grace period, puwedeng mag-lapse ang policy at mawala ang coverage. Na-note ko na po ito para sa aming Policy Services team."
+  repeat_breaker: "Pasensya na po, gusto ko lang pong masigurado. Anong petsa po kayo magbabayad? Kung mas madali po, ipapatawag ko na lang po kayo sa aming team."
+  third_party: "Tumatawag po ako para kay {honorific} {first_name} tungkol sa isang personal na bagay. Kailan po kaya siya puwedeng tawagan? Salamat po."
+third_party_regex: '\b(hindi po ako si|hindi ako si|asawa (niya|nya)|kapatid (niya|nya)|anak (niya|nya)|wala po siya|wrong number|(his|her) (wife|husband|colleague))\b'
+account_terms_regex: '\b(policy|premium|due|bayad|bayaran|account|insurance|lapse|coverage)\b'
+closing_regex: 'ingat po|salamat po sa oras'
+anything_else_regex: 'may iba pa|iba pa po ba|anything else'
+customer_bye_regex: 'salamat|bye|wala na|okay na|sige po|that''?s all'
+beyond_grace_regex: "lapse|mawala.*coverage"
+callback_days: [0, 1, 2, 3, 4, 5]
+# language-consistency guard: native markers in customer speech vs agent reply
+native_markers_regex: '\b(po|opo|ang|ng|sa|na|ko|niyo|ninyo|kayo|namin|ito|yung|lang|salamat|ingat|naman|ba)\b'

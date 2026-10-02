@@ -1,0 +1,367 @@
+{
+ "call_id": "in-20261001-200649-8d7f",
+ "market": "in_lender",
+ "channel": "simulated",
+ "customer_id": "C004",
+ "due_date": "2026-10-03",
+ "outside_calling_hours": true,
+ "state": {
+  "verified": true,
+  "verify_attempts": 1,
+  "disposition": "ESCALATED",
+  "ptp": null,
+  "tickets": [
+   {
+    "type": "escalation",
+    "id": "ESC-8BF56E",
+    "reason": "human_request",
+    "details": "Customer believes EMI amount wrong and wants to talk to a real person",
+    "market": "in_lender",
+    "customer_id": "C004",
+    "call_id": "in-20261001-200649-8d7f",
+    "created_at": "2026-10-01T20:07:37",
+    "sla": "callback within 1 working day",
+    "delivery": "logged"
+   },
+   {
+    "type": "callback",
+    "id": "CB-540FFD",
+    "at": "2026-10-02T11:00:00+05:30",
+    "reason": "Customer disputes EMI amount and requested a human specialist."
+   }
+  ],
+  "ended": true,
+  "details_shared": true
+ },
+ "crm_summary": {
+  "call_id": "in-20261001-200649-8d7f",
+  "market": "in_lender",
+  "customer_id": "C004",
+  "disposition": "ESCALATED",
+  "llm_disposition": "ESCALATED",
+  "summary": "Customer disputed EMI amount and requested human callback; scheduled callback for 2026-10-02 11:00.",
+  "ptp": null,
+  "tickets": [
+   {
+    "type": "escalation",
+    "id": "ESC-8BF56E",
+    "reason": "human_request",
+    "details": "Customer believes EMI amount wrong and wants to talk to a real person",
+    "market": "in_lender",
+    "customer_id": "C004",
+    "call_id": "in-20261001-200649-8d7f",
+    "created_at": "2026-10-01T20:07:37",
+    "sla": "callback within 1 working day",
+    "delivery": "logged"
+   },
+   {
+    "type": "callback",
+    "id": "CB-540FFD",
+    "at": "2026-10-02T11:00:00+05:30",
+    "reason": "Customer disputes EMI amount and requested a human specialist."
+   }
+  ],
+  "verified": true,
+  "kb_queries": 1,
+  "ended_at": "2026-10-01T20:08:09"
+ },
+ "kb_log": [
+  {
+   "query": "EMI amount wrong charged extra last month",
+   "results": [
+    "[kb_in_faq_279e0d | in_lender/web/faq.html §Can I change my EMI due date? | v2026-03-12]",
+    "[kb_in_faq_b1ffd6 | in_lender/web/faq.html §Is my EMI amount going to change? | v2026-03-12]",
+    "[kb_in_faq_c00b42 | in_lender/web/faq.html §What happens if I miss my EMI due date? | v2026-03-12]"
+   ],
+   "abstained": false,
+   "mode": "hybrid"
+  }
+ ],
+ "guard_log": [],
+ "metrics": {
+  "kb_ms": [
+   570.3
+  ],
+  "llm_ms": [
+   1690,
+   605,
+   397,
+   723,
+   574,
+   794,
+   2186,
+   2566,
+   4993,
+   595
+  ],
+  "turn_ms": [
+   1752,
+   9903,
+   18690,
+   23834
+  ],
+  "providers": {
+   "gemini/gemini-flash-lite-latest": 1,
+   "groq/openai/gpt-oss-120b": 4,
+   "groq/openai/gpt-oss-20b": 4,
+   "gemini/gemini-3.1-flash-lite": 1
+  }
+ },
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Hello, this is Asha, a virtual assistant calling from Udaan Credit Finance. This call is recorded for quality and compliance. Am I speaking with Fatima?",
+   "ts": 1790865409.418854,
+   "source": "fixed_script"
+  },
+  {
+   "role": "customer",
+   "text": "Yes, this is Fatima Sheikh.",
+   "ts": 1790865414.1855493,
+   "asr": {
+    "intended": "Yes, this is Fatima Sheikh.",
+    "ms": 307
+   },
+   "intended": "Yes, this is Fatima Sheikh."
+  },
+  {
+   "role": "agent",
+   "text": "Thank you, Fatima. For your security, could you please confirm your date of birth or the last four digits of your loan account number?",
+   "ts": 1790865415.9370675,
+   "source": "llm",
+   "tools": [],
+   "agent_ms": 1752,
+   "state": {
+    "verified": false,
+    "disposition": null,
+    "ended": false
+   }
+  },
+  {
+   "role": "customer",
+   "text": "My date of birth is 14th February 1988.",
+   "ts": 1790865422.8297586,
+   "asr": {
+    "intended": "My date of birth is 14 February 1988.",
+    "ms": 245
+   },
+   "intended": "My date of birth is 14 February 1988."
+  },
+  {
+   "role": "agent",
+   "text": "Fatima, this is a reminder for your Personal Loan EMI of ₹12,780, due on Saturday, 3 October 2026. Since auto‑debit is not active, could you let me know how and when you plan to make the payment?",
+   "ts": 1790865432.7324715,
+   "source": "llm",
+   "tools": [
+    {
+     "tool": "verify_identity",
+     "args": {
+      "date_of_birth": "1988-02-14"
+     },
+     "result": {
+      "verified": true,
+      "instruction": "Thank the customer, then call get_loan_details and give the reminder."
+     },
+     "ms": 0.1,
+     "model": "groq/openai/gpt-oss-120b"
+    },
+    {
+     "tool": "get_loan_details",
+     "args": {},
+     "result": {
+      "product": "Personal Loan",
+      "amount_due": "₹12,780",
+      "due_date": "2026-10-03",
+      "due_date_spoken": "Saturday, 3 October 2026",
+      "days_until_due": 2,
+      "auto_debit_active": false,
+      "auto_debit_bank": null,
+      "grace_period_end": "2026-10-06",
+      "payment_history": "30 of 30 EMIs paid on time"
+     },
+     "ms": 0.2,
+     "model": "groq/openai/gpt-oss-20b"
+    }
+   ],
+   "agent_ms": 9903,
+   "state": {
+    "verified": true,
+    "disposition": null,
+    "ended": false
+   }
+  },
+  {
+   "role": "customer",
+   "text": "The EMI amount looks wrong to me. I think I was charged extra last month. I want to talk to a real person, not a bot.",
+   "ts": 1790865441.4373662,
+   "asr": {
+    "intended": "The EMI amount looks wrong to me; I think I was charged extra last month. I want to talk to a real person, not a bot.",
+    "ms": 290
+   },
+   "intended": "The EMI amount looks wrong to me; I think I was charged extra last month. I want to talk to a real person, not a bot."
+  },
+  {
+   "role": "agent",
+   "text": "I understand your concern, Fatima. I’ll have a specialist from our team call you back within one working day. Do you have a preferred date and time for the callback?",
+   "ts": 1790865460.127094,
+   "source": "llm",
+   "tools": [
+    {
+     "tool": "search_knowledge_base",
+     "args": {
+      "query": "EMI amount wrong charged extra last month"
+     },
+     "result": {
+      "results": [
+       {
+        "citation": "kb_in_faq_279e0d",
+        "title": "Can I change my EMI due date?",
+        "content": "Yes, once during the loan tenure. Submit the EMI Date Change Request form at least 10 days before the next due date. Available dates are the 2nd, 5th, 10th and 15th. Broken-period interest for the extra days is added to the next EMI."
+       },
+       {
+        "citation": "kb_in_faq_b1ffd6",
+        "title": "Is my EMI amount going to change?",
+        "content": "For fixed-rate loans the EMI stays the same for the full tenure. For floating-rate loans the EMI or tenure may change when the benchmark rate changes; you will be informed in advance."
+       },
+       {
+        "citation": "kb_in_faq_c00b42",
+        "title": "What happens if I miss my EMI due date?",
+        "content": "If the EMI is not received within the grace period, a late payment charge of 2% per month on the overdue EMI amount is levied, along with a bounce charge of ₹590 (inclusive of GST) if an auto-debit or cheque fails. Missed payments are reported to credit bureaus such as CIBIL and may lower your credit score."
+       }
+      ],
+      "instruction": "Answer ONLY from these results, briefly. If they don't answer the question, say you don't have that information."
+     },
+     "ms": 570.5,
+     "model": "groq/openai/gpt-oss-20b"
+    },
+    {
+     "tool": "escalate_to_human",
+     "args": {
+      "details": "Customer believes EMI amount wrong and wants to talk to a real person",
+      "reason": "human_request"
+     },
+     "result": {
+      "ok": true,
+      "ticket": "ESC-8BF56E",
+      "instruction": "Tell the customer a specialist from our team will call back within 1 working day (do not promise any outcome). Ask if they prefer a time; if yes use schedule_callback."
+     },
+     "ms": 6.7,
+     "model": "groq/openai/gpt-oss-20b"
+    }
+   ],
+   "agent_ms": 18690,
+   "state": {
+    "verified": true,
+    "disposition": "ESCALATED",
+    "ended": false
+   }
+  },
+  {
+   "role": "customer",
+   "text": "Yes, please call me tomorrow at 11 a.m.",
+   "ts": 1790865467.6588047,
+   "asr": {
+    "intended": "Yes, please call me tomorrow at 11 AM.",
+    "ms": 579
+   },
+   "intended": "Yes, please call me tomorrow at 11 AM."
+  },
+  {
+   "role": "agent",
+   "text": "A specialist will call you back on Friday, 2 October 2026 at 11:00. Thank you for your time. Have a good day.",
+   "ts": 1790865491.492729,
+   "source": "llm",
+   "tools": [
+    {
+     "tool": "schedule_callback",
+     "args": {
+      "reason": "Customer disputes EMI amount and requested a human specialist.",
+      "date": "2026-10-02",
+      "time": "11:00"
+     },
+     "result": {
+      "ok": true,
+      "callback_id": "CB-540FFD",
+      "spoken": "Friday, 2 October 2026 11:00",
+      "instruction": "Confirm the callback date and time."
+     },
+     "ms": 1.5,
+     "model": "gemini/gemini-3.1-flash-lite"
+    },
+    {
+     "tool": "end_call",
+     "args": {
+      "disposition": "ESCALATED",
+      "summary": "Customer disputed EMI amount and requested human callback; scheduled callback for 2026-10-02 11:00."
+     },
+     "result": {
+      "ok": true,
+      "instruction": "Say the closing line now (one sentence summary of next step + closing). Do not ask further questions."
+     },
+     "ms": 11.4,
+     "model": "groq/openai/gpt-oss-120b"
+    }
+   ],
+   "agent_ms": 23834,
+   "state": {
+    "verified": true,
+    "disposition": "ESCALATED",
+    "ended": true
+   }
+  }
+ ],
+ "scenario": {
+  "id": "q1_05_human_request",
+  "title": "Human-assistance request (dispute)",
+  "market": "in_lender",
+  "customer_id": "C004",
+  "expect": {
+   "verified": true,
+   "disposition_in": [
+    "ESCALATED",
+    "CALLBACK_SCHEDULED"
+   ],
+   "escalated": true
+  }
+ },
+ "latency": {
+  "asr_ms": [
+   307,
+   245,
+   290,
+   579
+  ],
+  "agent_ms": [
+   1752,
+   9903,
+   18690,
+   23834
+  ],
+  "tts_ms": [
+   1534,
+   1665,
+   4581,
+   2099,
+   2306
+  ]
+ },
+ "asr_wer": 0.064,
+ "asr_pairs": [
+  {
+   "intended": "Yes, this is Fatima Sheikh.",
+   "asr": "Yes, this is Fatima Sheikh."
+  },
+  {
+   "intended": "My date of birth is 14 February 1988.",
+   "asr": "My date of birth is 14th February 1988."
+  },
+  {
+   "intended": "The EMI amount looks wrong to me; I think I was charged extra last month. I want to talk to a real person, not a bot.",
+   "asr": "The EMI amount looks wrong to me. I think I was charged extra last month. I want to talk to a real person, not a bot."
+  },
+  {
+   "intended": "Yes, please call me tomorrow at 11 AM.",
+   "asr": "Yes, please call me tomorrow at 11 a.m."
+  }
+ ]
+}

@@ -1,0 +1,83 @@
+{
+ "id": "s5_noisy_ambiguous",
+ "duration": 69.27,
+ "turns": [
+  {
+   "turn": 0,
+   "speaker": "agent",
+   "text": "Good evening, this is Arjun from Udaan Credit Finance. This call is recorded for quality and compliance. Am I speaking with Mr. Sameer Joshi?",
+   "start": 0.6,
+   "end": 12.115
+  },
+  {
+   "turn": 1,
+   "speaker": "customer",
+   "text": "Haan, yes, yes. Sorry, it's a bit noisy here, I'm at the market.",
+   "start": 12.565,
+   "end": 18.824
+  },
+  {
+   "turn": 2,
+   "speaker": "agent",
+   "text": "No problem sir. For verification, could you tell me the last four digits of your loan account?",
+   "start": 19.424,
+   "end": 26.177
+  },
+  {
+   "turn": 3,
+   "speaker": "customer",
+   "text": "Eight eight one zero.",
+   "start": 26.627,
+   "end": 28.009
+  },
+  {
+   "turn": 4,
+   "speaker": "agent",
+   "text": "Thank you sir. Your personal loan EMI of seven thousand rupees is due on the fifth. It will be debited automatically.",
+   "start": 28.61,
+   "end": 37.937
+  },
+  {
+   "turn": 5,
+   "speaker": "customer",
+   "text": "Yes, yes, it's fine. My brother also took a bike loan last year, he paid it off already, haha.",
+   "start": 38.387,
+   "end": 46.488
+  },
+  {
+   "turn": 6,
+   "speaker": "agent",
+   "text": "That's great to hear sir.",
+   "start": 47.088,
+   "end": 48.966
+  },
+  {
+   "turn": 7,
+   "speaker": "customer",
+   "text": "This traffic is killing me, honestly. Anyway, the money is in the account.",
+   "start": 49.416,
+   "end": 55.251
+  },
+  {
+   "turn": 8,
+   "speaker": "agent",
+   "text": "Perfect. Please keep the balance one day before the due date.",
+   "start": 55.851,
+   "end": 60.657
+  },
+  {
+   "turn": 9,
+   "speaker": "customer",
+   "text": "Okay, maybe I'll check the app later, no issues.",
+   "start": 61.107,
+   "end": 64.959
+  },
+  {
+   "turn": 10,
+   "speaker": "agent",
+   "text": "Thank you for your time sir, have a good evening.",
+   "start": 65.559,
+   "end": 68.816
+  }
+ ]
+}

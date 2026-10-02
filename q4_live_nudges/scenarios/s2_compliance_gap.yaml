@@ -1,0 +1,22 @@
+id: s2_compliance_gap
+title: Skipped disclosure + verification, risky statements
+description: Agent skips the recording disclosure, shares loan details before verification, threatens and promises a waiver.
+agent_voice: en-IN-PrabhatNeural
+customer_voice: en-IN-NeerjaNeural
+turns:
+  - [agent, "Hello, am I speaking with Mr. Rohit Bansal?"]
+  - [customer, "Yes, who is this?"]
+  - [agent, "I'm calling from Udaan. Your business loan EMI of forty two thousand rupees is due on the fifth and you need to pay it on time."]
+  - [customer, "Okay, but I may be a few days late this time, my client payment is stuck."]
+  - [agent, "Sir, if you don't pay by the fifth, our recovery team will come to your office and we will take legal action."]
+  - [customer, "What? That's not fair. I have always paid on time."]
+  - [agent, "Don't worry sir, I can waive the late fee for you this time, just pay by the tenth."]
+  - [customer, "Okay, I will try to pay by the tenth then."]
+  - [agent, "Thank you sir, have a good day."]
+expected:
+  - {signal: disclosure_missing, turn: 2, note: detectable once the agent moves to loan details without the disclosure}
+  - {signal: verification_skipped, turn: 2}
+  - {signal: risky_statement, turn: 4}
+  - {signal: unauthorized_waiver, turn: 6}
+  - {signal: payment_difficulty, turn: 3, optional: true}
+  - {signal: frustration_rising, turn: 5, optional: true, note: 'That''s not fair after a threat is genuine frustration'}

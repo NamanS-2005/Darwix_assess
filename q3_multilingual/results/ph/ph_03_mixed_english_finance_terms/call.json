@@ -1,0 +1,282 @@
+{
+ "call_id": "ph-20261001-214008-3549",
+ "market": "ph_life",
+ "channel": "simulated",
+ "customer_id": "P001",
+ "due_date": "2026-10-07",
+ "outside_calling_hours": true,
+ "state": {
+  "verified": true,
+  "verify_attempts": 1,
+  "disposition": "PTP_WITHIN_GRACE",
+  "ptp": {
+   "date": "2026-10-17",
+   "mode": "app",
+   "class": "PTP_WITHIN_GRACE"
+  },
+  "tickets": [],
+  "ended": false,
+  "details_shared": true,
+  "offered_anything_else": true
+ },
+ "crm_summary": null,
+ "kb_log": [
+  {
+   "query": "grace period lapse critical illness rider if premium missed",
+   "results": [
+    "[kb_ph_faq_4d8f47 | ph_life/premium_faq_taglish.md §Ano ang riders? | v2026-02-01]",
+    "[kb_ph_faq_d1e4ff | ph_life/premium_faq_taglish.md §Ano ang grace period? | v2026-02-01]",
+    "[kb_ph_faq_e5bd9f | ph_life/premium_faq_taglish.md §Ano ang mangyayari kapag nag-lapse ang policy? | v2026-02-01]"
+   ],
+   "abstained": false,
+   "mode": "hybrid"
+  }
+ ],
+ "guard_log": [],
+ "metrics": {
+  "kb_ms": [
+   608.4
+  ],
+  "llm_ms": [
+   724,
+   749,
+   1989,
+   3340,
+   542,
+   572,
+   793,
+   555
+  ],
+  "turn_ms": [
+   6879,
+   1724,
+   1500
+  ],
+  "providers": {
+   "groq2/openai/gpt-oss-20b": 2,
+   "openrouter/qwen/qwen3.8-27b:free": 2,
+   "groq2/qwen/qwen3.8-27b": 2,
+   "groq2/openai/gpt-oss-120b": 2
+  }
+ },
+ "transcript": [
+  {
+   "role": "agent",
+   "text": "Magandang gabi po! Ako po si Bea, virtual assistant ng Bituin Life Assurance. Paalala lang po, naka-record ang tawag na ito para sa quality at compliance. Si Ma'am Maria po ba ang kausap ko?",
+   "ts": 1790871008.6685107,
+   "source": "fixed_script"
+  },
+  {
+   "role": "customer",
+   "text": "Hi, yes this is Maria. Para ma-verify, Ninoy birthday is June 9, 1987 and Ninoy policy ends in 4417.",
+   "ts": 1790871016.5148766,
+   "asr": {
+    "intended": "Hi, yes this is Maria. Para ma-verify, my birthday is June ninth, nineteen eighty-seven, and my policy ends in four four one seven.",
+    "ms": 434
+   },
+   "intended": "Hi, yes this is Maria. Para ma-verify, my birthday is June ninth, nineteen eighty-seven, and my policy ends in four four one seven."
+  },
+  {
+   "role": "agent",
+   "text": "Salamat po, Ma'am Maria, verified na po kayo. Paalala lang po, ang premium ninyo na ₱4,250 due na po on October 7. Kailan at paano po kayo magbabayad?",
+   "ts": 1790871023.394203,
+   "source": "llm",
+   "tools": [
+    {
+     "tool": "verify_identity",
+     "args": {
+      "account_last4": "4417",
+      "date_of_birth": "1987-06-09"
+     },
+     "result": {
+      "verified": true,
+      "instruction": "Thank the customer, then call get_loan_details and give the reminder."
+     },
+     "ms": 0.2,
+     "model": "groq2/openai/gpt-oss-20b"
+    },
+    {
+     "tool": "get_loan_details",
+     "args": {
+      "": ""
+     },
+     "result": {
+      "error": "bad arguments: get_loan_details() got an unexpected keyword argument ''"
+     },
+     "ms": 0.1,
+     "model": "groq2/openai/gpt-oss-20b"
+    },
+    {
+     "tool": "get_loan_details",
+     "args": {},
+     "result": {
+      "product": "Bituin Life Protect (whole life) with Critical Illness rider",
+      "amount_due": "₱4,250",
+      "due_date": "2026-10-07",
+      "due_date_spoken": "October 7, 2026 (Wednesday)",
+      "days_until_due": 5,
+      "auto_debit_active": false,
+      "auto_debit_bank": "BancoBayan",
+      "grace_period_end": "2026-11-07",
+      "payment_history": "policy in force since 2022, 2 late payments within grace",
+      "payment_mode": "monthly"
+     },
+     "ms": 0.2,
+     "model": "openrouter/qwen/qwen3.8-27b:free"
+    }
+   ],
+   "agent_ms": 6879,
+   "state": {
+    "verified": true,
+    "disposition": null,
+    "ended": false
+   }
+  },
+  {
+   "role": "customer",
+   "text": "Hi, yes this is Maria. Quick question lang, if I miss the due date, will Enway policy lapse agad? And what happens to Enway critical illness rider?",
+   "ts": 1790871031.9644914,
+   "asr": {
+    "intended": "Hi, yes this is Maria. Quick question lang — if I miss the due date, will my policy lapse agad? And what happens to my critical illness rider?",
+    "ms": 449
+   },
+   "intended": "Hi, yes this is Maria. Quick question lang — if I miss the due date, will my policy lapse agad? And what happens to my critical illness rider?"
+  },
+  {
+   "role": "agent",
+   "text": "Hindi agad po, Ma'am. May 31-day grace period po kayo, kaya active pa rin ang coverage hanggang November 7. Pero kung lapsed na ang base policy, lapsed din po ang Critical Illness rider. Kailan po kayo magbabayad?",
+   "ts": 1790871033.6887913,
+   "source": "llm",
+   "tools": [
+    {
+     "tool": "search_knowledge_base",
+     "args": {
+      "query": "grace period lapse critical illness rider if premium missed"
+     },
+     "result": {
+      "results": [
+       {
+        "citation": "kb_ph_faq_4d8f47",
+        "title": "Ano ang riders?",
+        "content": "Ang riders ay dagdag na benefits na naka-attach sa base policy, gaya ng Critical Illness rider, Accidental Death rider at Waiver of Premium rider. Kapag nag-lapse ang base policy, lapsed din ang riders."
+       },
+       {
+        "citation": "kb_ph_faq_d1e4ff",
+        "title": "Ano ang grace period?",
+        "content": "May grace period po na 31 days mula sa due date. Habang nasa grace period, active pa rin ang coverage ng policy. Kapag hindi nabayaran ang premium pagkatapos ng 31 days, puwedeng mag-lapse ang policy maliban kung may sapat na cash value para sa Automatic Premium Loan (APL)."
+       },
+       {
+        "citation": "kb_ph_faq_e5bd9f",
+        "title": "Ano ang mangyayari kapag nag-lapse ang policy?",
+        "content": "Kapag lapsed na, wala nang coverage — hindi na mababayaran ang death o rider benefits. Puwedeng i-reinstate ang policy within 3 years mula sa lapse date kung babayaran ang lahat ng unpaid premiums with interest at magsusumite ng evidence of insurability (health declaration, minsan medical exam)."
+       }
+      ],
+      "instruction": "Answer ONLY from these results, briefly. If they don't answer the question, say you don't have that information."
+     },
+     "ms": 608.5,
+     "model": "groq2/qwen/qwen3.8-27b"
+    }
+   ],
+   "agent_ms": 1724,
+   "state": {
+    "verified": true,
+    "disposition": null,
+    "ended": false
+   }
+  },
+  {
+   "role": "customer",
+   "text": "Okay, gets ko. I'll pay naman within the grace period via Maya, probably mga 10 days after the due date.",
+   "ts": 1790871040.0818167,
+   "asr": {
+    "intended": "Okay, gets ko. I’ll pay naman within the grace period via Maya, probably mga ten days after the due date.",
+    "ms": 422
+   },
+   "intended": "Okay, gets ko. I’ll pay naman within the grace period via Maya, probably mga ten days after the due date."
+  },
+  {
+   "role": "agent",
+   "text": "Naiintindihan ko po, Ma'am Maria. Nakarecord po ang payment sa Maya on October 17, Saturday. Salamat po, at kung may tanong pa po kayo, sabihin niyo lang. Good luck!",
+   "ts": 1790871041.5823,
+   "source": "llm",
+   "tools": [
+    {
+     "tool": "record_promise_to_pay",
+     "args": {
+      "date": "2026-10-17",
+      "mode": "app"
+     },
+     "result": {
+      "ok": true,
+      "classification": "PTP_WITHIN_GRACE",
+      "date_spoken": "October 17, 2026 (Saturday)",
+      "mode": "app",
+      "instruction": "Allowed (within grace period). Confirm date and mode. You may say paying by the due date is best; do not invent charges."
+     },
+     "ms": 0.3,
+     "model": "groq2/openai/gpt-oss-120b"
+    }
+   ],
+   "agent_ms": 1500,
+   "state": {
+    "verified": true,
+    "disposition": "PTP_WITHIN_GRACE",
+    "ended": false
+   }
+  }
+ ],
+ "scenario": {
+  "id": "ph_03_mixed_english_finance_terms",
+  "title": "PH – Mixed English + finance terms (lapse, APL, rider)",
+  "market": "ph_life",
+  "customer_id": "P001",
+  "expect": {
+   "verified": true,
+   "tools_called": [
+    "search_knowledge_base",
+    "record_promise_to_pay"
+   ],
+   "kb_used": true,
+   "disposition_in": [
+    "PTP_WITHIN_GRACE"
+   ],
+   "agent_says_any": [
+    "31"
+   ],
+   "language_judge": "Mostly English / Taglish mirroring an English-heavy customer"
+  }
+ },
+ "latency": {
+  "asr_ms": [
+   434,
+   449,
+   422
+  ],
+  "agent_ms": [
+   6879,
+   1724,
+   1500
+  ],
+  "tts_ms": [
+   1398,
+   2907,
+   2118,
+   3500
+  ]
+ },
+ "asr_wer": 0.205,
+ "asr_pairs": [
+  {
+   "intended": "Hi, yes this is Maria. Para ma-verify, my birthday is June ninth, nineteen eighty-seven, and my policy ends in four four one seven.",
+   "asr": "Hi, yes this is Maria. Para ma-verify, Ninoy birthday is June 9, 1987 and Ninoy policy ends in 4417."
+  },
+  {
+   "intended": "Hi, yes this is Maria. Quick question lang — if I miss the due date, will my policy lapse agad? And what happens to my critical illness rider?",
+   "asr": "Hi, yes this is Maria. Quick question lang, if I miss the due date, will Enway policy lapse agad? And what happens to Enway critical illness rider?"
+  },
+  {
+   "intended": "Okay, gets ko. I’ll pay naman within the grace period via Maya, probably mga ten days after the due date.",
+   "asr": "Okay, gets ko. I'll pay naman within the grace period via Maya, probably mga 10 days after the due date."
+  }
+ ]
+}

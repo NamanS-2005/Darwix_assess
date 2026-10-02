@@ -1,0 +1,490 @@
+{"key": "whisper-v3 | lang hint + prompt||ph01_fil-PH-BlessicaNeural.wav", "v": ["Magandang umaga po. Gusto ko pong malaman kung kailan ang due date ng premium ko.", 772.7557000034722, "Tagalog"]}
+{"key": "whisper-v3 | lang hint + prompt||ph01_fil-PH-BlessicaNeural_noisy.wav", "v": ["Magandang umaga po. Gusto ko pong malaman kung kailan ang due date ng premium ko.", 502.54689999565016, "Tagalog"]}
+{"key": "whisper-v3 | lang hint + prompt||ph01_fil-PH-AngeloNeural.wav", "v": ["Magandang umaga po. Gusto ko pong malaman kung kailan ang due date ng premium ko.", 285.10919999098405, "Tagalog"]}
+{"key": "whisper-v3 | lang hint + prompt||ph01_en-PH-RosaNeural.wav", "v": ["Magandang umaga pa! Gusto kayo pang malamon kang kailin ang due date ng premium kayo.", 309.12039999384433, "Tagalog"]}
+{"key": "whisper-v3 | lang hint + prompt||ph02_fil-PH-BlessicaNeural.wav", "v": ["Hi po, nag-check ako sa Appy pero hindi pa nag-reflect yung bayad ko sa cash kahapon.", 323.3707999897888, "Tagalog"]}
+{"key": "whisper-v3 | lang hint + prompt||ph02_fil-PH-BlessicaNeural_noisy.wav", "v": ["Hippo, nag-check ako sa Appy pero hindi pa nag-reflect yung bayad ko sa cash kahapon.", 307.3739999963436, "Tagalog"]}
+{"key": "whisper-v3 | lang hint + prompt||ph02_fil-PH-AngeloNeural.wav", "v": ["Hi po, nag-check ako sa API pero hindi pa nag-reflect yung bayad ko sa cash kahapon.", 313.10499999381136, "Tagalog"]}
+{"key": "whisper-v3 | lang hint + prompt||ph02_en-PH-RosaNeural.wav", "v": ["Hi pa! Nag-check eh KOSA app pero hindi pa nag-reflect yung bayad KOSAG cash kahapon.", 326.2412000040058, "Tagalog"]}
+{"key": "whisper-v3 | lang hint + prompt||ph03_fil-PH-BlessicaNeural.wav", "v": ["Kapag na-lapse po ba yung policy, mawawala na rin yung coverage ng rider ko.", 300.36249999830034, "Tagalog"]}
+{"key": "whisper-v3 | lang hint + prompt||ph03_fil-PH-BlessicaNeural_noisy.wav", "v": ["Kapag na-lapse po ba yung policy, mawawala na rin yung coverage ng rider ko.", 293.7066999875242, "Tagalog"]}
+{"key": "whisper-v3 | lang hint + prompt||ph03_fil-PH-AngeloNeural.wav", "v": ["Kapag na-lapse po ba yung policy, mawawala na rin yung coverage ng rider ko.", 299.47359999641776, "Tagalog"]}
+{"key": "whisper-v3 | lang hint + prompt||ph03_en-PH-RosaNeural.wav", "v": ["Kapag na-lapse pa ba yung policy, mawawala na rin yung coverage in Rider KO.", 281.62999999767635, "Tagalog"]}
+{"key": "whisper-v3 | lang hint + prompt||ph04_fil-PH-BlessicaNeural.wav", "v": ["Gusto ko pong palitan yung beneficiary ko, yung asawa ko na lang po ang ilagay.", 285.33120000793133, "Tagalog"]}
+{"key": "whisper-v3 | lang hint + prompt||ph04_fil-PH-BlessicaNeural_noisy.wav", "v": ["Gusto ko pong palitan yung beneficiary ko, yung asawa ko na lang po ang ilagay.", 279.65579999727197, "Tagalog"]}
+{"key": "whisper-v3 | lang hint + prompt||ph04_fil-PH-AngeloNeural.wav", "v": ["Gusto ko pong palitan yung beneficiary ko, yung asawa ko na lang po ang ilagay.", 297.78510000323877, "Tagalog"]}
+{"key": "whisper-v3 | lang hint + prompt||ph04_en-PH-RosaNeural.wav", "v": ["Gusto kayo pang palitan yung beneficiary kayo, yung asawa kayo na lang po ang iligay.", 317.0191999961389, "Tagalog"]}
+{"key": "whisper-v3 | lang hint + prompt||ph05_fil-PH-BlessicaNeural.wav", "v": ["Ay naku, gipit pa ako ngayon sa katapusan pa yung sweldo ko eh.", 313.55180000537075, "Tagalog"]}
+{"key": "whisper-v3 | lang hint + prompt||ph05_fil-PH-BlessicaNeural_noisy.wav", "v": ["Ay naku, gipit pa ako ngayon sa katapusan pa yung sweldo ko eh.", 278.1990999937989, "Tagalog"]}
+{"key": "whisper-v3 | lang hint + prompt||ph05_fil-PH-AngeloNeural.wav", "v": ["Ay naku, gipit pa ako ngayon, sa katapusan pa yung sweldo ko eh.", 311.05370000295807, "Tagalog"]}
+{"key": "whisper-v3 | lang hint + prompt||ph05_en-PH-RosaNeural.wav", "v": ["Ay naku, jipit pa e kayo nayon, es e katapusin pa yung sweldo kayo eh.", 307.49390000710264, "Tagalog"]}
+{"key": "whisper-v3 | lang hint + prompt||ph06_fil-PH-BlessicaNeural.wav", "v": ["Quick question lang, if amidst the due date will Envey policy lapse agad or may grace period?", 318.027000001166, "Tagalog"]}
+{"key": "whisper-v3 | lang hint + prompt||ph06_fil-PH-BlessicaNeural_noisy.wav", "v": ["Quick question lang, if amidst the due date will Envey policy lapse agad or may grace period?", 334.91949999006465, "Tagalog"]}
+{"key": "whisper-v3 | lang hint + prompt||ph06_fil-PH-AngeloNeural.wav", "v": ["Quick question lang, if I miss the due date will annoy policy lapse agad or may grace period?", 304.68119999568444, "Tagalog"]}
+{"key": "whisper-v3 | lang hint + prompt||ph06_en-PH-RosaNeural.wav", "v": ["Quick question lang, if I miss the due date will my policy lapse agad or may grace period?", 307.25149999489076, "Tagalog"]}
+{"key": "whisper-v3 | lang hint + prompt||ph07_fil-PH-BlessicaNeural.wav", "v": ["Babayaran ko po yung 4,250 sa October 15 sa Bancobayan branch.", 288.8139999995474, "Tagalog"]}
+{"key": "whisper-v3 | lang hint + prompt||ph07_fil-PH-BlessicaNeural_noisy.wav", "v": ["Babayaran ko po yung 4,250 sa October 15 sa Bancobayan Branch.", 272.25740000722, "Tagalog"]}
+{"key": "whisper-v3 | lang hint + prompt||ph07_fil-PH-AngeloNeural.wav", "v": ["Babayaran ko po yung 4,250 sa October 15 sa Bancobayan branch.", 321.6643999912776, "Tagalog"]}
+{"key": "whisper-v3 | lang hint + prompt||ph07_en-PH-RosaNeural.wav", "v": ["Babayaran kayo payang 4,250 sa Oct. 15 sa Bancobayan branch.", 344.59619999688584, "Tagalog"]}
+{"key": "whisper-v3 | lang hint + prompt||ph08_fil-PH-BlessicaNeural.wav", "v": ["Sabi kasi ng taga-bank ko parang savings lang daw ito, bank referral lang daw.", 345.2473000070313, "Tagalog"]}
+{"key": "whisper-v3 | lang hint + prompt||ph08_fil-PH-BlessicaNeural_noisy.wav", "v": ["Sabi kasi ng taga-bank ko parang savings lang daw ito, bank referral lang daw.", 323.1376000039745, "Tagalog"]}
+{"key": "whisper-v3 | lang hint + prompt||ph08_fil-PH-AngeloNeural.wav", "v": ["Sabi kasi ng taga-bank ko parang savings lang daw ito, bank referral lang daw.", 285.5917000124464, "Tagalog"]}
+{"key": "whisper-v3 | lang hint + prompt||ph08_en-PH-RosaNeural.wav", "v": ["Sabi kasi yung taga-banko parang savings lang daw ito, bank referral lang daw.", 308.20759999915026, "Tagalog"]}
+{"key": "whisper-v3 | lang hint + prompt||ph09_fil-PH-BlessicaNeural.wav", "v": ["Gusto ko pong makausap yung tao, hindi po buwat pakitawagan na lang po ako bukas ng umaga.", 304.1124999872409, "Tagalog"]}
+{"key": "whisper-v3 | lang hint + prompt||ph09_fil-PH-BlessicaNeural_noisy.wav", "v": ["Gusto ko pong makausap yung tao, hindi po buwat pakitawagan na lang po ako bukas ng umaga.", 305.1858999970136, "Tagalog"]}
+{"key": "whisper-v3 | lang hint + prompt||ph09_fil-PH-AngeloNeural.wav", "v": ["Gusto ko pong makausap yung tao, hindi po bot pakitawagan na lang po ako bukas ng umaga.", 473.7116000032984, "Tagalog"]}
+{"key": "whisper-v3 | lang hint + prompt||ph09_en-PH-RosaNeural.wav", "v": ["Gusto kayo pong makasap yung tao, hindi pa ba't? Pakitawagan na lang pa ekayo bukas ing umaga.", 329.20609999564476, "Tagalog"]}
+{"key": "whisper-v3 | lang hint + prompt||ph10_fil-PH-BlessicaNeural.wav", "v": ["Scam ba to? Paano ko malalaman na taga-Between Life talaga kayo?", 322.86549999844283, "Tagalog"]}
+{"key": "whisper-v3 | lang hint + prompt||ph10_fil-PH-BlessicaNeural_noisy.wav", "v": ["Scamba 2, paano ko malalaman na taga-Between Life talaga kayo?", 286.3155000086408, "Tagalog"]}
+{"key": "whisper-v3 | lang hint + prompt||ph10_fil-PH-AngeloNeural.wav", "v": ["Scam ba to? Paano ko malalaman na taga-B2 in life talaga kayo?", 313.3603000023868, "Tagalog"]}
+{"key": "whisper-v3 | lang hint + prompt||ph10_en-PH-RosaNeural.wav", "v": ["Scambiae 2? Paano kayo malalaman na taga between life talaga kayo?", 318.58060001104604, "Tagalog"]}
+{"key": "whisper-v3 | auto-detect + prompt||ph01_fil-PH-BlessicaNeural.wav", "v": ["Magandang umaga po. Gusto ko pong malaman kung kailan ang due date ng premium ko.", 317.1093000128167, "Tagalog"]}
+{"key": "whisper-v3 | auto-detect + prompt||ph01_fil-PH-BlessicaNeural_noisy.wav", "v": ["Magandang umaga po. Gusto ko pong malaman kung kailan ang due date ng premium ko.", 301.1391000036383, "Tagalog"]}
+{"key": "whisper-v3 | auto-detect + prompt||ph01_fil-PH-AngeloNeural.wav", "v": ["Magandang umaga po. Gusto ko pong malaman kung kailan ang due date ng premium ko.", 357.7052999899024, "Tagalog"]}
+{"key": "whisper-v3 | auto-detect + prompt||ph01_en-PH-RosaNeural.wav", "v": ["Magandang umaga pa! Gusto kayo pang malamon kang kailin ang due date ng premium kayo.", 380.2878000133205, "Tagalog"]}
+{"key": "whisper-v3 | auto-detect + prompt||ph02_fil-PH-BlessicaNeural.wav", "v": ["Hi po, nag-check ako sa Appy pero hindi pa nag-reflect yung bayad ko sa cash kahapon.", 318.416399997659, "Tagalog"]}
+{"key": "whisper-v3 | auto-detect + prompt||ph02_fil-PH-BlessicaNeural_noisy.wav", "v": ["Hippo, nag-check ako sa Appy pero hindi pa nag-reflect yung bayad ko sa cash kahapon.", 291.7310000048019, "Tagalog"]}
+{"key": "whisper-v3 | auto-detect + prompt||ph02_fil-PH-AngeloNeural.wav", "v": ["Hi po, nag-check ako sa API pero hindi pa nag-reflect yung bayad ko sa cash kahapon.", 325.69969999894965, "Tagalog"]}
+{"key": "whisper-v3 | auto-detect + prompt||ph02_en-PH-RosaNeural.wav", "v": ["Hi pa! Nag-check eh KOSA app pero hindi pa nag-reflect yung bayad KOSAG cash kahapon.", 308.2780999975512, "Tagalog"]}
+{"key": "whisper-v3 | auto-detect + prompt||ph03_fil-PH-BlessicaNeural.wav", "v": ["Kapag na-lapse po ba yung policy, mawawala na rin yung coverage ng rider ko.", 302.53080000693444, "Tagalog"]}
+{"key": "whisper-v3 | auto-detect + prompt||ph03_fil-PH-BlessicaNeural_noisy.wav", "v": ["Kapag na-lapse po ba yung policy, mawawala na rin yung coverage ng rider ko.", 546.9075000000885, "Tagalog"]}
+{"key": "whisper-v3 | auto-detect + prompt||ph03_fil-PH-AngeloNeural.wav", "v": ["Kapag na-lapse po ba yung policy, mawawala na rin yung coverage ng rider ko.", 303.2336999895051, "Tagalog"]}
+{"key": "whisper-v3 | auto-detect + prompt||ph03_en-PH-RosaNeural.wav", "v": ["Kapag na-lapse pa ba yung policy, mawawala na rin yung coverage in Rider KO.", 293.83499998948537, "Tagalog"]}
+{"key": "whisper-v3 | auto-detect + prompt||ph04_fil-PH-BlessicaNeural.wav", "v": ["Gusto ko pong palitan yung beneficiary ko, yung asawa ko na lang po ang ilagay.", 321.60799999837764, "Tagalog"]}
+{"key": "whisper-v3 | auto-detect + prompt||ph04_fil-PH-BlessicaNeural_noisy.wav", "v": ["Gusto ko pong palitan yung beneficiary ko, yung asawa ko na lang po ang ilagay.", 289.22539998893626, "Tagalog"]}
+{"key": "whisper-v3 | auto-detect + prompt||ph04_fil-PH-AngeloNeural.wav", "v": ["Gusto ko pong palitan yung beneficiary ko, yung asawa ko na lang po ang ilagay.", 291.8475999904331, "Tagalog"]}
+{"key": "whisper-v3 | auto-detect + prompt||ph04_en-PH-RosaNeural.wav", "v": ["Gusto kayo pang palitan yung beneficiary kayo, yung asawa kayo na lang po ang iligay.", 366.0126000031596, "Tagalog"]}
+{"key": "whisper-v3 | auto-detect + prompt||ph05_fil-PH-BlessicaNeural.wav", "v": ["Ay naku, gipit pa ako ngayon sa katapusan pa yung sweldo ko eh.", 302.39029999938793, "Tagalog"]}
+{"key": "whisper-v3 | auto-detect + prompt||ph05_fil-PH-BlessicaNeural_noisy.wav", "v": ["Ay naku, gipit pa ako ngayon sa katapusan pa yung sweldo ko eh.", 350.06029999931343, "Tagalog"]}
+{"key": "whisper-v3 | auto-detect + prompt||ph05_fil-PH-AngeloNeural.wav", "v": ["Ay naku, gipit pa ako ngayon, sa katapusan pa yung sweldo ko eh.", 281.5489000058733, "Tagalog"]}
+{"key": "whisper-v3 | auto-detect + prompt||ph05_en-PH-RosaNeural.wav", "v": ["Ay naku, jipit pa e kayo nayon, es e katapusin pa yung sweldo kayo eh.", 337.04329999454785, "Tagalog"]}
+{"key": "whisper-v3 | auto-detect + prompt||ph06_fil-PH-BlessicaNeural.wav", "v": ["Quick question lang, if amidst the due date will Envay policy lapse agad or may grace period?", 342.38919999916106, "English"]}
+{"key": "whisper-v3 | auto-detect + prompt||ph06_fil-PH-BlessicaNeural_noisy.wav", "v": ["Quick question lang, if amidst the due date will Envey policy lapse agad or may grace period?", 340.90890000516083, "English"]}
+{"key": "whisper-v3 | auto-detect + prompt||ph06_fil-PH-AngeloNeural.wav", "v": ["Quick question lang, if I miss the due date will annoy policy lapse agad or may grace period?", 291.1752000072738, "English"]}
+{"key": "whisper-v3 | auto-detect + prompt||ph06_en-PH-RosaNeural.wav", "v": ["Quick question lang, if I miss the due date will my policy lapse agad or may grace period?", 308.2686999987345, "English"]}
+{"key": "whisper-v3 | auto-detect + prompt||ph07_fil-PH-BlessicaNeural.wav", "v": ["Babayaran ko po yung 4,250 sa October 15 sa Bancobayan branch.", 368.03620000137016, "Tagalog"]}
+{"key": "whisper-v3 | auto-detect + prompt||ph07_fil-PH-BlessicaNeural_noisy.wav", "v": ["Babayaran ko po yung 4,250 sa October 15 sa Bancobayan Branch.", 341.44730000116397, "Tagalog"]}
+{"key": "whisper-v3 | auto-detect + prompt||ph07_fil-PH-AngeloNeural.wav", "v": ["Babayaran ko po yung 4,250 sa October 15 sa Bancobayan branch.", 415.001499990467, "Tagalog"]}
+{"key": "whisper-v3 | auto-detect + prompt||ph07_en-PH-RosaNeural.wav", "v": ["Babayaran kayo payang 4,250 sa Oct. 15 sa Bancobayan branch.", 592.5253000023076, "Tagalog"]}
+{"key": "whisper-v3 | auto-detect + prompt||ph08_fil-PH-BlessicaNeural.wav", "v": ["Sabi kasi ng taga-bank ko parang savings lang daw ito, bank referral lang daw.", 361.5914999973029, "Tagalog"]}
+{"key": "whisper-v3 | auto-detect + prompt||ph08_fil-PH-BlessicaNeural_noisy.wav", "v": ["Sabi kasi ng taga-bank ko parang savings lang daw ito, bank referral lang daw.", 263.99720000335947, "Tagalog"]}
+{"key": "whisper-v3 | auto-detect + prompt||ph08_fil-PH-AngeloNeural.wav", "v": ["Sabi kasi ng taga-bank ko parang savings lang daw ito, bank referral lang daw.", 304.0497000038158, "Tagalog"]}
+{"key": "whisper-v3 | auto-detect + prompt||ph08_en-PH-RosaNeural.wav", "v": ["Sabi kasi yung taga-banko parang savings lang daw ito, bank referral lang daw.", 288.61429999233223, "Tagalog"]}
+{"key": "whisper-v3 | auto-detect + prompt||ph09_fil-PH-BlessicaNeural.wav", "v": ["Gusto ko pong makausap yung tao, hindi po buwat pakitawagan na lang po ako bukas ng umaga.", 305.856799997855, "Tagalog"]}
+{"key": "whisper-v3 | auto-detect + prompt||ph09_fil-PH-BlessicaNeural_noisy.wav", "v": ["Gusto ko pong makausap yung tao, hindi po buwat pakitawagan na lang po ako bukas ng umaga.", 314.2700999887893, "Tagalog"]}
+{"key": "whisper-v3 | auto-detect + prompt||ph09_fil-PH-AngeloNeural.wav", "v": ["Gusto ko pong makausap yung tao, hindi po bot pakitawagan na lang po ako bukas ng umaga.", 350.02960001293104, "Tagalog"]}
+{"key": "whisper-v3 | auto-detect + prompt||ph09_en-PH-RosaNeural.wav", "v": ["Gusto kayo pong makasap yung tao, hindi pa ba't? Pakitawagan na lang pa ekayo bukas ing umaga.", 343.5981000075117, "Tagalog"]}
+{"key": "whisper-v3 | auto-detect + prompt||ph10_fil-PH-BlessicaNeural.wav", "v": ["Scam ba to? Paano ko malalaman na taga-Between Life talaga kayo?", 304.7629000066081, "Tagalog"]}
+{"key": "whisper-v3 | auto-detect + prompt||ph10_fil-PH-BlessicaNeural_noisy.wav", "v": ["Scamba 2, paano ko malalaman na taga-Between Life talaga kayo?", 294.98780000722036, "Tagalog"]}
+{"key": "whisper-v3 | auto-detect + prompt||ph10_fil-PH-AngeloNeural.wav", "v": ["Scam ba to? Paano ko malalaman na taga-B2 in life talaga kayo?", 279.82019999762997, "Tagalog"]}
+{"key": "whisper-v3 | auto-detect + prompt||ph10_en-PH-RosaNeural.wav", "v": ["Scambiae 2? Paano kayo malalaman na taga between life talaga kayo?", 309.8458999884315, "Tagalog"]}
+{"key": "whisper-v3 | lang hint, no prompt||ph01_fil-PH-BlessicaNeural.wav", "v": ["Magandang umaga po. Gusto ko pong malaman kung kailan ang due date ng premium ko.", 299.7316000110004, "Tagalog"]}
+{"key": "whisper-v3 | lang hint, no prompt||ph01_fil-PH-BlessicaNeural_noisy.wav", "v": ["Magandang umaga po. Gusto ko pong malaman kung kailan ang due date ng premium ko.", 336.2968000001274, "Tagalog"]}
+{"key": "whisper-v3 | lang hint, no prompt||ph01_fil-PH-AngeloNeural.wav", "v": ["Magandang umaga po. Gusto ko pong malaman kung kailan ang due date ng premium ko.", 290.89859999658074, "Tagalog"]}
+{"key": "whisper-v3 | lang hint, no prompt||ph01_en-PH-RosaNeural.wav", "v": ["Magandang umaga pa! Gusto kayo pang malamon kang kailin ang due date in premium kayo.", 332.0582999876933, "Tagalog"]}
+{"key": "whisper-v3 | lang hint, no prompt||ph02_fil-PH-BlessicaNeural.wav", "v": ["Hippo, nag-check ako sa Appy pero hindi pa nag-reflect yung bayad ko sa cash kahapon.", 292.4329000088619, "Tagalog"]}
+{"key": "whisper-v3 | lang hint, no prompt||ph02_fil-PH-BlessicaNeural_noisy.wav", "v": ["Hippo, nag-check ako sa API pero hindi pa nag-reflect yung bayad ko sa cash kahapon.", 327.90839999506716, "Tagalog"]}
+{"key": "whisper-v3 | lang hint, no prompt||ph02_fil-PH-AngeloNeural.wav", "v": ["Hi po, nag-check ako sa API pero hindi pa nag-reflect yung bayad ko sa cash kahapon.", 347.9032000032021, "Tagalog"]}
+{"key": "whisper-v3 | lang hint, no prompt||ph02_en-PH-RosaNeural.wav", "v": ["Hi pa, nag-check e KOSA app pero hindi pa nag-reflect yung bayad KOSAG cash kahapon.", 317.7980999898864, "Tagalog"]}
+{"key": "whisper-v3 | lang hint, no prompt||ph03_fil-PH-BlessicaNeural.wav", "v": ["Kapag na-lapse po ba yung policy, mawawala na rin yung coverage ng rider ko.", 279.7816999955103, "Tagalog"]}
+{"key": "whisper-v3 | lang hint, no prompt||ph03_fil-PH-BlessicaNeural_noisy.wav", "v": ["Kapag na-lapse po ba yung policy, mawawala na rin yung coverage ng rider ko.", 286.04469999845605, "Tagalog"]}
+{"key": "whisper-v3 | lang hint, no prompt||ph03_fil-PH-AngeloNeural.wav", "v": ["Kapag na-lapse po ba yung policy, mawawala na rin yung coverage ng rider ko.", 320.51160000264645, "Tagalog"]}
+{"key": "whisper-v3 | lang hint, no prompt||ph03_en-PH-RosaNeural.wav", "v": ["Kapag nolaps pa ba yung policy, mawawala na rin yung coverage in Rider KO.", 357.4089999892749, "Tagalog"]}
+{"key": "whisper-v3 | lang hint, no prompt||ph04_fil-PH-BlessicaNeural.wav", "v": ["Gusto ko pong palitan yung beneficiary ko, yung asawa ko na lang po ang ilagay.", 356.0984999930952, "Tagalog"]}
+{"key": "whisper-v3 | lang hint, no prompt||ph04_fil-PH-BlessicaNeural_noisy.wav", "v": ["Gusto ko pong palitan yung beneficiary ko, yung asawa ko na lang po ang ilagay.", 271.57379999698605, "Tagalog"]}
+{"key": "whisper-v3 | lang hint, no prompt||ph04_fil-PH-AngeloNeural.wav", "v": ["Gusto ko pong palitan yung beneficiary ko, yung asawa ko na lang po ang ilagay.", 311.69009998848196, "Tagalog"]}
+{"key": "whisper-v3 | lang hint, no prompt||ph04_en-PH-RosaNeural.wav", "v": ["Gusto kayo pang palitan yung beneficiary kayo, yung asawa kayo na lang po ang iligay.", 400.36549999786075, "Tagalog"]}
+{"key": "whisper-v3 | lang hint, no prompt||ph05_fil-PH-BlessicaNeural.wav", "v": ["Ay naku, gipit pa ako ngayon, sakatapusan pa yung sweldo ko eh.", 337.7955000032671, "Tagalog"]}
+{"key": "whisper-v3 | lang hint, no prompt||ph05_fil-PH-BlessicaNeural_noisy.wav", "v": ["Ay naku, gipit pa ako ngayon, sakatapusan pa yung sweldo ko eh.", 264.5886999962386, "Tagalog"]}
+{"key": "whisper-v3 | lang hint, no prompt||ph05_fil-PH-AngeloNeural.wav", "v": ["Ay naku, gipit pa ako ngayon, sakatapusan pa yung sweldo ko eh.", 288.11949999362696, "Tagalog"]}
+{"key": "whisper-v3 | lang hint, no prompt||ph05_en-PH-RosaNeural.wav", "v": ["Ay naku, jipit pa e kayo nayon, es e katapusin pa yung sweldo kayo e.", 318.3216000034008, "Tagalog"]}
+{"key": "whisper-v3 | lang hint, no prompt||ph06_fil-PH-BlessicaNeural.wav", "v": ["Quick question lang, if amidst the due date will in-vay policy lapse agad or may grace period?", 295.24079999828245, "Tagalog"]}
+{"key": "whisper-v3 | lang hint, no prompt||ph06_fil-PH-BlessicaNeural_noisy.wav", "v": ["Quick question lang, if amidst the due date will in-vay policy lapse agad or may grace period?", 307.87160000181757, "Tagalog"]}
+{"key": "whisper-v3 | lang hint, no prompt||ph06_fil-PH-AngeloNeural.wav", "v": ["Quick question lang, if I miss the due date will annoying policy lapse agad or may grace period?", 286.85970000515226, "Tagalog"]}
+{"key": "whisper-v3 | lang hint, no prompt||ph06_en-PH-RosaNeural.wav", "v": ["Quick question lang, if I miss the due date will my policy lapse agad or may grace period?", 300.7106000004569, "Tagalog"]}
+{"key": "whisper-v3 | lang hint, no prompt||ph07_fil-PH-BlessicaNeural.wav", "v": ["Babayaran ko po yung 4,250 sa October 15 sa Bancobayan Branch.", 272.14200000162236, "Tagalog"]}
+{"key": "whisper-v3 | lang hint, no prompt||ph07_fil-PH-BlessicaNeural_noisy.wav", "v": ["Babayaran ko po yung 4,250 sa October 15 sa Banco Bayan Branch.", 306.76300000050105, "Tagalog"]}
+{"key": "whisper-v3 | lang hint, no prompt||ph07_fil-PH-AngeloNeural.wav", "v": ["Babayaran ko po yung 4,250 sa October 15 sa Banko Bayan Branch.", 255.62530000752304, "Tagalog"]}
+{"key": "whisper-v3 | lang hint, no prompt||ph07_en-PH-RosaNeural.wav", "v": ["Babayaran K.O. Payong 4,250 S.A. October 15, S.A. Bangko Bayan Branch", 288.16890000598505, "Tagalog"]}
+{"key": "whisper-v3 | lang hint, no prompt||ph08_fil-PH-BlessicaNeural.wav", "v": ["Sabi kasi ng taga-bank ko parang savings lang daw ito, bank referral lang daw.", 260.5143999971915, "Tagalog"]}
+{"key": "whisper-v3 | lang hint, no prompt||ph08_fil-PH-BlessicaNeural_noisy.wav", "v": ["Sabi kasi ng taga-bank ko parang savings lang daw ito, bank referral lang daw.", 276.3680000061868, "Tagalog"]}
+{"key": "whisper-v3 | lang hint, no prompt||ph08_fil-PH-AngeloNeural.wav", "v": ["Sabi kasi ng taga-bank ko parang savings lang daw ito, bank referral lang daw.", 350.31410001101904, "Tagalog"]}
+{"key": "whisper-v3 | lang hint, no prompt||ph08_en-PH-RosaNeural.wav", "v": ["Sabi kasi yung taga-banko parang savings lang daw ito, bank referral lang daw.", 300.8501000003889, "Tagalog"]}
+{"key": "whisper-v3 | lang hint, no prompt||ph09_fil-PH-BlessicaNeural.wav", "v": ["Gusto ko pong makausap yung tao, hindi po buwat pakitawagan na lang po ako bukas ng umaga.", 295.28099999879487, "Tagalog"]}
+{"key": "whisper-v3 | lang hint, no prompt||ph09_fil-PH-BlessicaNeural_noisy.wav", "v": ["Gusto ko pong makausap yung tao, hindi po buwat pakitawagan na lang po ako bukas ng umaga.", 403.8915999990422, "Tagalog"]}
+{"key": "whisper-v3 | lang hint, no prompt||ph09_fil-PH-AngeloNeural.wav", "v": ["Gusto ko pong makausap yung tao, hindi po bot pakitawagan na lang po ako bukas ng umaga.", 295.17240000132006, "Tagalog"]}
+{"key": "whisper-v3 | lang hint, no prompt||ph09_en-PH-RosaNeural.wav", "v": ["Gusto kayo pong makasap yung tao, hindi pa ba? Pakit awagan na lang pa e kayo bukas ing umaga.", 346.3864000077592, "Tagalog"]}
+{"key": "whisper-v3 | lang hint, no prompt||ph10_fil-PH-BlessicaNeural.wav", "v": ["Scamba 2. Paano ko malalaman na taga-between life talaga kayo?", 295.5586000025505, "Tagalog"]}
+{"key": "whisper-v3 | lang hint, no prompt||ph10_fil-PH-BlessicaNeural_noisy.wav", "v": ["Scamba 2, paano ko malalaman na taga-Between Life talaga kayo?", 381.0291999980109, "Tagalog"]}
+{"key": "whisper-v3 | lang hint, no prompt||ph10_fil-PH-AngeloNeural.wav", "v": ["Scam ba to? Paano ko malalaman na taga-B2 in life talaga kayo?", 276.38359999400564, "Tagalog"]}
+{"key": "whisper-v3 | lang hint, no prompt||ph10_en-PH-RosaNeural.wav", "v": ["Scambia 2? Paano kayo malalaman na taga between life talaga kayo?", 270.84820000163745, "Tagalog"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||ph01_fil-PH-BlessicaNeural.wav", "v": ["Magandang umaga po. Gusto ko pong malaman kung kailan ang due date ng premium ko.", 232.721299995319, "Tagalog"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||ph01_fil-PH-BlessicaNeural_noisy.wav", "v": ["Magandang umaga po. Gusto ko pong malaman kung kailan ang due date ng premium ko.", 310.9058999980334, "Tagalog"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||ph01_fil-PH-AngeloNeural.wav", "v": ["Magandang umaga po. Gusto ko pong malaman kung kailan ang due date ng premium ko.", 453.22359999408945, "Tagalog"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||ph01_en-PH-RosaNeural.wav", "v": ["Magandang umaga pa. Gusto keyo pang malamon kang keilin ang do date ing premium keyo.", 285.0427000084892, "Tagalog"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||ph02_fil-PH-BlessicaNeural.wav", "v": ["Hippo, nag-check ako sa API pero hindi pa nag-reflect yung bayad ko sa cash kahapon.", 281.62280000105966, "Tagalog"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||ph02_fil-PH-BlessicaNeural_noisy.wav", "v": ["Hippo, nag-check ako sa API pero hindi pa nag-reflect yung bayad ko sa cash kahapon.", 304.18880000070203, "Tagalog"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||ph02_fil-PH-AngeloNeural.wav", "v": ["Hippo, nag-check ako sa API pero hindi pa nag-reflect yung bayad ko sa cash kahapon.", 251.5372999914689, "Tagalog"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||ph02_en-PH-RosaNeural.wav", "v": ["Hi pa, nagcheck e KOSA app pero hindi pa nagreflect yang bayad KOSAG Cash kahapon.", 234.87079999176785, "Tagalog"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||ph03_fil-PH-BlessicaNeural.wav", "v": ["Kapag nalaps po ba yung policy, mawawala na rin yung coverage ng rider ko.", 238.1185000122059, "Tagalog"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||ph03_fil-PH-BlessicaNeural_noisy.wav", "v": ["Kapag nalaps po ba yung policy, mawawala na rin yung coverage ng rider ko.", 244.06700000690762, "Tagalog"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||ph03_fil-PH-AngeloNeural.wav", "v": ["Kapag nalaps po ba yung policy, mawawala na rin yung coverage ng rider ko.", 229.55170000204816, "Tagalog"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||ph03_en-PH-RosaNeural.wav", "v": ["Kapaag na lapse pa BA Young Policy, mawawala na re-neung coverage in Rider-Ko.", 241.6805000102613, "Tagalog"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||ph04_fil-PH-BlessicaNeural.wav", "v": ["Gusto ko pong palitan yung beneficiary ko, yung asawa ko na lang po ang ilagay.", 229.83160000876524, "Tagalog"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||ph04_fil-PH-BlessicaNeural_noisy.wav", "v": ["Gusto ko pong palitan yung beneficiary ko, yung asawa ko na lang po ang ilagay.", 390.15479999943636, "Tagalog"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||ph04_fil-PH-AngeloNeural.wav", "v": ["Gusto ko pong palitan yung beneficiary ko, yung asawa ko na lang po ang ilagay.", 254.22200000321027, "Tagalog"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||ph04_en-PH-RosaNeural.wav", "v": ["Gusto kayo pong palitan yung beneficiary kayo, yung asawa kayo na lang po ang iligay.", 254.6479000011459, "Tagalog"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||ph05_fil-PH-BlessicaNeural.wav", "v": ["Ay naku, gipit pa ako ngayon, sa katapusan pa yung sweldo ko eh.", 331.98830000765156, "Tagalog"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||ph05_fil-PH-BlessicaNeural_noisy.wav", "v": ["Ay naku, gipit pa ako ngayon, saka tapusan pa yung sweldo ko eh.", 246.02439999580383, "Tagalog"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||ph05_fil-PH-AngeloNeural.wav", "v": ["Ay naku, gipit pa ako ngayon, sakatapusan pa yung sweldo ko eh.", 275.09830000053626, "Tagalog"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||ph05_en-PH-RosaNeural.wav", "v": ["Ay naku, jipit pa ay ko na yon, es ay katapusan pa yong sweldo ko eh.", 286.63859999505803, "Tagalog"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||ph06_fil-PH-BlessicaNeural.wav", "v": ["Quick question lang, if amidst the due date will invite policy lapse agad or may grace period.", 255.1443999982439, "Tagalog"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||ph06_fil-PH-BlessicaNeural_noisy.wav", "v": ["Quick question lang, if amidst the due date will envy policy lapse agad or may grace period.", 248.30789999396075, "Tagalog"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||ph06_fil-PH-AngeloNeural.wav", "v": ["Quick question lang, if I miss the due date will annoy policy lapse agad or may grace period?", 606.907900000806, "Tagalog"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||ph06_en-PH-RosaNeural.wav", "v": ["Quick question Lang, if I miss the due date will my policy lapse agad or may grace period?", 334.01299999968614, "Tagalog"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||ph07_fil-PH-BlessicaNeural.wav", "v": ["Babayaran ko po yung 4,250 sa October 15 sa Bancobayan Branch.", 301.0704999906011, "Tagalog"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||ph07_fil-PH-BlessicaNeural_noisy.wav", "v": ["Babayaran ko po yung 4,250 sa October 15 sa Bancobayan Branch.", 256.0358000046108, "Tagalog"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||ph07_fil-PH-AngeloNeural.wav", "v": ["Babayaran ko po yung 4,250 sa October 15 sa Bancobayan Branch.", 240.11990000144579, "Tagalog"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||ph07_en-PH-RosaNeural.wav", "v": ["Babayaran K.O. Payong 4250 SA October 15, SA BancoBayan Branch", 248.7018999963766, "Tagalog"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||ph08_fil-PH-BlessicaNeural.wav", "v": ["Sabi kasi ng taga-Banco parang savings lang daw ito, bank referral lang daw.", 299.50739999185316, "Tagalog"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||ph08_fil-PH-BlessicaNeural_noisy.wav", "v": ["Sabi kasi ng taga-Banco parang savings lang daw ito, bank referral lang daw.", 239.91509999905247, "Tagalog"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||ph08_fil-PH-AngeloNeural.wav", "v": ["Sabi kasi ng taga-Banco parang savings lang daw ito, bank referral lang daw.", 246.62890000035986, "Tagalog"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||ph08_en-PH-RosaNeural.wav", "v": ["Sabi kasi ang taga banko parang savings lang do ito, bank referral lang do.", 234.6799000079045, "Tagalog"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||ph09_fil-PH-BlessicaNeural.wav", "v": ["Gusto ko pong makausap yung tao, hindi po bot pakitawagan na lang po ako bukas ng umaga.", 268.1695000064792, "Tagalog"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||ph09_fil-PH-BlessicaNeural_noisy.wav", "v": ["Gusto ko pong makausap yung tao, hindi po bot pakitawagan na lang po ako bukas ng umaga.", 306.6619000019273, "Tagalog"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||ph09_fil-PH-AngeloNeural.wav", "v": ["Gusto ko pong makausap yung tao, hindi po ba't pakitawagan na lang po ako bukas ng umaga.", 260.0066000013612, "Tagalog"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||ph09_en-PH-RosaNeural.wav", "v": ["Gusto keo pong makosap yang tau, hindi pa bot. Pakit a wagon na lang pa e keo bukas ing umaga.", 293.9728999917861, "Tagalog"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||ph10_fil-PH-BlessicaNeural.wav", "v": ["Scamba 2, paano ko malalaman na taga-between life talaga kayo?", 245.95229999977164, "Tagalog"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||ph10_fil-PH-BlessicaNeural_noisy.wav", "v": ["Scambato, paano ko malalaman na taga-between life talaga kayo?", 247.57759999192785, "Tagalog"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||ph10_fil-PH-AngeloNeural.wav", "v": ["Scam ba to? Paano ko malalaman na taga-between life talaga kayo?", 269.5005999994464, "Tagalog"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||ph10_en-PH-RosaNeural.wav", "v": ["Scambi A2? Paano keyo malaliman na tago bichwin life talaga keyo?", 268.53509999637026, "Tagalog"]}
+{"key": "gemini-flash-lite | audio prompt||ph01_fil-PH-BlessicaNeural.wav", "v": ["Magandang umaga po. Gusto ko po malaman kung kailan ang due date ng premium ko.", 2224.5339999935823, null]}
+{"key": "gemini-flash-lite | audio prompt||ph01_fil-PH-BlessicaNeural_noisy.wav", "v": ["Magandang umaga po. Gusto ko po malaman kung kailan ang due date ng premium ko.", 1937.8678999928525, null]}
+{"key": "gemini-flash-lite | audio prompt||ph01_fil-PH-AngeloNeural.wav", "v": ["Magandang umaga po. Gusto ko pong malaman kung kailan ang due date ng premium ko.", 2858.0282000039006, null]}
+{"key": "gemini-flash-lite | audio prompt||ph01_en-PH-RosaNeural.wav", "v": ["Magandang umaga po. Gusto niyo po bang malaman kung kailan ang due date in Premium KO?", 2953.170799999498, null]}
+{"key": "gemini-flash-lite | audio prompt||ph02_fil-PH-BlessicaNeural.wav", "v": ["Hipo, nag-check ako sa app eh pero hindi pa nag-reflect yung bayad ko sa cash kahapon.", 3219.6727999980794, null]}
+{"key": "gemini-flash-lite | audio prompt||ph02_fil-PH-BlessicaNeural_noisy.wav", "v": ["Hi po, nag-check ako sa app pero hindi pa nag-reflect yung bayad ko sa GCash kahapon.", 2405.3262999950675, null]}
+{"key": "gemini-flash-lite | audio prompt||ph02_fil-PH-AngeloNeural.wav", "v": ["Hipo, nag-check ako sa app eh, pero hindi pa nag-reflect 'yung bayad ko sa G-Cash kahapon.", 3253.2440000068163, null]}
+{"key": "gemini-flash-lite | audio prompt||ph02_en-PH-RosaNeural.wav", "v": ["Hi pa nag check ako sa app pero hindi pa nag reflect yung bayad sa Gcash kahapon.", 1718.05470000254, null]}
+{"key": "gemini-flash-lite | audio prompt||ph03_fil-PH-BlessicaNeural.wav", "v": ["Kapag nalapse po ba 'yung policy, mawawala na rin 'yung coverage ng rider ko?", 2047.2198000061326, null]}
+{"key": "gemini-flash-lite | audio prompt||ph03_fil-PH-BlessicaNeural_noisy.wav", "v": ["Kapag nalapse po ba yung policy, mawawala na rin yung coverage ng rider ko?", 2258.7254000100074, null]}
+{"key": "gemini-flash-lite | audio prompt||ph03_fil-PH-AngeloNeural.wav", "v": ["Kapag nalapse po ba yung policy, mawawala na rin yung coverage ng rider ko?", 2023.0059000023175, null]}
+{"key": "gemini-flash-lite | audio prompt||ph03_en-PH-RosaNeural.wav", "v": ["Kapag nag-lapse pa ba 'yang policy, mawawala na rin 'yang coverage ng Rider KO?", 2943.781599999056, null]}
+{"key": "gemini-flash-lite | audio prompt||ph04_fil-PH-BlessicaNeural.wav", "v": ["Gusto ko pong palitan yung beneficiary ko. Yung asawa ko na lang po ang ilagay.", 2302.2176999947987, null]}
+{"key": "gemini-flash-lite | audio prompt||ph04_fil-PH-BlessicaNeural_noisy.wav", "v": ["Gusto ko pong palitan yung beneficiary ko, yung asawa ko na lang po ang ilagay.", 1925.5128999939188, null]}
+{"key": "gemini-flash-lite | audio prompt||ph04_fil-PH-AngeloNeural.wav", "v": ["Gusto ko po palitan 'yung beneficiary ko, 'yung asawa ko na lang po ang ilagay.", 1818.0103999911807, null]}
+{"key": "gemini-flash-lite | audio prompt||ph04_en-PH-RosaNeural.wav", "v": ["Gusto KO palitan yang beneficiary KO yang asawa KO na lang po ang ilagay.", 2116.182799989474, null]}
+{"key": "gemini-flash-lite | audio prompt||ph05_fil-PH-BlessicaNeural.wav", "v": ["Ay naku, gipit pa ako ngayon, sa katapusan pa yung sweldo ko eh.", 1811.8594999978086, null]}
+{"key": "gemini-flash-lite | audio prompt||ph05_fil-PH-BlessicaNeural_noisy.wav", "v": ["Ay nako, gipit pa ako ngayon sa katapusan pa yung sweldo ko eh.", 2119.7664000064833, null]}
+{"key": "gemini-flash-lite | audio prompt||ph05_fil-PH-AngeloNeural.wav", "v": ["Ay nako, gipit pa ako ngayon sa katapusan pa 'yong sweldo ko eh.", 1997.8744000109145, null]}
+{"key": "gemini-flash-lite | audio prompt||ph05_en-PH-RosaNeural.wav", "v": ["Ay naku, zipit pa AKO nayon. S-ekatopyusin pa yung sweldo KOE.", 2124.9976999970386, null]}
+{"key": "gemini-flash-lite | audio prompt||ph06_fil-PH-BlessicaNeural.wav", "v": ["Quick question lang. If I missed the due date, will my policy lapse agad or may grace period?", 1724.0508000104455, null]}
+{"key": "gemini-flash-lite | audio prompt||ph06_fil-PH-BlessicaNeural_noisy.wav", "v": ["Quick question lang, if I miss the due date, will unpaid policy lapse agad or may grace period?", 2165.5880000034813, null]}
+{"key": "gemini-flash-lite | audio prompt||ph06_fil-PH-AngeloNeural.wav", "v": ["Quick question lang, if I miss the due date, will Annuity policy lapse agad or may grace period?", 2286.8333000078565, null]}
+{"key": "gemini-flash-lite | audio prompt||ph06_en-PH-RosaNeural.wav", "v": ["Quick question lang, if I miss the due date, will my policy lapse agad or may grace period?", 2025.4276000050595, null]}
+{"key": "gemini-flash-lite | audio prompt||ph07_fil-PH-BlessicaNeural.wav", "v": ["Babayaran ko po 'yong 4,250 sa October 15 sa BanKo Bayan branch.", 1987.143799997284, null]}
+{"key": "gemini-flash-lite | audio prompt||ph07_fil-PH-BlessicaNeural_noisy.wav", "v": ["Babayaran ko po 'yung 4,250 sa October 15 sa Banhong Bayan branch.", 3375.077099990449, null]}
+{"key": "gemini-flash-lite | audio prompt||ph07_fil-PH-AngeloNeural.wav", "v": ["Babayaran ko po 'yung 4,250 sa October 15 sa Banco de Oro branch.", 1714.368499990087, null]}
+{"key": "gemini-flash-lite | audio prompt||ph07_en-PH-RosaNeural.wav", "v": ["BPI 04250 SA October 15 SA Banco Bayan branch.", 1999.2466999974567, null]}
+{"key": "gemini-flash-lite | audio prompt||ph08_fil-PH-BlessicaNeural.wav", "v": ["Sabi kasi ng taga-Banko, parang savings lang daw ito, bank referral lang daw.", 2648.0147000111174, null]}
+{"key": "gemini-flash-lite | audio prompt||ph08_fil-PH-BlessicaNeural_noisy.wav", "v": ["Sabi kasi ng taga-bangko parang savings lang daw ito. Bank referral lang daw.", 1759.3422000063583, null]}
+{"key": "gemini-flash-lite | audio prompt||ph08_fil-PH-AngeloNeural.wav", "v": ["Sabi kasi ng taga-bangko parang savings lang daw ito, bank referral lang daw.", 1996.6386000014609, null]}
+{"key": "gemini-flash-lite | audio prompt||ph08_en-PH-RosaNeural.wav", "v": ["Sabi kasi taga BPI savings lang daw ito. Bank referral lang daw.", 2203.880899993237, null]}
+{"key": "gemini-flash-lite | audio prompt||ph09_fil-PH-BlessicaNeural.wav", "v": ["Gusto ko pong makausap 'yung tao. Hindi po ba at pakitawagan na lang po ako bukas ng umaga?", 2034.5913000055589, null]}
+{"key": "gemini-flash-lite | audio prompt||ph09_fil-PH-BlessicaNeural_noisy.wav", "v": ["Gusto ko po makausap yung tao. Hindi po ba't pakitawagan na lang po ako bukas ng umaga?", 21589.387599990005, null]}
+{"key": "gemini-flash-lite | audio prompt||ph09_fil-PH-AngeloNeural.wav", "v": ["Gusto ko po makausap 'yung tao. Hindi po ba't pakitawagan na lang po ako bukas ng umaga?", 1900.244999997085, null]}
+{"key": "gemini-flash-lite | audio prompt||ph09_en-PH-RosaNeural.wav", "v": ["Gusto kayo pang maka-accept ng out-town? Hindi pa ba? Paki-tawagan na lang pa-accept bukas ing umaga.", 2109.3412000045646, null]}
+{"key": "gemini-flash-lite | audio prompt||ph10_fil-PH-BlessicaNeural.wav", "v": ["Scam ba 'to? Paano ko malalaman na taga-BDO Life talaga kayo?", 2115.770699994755, null]}
+{"key": "gemini-flash-lite | audio prompt||ph10_fil-PH-BlessicaNeural_noisy.wav", "v": ["Scam ba 'to? Paano ko malalaman na taga-BDO Life talaga kayo?", 1889.0993000095477, null]}
+{"key": "gemini-flash-lite | audio prompt||ph10_fil-PH-AngeloNeural.wav", "v": ["Scam ba 'to? Paano ko malalaman na taga-Bituin Life talaga kayo?", 1973.406299992348, null]}
+{"key": "gemini-flash-lite | audio prompt||ph10_en-PH-RosaNeural.wav", "v": ["Scam ba 'to? Paano kayo malalaman na taga-between life talaga kayo?", 1929.5903999882285, null]}
+{"key": "whisper-v3 | lang hint + prompt||id01_id-ID-GadisNeural.wav", "v": ["Selamat siang, saya ingin menanyakan tanggal jatuh tempo angsuran saya bulan ini.", 394.63830000022426, "Indonesian"]}
+{"key": "whisper-v3 | lang hint + prompt||id01_id-ID-GadisNeural_noisy.wav", "v": ["Selamat siang, saya ingin menanyakan tanggal jatuh tempo angsuran saya bulan ini.", 318.4937999903923, "Indonesian"]}
+{"key": "whisper-v3 | lang hint + prompt||id01_id-ID-ArdiNeural.wav", "v": ["Selamat siang, saya ingin menanyakan tanggal jatuh tempo angsuran saya bulan ini.", 283.34550000727177, "Indonesian"]}
+{"key": "whisper-v3 | lang hint + prompt||id01_jv-ID-DimasNeural.wav", "v": ["Selamat siang, soyo ingin menanyakan tanggal jatuh tempo angsuran soyo bulan ini.", 347.14749999693595, "Indonesian"]}
+{"key": "whisper-v3 | lang hint + prompt||id01_su-ID-JajangNeural.wav", "v": ["Selamat siang, saya ingin menanyakan tanggal jatuh tempo angsuran saya bulan ini.", 293.7727999960771, "Indonesian"]}
+{"key": "whisper-v3 | lang hint + prompt||id02_id-ID-GadisNeural.wav", "v": ["Berapa denda keterlambatan kalau saya membayar dua hari setelah jatuh tempo?", 349.9177000048803, "Indonesian"]}
+{"key": "whisper-v3 | lang hint + prompt||id02_id-ID-GadisNeural_noisy.wav", "v": ["Berapa denda keterlambatan kalau saya membayar dua hari setelah jatuh tempo?", 287.79480000957847, "Indonesian"]}
+{"key": "whisper-v3 | lang hint + prompt||id02_id-ID-ArdiNeural.wav", "v": ["Berapa denda keterlambatan kalau saya membayar 2 hari setelah jatuh tempo?", 331.76329999696463, "Indonesian"]}
+{"key": "whisper-v3 | lang hint + prompt||id02_jv-ID-DimasNeural.wav", "v": ["Beropo denda keterlambatan kalau Soyo membayar dua hari setelah jatuh tempo.", 319.43419999151956, "Indonesian"]}
+{"key": "whisper-v3 | lang hint + prompt||id02_su-ID-JajangNeural.wav", "v": ["Berapa denda keterlambatan kalau saya membayar dua hari setelah jatuh tempo?", 292.4163999996381, "Indonesian"]}
+{"key": "whisper-v3 | lang hint + prompt||id03_id-ID-GadisNeural.wav", "v": ["Aduh mbak, saya belum gajian nih, telat dikit nggak apa-apa kan?", 307.91689999750815, "Indonesian"]}
+{"key": "whisper-v3 | lang hint + prompt||id03_id-ID-GadisNeural_noisy.wav", "v": ["Aduh mbak, saya belum gajian nih, telat dikit nggak apa-apa kan?", 289.9567999993451, "Indonesian"]}
+{"key": "whisper-v3 | lang hint + prompt||id03_id-ID-ArdiNeural.wav", "v": ["Aduh mbak, saya belum gajian nih, telat dikit nggak apa-apa kan?", 287.17280000273604, "Indonesian"]}
+{"key": "whisper-v3 | lang hint + prompt||id03_jv-ID-DimasNeural.wav", "v": ["Aduh mbak, saya belum gajian nih, telatikit nggak apa-apa kan.", 287.45879999769386, "Indonesian"]}
+{"key": "whisper-v3 | lang hint + prompt||id03_su-ID-JajangNeural.wav", "v": ["Aduh mbak, saya belum gajian nih, telat dikit nggak apa-apakan.", 288.53230000822805, "Indonesian"]}
+{"key": "whisper-v3 | lang hint + prompt||id04_id-ID-GadisNeural.wav", "v": ["Udah saya transfer kemarin sore lewat mbanking, kok belum masuk ya?", 304.39879999903496, "Indonesian"]}
+{"key": "whisper-v3 | lang hint + prompt||id04_id-ID-GadisNeural_noisy.wav", "v": ["Udah saya transfer kemarin sore lewat mbanking, kok belum masuk ya?", 274.64879999752156, "Indonesian"]}
+{"key": "whisper-v3 | lang hint + prompt||id04_id-ID-ArdiNeural.wav", "v": ["Udah saya transfer kemarin sore lewat mbanking, kok belum masuk ya?", 297.20040000393055, "Indonesian"]}
+{"key": "whisper-v3 | lang hint + prompt||id04_jv-ID-DimasNeural.wav", "v": ["Udah soyo transfer kemarin sore lewat mbangking, kok belum masuk yo?", 294.73710000456776, "Indonesian"]}
+{"key": "whisper-v3 | lang hint + prompt||id04_su-ID-JajangNeural.wav", "v": ["Udah saya transfer kemarin sore lewat mebanking kok belum masuk ya.", 298.27849999128375, "Indonesian"]}
+{"key": "whisper-v3 | lang hint + prompt||id05_id-ID-GadisNeural.wav", "v": ["Tenor saya 24 bulan, DP-nya dulu 10%, cicilannya 1,25 juta.", 290.19379999954253, "Indonesian"]}
+{"key": "whisper-v3 | lang hint + prompt||id05_id-ID-GadisNeural_noisy.wav", "v": ["Tenor saya 24 bulan, DP-nya dulu 10%, cicilannya 1,25 juta.", 298.80750000302214, "Indonesian"]}
+{"key": "whisper-v3 | lang hint + prompt||id05_id-ID-ArdiNeural.wav", "v": ["Tenor saya 24 bulan, DP-nya dulu 10%, cicilannya 1,25 juta.", 396.8867999938084, "Indonesian"]}
+{"key": "whisper-v3 | lang hint + prompt||id05_jv-ID-DimasNeural.wav", "v": ["Tenor saya 24 bulan, nya dulu 10%, cicilannya 1,25 juta.", 336.0971999936737, "Indonesian"]}
+{"key": "whisper-v3 | lang hint + prompt||id05_su-ID-JajangNeural.wav", "v": ["Tenor saya 24 bulan, benya dulu 10%, cicilannya 1,25 juta.", 280.317799988552, "Indonesian"]}
+{"key": "whisper-v3 | lang hint + prompt||id06_id-ID-GadisNeural.wav", "v": ["Kalau pelunasan dipercepat ada penalti berapa persen dari sisa pokok pembiayaan?", 372.0395999989705, "Indonesian"]}
+{"key": "whisper-v3 | lang hint + prompt||id06_id-ID-GadisNeural_noisy.wav", "v": ["Kalau pelunasan dipercepat ada penalti berapa persen dari sisa pokok pembiayaan?", 281.94499999517575, "Indonesian"]}
+{"key": "whisper-v3 | lang hint + prompt||id06_id-ID-ArdiNeural.wav", "v": ["Kalau pelunasan dipercepat ada penalti berapa persen dari sisa pokok pembiayaan?", 278.6049999995157, "Indonesian"]}
+{"key": "whisper-v3 | lang hint + prompt||id06_jv-ID-DimasNeural.wav", "v": ["Kalau pelunasan dipercepat odo penalti berapa persen dari siso pokok pembiayaan.", 436.2546000047587, "Indonesian"]}
+{"key": "whisper-v3 | lang hint + prompt||id06_su-ID-JajangNeural.wav", "v": ["Kalau pelunasan dipercepat ada penalti berapa persen dari sisa pokok pembiayaan?", 411.88999998848885, "Indonesian"]}
+{"key": "whisper-v3 | lang hint + prompt||id07_id-ID-GadisNeural.wav", "v": ["By the way, kalau saya bayar via virtual account BCA itu real time kan? Nggak pakai admin fee?", 310.35110000811983, "Indonesian"]}
+{"key": "whisper-v3 | lang hint + prompt||id07_id-ID-GadisNeural_noisy.wav", "v": ["By the way, kalau saya bayar via virtual account BCA itu real time kan? Nggak pakai admin fee?", 339.8704999999609, "Indonesian"]}
+{"key": "whisper-v3 | lang hint + prompt||id07_id-ID-ArdiNeural.wav", "v": ["By the way, kalau saya bayar via virtual.com BCA itu real-time kan? Nggak pakai admin fee.", 296.7205000022659, "Indonesian"]}
+{"key": "whisper-v3 | lang hint + prompt||id07_jv-ID-DimasNeural.wav", "v": ["Rukalau soyo bayar via virtual account, co itu realtime kan, nggak pakai admin fee.", 331.868499997654, "Indonesian"]}
+{"key": "whisper-v3 | lang hint + prompt||id07_su-ID-JajangNeural.wav", "v": ["Tuh kalau saya bayar ya virtual account, cah itu realtime kan, nggak pakai admin eh.", 341.66869999899063, "Indonesian"]}
+{"key": "whisper-v3 | lang hint + prompt||id08_id-ID-GadisNeural.wav", "v": ["Saya bayar tanggal 5 Oktober lewat Indomaret, jumlahnya Rp1.250.000.", 345.19300000101794, "Indonesian"]}
+{"key": "whisper-v3 | lang hint + prompt||id08_id-ID-GadisNeural_noisy.wav", "v": ["Saya bayar tanggal 5 Oktober lewat Indomaret, jumlahnya Rp 1.250.000.", 305.93290000979323, "Indonesian"]}
+{"key": "whisper-v3 | lang hint + prompt||id08_id-ID-ArdiNeural.wav", "v": ["Saya bayar tanggal 5 Oktober lewat Indomaret, jumlahnya Rp1.250.000.", 302.2242000006372, "Indonesian"]}
+{"key": "whisper-v3 | lang hint + prompt||id08_jv-ID-DimasNeural.wav", "v": ["Soyo bayar tanggal 5 Oktober lewat Indomaret, jumlahnya Rp1.250.000.", 285.065999996732, "Indonesian"]}
+{"key": "whisper-v3 | lang hint + prompt||id08_su-ID-JajangNeural.wav", "v": ["Saya bayar tanggal 5 Oktober lewat Indomaret, jumlahnya Rp1.250.000.", 330.8353000029456, "Indonesian"]}
+{"key": "whisper-v3 | lang hint + prompt||id09_id-ID-GadisNeural.wav", "v": ["Motornya sudah saya oper ke adik saya. Jadi BPKB-nya gimana?", 283.63289999833796, "Indonesian"]}
+{"key": "whisper-v3 | lang hint + prompt||id09_id-ID-GadisNeural_noisy.wav", "v": ["Motornya sudah saya oper ke adik saya, jadi BPKB-nya gimana?", 286.40460000315215, "Indonesian"]}
+{"key": "whisper-v3 | lang hint + prompt||id09_id-ID-ArdiNeural.wav", "v": ["Motornya sudah saya oper ke adik saya. Jadi BPKB-nya gimana?", 429.36740000732243, "Indonesian"]}
+{"key": "whisper-v3 | lang hint + prompt||id09_jv-ID-DimasNeural.wav", "v": ["Motornya sudah saya oper ke adik saya, jadi pepnya gimana?", 301.66470000403933, "Indonesian"]}
+{"key": "whisper-v3 | lang hint + prompt||id09_su-ID-JajangNeural.wav", "v": ["Motornya sudah saya oper ke adik saya, jadi benyah gimana?", 284.9622000067029, "Indonesian"]}
+{"key": "whisper-v3 | lang hint + prompt||id10_id-ID-GadisNeural.wav", "v": ["Saya mau bicara langsung sama petugas aja. Mbak, tolong telepon balik besok.", 290.33579998940695, "Indonesian"]}
+{"key": "whisper-v3 | lang hint + prompt||id10_id-ID-GadisNeural_noisy.wav", "v": ["Saya mau bicara langsung sama petugas aja. Mbak, tolong telepon balik besok.", 316.23209999816027, "Indonesian"]}
+{"key": "whisper-v3 | lang hint + prompt||id10_id-ID-ArdiNeural.wav", "v": ["Saya mau bicara langsung sama petugas aja. Mbak, tolong telepon balik besok.", 358.89800000586547, "Indonesian"]}
+{"key": "whisper-v3 | lang hint + prompt||id10_jv-ID-DimasNeural.wav", "v": ["Soyo mau bicara langsung sama petugas Ojo. Mbak, tolong telepon balik besok.", 293.75749999599066, "Indonesian"]}
+{"key": "whisper-v3 | lang hint + prompt||id10_su-ID-JajangNeural.wav", "v": ["Saya mau bicara langsung sama petugas aja, mbak, tolong telepon balik besok.", 286.3580999983242, "Indonesian"]}
+{"key": "whisper-v3 | lang hint + prompt||id11_jv-ID-DimasNeural.wav", "v": ["Gihleres, angsurani pun sampun kulo siapke, mangke tak bayar lewat Alfamart.", 297.3302999889711, "Indonesian"]}
+{"key": "whisper-v3 | lang hint + prompt||id11_jv-ID-DimasNeural_noisy.wav", "v": ["Gihleres, angsurani pun sampun kulo siapke, mangke tak bayar lewat Alfamart.", 324.7335999913048, "Indonesian"]}
+{"key": "whisper-v3 | lang hint + prompt||id11_jv-ID-SitiNeural.wav", "v": ["Gihleres, angsurani pun sampun kulo siapke, mangke tak bayar lewat Alfamart.", 338.5765999992145, "Indonesian"]}
+{"key": "whisper-v3 | lang hint + prompt||id11_id-ID-GadisNeural.wav", "v": ["Gihleres, angsurani pun sampun kulo siapke, mangke tak bayar lewat Alfamart.", 292.8749999991851, "Indonesian"]}
+{"key": "whisper-v3 | lang hint + prompt||id12_su-ID-JajangNeural.wav", "v": ["Mohon teh, teacan gajian atuh, tapi pas jatuh tempo abdi bayar.", 348.1128000130411, "Indonesian"]}
+{"key": "whisper-v3 | lang hint + prompt||id12_su-ID-JajangNeural_noisy.wav", "v": ["Mohon teh, teacan gajian atuh, tapi pas jatuh tempo abdi bayar.", 312.6421000051778, "Indonesian"]}
+{"key": "whisper-v3 | lang hint + prompt||id12_su-ID-TutiNeural.wav", "v": ["Mohon teh, teacan gajian atuh, tapi pas jatuh tempo abdi bayar.", 289.42230000393465, "Indonesian"]}
+{"key": "whisper-v3 | lang hint + prompt||id12_id-ID-GadisNeural.wav", "v": ["Mohon teh, tau acan gajian atuh, tapi pas jatuh tempo ab dibayar.", 305.7042000000365, "Indonesian"]}
+{"key": "whisper-v3 | auto-detect + prompt||id01_id-ID-GadisNeural.wav", "v": ["Selamat siang, saya ingin menanyakan tanggal jatuh tempo angsuran saya bulan ini.", 298.7262000096962, "Indonesian"]}
+{"key": "whisper-v3 | auto-detect + prompt||id01_id-ID-GadisNeural_noisy.wav", "v": ["Selamat siang, saya ingin menanyakan tanggal jatuh tempo angsuran saya bulan ini.", 323.0855000001611, "Indonesian"]}
+{"key": "whisper-v3 | auto-detect + prompt||id01_id-ID-ArdiNeural.wav", "v": ["Selamat siang, saya ingin menanyakan tanggal jatuh tempo angsuran saya bulan ini.", 321.24029999249615, "Indonesian"]}
+{"key": "whisper-v3 | auto-detect + prompt||id01_jv-ID-DimasNeural.wav", "v": ["Selamat siang, soyo ingin menanyakan tanggal jatuh tempo angsuran soyo bulan ini.", 305.02810000325553, "Indonesian"]}
+{"key": "whisper-v3 | auto-detect + prompt||id01_su-ID-JajangNeural.wav", "v": ["Selamat siang, saya ingin menanyakan tanggal jatuh tempo angsuran saya bulan ini.", 285.03379999892786, "Indonesian"]}
+{"key": "whisper-v3 | auto-detect + prompt||id02_id-ID-GadisNeural.wav", "v": ["Berapa denda keterlambatan kalau saya membayar dua hari setelah jatuh tempo?", 295.97899998771027, "Indonesian"]}
+{"key": "whisper-v3 | auto-detect + prompt||id02_id-ID-GadisNeural_noisy.wav", "v": ["Berapa denda keterlambatan kalau saya membayar dua hari setelah jatuh tempo?", 305.3619999991497, "Indonesian"]}
+{"key": "whisper-v3 | auto-detect + prompt||id02_id-ID-ArdiNeural.wav", "v": ["Berapa denda keterlambatan kalau saya membayar 2 hari setelah jatuh tempo?", 290.68350000306964, "Indonesian"]}
+{"key": "whisper-v3 | auto-detect + prompt||id02_jv-ID-DimasNeural.wav", "v": ["Beropo denda keterlambatan kalau Soyo membayar dua hari setelah jatuh tempo.", 297.71400000026915, "Indonesian"]}
+{"key": "whisper-v3 | auto-detect + prompt||id02_su-ID-JajangNeural.wav", "v": ["Berapa denda keterlambatan kalau saya membayar dua hari setelah jatuh tempo?", 295.93029999523424, "Indonesian"]}
+{"key": "whisper-v3 | auto-detect + prompt||id03_id-ID-GadisNeural.wav", "v": ["Aduh mbak, saya belum gajian nih, telat dikit nggak apa-apa kan?", 289.7248000081163, "Indonesian"]}
+{"key": "whisper-v3 | auto-detect + prompt||id03_id-ID-GadisNeural_noisy.wav", "v": ["Aduh mbak, saya belum gajian nih, telat dikit nggak apa-apa kan?", 304.4792000000598, "Indonesian"]}
+{"key": "whisper-v3 | auto-detect + prompt||id03_id-ID-ArdiNeural.wav", "v": ["Aduh mbak, saya belum gajian nih, telat dikit nggak apa-apa kan?", 292.26430000562686, "Indonesian"]}
+{"key": "whisper-v3 | auto-detect + prompt||id03_jv-ID-DimasNeural.wav", "v": ["Aduh mbak, saya belum gajian nih, telatikit nggak apa-apa kan.", 322.26600000285544, "Indonesian"]}
+{"key": "whisper-v3 | auto-detect + prompt||id03_su-ID-JajangNeural.wav", "v": ["Aduh mbak, saya belum gajian nih, telat dikit nggak apa-apakan.", 333.78190000075847, "Indonesian"]}
+{"key": "whisper-v3 | auto-detect + prompt||id04_id-ID-GadisNeural.wav", "v": ["Udah saya transfer kemarin sore lewat mbanking, kok belum masuk ya?", 296.43030000443105, "Indonesian"]}
+{"key": "whisper-v3 | auto-detect + prompt||id04_id-ID-GadisNeural_noisy.wav", "v": ["Udah saya transfer kemarin sore lewat mbanking, kok belum masuk ya?", 300.0734000088414, "Indonesian"]}
+{"key": "whisper-v3 | auto-detect + prompt||id04_id-ID-ArdiNeural.wav", "v": ["Udah saya transfer kemarin sore lewat mbanking, kok belum masuk ya?", 281.0526999965077, "Indonesian"]}
+{"key": "whisper-v3 | auto-detect + prompt||id04_jv-ID-DimasNeural.wav", "v": ["Udah soyo transfer kemarin sore lewat mbangking, kok belum masuk yo?", 286.40750001068227, "Indonesian"]}
+{"key": "whisper-v3 | auto-detect + prompt||id04_su-ID-JajangNeural.wav", "v": ["Udah saya transfer kemarin sore lewat mebanking kok belum masuk ya.", 333.1945999962045, "Indonesian"]}
+{"key": "whisper-v3 | auto-detect + prompt||id05_id-ID-GadisNeural.wav", "v": ["Tenor saya 24 bulan, DP-nya dulu 10%, cicilannya 1,25 juta.", 377.8139999922132, "Indonesian"]}
+{"key": "whisper-v3 | auto-detect + prompt||id05_id-ID-GadisNeural_noisy.wav", "v": ["Tenor saya 24 bulan, DP-nya dulu 10%, cicilannya 1,25 juta.", 287.2597000095993, "Indonesian"]}
+{"key": "whisper-v3 | auto-detect + prompt||id05_id-ID-ArdiNeural.wav", "v": ["Tenor saya 24 bulan, DP-nya dulu 10%, cicilannya 1,25 juta.", 318.466199998511, "Indonesian"]}
+{"key": "whisper-v3 | auto-detect + prompt||id05_jv-ID-DimasNeural.wav", "v": ["Tenor saya 24 bulan, nya dulu 10%, cicilannya 1,25 juta.", 429.7224999900209, "Indonesian"]}
+{"key": "whisper-v3 | auto-detect + prompt||id05_su-ID-JajangNeural.wav", "v": ["Tenor saya 24 bulan, benya dulu 10%, cicilannya 1,25 juta.", 293.4056999947643, "Indonesian"]}
+{"key": "whisper-v3 | auto-detect + prompt||id06_id-ID-GadisNeural.wav", "v": ["Kalau pelunasan dipercepat ada penalti berapa persen dari sisa pokok pembiayaan?", 316.75840000389144, "Indonesian"]}
+{"key": "whisper-v3 | auto-detect + prompt||id06_id-ID-GadisNeural_noisy.wav", "v": ["Kalau pelunasan dipercepat ada penalti berapa persen dari sisa pokok pembiayaan?", 406.32320000440814, "Indonesian"]}
+{"key": "whisper-v3 | auto-detect + prompt||id06_id-ID-ArdiNeural.wav", "v": ["Kalau pelunasan dipercepat ada penalti berapa persen dari sisa pokok pembiayaan?", 314.15299999935087, "Indonesian"]}
+{"key": "whisper-v3 | auto-detect + prompt||id06_jv-ID-DimasNeural.wav", "v": ["Kalau pelunasan dipercepat odo penalti berapa persen dari siso pokok pembiayaan.", 370.960100000957, "Indonesian"]}
+{"key": "whisper-v3 | auto-detect + prompt||id06_su-ID-JajangNeural.wav", "v": ["Kalau pelunasan dipercepat ada penalti berapa persen dari sisa pokok pembiayaan?", 300.9734000079334, "Indonesian"]}
+{"key": "whisper-v3 | auto-detect + prompt||id07_id-ID-GadisNeural.wav", "v": ["By the way, kalau saya bayar via virtual account BCA itu real time kan? Nggak pakai admin fee?", 344.08939999411814, "Indonesian"]}
+{"key": "whisper-v3 | auto-detect + prompt||id07_id-ID-GadisNeural_noisy.wav", "v": ["By the way, kalau saya bayar via virtual account BCA itu real time kan? Nggak pakai admin fee?", 343.98659999715164, "Indonesian"]}
+{"key": "whisper-v3 | auto-detect + prompt||id07_id-ID-ArdiNeural.wav", "v": ["By the way, kalau saya bayar via virtual.com BCA itu real-time kan? Nggak pakai admin fee.", 321.0492000071099, "Indonesian"]}
+{"key": "whisper-v3 | auto-detect + prompt||id07_jv-ID-DimasNeural.wav", "v": ["Rukalau soyo bayar via virtual account, co itu realtime kan, nggak pakai admin fee.", 332.83129999472294, "Indonesian"]}
+{"key": "whisper-v3 | auto-detect + prompt||id07_su-ID-JajangNeural.wav", "v": ["Tuh kalau saya bayar ya virtual account, cah itu realtime kan, nggak pakai admin eh.", 297.75949999748264, "Indonesian"]}
+{"key": "whisper-v3 | auto-detect + prompt||id08_id-ID-GadisNeural.wav", "v": ["Saya bayar tanggal 5 Oktober lewat Indomaret, jumlahnya Rp1.250.000.", 320.1553000108106, "Indonesian"]}
+{"key": "whisper-v3 | auto-detect + prompt||id08_id-ID-GadisNeural_noisy.wav", "v": ["Saya bayar tanggal 5 Oktober lewat Indomaret, jumlahnya Rp 1.250.000.", 305.652299997746, "Indonesian"]}
+{"key": "whisper-v3 | auto-detect + prompt||id08_id-ID-ArdiNeural.wav", "v": ["Saya bayar tanggal 5 Oktober lewat Indomaret, jumlahnya Rp1.250.000.", 306.5093000041088, "Indonesian"]}
+{"key": "whisper-v3 | auto-detect + prompt||id08_jv-ID-DimasNeural.wav", "v": ["Soyo bayar tanggal 5 Oktober lewat Indomaret, jumlahnya Rp1.250.000.", 314.2493000050308, "Indonesian"]}
+{"key": "whisper-v3 | auto-detect + prompt||id08_su-ID-JajangNeural.wav", "v": ["Saya bayar tanggal 5 Oktober lewat Indomaret, jumlahnya Rp1.250.000.", 291.9666999951005, "Indonesian"]}
+{"key": "whisper-v3 | auto-detect + prompt||id09_id-ID-GadisNeural.wav", "v": ["Motornya sudah saya oper ke adik saya. Jadi BPKB-nya gimana?", 286.65259999979753, "Indonesian"]}
+{"key": "whisper-v3 | auto-detect + prompt||id09_id-ID-GadisNeural_noisy.wav", "v": ["Motornya sudah saya oper ke adik saya, jadi BPKB-nya gimana?", 334.337799999048, "Indonesian"]}
+{"key": "whisper-v3 | auto-detect + prompt||id09_id-ID-ArdiNeural.wav", "v": ["Motornya sudah saya oper ke adik saya. Jadi BPKB-nya gimana?", 271.35270000144374, "Indonesian"]}
+{"key": "whisper-v3 | auto-detect + prompt||id09_jv-ID-DimasNeural.wav", "v": ["Motornya sudah saya oper ke adik saya, jadi pepnya gimana?", 266.33690000744537, "Indonesian"]}
+{"key": "whisper-v3 | auto-detect + prompt||id09_su-ID-JajangNeural.wav", "v": ["Motornya sudah saya oper ke adik saya, jadi benyah gimana?", 285.71589999774005, "Indonesian"]}
+{"key": "whisper-v3 | auto-detect + prompt||id10_id-ID-GadisNeural.wav", "v": ["Saya mau bicara langsung sama petugas aja. Mbak, tolong telepon balik besok.", 300.34110000997316, "Indonesian"]}
+{"key": "whisper-v3 | auto-detect + prompt||id10_id-ID-GadisNeural_noisy.wav", "v": ["Saya mau bicara langsung sama petugas aja. Mbak, tolong telepon balik besok.", 332.0355999894673, "Indonesian"]}
+{"key": "whisper-v3 | auto-detect + prompt||id10_id-ID-ArdiNeural.wav", "v": ["Saya mau bicara langsung sama petugas aja. Mbak, tolong telepon balik besok.", 289.4763999938732, "Indonesian"]}
+{"key": "whisper-v3 | auto-detect + prompt||id10_jv-ID-DimasNeural.wav", "v": ["Soyo mau bicara langsung sama petugas Ojo. Mbak, tolong telepon balik besok.", 305.70759999682195, "Indonesian"]}
+{"key": "whisper-v3 | auto-detect + prompt||id10_su-ID-JajangNeural.wav", "v": ["Saya mau bicara langsung sama petugas aja, mbak, tolong telepon balik besok.", 288.19550000480376, "Indonesian"]}
+{"key": "whisper-v3 | auto-detect + prompt||id11_jv-ID-DimasNeural.wav", "v": ["Gihleres, angsurani pun sampun kulo siapke, mangke tak bayar lewat Alfamart.", 310.4613000032259, "Indonesian"]}
+{"key": "whisper-v3 | auto-detect + prompt||id11_jv-ID-DimasNeural_noisy.wav", "v": ["Gihleres, angsurani pun sampun kulo siapke, mangke tak bayar lewat Alfamart.", 298.42639999696985, "Indonesian"]}
+{"key": "whisper-v3 | auto-detect + prompt||id11_jv-ID-SitiNeural.wav", "v": ["Gihleres, angsurani pun sampun kulo siapke, mangke tak bayar lewat Alfamart.", 322.54619999730494, "Indonesian"]}
+{"key": "whisper-v3 | auto-detect + prompt||id11_id-ID-GadisNeural.wav", "v": ["Gihleres, angsurani pun sampun kulo siapke, mangke tak bayar lewat Alfamart.", 298.8354999979492, "Indonesian"]}
+{"key": "whisper-v3 | auto-detect + prompt||id12_su-ID-JajangNeural.wav", "v": ["Mohon teh, teacan gajian atuh, tapi pas jatuh tempo abdi bayar.", 296.9831000082195, "Indonesian"]}
+{"key": "whisper-v3 | auto-detect + prompt||id12_su-ID-JajangNeural_noisy.wav", "v": ["Mohon teh, teacan gajian atuh, tapi pas jatuh tempo abdi bayar.", 311.16450000263285, "Indonesian"]}
+{"key": "whisper-v3 | auto-detect + prompt||id12_su-ID-TutiNeural.wav", "v": ["Mohon teh, teacan gajian atuh, tapi pas jatuh tempo abdi bayar.", 305.50110001058783, "Indonesian"]}
+{"key": "whisper-v3 | auto-detect + prompt||id12_id-ID-GadisNeural.wav", "v": ["Mohon teh, tau acan gajian atuh, tapi pas jatuh tempo ab dibayar.", 299.73870000685565, "Indonesian"]}
+{"key": "whisper-v3 | lang hint, no prompt||id01_id-ID-GadisNeural.wav", "v": ["Selamat siang, saya ingin menanyakan tanggal jatuh tempo angsuran saya bulan ini.", 345.96950000559445, "Indonesian"]}
+{"key": "whisper-v3 | lang hint, no prompt||id01_id-ID-GadisNeural_noisy.wav", "v": ["Selamat siang, saya ingin menanyakan tanggal jatuh tempo angsuran saya bulan ini.", 307.5547999906121, "Indonesian"]}
+{"key": "whisper-v3 | lang hint, no prompt||id01_id-ID-ArdiNeural.wav", "v": ["Selamat siang. Saya ingin menanyakan tanggal jatuh tempo angsuran saya bulan ini.", 265.31279999471735, "Indonesian"]}
+{"key": "whisper-v3 | lang hint, no prompt||id01_jv-ID-DimasNeural.wav", "v": ["Selamat siang, Soyo ingin menanyakan tanggal jatuh tempoh angsuran Soyo bulan ini.", 283.17019999667536, "Indonesian"]}
+{"key": "whisper-v3 | lang hint, no prompt||id01_su-ID-JajangNeural.wav", "v": ["Selamat siang, saya ingin menanyakan tanggal jatuh tempoh angsuran saya bulan ini.", 309.63650000921916, "Indonesian"]}
+{"key": "whisper-v3 | lang hint, no prompt||id02_id-ID-GadisNeural.wav", "v": ["Berapa denda keterlambatan kalau saya membayar dua hari setelah jatuh tempo?", 289.0078999917023, "Indonesian"]}
+{"key": "whisper-v3 | lang hint, no prompt||id02_id-ID-GadisNeural_noisy.wav", "v": ["Berapa denda keterlambatan kalau saya membayar dua hari setelah jatuh tempo?", 292.69489999569487, "Indonesian"]}
+{"key": "whisper-v3 | lang hint, no prompt||id02_id-ID-ArdiNeural.wav", "v": ["Berapa denda keterlambatan kalau saya membayar 2 hari setelah jatuh tempo?", 264.21590000973083, "Indonesian"]}
+{"key": "whisper-v3 | lang hint, no prompt||id02_jv-ID-DimasNeural.wav", "v": ["Beropo denda keterlambatan kalau Soyo membayar dua hari setelah jatuh tempoh.", 312.3570999887306, "Indonesian"]}
+{"key": "whisper-v3 | lang hint, no prompt||id02_su-ID-JajangNeural.wav", "v": ["Berapa denda keterlambatan kalau saya membayar dua hari setelah jatuh tempoh?", 275.5159999942407, "Indonesian"]}
+{"key": "whisper-v3 | lang hint, no prompt||id03_id-ID-GadisNeural.wav", "v": ["Aduh mbak, saya belum gajian nih. Telat dikit gak apa-apa kan?", 277.1601999993436, "Indonesian"]}
+{"key": "whisper-v3 | lang hint, no prompt||id03_id-ID-GadisNeural_noisy.wav", "v": ["Aduh mbak, saya belum gajian nih, telat dikit gak apa-apa kan?", 271.8079000042053, "Indonesian"]}
+{"key": "whisper-v3 | lang hint, no prompt||id03_id-ID-ArdiNeural.wav", "v": ["Aduh mbak, saya belum gajian nih. Telat dikit gak apa-apa kan?", 309.4437000108883, "Indonesian"]}
+{"key": "whisper-v3 | lang hint, no prompt||id03_jv-ID-DimasNeural.wav", "v": ["Aduh mbak, saya belum gajian nih, telah tiket gak opo-opo kan.", 366.651099990122, "Indonesian"]}
+{"key": "whisper-v3 | lang hint, no prompt||id03_su-ID-JajangNeural.wav", "v": ["Aduh mbak, saya belum gajian nih, telat dikit gak apa-apakan.", 259.84869999228977, "Indonesian"]}
+{"key": "whisper-v3 | lang hint, no prompt||id04_id-ID-GadisNeural.wav", "v": ["Udah saya transfer kemarin sore lewat M-Banking. Kok belum masuk ya?", 296.8494999950053, "Indonesian"]}
+{"key": "whisper-v3 | lang hint, no prompt||id04_id-ID-GadisNeural_noisy.wav", "v": ["Udah saya transfer kemarin sore lewat M-Banking, kok belum masuk ya?", 294.59720000158995, "Indonesian"]}
+{"key": "whisper-v3 | lang hint, no prompt||id04_id-ID-ArdiNeural.wav", "v": ["Udah saya transfer kemarin sore lewat mbanking, kok belum masuk ya?", 285.7965999864973, "Indonesian"]}
+{"key": "whisper-v3 | lang hint, no prompt||id04_jv-ID-DimasNeural.wav", "v": ["Udah saya transfer kemarin sore lewat membanking, kok belum masuk yo.", 258.5911999922246, "Indonesian"]}
+{"key": "whisper-v3 | lang hint, no prompt||id04_su-ID-JajangNeural.wav", "v": ["Udah saya transfer kemarin sore lewat mebanking kok belum masuk ya.", 302.8351999964798, "Indonesian"]}
+{"key": "whisper-v3 | lang hint, no prompt||id05_id-ID-GadisNeural.wav", "v": ["Tenor saya 24 bulan, DP-nya dulu 10%, cicilannya 1,25 juta.", 309.9562999996124, "Indonesian"]}
+{"key": "whisper-v3 | lang hint, no prompt||id05_id-ID-GadisNeural_noisy.wav", "v": ["Tenor saya 24 bulan, DP-nya dulu 10%, cicilannya 1,25 juta.", 270.9792999958154, "Indonesian"]}
+{"key": "whisper-v3 | lang hint, no prompt||id05_id-ID-ArdiNeural.wav", "v": ["Tenor saya 24 bulan, DP-nya dulu 10%, cicilannya 1,25 juta.", 270.5227999977069, "Indonesian"]}
+{"key": "whisper-v3 | lang hint, no prompt||id05_jv-ID-DimasNeural.wav", "v": ["Tenor soya 24 bulan, nyodulu 10%, cicilannya 1,25 juta.", 286.4312999881804, "Indonesian"]}
+{"key": "whisper-v3 | lang hint, no prompt||id05_su-ID-JajangNeural.wav", "v": ["Tenor saya 24 bulan, benyadulu 10%, cicilannya 1,25 juta.", 290.0995999953011, "Indonesian"]}
+{"key": "whisper-v3 | lang hint, no prompt||id06_id-ID-GadisNeural.wav", "v": ["Kalau pelunasan dipercepat ada penalti berapa persen dari sisa pokok pembiayaan?", 324.98360000317916, "Indonesian"]}
+{"key": "whisper-v3 | lang hint, no prompt||id06_id-ID-GadisNeural_noisy.wav", "v": ["Kalau pelunasan dipercepat ada penalti berapa persen dari sisa pokok pembiayaan?", 286.2904000066919, "Indonesian"]}
+{"key": "whisper-v3 | lang hint, no prompt||id06_id-ID-ArdiNeural.wav", "v": ["Kalau pelunasan dipercepat ada penalti berapa persen dari sisa pokok pembiayaan?", 278.7042999989353, "Indonesian"]}
+{"key": "whisper-v3 | lang hint, no prompt||id06_jv-ID-DimasNeural.wav", "v": ["Kalau pelunasan dipercepat odo penalti berapa persen dari sisa pokok pembiayaan.", 312.84969999978784, "Indonesian"]}
+{"key": "whisper-v3 | lang hint, no prompt||id06_su-ID-JajangNeural.wav", "v": ["Kalau pelunasan dipercepat ada penalti berapa persen dari sisa pokok pembiayaan.", 266.46230000187643, "Indonesian"]}
+{"key": "whisper-v3 | lang hint, no prompt||id07_id-ID-GadisNeural.wav", "v": ["By the way, kalau saya bayar via virtual account BCA itu real time kan? Nggak pakai admin fee?", 314.8371999996016, "Indonesian"]}
+{"key": "whisper-v3 | lang hint, no prompt||id07_id-ID-GadisNeural_noisy.wav", "v": ["By the way, kalau saya bayar via virtual account BCA itu real time kan? Nggak pakai admin fee?", 289.9690000049304, "Indonesian"]}
+{"key": "whisper-v3 | lang hint, no prompt||id07_id-ID-ArdiNeural.wav", "v": ["By the way, kalau saya bayar via virtual.com BCA itu real-time kan? Nggak pakai admin fee.", 297.0103999978164, "Indonesian"]}
+{"key": "whisper-v3 | lang hint, no prompt||id07_jv-ID-DimasNeural.wav", "v": ["Rukalau soyo bayar via virtual account, co itu realtime kan, gak pakai admin fee.", 277.3509999969974, "Indonesian"]}
+{"key": "whisper-v3 | lang hint, no prompt||id07_su-ID-JajangNeural.wav", "v": ["Tuh kalau saya bayar ya virtual acount, cah itu realtime kan, gak pakai admin eh.", 334.6375999972224, "Indonesian"]}
+{"key": "whisper-v3 | lang hint, no prompt||id08_id-ID-GadisNeural.wav", "v": ["Saya bayar tanggal 5 Oktober lewat Indomaret, jumlahnya Rp1.250.000.", 334.2089999932796, "Indonesian"]}
+{"key": "whisper-v3 | lang hint, no prompt||id08_id-ID-GadisNeural_noisy.wav", "v": ["Saya bayar tanggal 5 Oktober lewat Indomaret, jumlahnya Rp1.250.000.", 290.82110000308603, "Indonesian"]}
+{"key": "whisper-v3 | lang hint, no prompt||id08_id-ID-ArdiNeural.wav", "v": ["Saya bayar tanggal 5 Oktober lewat Indomaret, jumlahnya Rp1.250.000.", 293.17299999820534, "Indonesian"]}
+{"key": "whisper-v3 | lang hint, no prompt||id08_jv-ID-DimasNeural.wav", "v": ["Soyo bayar tanggal 5 Oktober lewat Indomaret, jumlahnya Rp1.250.000.", 312.465399998473, "Indonesian"]}
+{"key": "whisper-v3 | lang hint, no prompt||id08_su-ID-JajangNeural.wav", "v": ["Saya bayar tanggal 5 Oktober lewat Indomaret, jumlahnya Rp1.250.000.", 290.80420000536833, "Indonesian"]}
+{"key": "whisper-v3 | lang hint, no prompt||id09_id-ID-GadisNeural.wav", "v": ["Motornya sudah saya oper ke adik saya. Jadi BPKB-nya gimana?", 297.6098000071943, "Indonesian"]}
+{"key": "whisper-v3 | lang hint, no prompt||id09_id-ID-GadisNeural_noisy.wav", "v": ["Motornya sudah saya oper ke adik saya. Jadi BPKB-nya gimana?", 292.3294999927748, "Indonesian"]}
+{"key": "whisper-v3 | lang hint, no prompt||id09_id-ID-ArdiNeural.wav", "v": ["Motornya sudah saya oper ke adik saya. Jadi BPKB-nya gimana?", 289.3824999919161, "Indonesian"]}
+{"key": "whisper-v3 | lang hint, no prompt||id09_jv-ID-DimasNeural.wav", "v": ["Motornya sudah saya oper ke adik saya jadi pepnya gimana.", 254.63640000089072, "Indonesian"]}
+{"key": "whisper-v3 | lang hint, no prompt||id09_su-ID-JajangNeural.wav", "v": ["Motornya sudah saya oper ke adik saya, jadi benya gimana?", 276.0326999996323, "Indonesian"]}
+{"key": "whisper-v3 | lang hint, no prompt||id10_id-ID-GadisNeural.wav", "v": ["Saya mau bicara langsung sama petugas aja. Mbak, tolong telepon balik besok.", 310.6253000005381, "Indonesian"]}
+{"key": "whisper-v3 | lang hint, no prompt||id10_id-ID-GadisNeural_noisy.wav", "v": ["Saya mau bicara langsung sama petugas aja. Mbak, tolong telepon balik besok.", 302.7923000045121, "Indonesian"]}
+{"key": "whisper-v3 | lang hint, no prompt||id10_id-ID-ArdiNeural.wav", "v": ["Saya mau bicara langsung sama petugas aja. Mbak, tolong telepon balik besok.", 290.3890000015963, "Indonesian"]}
+{"key": "whisper-v3 | lang hint, no prompt||id10_jv-ID-DimasNeural.wav", "v": ["Saya mau bicara langsung sama petugas Ojo. Mbak, tolong telepon balik besok.", 270.55149999796413, "Indonesian"]}
+{"key": "whisper-v3 | lang hint, no prompt||id10_su-ID-JajangNeural.wav", "v": ["Saya mau bicara langsung sama petugas aja, mbak. Tolong telepon balik besok.", 292.8807999996934, "Indonesian"]}
+{"key": "whisper-v3 | lang hint, no prompt||id11_jv-ID-DimasNeural.wav", "v": ["Gehleres, angsurani pun sampun kulo siapke, mangke tak bayar lewat Alfamart.", 293.7260999897262, "Indonesian"]}
+{"key": "whisper-v3 | lang hint, no prompt||id11_jv-ID-DimasNeural_noisy.wav", "v": ["Gehleres, angsurani pun sampun kulo siapke, mangke tak bayar lewat Alfamart.", 284.4511000002967, "Indonesian"]}
+{"key": "whisper-v3 | lang hint, no prompt||id11_jv-ID-SitiNeural.wav", "v": ["Gihleres, Angsurani pun sampun kulo siapke, mangke tak bayar lewat Alfamart.", 331.2691999890376, "Indonesian"]}
+{"key": "whisper-v3 | lang hint, no prompt||id11_id-ID-GadisNeural.wav", "v": ["Gihleres, Angsurani pun sampun kulus siapke, mangke tak bayar lewat Alfamar.", 329.58249999501277, "Indonesian"]}
+{"key": "whisper-v3 | lang hint, no prompt||id12_su-ID-JajangNeural.wav", "v": ["Mohon teh, teacan gajian atuh, tapi pas jatuh tempoh abdi bayar.", 304.17089999536984, "Indonesian"]}
+{"key": "whisper-v3 | lang hint, no prompt||id12_su-ID-JajangNeural_noisy.wav", "v": ["Mohon teh, teacan gajian atuh, tapi pas jatuh tempoh abdi bayar.", 291.09909999533556, "Indonesian"]}
+{"key": "whisper-v3 | lang hint, no prompt||id12_su-ID-TutiNeural.wav", "v": ["Mohon teh, teacan gajian atuh, tapi pas jatuh tempoh abdi bayar.", 309.1429999913089, "Indonesian"]}
+{"key": "whisper-v3 | lang hint, no prompt||id12_id-ID-GadisNeural.wav", "v": ["Mohon teh, tau acan gajian atuh, tapi pas jatuh tempo ab dibayar.", 289.1084999864688, "Indonesian"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||id01_id-ID-GadisNeural.wav", "v": ["Selamat siang, saya ingin menanyakan tanggal jatuh tempo angsuran saya bulan ini.", 246.73210000037216, "Indonesian"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||id01_id-ID-GadisNeural_noisy.wav", "v": ["Selamat siang, saya ingin menanyakan tanggal jatuh tempo angsuran saya bulan ini.", 240.07650000567082, "Indonesian"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||id01_id-ID-ArdiNeural.wav", "v": ["Selama siang, saya ingin menanyakan tanggal jatuh tempo angsuran saya bulan ini.", 265.5559999984689, "Indonesian"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||id01_jv-ID-DimasNeural.wav", "v": ["Selamat siang, Soyo ingin menanyakan tanggal jatuh tempoh angsuran Soyo bulan ini.", 235.39020000316668, "Indonesian"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||id01_su-ID-JajangNeural.wav", "v": ["Selamat siang, saya ingin menanyakan tanggal jatuh tempo angsuran saya bulan ini.", 263.3421999926213, "Indonesian"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||id02_id-ID-GadisNeural.wav", "v": ["Berapa denda keterlambatan kalau saya membayar dua hari setelah jatuh tempo?", 236.34970000421163, "Indonesian"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||id02_id-ID-GadisNeural_noisy.wav", "v": ["Berapa denda keterlambatan kalau saya membayar dua hari setelah jatuh tempo?", 237.74159999447875, "Indonesian"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||id02_id-ID-ArdiNeural.wav", "v": ["Berapa denda keterlambatan kalau saya membayar dua hari setelah jatuh tempo?", 234.43050000059884, "Indonesian"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||id02_jv-ID-DimasNeural.wav", "v": ["Berapa denda keterlambatan kalau soya membayar dua hari setelah jatuh tempo?", 246.62240000907332, "Indonesian"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||id02_su-ID-JajangNeural.wav", "v": ["Berapa denda keterlambatan kalau saya membayar dua hari setelah jatuh tempo?", 232.6887999952305, "Indonesian"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||id03_id-ID-GadisNeural.wav", "v": ["Aduh mbak, saya belum gajian nih, telat dikit nggak apa-apa kan?", 237.55719998735003, "Indonesian"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||id03_id-ID-GadisNeural_noisy.wav", "v": ["Aduh mbak, saya belum gajian nih, telat dikit nggak apa-apa kan?", 234.7509999963222, "Indonesian"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||id03_id-ID-ArdiNeural.wav", "v": ["Aduh mbak, saya belum gajian nih, telat dikit nggak apa-apa kan?", 231.85780001222156, "Indonesian"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||id03_jv-ID-DimasNeural.wav", "v": ["Aduh mbak, saya belum gajian nih, telat dikit nggak opo-opo kan.", 237.76219999126624, "Indonesian"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||id03_su-ID-JajangNeural.wav", "v": ["Aduh mbak, saya belum gajian nih, telat dikit nggak apa-apakan.", 232.25100000854582, "Indonesian"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||id04_id-ID-GadisNeural.wav", "v": ["Udah saya transfer kemarin sore lewat M-Banking, kok belum masuk ya?", 248.96569999691565, "Indonesian"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||id04_id-ID-GadisNeural_noisy.wav", "v": ["Udah saya transfer kemarin sore lewat M-Banking, kok belum masuk ya?", 258.06330000341404, "Indonesian"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||id04_id-ID-ArdiNeural.wav", "v": ["Udah saya transfer kemarin sore lewat M-Banking, kok belum masuk ya?", 216.37680000276305, "Indonesian"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||id04_jv-ID-DimasNeural.wav", "v": ["Udah saya transfer kemarin sore lewat membangking, kok belum masuk ya?", 239.08290000690613, "Indonesian"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||id04_su-ID-JajangNeural.wav", "v": ["Udah saya transfer kemarin sore lewat membangking kok belum masuk ya.", 253.62560000212397, "Indonesian"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||id05_id-ID-GadisNeural.wav", "v": ["Tenor saya 24 bulan, DP-nya dulu 10%, cicilannya 1,25 juta.", 247.7980999974534, "Indonesian"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||id05_id-ID-GadisNeural_noisy.wav", "v": ["Tenor saya 24 bulan, DP-nya dulu 10%, cicilannya 1,25 juta.", 244.85550000099465, "Indonesian"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||id05_id-ID-ArdiNeural.wav", "v": ["Tenor saya 24 bulan, DP-nya dulu 10%, cicilannya 1,25 juta.", 232.43210000509862, "Indonesian"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||id05_jv-ID-DimasNeural.wav", "v": ["Tenor soya 24 bulan, nyatuh dulu 10%, cicilannya 1,25 juta.", 275.3907000005711, "Indonesian"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||id05_su-ID-JajangNeural.wav", "v": ["Tenor saya 24 bulan, punya dulu 10%, cicilannya 1,25 juta.", 255.70999999763444, "Indonesian"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||id06_id-ID-GadisNeural.wav", "v": ["Kalau pelunasan dipercepat ada penalti berapa persen dari sisa pokok pembiayaan?", 252.19990000186954, "Indonesian"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||id06_id-ID-GadisNeural_noisy.wav", "v": ["Kalau pelunasan dipercepat ada penalti berapa persen dari sisa pokok pembiayaan?", 232.4980000121286, "Indonesian"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||id06_id-ID-ArdiNeural.wav", "v": ["Kalau pelunasan dipercepat ada penalti berapa persen dari sisa pokok pembiayaan?", 244.70690000453033, "Indonesian"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||id06_jv-ID-DimasNeural.wav", "v": ["Kalau pelunasan dipercepat, odo penalti berapa persen dari sisa pokok pembiayaan?", 239.45680000178982, "Indonesian"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||id06_su-ID-JajangNeural.wav", "v": ["Kalau pelunasan dipercepat ada penalti berapa persen dari sisa pokok pembiayaan.", 279.21179999248125, "Indonesian"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||id07_id-ID-GadisNeural.wav", "v": ["By the way, kalau saya bayar via virtual account BCA itu real-time kan, nggak pakai admin fee?", 295.3257000044687, "Indonesian"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||id07_id-ID-GadisNeural_noisy.wav", "v": ["By the way, kalau saya bayar via virtual account, BKB itu real time kan? Nggak pakai admin sih?", 261.05259999167174, "Indonesian"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||id07_id-ID-ArdiNeural.wav", "v": ["By the way, kalau saya bayar via virtual.com BCI itu real-time kan? Nggak pakai admin fee.", 252.67750000057276, "Indonesian"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||id07_jv-ID-DimasNeural.wav", "v": ["Rukalau soya bayar via virtual account, co itu realtimekan, nggak pakai admin fee.", 284.2307999962941, "Indonesian"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||id07_su-ID-JajangNeural.wav", "v": ["Tuh kalau saya bayar ya, virtual account, Bca itu realtimekan, nggak pakai admin, eh.", 253.79119999706745, "Indonesian"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||id08_id-ID-GadisNeural.wav", "v": ["Saya bayar tanggal 5 Oktober lewat Indomaret jumlahnya Rp 1.250.000.", 281.208999993396, "Indonesian"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||id08_id-ID-GadisNeural_noisy.wav", "v": ["Saya bayar tanggal 5 Oktober lewat Indomaret, jumlahnya Rp 1.250.000.", 252.98019999172539, "Indonesian"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||id08_id-ID-ArdiNeural.wav", "v": ["Saya bayar tanggal 5 Oktober lewat Indomaret, jumlahnya Rp 1.250.000.", 286.7668000108097, "Indonesian"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||id08_jv-ID-DimasNeural.wav", "v": ["Soyo bayar tanggal 5 Oktober lewat Indomaret, jumlahnya Rp 1.250.000.", 277.5208999955794, "Indonesian"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||id08_su-ID-JajangNeural.wav", "v": ["Saya bayar tanggal 5 Oktober lewat Indomaret jumlahnya Rp 1.250.000.", 246.25430000014603, "Indonesian"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||id09_id-ID-GadisNeural.wav", "v": ["Motornya sudah saya oper ke adik saya. Jadi BPKB-nya gimana?", 266.1802000075113, "Indonesian"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||id09_id-ID-GadisNeural_noisy.wav", "v": ["Motornya sudah saya oper ke adik saya, jadi BPKB-nya gimana?", 264.2679999989923, "Indonesian"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||id09_id-ID-ArdiNeural.wav", "v": ["Motornya sudah saya oper ke adik saya, jadi BPKB-nya gimana?", 252.4252000002889, "Indonesian"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||id09_jv-ID-DimasNeural.wav", "v": ["Motornya sudah saya oper ke adik saya jadi pepnya gimana?", 238.74079999222886, "Indonesian"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||id09_su-ID-JajangNeural.wav", "v": ["Motornya sudah saya oper ke adik saya jadi Bukbenya gimana?", 239.13629999151453, "Indonesian"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||id10_id-ID-GadisNeural.wav", "v": ["Saya mau bicara langsung sama petugas aja. Mbak, tolong telepon balik besok.", 268.02250000764616, "Indonesian"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||id10_id-ID-GadisNeural_noisy.wav", "v": ["Saya mau bicara langsung sama petugas aja. Mbak, tolong telepon balik besok.", 257.33110000146553, "Indonesian"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||id10_id-ID-ArdiNeural.wav", "v": ["Saya mau bicara langsung sama petugas aja. Mbak, tolong telepon balik besok.", 263.2439000008162, "Indonesian"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||id10_jv-ID-DimasNeural.wav", "v": ["Soyo mau bicara langsung sama petugas Ojo, Mbak, tolong telepon balik besok.", 243.93270000291523, "Indonesian"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||id10_su-ID-JajangNeural.wav", "v": ["Saya mau bicara langsung sama petugas aja, Mbak, tolong telepon balik besok.", 251.2471999943955, "Indonesian"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||id11_jv-ID-DimasNeural.wav", "v": ["Gih leres, angsuranipun sampun kulo siap ke, mangke tak bayar lewat Alfamart.", 258.9455999986967, "Indonesian"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||id11_jv-ID-DimasNeural_noisy.wav", "v": ["Gih leres, angsuran pun sampun kulo siap ke, mangke tak bayar lewat Alfamart.", 275.40819998830557, "Indonesian"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||id11_jv-ID-SitiNeural.wav", "v": ["Gih leres, angsuranipun sampun kulo siapke, mangke tak bayar lewat Alfamart.", 245.38540000503417, "Indonesian"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||id11_id-ID-GadisNeural.wav", "v": ["Ngihleres, angsuranipun sampun kulo siap ke, mangke tak bayar lewat Alfamart.", 292.11599999689497, "Indonesian"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||id12_su-ID-JajangNeural.wav", "v": ["Muhun teh, teacan gajian atuh, tapi pas jatuh tempo abdibayar.", 281.9727000023704, "Indonesian"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||id12_su-ID-JajangNeural_noisy.wav", "v": ["Muhun teh teh acan gajian atuh tapi pas jatuh tempo abdibayar.", 244.06240000098478, "Indonesian"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||id12_su-ID-TutiNeural.wav", "v": ["Muhun teh teh acan gajian atuh, tapi pas jatuh tempo abdi bayar.", 268.6345000111032, "Indonesian"]}
+{"key": "whisper-v3-turbo | lang hint + prompt||id12_id-ID-GadisNeural.wav", "v": ["Muhun teh, tau acan gajian atuh, tapi pas jatuh tempo abdibayar.", 266.8241999926977, "Indonesian"]}
+{"key": "gemini-flash-lite | audio prompt||id01_id-ID-GadisNeural.wav", "v": ["Selamat siang, saya ingin menanyakan tanggal jatuh tempo angsuran saya bulan ini.", 3765.2359000057913, null]}
+{"key": "gemini-flash-lite | audio prompt||id01_id-ID-GadisNeural_noisy.wav", "v": ["Selamat siang, saya ingin menanyakan tanggal jatuh tempo angsuran saya bulan ini.", 1911.1816999939037, null]}
+{"key": "gemini-flash-lite | audio prompt||id01_id-ID-ArdiNeural.wav", "v": ["Selamat siang. Saya ingin menanyakan tanggal jatuh tempo angsuran saya bulan ini.", 1795.1851000107126, null]}
+{"key": "gemini-flash-lite | audio prompt||id01_jv-ID-DimasNeural.wav", "v": ["Selamat siang, Soyo ingin menanyakan tanggal jatuh tempo angsuran Soyo bulan ini.", 2194.6865000063553, null]}
+{"key": "gemini-flash-lite | audio prompt||id01_su-ID-JajangNeural.wav", "v": ["Selamat siang, saya ingin menanyakan tanggal jatuh tempo angsuran saya bulan ini.", 2228.9282999990974, null]}
+{"key": "gemini-flash-lite | audio prompt||id02_id-ID-GadisNeural.wav", "v": ["Berapa denda keterlambatan kalau saya membayar dua hari setelah jatuh tempo?", 4266.592800006038, null]}
+{"key": "gemini-flash-lite | audio prompt||id02_id-ID-GadisNeural_noisy.wav", "v": ["Berapa denda keterlambatan kalau saya membayar 2 hari setelah jatuh tempo?", 2262.4359999899752, null]}
+{"key": "gemini-flash-lite | audio prompt||id02_id-ID-ArdiNeural.wav", "v": ["Berapa denda keterlambatan kalau saya membayar dua hari setelah jatuh tempo?", 1889.7069999948144, null]}
+{"key": "gemini-flash-lite | audio prompt||id02_jv-ID-DimasNeural.wav", "v": ["Berapa denda keterlambatan kalau saya membayar dua hari setelah jatuh tempo?", 2383.083100008662, null]}
+{"key": "gemini-flash-lite | audio prompt||id02_su-ID-JajangNeural.wav", "v": ["Berapa denda keterlambatan kalau saya membayar dua hari setelah jatuh tempo?", 2328.1530999956885, null]}
+{"key": "gemini-flash-lite | audio prompt||id03_id-ID-GadisNeural.wav", "v": ["Aduh Mba, saya belum gajian nih. Telat dikit enggak apa-apakan?", 2249.3633999984013, null]}
+{"key": "gemini-flash-lite | audio prompt||id03_id-ID-GadisNeural_noisy.wav", "v": ["Aduh Mba, saya belum gajian nih. Telat dikit enggak apa-apa kan?", 2614.119199992274, null]}
+{"key": "gemini-flash-lite | audio prompt||id03_id-ID-ArdiNeural.wav", "v": ["Aduh Mbak, saya belum gajian nih. Telat dikit enggak apa-apa, kan?", 2455.4671999940183, null]}
+{"key": "gemini-flash-lite | audio prompt||id03_jv-ID-DimasNeural.wav", "v": ["Aduh Mbak, saya belum kajian nih, telat dikit enggak apa-apa kan?", 2050.8973999967566, null]}
+{"key": "gemini-flash-lite | audio prompt||id03_su-ID-JajangNeural.wav", "v": ["Aduh Mbak, saya belum gajian nih. Telat dikit, enggak apa-apakan?", 1988.2921000098577, null]}
+{"key": "gemini-flash-lite | audio prompt||id04_id-ID-GadisNeural.wav", "v": ["Udah saya transfer kemarin sore lewat M-Banking, kok belum masuk ya?", 5977.964599995175, null]}
+{"key": "gemini-flash-lite | audio prompt||id04_id-ID-GadisNeural_noisy.wav", "v": ["Udah saya transfer kemarin sore lewat M-Banking, kok belum masuk ya?", 1825.2158999966923, null]}
+{"key": "gemini-flash-lite | audio prompt||id04_id-ID-ArdiNeural.wav", "v": ["Udah saya transfer kemarin sore lewat M-Banking, kok belum masuk, ya?", 2019.0239000075962, null]}
+{"key": "gemini-flash-lite | audio prompt||id04_jv-ID-DimasNeural.wav", "v": ["Udah saya transfer kemarin sore lewat m-banking. Kok belum masuk ya?", 1997.9140000068583, null]}
+{"key": "gemini-flash-lite | audio prompt||id04_su-ID-JajangNeural.wav", "v": ["Udah saya transfer kemarin sore lewat m-banking, kok belum masuk ya?", 1894.6362999995472, null]}
+{"key": "gemini-flash-lite | audio prompt||id05_id-ID-GadisNeural.wav", "v": ["Tenor saya 24 bulan, DP-nya dulu 10%, cicilannya Rp1,25 juta.", 1882.9231999989133, null]}
+{"key": "gemini-flash-lite | audio prompt||id05_id-ID-GadisNeural_noisy.wav", "v": ["Tenor saya 24 bulan, DP-nya dulu 10%, cicilannya Rp1,25 juta.", 2779.1342999989865, null]}
+{"key": "gemini-flash-lite | audio prompt||id05_id-ID-ArdiNeural.wav", "v": ["Tenor saya 24 bulan, DP-nya dulu 10%, cicilannya Rp1,25 juta.", 1964.2467000085162, null]}
+{"key": "gemini-flash-lite | audio prompt||id05_jv-ID-DimasNeural.wav", "v": ["Tenor Soyo 24 bulan, nyo dulu 10%, cicilannya Rp1,25 juta.", 2342.4491999903694, null]}
+{"key": "gemini-flash-lite | audio prompt||id05_su-ID-JajangNeural.wav", "v": ["Tenor saya 24 bulan punya dulu 10% cicilannya 1,25 juta.", 2134.868099994492, null]}
+{"key": "gemini-flash-lite | audio prompt||id06_id-ID-GadisNeural.wav", "v": ["Kalau pelunasan dipercepat, ada penalti berapa persen dari sisa pokok pembiayaan?", 5103.510700006154, null]}
+{"key": "gemini-flash-lite | audio prompt||id06_id-ID-GadisNeural_noisy.wav", "v": ["kalau pelunasan dipercepat ada penalti berapa persen dari sisa pokok pembiayaan?", 2184.477600007085, null]}
+{"key": "gemini-flash-lite | audio prompt||id06_id-ID-ArdiNeural.wav", "v": ["Kalau pelunasan dipercepat ada penalti berapa persen dari sisa pokok pembiayaan?", 2460.538400002406, null]}
+{"key": "gemini-flash-lite | audio prompt||id06_jv-ID-DimasNeural.wav", "v": ["kalau pelunasan dipercepat auto penalti berapa persen dari sisa pokok pembiayaan?", 2246.495999992476, null]}
+{"key": "gemini-flash-lite | audio prompt||id06_su-ID-JajangNeural.wav", "v": ["Kalau pelunasan dipercepat ada penalti berapa persen dari sisa pokok pembiayaan?", 1861.1519999976736, null]}
+{"key": "gemini-flash-lite | audio prompt||id07_id-ID-GadisNeural.wav", "v": ["By the way, kalau saya bayar via virtual account BCA itu real-time, kan? Nggak pakai admin fee?", 1689.2059000092559, null]}
+{"key": "gemini-flash-lite | audio prompt||id07_id-ID-GadisNeural_noisy.wav", "v": ["By the way, kalau saya bayar via virtual account BCA itu real-time kan? Nggak pakai admin fee?", 2502.1336000063457, null]}
+{"key": "gemini-flash-lite | audio prompt||id07_id-ID-ArdiNeural.wav", "v": ["By the way, kalau saya bayar via Virtual Account BCA itu real time kan? Enggak pakai admin fee?", 2215.1980999915395, null]}
+{"key": "gemini-flash-lite | audio prompt||id07_jv-ID-DimasNeural.wav", "v": ["Buka laku soyo bayar via virtual account, jo itu realtimeekan, enggak pakai admin fee.", 1994.3450999999186, null]}
+{"key": "gemini-flash-lite | audio prompt||id07_su-ID-JajangNeural.wav", "v": ["Itu kalau saya bayar Yair Tual Aconk, cika itu real time kan, gak pakai admin, e.", 2413.3920000022044, null]}
+{"key": "gemini-flash-lite | audio prompt||id08_id-ID-GadisNeural.wav", "v": ["Saya bayar tanggal 5 Oktober lewat Indomaret, jumlahnya Rp1.250.000.", 2706.7557999980636, null]}
+{"key": "gemini-flash-lite | audio prompt||id08_id-ID-GadisNeural_noisy.wav", "v": ["Saya bayar tanggal 5 Oktober lewat Indomaret, jumlahnya Rp1.250.000.", 1881.4083999895956, null]}
+{"key": "gemini-flash-lite | audio prompt||id08_id-ID-ArdiNeural.wav", "v": ["Saya bayar tanggal 5 Oktober lewat Indomaret, jumlahnya Rp1.250.000.", 2481.4108999999007, null]}
+{"key": "gemini-flash-lite | audio prompt||id08_jv-ID-DimasNeural.wav", "v": ["Saya bayar tanggal 5 Oktober lewat Indomaret jumlahnya Rp1.250.000.", 1958.6944000038784, null]}
+{"key": "gemini-flash-lite | audio prompt||id08_su-ID-JajangNeural.wav", "v": ["Saya bayar tanggal 5 Oktober lewat Indomaret, jumlahnya Rp1.250.000,-.", 2168.3072000014363, null]}
+{"key": "gemini-flash-lite | audio prompt||id09_id-ID-GadisNeural.wav", "v": ["Motornya sudah saya over ke adik saya. Jadi BPKB-nya gimana?", 3424.3703999964055, null]}
+{"key": "gemini-flash-lite | audio prompt||id09_id-ID-GadisNeural_noisy.wav", "v": ["Motornya sudah saya over ke adik saya, jadi BPKB-nya gimana?", 2153.395900008036, null]}
+{"key": "gemini-flash-lite | audio prompt||id09_id-ID-ArdiNeural.wav", "v": ["Motornya sudah saya over ke adik saya, jadi BPKB-nya gimana?", 3820.1706999971066, null]}
+{"key": "gemini-flash-lite | audio prompt||id09_jv-ID-DimasNeural.wav", "v": ["Motornya sudah saya over ke adik saya jadi banyogimono.", 2225.0806000083685, null]}
+{"key": "gemini-flash-lite | audio prompt||id09_su-ID-JajangNeural.wav", "v": ["Motornya sudah saya over ke adik saya jadi benya gimana?", 2182.594000012614, null]}
+{"key": "gemini-flash-lite | audio prompt||id10_id-ID-GadisNeural.wav", "v": ["Saya mau bicara langsung sama petugas aja. Mbak, tolong telepon balik besok.", 2318.8995999953477, null]}
+{"key": "gemini-flash-lite | audio prompt||id10_id-ID-GadisNeural_noisy.wav", "v": ["Saya mau bicara langsung sama petugas aja. Mbak, tolong telepon balik besok.", 1884.8838999983855, null]}
+{"key": "gemini-flash-lite | audio prompt||id10_id-ID-ArdiNeural.wav", "v": ["Saya mau bicara langsung sama petugas saja. Mbak, tolong telepon balik besok.", 13670.346500002779, null]}
+{"key": "gemini-flash-lite | audio prompt||id10_jv-ID-DimasNeural.wav", "v": ["Soyo mau bicara langsung sama petugas Ojo, Mbak, tolong telepon balik besok.", 3851.5625, null]}
+{"key": "gemini-flash-lite | audio prompt||id10_su-ID-JajangNeural.wav", "v": ["Saya mau bicara langsung sama petugas saja, Mbak. Tolong telepon balik besok.", 3575.604400000884, null]}
+{"key": "gemini-flash-lite | audio prompt||id11_jv-ID-DimasNeural.wav", "v": ["Nggih Leres, angsuranipun sampun kula siapke, mangke tak bayar lewat Alfamart.", 1817.6429999875836, null]}
+{"key": "gemini-flash-lite | audio prompt||id11_jv-ID-DimasNeural_noisy.wav", "v": ["Nggih leres, angsuranipun sampun kula siapke, mangke tak bayar lewat Alfamart.", 2149.9746999907074, null]}
+{"key": "gemini-flash-lite | audio prompt||id11_jv-ID-SitiNeural.wav", "v": ["Nggih, Leres. Angsuranipun sampun kula siapke. Mangke tak bayar lewat Alfamart.", 2182.119799996144, null]}
+{"key": "gemini-flash-lite | audio prompt||id11_id-ID-GadisNeural.wav", "v": ["Nggih leres, angsuranipun sampun kula siapke, mangke tak bayar lewat Alfamart.", 2069.167199995718, null]}
+{"key": "gemini-flash-lite | audio prompt||id12_su-ID-JajangNeural.wav", "v": ["Muhun teh teu acan gajian atuh, tapi pas jatuh tempo abdi bayar.", 2146.2069999979576, null]}
+{"key": "gemini-flash-lite | audio prompt||id12_su-ID-JajangNeural_noisy.wav", "v": ["Mohun teh teu acan gajian atuh tapi pas jatuh tempo abdi bayar.", 2189.554299999145, null]}
+{"key": "gemini-flash-lite | audio prompt||id12_su-ID-TutiNeural.wav", "v": ["Moohun teh teu acan gajian atuh, tapi pas jatuh tempo abdi bayar.", 2028.6597000085749, null]}
+{"key": "gemini-flash-lite | audio prompt||id12_id-ID-GadisNeural.wav", "v": ["Muhun Teh, tuh acan gajian atuh tapi pas jatuh tempo abdi bayar.", 1969.0239000046859, null]}

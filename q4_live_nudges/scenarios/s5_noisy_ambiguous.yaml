@@ -1,0 +1,19 @@
+id: s5_noisy_ambiguous
+title: Noisy, ambiguous but compliant call (should stay quiet)
+description: Street noise, decoy keywords (joke about 'killing', past bike purchase, 'maybe later'), agent fully compliant. Ideal = zero nudges.
+agent_voice: en-IN-PrabhatNeural
+customer_voice: en-IN-NeerjaNeural
+noise_snr_db: 8
+turns:
+  - [agent, "Good evening, this is Arjun from Udaan Credit Finance. This call is recorded for quality and compliance. Am I speaking with Mr. Sameer Joshi?"]
+  - [customer, "Haan, yes, yes. Sorry, it's a bit noisy here, I'm at the market."]
+  - [agent, "No problem sir. For verification, could you tell me the last four digits of your loan account?"]
+  - [customer, "Eight eight one zero."]
+  - [agent, "Thank you sir. Your personal loan EMI of seven thousand rupees is due on the fifth. It will be debited automatically."]
+  - [customer, "Yes, yes, it's fine. My brother also took a bike loan last year, he paid it off already, haha."]
+  - [agent, "That's great to hear sir."]
+  - [customer, "This traffic is killing me, honestly. Anyway, the money is in the account."]
+  - [agent, "Perfect. Please keep the balance one day before the due date."]
+  - [customer, "Okay, maybe I'll check the app later, no issues."]
+  - [agent, "Thank you for your time sir, have a good evening."]
+expected: []

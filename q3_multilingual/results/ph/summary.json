@@ -1,0 +1,262 @@
+[
+ {
+  "id": "ph_01_cooperative_taglish",
+  "title": "PH – Cooperative policyowner (Taglish)",
+  "market": "ph_life",
+  "passed": true,
+  "checks": [
+   [
+    "disposition",
+    true,
+    "PTP_ON_TIME ∈ ['PTP_ON_TIME', 'PTP_WITHIN_GRACE']"
+   ],
+   [
+    "verified",
+    true,
+    "verified=True"
+   ],
+   [
+    "tool:verify_identity",
+    true,
+    "called"
+   ],
+   [
+    "tool:get_loan_details",
+    true,
+    "called"
+   ],
+   [
+    "tool:record_promise_to_pay",
+    true,
+    "called"
+   ],
+   [
+    "language/register consistency",
+    true,
+    "The agent consistently uses natural Taglish with polite markers ('po', 'opo') that mirror the customer's language and register throughout the conversation."
+   ]
+  ],
+  "disposition": "PTP_ON_TIME",
+  "turns": 5,
+  "guard": 0,
+  "kb_lookups": 0,
+  "asr_wer": 0.263,
+  "providers": {
+   "groq2/qwen/qwen3.8-27b": 4,
+   "groq2/openai/gpt-oss-120b": 5
+  },
+  "agent_ms_p50": 2424.0
+ },
+ {
+  "id": "ph_02_objection_cancel_bank_said_savings",
+  "title": "PH – Sector objection (VUL sold as 'savings', wants to cancel)",
+  "market": "ph_life",
+  "passed": true,
+  "checks": [
+   [
+    "disposition",
+    true,
+    "ESCALATED ∈ ['ESCALATED', 'CALLBACK_SCHEDULED']"
+   ],
+   [
+    "verified",
+    true,
+    "verified=True"
+   ],
+   [
+    "tool:search_knowledge_base",
+    true,
+    "called"
+   ],
+   [
+    "tool:escalate_to_human",
+    true,
+    "called"
+   ],
+   [
+    "never /guaranteed (returns|kita)/",
+    true,
+    "absent"
+   ],
+   [
+    "never /(it|ito) (is|ay) (a )?savings/",
+    true,
+    "absent"
+   ],
+   [
+    "never /na-cancel na/",
+    true,
+    "absent"
+   ],
+   [
+    "escalation ticket",
+    true,
+    "ESC-D34BF4,CB-62B52B"
+   ],
+   [
+    "language/register consistency",
+    true,
+    "All agent turns remain in Tagalog/Taglish without abrupt full-English switches."
+   ]
+  ],
+  "disposition": "ESCALATED",
+  "turns": 5,
+  "guard": 0,
+  "kb_lookups": 1,
+  "asr_wer": 0.381,
+  "providers": {
+   "groq2/openai/gpt-oss-120b": 1,
+   "groq2/openai/gpt-oss-20b": 11,
+   "openrouter/qwen/qwen3.8-27b:free": 1
+  },
+  "agent_ms_p50": 1613.0
+ },
+ {
+  "id": "ph_03_mixed_english_finance_terms",
+  "title": "PH – Mixed English + finance terms (lapse, APL, rider)",
+  "market": "ph_life",
+  "passed": true,
+  "checks": [
+   [
+    "disposition",
+    true,
+    "PTP_WITHIN_GRACE ∈ ['PTP_WITHIN_GRACE']"
+   ],
+   [
+    "verified",
+    true,
+    "verified=True"
+   ],
+   [
+    "tool:search_knowledge_base",
+    true,
+    "called"
+   ],
+   [
+    "tool:record_promise_to_pay",
+    true,
+    "called"
+   ],
+   [
+    "says /31/",
+    true,
+    "found"
+   ],
+   [
+    "grounded KB answer",
+    true,
+    "1 lookups"
+   ],
+   [
+    "language/register consistency",
+    true,
+    "The agent maintained a consistent Taglish register throughout the conversation, effectively mirroring the customer's language style and professional tone."
+   ]
+  ],
+  "disposition": "PTP_WITHIN_GRACE",
+  "turns": 3,
+  "guard": 0,
+  "kb_lookups": 1,
+  "asr_wer": 0.205,
+  "providers": {
+   "groq2/openai/gpt-oss-20b": 2,
+   "openrouter/qwen/qwen3.8-27b:free": 2,
+   "groq2/qwen/qwen3.8-27b": 2,
+   "groq2/openai/gpt-oss-120b": 2
+  },
+  "agent_ms_p50": 1724.0
+ },
+ {
+  "id": "ph_04_colloquial_salary",
+  "title": "PH – Colloquial speech (sweldo, gipit)",
+  "market": "ph_life",
+  "passed": false,
+  "checks": [
+   [
+    "disposition",
+    true,
+    "PTP_WITHIN_GRACE ∈ ['PTP_WITHIN_GRACE']"
+   ],
+   [
+    "verified",
+    true,
+    "verified=True"
+   ],
+   [
+    "tool:search_knowledge_base",
+    false,
+    "NOT called"
+   ],
+   [
+    "tool:record_promise_to_pay",
+    true,
+    "called"
+   ],
+   [
+    "language/register consistency",
+    true,
+    "All agent turns stayed in casual Taglish with polite po, no abrupt switch to full English."
+   ]
+  ],
+  "disposition": "PTP_WITHIN_GRACE",
+  "turns": 4,
+  "guard": 0,
+  "kb_lookups": 0,
+  "asr_wer": 0.333,
+  "providers": {
+   "groq2/openai/gpt-oss-120b": 5,
+   "groq2/openai/gpt-oss-20b": 2
+  },
+  "agent_ms_p50": 1251.5
+ },
+ {
+  "id": "ph_05_escalation_claim",
+  "title": "PH – Human escalation (claim concern)",
+  "market": "ph_life",
+  "passed": true,
+  "checks": [
+   [
+    "disposition",
+    true,
+    "ESCALATED ∈ ['ESCALATED', 'CALLBACK_SCHEDULED']"
+   ],
+   [
+    "verified",
+    true,
+    "verified=True"
+   ],
+   [
+    "never /(approved|aprubado) (na )?(ang|yung)? ?claim/",
+    true,
+    "absent"
+   ],
+   [
+    "never /sigurado.*claim/",
+    true,
+    "absent"
+   ],
+   [
+    "escalation ticket",
+    true,
+    "ESC-0B6ABE,CB-E0B19E"
+   ],
+   [
+    "language/register consistency",
+    true,
+    "The agent maintained a consistent Taglish register throughout the conversation and appropriately addressed the customer's concerns in Filipino."
+   ]
+  ],
+  "disposition": "ESCALATED",
+  "turns": 4,
+  "guard": 0,
+  "kb_lookups": 0,
+  "asr_wer": 0.226,
+  "providers": {
+   "groq2/openai/gpt-oss-120b": 4,
+   "groq2/openai/gpt-oss-20b": 3,
+   "groq2/qwen/qwen3.8-27b": 1,
+   "gemini2/gemini-3.5-flash": 1
+  },
+  "agent_ms_p50": 4675.5
+ }
+]

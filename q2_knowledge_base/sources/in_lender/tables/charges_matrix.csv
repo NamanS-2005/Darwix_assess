@@ -1,0 +1,11 @@
+Product,Charge Type,Amount,GST,Last Revised
+Personal Loan,Bounce charge,Rs. 590,incl,01/04/2026
+Personal Loan,Late Payment Charges,2% p.m. on overdue instalment,extra,1 Apr 2026
+Personal Loan,Foreclosure (fixed),4% of POS,extra,2026-04-01
+Business Loan,Cheque/NACH dishonour,INR 590,incl,01/04/2026
+Business Loan,Late Payment Charges,2% p.m. on overdue EMI,extra,01/04/2026
+Business Loan,Foreclosure (fixed),5% of POS,extra,01/04/2026
+Two Wheeler Loan,Bounce charge,₹5900,incl,01-04-2026
+Two Wheeler Loan,Late payment charge,2% per month on overdue instalment amt,extra,01/04/2026
+Two Wheeler Loan,Foreclosure (fixed),3% of POS,extra,01/04/2026
+Personal Loan,Bounce charge,Rs. 590,incl,01/04/2026

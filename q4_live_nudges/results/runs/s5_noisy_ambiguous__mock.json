@@ -1,0 +1,495 @@
+{
+ "utterances": 24,
+ "dropped_segments": 10,
+ "llm_skipped_prefilter": 9,
+ "engine_stats": {
+  "signals_in": 2,
+  "below_threshold": 1,
+  "awaiting_llm_rejected": 0,
+  "duplicates_merged": 0,
+  "cooldown_suppressed": 0,
+  "held_then_shown": 0,
+  "held_expired": 0,
+  "evicted": 0,
+  "unknown_type": 0
+ },
+ "post_call": {
+  "missed_opportunities": [],
+  "unresolved_compliance": [],
+  "acted_on": 0,
+  "total_nudges": 1
+ },
+ "topic_shifts": [
+  {
+   "uid": 1,
+   "from": null,
+   "to": "greeting",
+   "t": 4.3
+  },
+  {
+   "uid": 4,
+   "from": "greeting",
+   "to": "verification",
+   "t": 13.3
+  },
+  {
+   "uid": 14,
+   "from": "verification",
+   "to": "small_talk",
+   "t": 38.6
+  },
+  {
+   "uid": 5,
+   "from": "small_talk",
+   "to": "verification",
+   "t": 14.0
+  },
+  {
+   "uid": 15,
+   "from": "verification",
+   "to": "payment_reminder",
+   "t": 40.3
+  },
+  {
+   "uid": 17,
+   "from": "payment_reminder",
+   "to": "small_talk",
+   "t": 46.3
+  },
+  {
+   "uid": 12,
+   "from": "small_talk",
+   "to": "payment_reminder",
+   "t": 34.9
+  },
+  {
+   "uid": 16,
+   "from": "payment_reminder",
+   "to": "small_talk",
+   "t": 43.9
+  },
+  {
+   "uid": 20,
+   "from": "small_talk",
+   "to": "payment_reminder",
+   "t": 54.9
+  },
+  {
+   "uid": 19,
+   "from": "payment_reminder",
+   "to": "small_talk",
+   "t": 51.7
+  },
+  {
+   "uid": 23,
+   "from": "small_talk",
+   "to": "closing",
+   "t": 64.6
+  }
+ ],
+ "frustration_trace": [
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0,
+  0.0
+ ],
+ "component_latency": {
+  "chunk_processing_us_p50": 524.5,
+  "asr_ms": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0
+  ],
+  "audio_to_text_ms": [
+   251,
+   248,
+   251,
+   250,
+   249,
+   253,
+   250,
+   264,
+   250,
+   250,
+   263,
+   251,
+   247,
+   248,
+   249,
+   248,
+   249,
+   252,
+   250,
+   263,
+   250,
+   251,
+   250,
+   250
+  ],
+  "rules_us": [
+   66.5,
+   43.3,
+   44.3,
+   42.7,
+   27.0,
+   40.2,
+   34.3,
+   46.0,
+   51.6,
+   31.2,
+   17.9,
+   71.0,
+   27.3,
+   31.3,
+   54.3,
+   86.7,
+   38.0,
+   47.1,
+   74.3,
+   42.5,
+   20.3,
+   71.7,
+   53.1,
+   65.6
+  ],
+  "llm_ms": [
+   2293,
+   536,
+   2816,
+   4434,
+   3250,
+   4597,
+   3625,
+   16705,
+   3651,
+   1656,
+   7525,
+   3070,
+   3185,
+   5666,
+   4519
+  ]
+ },
+ "transcript": [
+  {
+   "uid": 1,
+   "speaker": "agent",
+   "text": "Good evening, this is Arjun from Udaan Credit Finance.",
+   "start_t": 0.5,
+   "end_t": 4.26,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 251
+  },
+  {
+   "uid": 2,
+   "speaker": "agent",
+   "text": "This call is recorded for quality and compliance. Am",
+   "start_t": 5.06,
+   "end_t": 8.36,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 248
+  },
+  {
+   "uid": 3,
+   "speaker": "agent",
+   "text": "I speaking with Mr. Sameer Joshi?",
+   "start_t": 9.34,
+   "end_t": 11.98,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 251
+  },
+  {
+   "uid": 4,
+   "speaker": "customer",
+   "text": "Haan, yes, yes.",
+   "start_t": 12.52,
+   "end_t": 13.34,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 250
+  },
+  {
+   "uid": 5,
+   "speaker": "customer",
+   "text": "yes. Sorry,",
+   "start_t": 13.82,
+   "end_t": 14.0,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 249
+  },
+  {
+   "uid": 6,
+   "speaker": "customer",
+   "text": "a bit noisy here, I'm at",
+   "start_t": 15.32,
+   "end_t": 17.24,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 253
+  },
+  {
+   "uid": 7,
+   "speaker": "customer",
+   "text": "at the market.",
+   "start_t": 17.72,
+   "end_t": 18.32,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 250
+  },
+  {
+   "uid": 8,
+   "speaker": "agent",
+   "text": "No problem sir. For",
+   "start_t": 19.32,
+   "end_t": 20.38,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 264
+  },
+  {
+   "uid": 9,
+   "speaker": "agent",
+   "text": "verification, could you tell me the last four digits of your loan account?",
+   "start_t": 21.34,
+   "end_t": 25.96,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 250
+  },
+  {
+   "uid": 10,
+   "speaker": "customer",
+   "text": "Eight eight one zero.",
+   "start_t": 26.54,
+   "end_t": 27.8,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 250
+  },
+  {
+   "uid": 11,
+   "speaker": "agent",
+   "text": "Thank you sir.",
+   "start_t": 28.52,
+   "end_t": 29.3,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 263
+  },
+  {
+   "uid": 12,
+   "speaker": "agent",
+   "text": "Your personal loan EMI of seven thousand rupees is due on the fifth.",
+   "start_t": 30.18,
+   "end_t": 34.88,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 251
+  },
+  {
+   "uid": 13,
+   "speaker": "agent",
+   "text": "It will be debited automatically.",
+   "start_t": 35.84,
+   "end_t": 37.76,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 247
+  },
+  {
+   "uid": 14,
+   "speaker": "customer",
+   "text": "Yes, yes,",
+   "start_t": 38.32,
+   "end_t": 38.62,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 248
+  },
+  {
+   "uid": 15,
+   "speaker": "customer",
+   "text": "yes, it's fine. My brother",
+   "start_t": 39.1,
+   "end_t": 40.26,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 249
+  },
+  {
+   "uid": 16,
+   "speaker": "customer",
+   "text": "also took a bike loan last year, he",
+   "start_t": 41.32,
+   "end_t": 43.86,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 248
+  },
+  {
+   "uid": 17,
+   "speaker": "customer",
+   "text": "he paid it off already, haha.",
+   "start_t": 44.34,
+   "end_t": 46.28,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 249
+  },
+  {
+   "uid": 18,
+   "speaker": "agent",
+   "text": "That's great to hear sir.",
+   "start_t": 47.0,
+   "end_t": 48.72,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 252
+  },
+  {
+   "uid": 19,
+   "speaker": "customer",
+   "text": "This traffic is killing me, honestly. Anyway,",
+   "start_t": 49.4,
+   "end_t": 51.74,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 250
+  },
+  {
+   "uid": 20,
+   "speaker": "customer",
+   "text": "the money is in the account.",
+   "start_t": 52.76,
+   "end_t": 54.86,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 263
+  },
+  {
+   "uid": 21,
+   "speaker": "agent",
+   "text": "Perfect. Please",
+   "start_t": 55.36,
+   "end_t": 56.22,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 250
+  },
+  {
+   "uid": 22,
+   "speaker": "agent",
+   "text": "keep the balance one day before the due date.",
+   "start_t": 57.12,
+   "end_t": 60.32,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 251
+  },
+  {
+   "uid": 23,
+   "speaker": "customer",
+   "text": "Okay, maybe I'll check the app later, no issues.",
+   "start_t": 61.02,
+   "end_t": 64.58,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 250
+  },
+  {
+   "uid": 24,
+   "speaker": "agent",
+   "text": "Thank you for your time sir, have a good evening.",
+   "start_t": 65.32,
+   "end_t": 68.64,
+   "asr_ms": 0,
+   "asr_conf": 1.0,
+   "forced_cut": false,
+   "audio_to_text_ms": 250
+  }
+ ],
+ "asr": "mock",
+ "llm": true,
+ "nudges": [
+  {
+   "id": "N1",
+   "type": "callback_needed",
+   "label": "Callback",
+   "text": "Customer can't talk now \u2014 offer a callback slot (8 AM\u20137 PM) and confirm the exact time.",
+   "priority": 3,
+   "topic": "callback_needed:background_noise",
+   "confidence": 0.8,
+   "source": "llm",
+   "evidence": [
+    "a bit noisy here, I'm at"
+   ],
+   "status": "active",
+   "updates": 0,
+   "uid": 6,
+   "t_call": 8.61,
+   "latency_ms": {
+    "endpointing": 252.1,
+    "asr": 0.7,
+    "signal": 4433.9,
+    "llm": 4433.8,
+    "engine": 0.1,
+    "delivery": 0.1,
+    "e2e": 4686.9
+   },
+   "path": "llm"
+  }
+ ]
+}

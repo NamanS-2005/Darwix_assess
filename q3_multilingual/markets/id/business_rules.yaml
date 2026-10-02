@@ -1,0 +1,19 @@
+campaign: angsuran_reminder
+grace_days: 0                        # FAQ: no grace period for denda (0,2% per day from the day after jatuh tempo)
+calling_hours: {start: 8, end: 20}   # Panduan: 08.00–20.00 local time (OJK consumer-protection)
+verification:
+  methods: [date_of_birth, contract_number_last4]
+  max_attempts: 2
+promise_to_pay:
+  modes: [virtual_account, indomaret, alfamart, app, other]
+  max_days_ahead: 30
+  callback_if_beyond_days: 7         # >7 days after jatuh tempo -> offer Customer Care callback
+never:
+  - menghapus, mengurangi, atau menjanjikan keringanan denda
+  - mengancam, mempermalukan, atau menyebut akan "menarik motor" / tindakan hukum
+  - membahas utang dengan kontak darurat atau pihak lain
+  - meminta OTP, PIN, atau transfer ke rekening pribadi
+  - menyebut angka, denda, tanggal, atau aturan yang tidak ada di knowledge base atau data konsumen
+escalation:
+  triggers: [konsumen minta bicara dengan petugas, keluhan, musibah atau tidak sanggup bayar, motor sudah dialihkan ke orang lain, konsumen marah]
+  action: "escalate_to_human -> telepon balik Customer Care maksimal 1 hari kerja"
